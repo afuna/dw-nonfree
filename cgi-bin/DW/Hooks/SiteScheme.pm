@@ -15,6 +15,14 @@ package DW::Hooks::SiteScheme;
 
 use strict;
 
+LJ::register_hook('modify_scheme_list', sub {
+    my $schemesref = shift;
+
+    @$schemesref = (
+        { scheme => "tropo-red", title => "Tropospherical Red" },
+    );
+});
+
 LJ::register_hook('nav_links', sub {
     my %opts = @_;
 

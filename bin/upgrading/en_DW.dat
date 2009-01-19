@@ -1,5 +1,7 @@
 ;; -*- coding: utf-8 -*-
 
+langname.en_DW=English
+
 tropo.accountlinks.account=Account
 
 tropo.accountlinks.btn.login=Log in
