@@ -191,10 +191,10 @@ _code?>
 
 footer<=
 <ul>
-    <li><a href="<?siteroot?>/legal/privacypolicy.bml"><?_ml tropo.footer.legal.privacypolicy _ml?></a></li>
+    <li><a href="<?siteroot?>/legal/privacy.bml"><?_ml tropo.footer.legal.privacypolicy _ml?></a></li>
     <li><a href="<?siteroot?>/legal/tos.bml"><?_ml tropo.footer.legal.tos _ml?></a></li>
-    <li><a href="<?siteroot?>/legal/diversitystatement.bml"><?_ml tropo.footer.legal.diversitystatement _ml?></a></li>
-    <li><a href="<?siteroot?>/legal/guidingprinciples.bml"><?_ml tropo.footer.legal.guidingprinciples _ml?></a></li>
+    <li><a href="<?siteroot?>/legal/diversity.bml"><?_ml tropo.footer.legal.diversitystatement _ml?></a></li>
+    <li><a href="<?siteroot?>/legal/principles.bml"><?_ml tropo.footer.legal.guidingprinciples _ml?></a></li>
 </ul>
 <p><?_ml tropo.footer.info _ml?></p>
 <=footer

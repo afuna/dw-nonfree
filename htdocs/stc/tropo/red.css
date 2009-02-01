@@ -229,6 +229,24 @@ a:active,
     margin: 0;
     padding: 0;
 }
+#content h2 {
+    font: 1.5em/1.5 Arial, sans-serif;
+    color: #c1272d;
+    margin: 0;
+    padding: 0;
+}
+#content p {
+    margin-bottom: 1em;
+}
+#content p.note {
+    font-style: italic;
+    font-size: 0.8em;
+}
+#content ul {
+    list-style: disc outside;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
 /**
  * Content Layouts
  *
