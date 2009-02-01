@@ -29,6 +29,12 @@ LJ::register_hook('nav_links', sub {
     my $category = $opts{category};
 
     my $remote = LJ::get_remote();
+    my ($userpic_count, $userpic_max);
+    if ($remote) {
+        $userpic_count = $remote->get_userpic_count;
+        $userpic_max = $remote->userpic_quota;
+    }
+
     my %nav = (
         create => [
             {
@@ -58,6 +64,7 @@ LJ::register_hook('nav_links', sub {
             {
                 url => "$LJ::SITEROOT/editpics.bml",
                 text => "tropo.nav.create.uploaduserpics",
+                text_opts => { num => $userpic_count, max => $userpic_max },
                 loggedin => 1,
                 loggedout => 0,
             },

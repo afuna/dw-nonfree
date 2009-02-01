@@ -157,7 +157,7 @@ a:active,
     display: block;
     color: #444;
     text-decoration: none;
-    text-indent: 1.9em;
+    text-indent: 2.1em;
     padding-right: 0.75em;
 }
 /* .hover is a class added by js for the currently hovered/focused menu */
@@ -179,7 +179,7 @@ a:active,
     position: absolute;
     top: 2.5em;
     left: 0;
-    width: 13.5em;
+    width: 15em;
     background-color: #f4717a;
 }
 #menu ul li ul li {

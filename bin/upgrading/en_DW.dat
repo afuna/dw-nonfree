@@ -12,6 +12,8 @@ tropo.accountlinks.help=Help
 
 tropo.accountlinks.inbox=Inbox
 
+tropo.accountlinks.invitefriend=Invite a Friend
+
 tropo.accountlinks.login.forgotpassword=Forgot password?
 
 tropo.accountlinks.login.openid=Log in with OpenID?
@@ -52,7 +54,7 @@ tropo.nav.create.editprofile=Edit Profile
 
 tropo.nav.create.updatejournal=Update Journal
 
-tropo.nav.create.uploaduserpics=Upload Userpics
+tropo.nav.create.uploaduserpics=Upload Userpics ([[num]] of [[max]])
 
 tropo.nav.explore=Explore
 

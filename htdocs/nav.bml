@@ -33,7 +33,7 @@ body<=
     my @links_html;
     foreach my $link ( @$nav_links ) {
         next unless ( $remote && $link->{loggedin} ) || ( !$remote && $link->{loggedout} );
-        push @links_html, "<a href='$link->{url}'>$ML{$link->{text}}</a>";
+        push @links_html, "<a href='$link->{url}'>" . BML::ml("$link->{text}", $link->{text_opts}) . "</a>";
     }
     $ret .= join("<br />", @links_html);
 

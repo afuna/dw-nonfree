@@ -32,7 +32,7 @@
 
     # the base domain of your site.
     # CHANGE THIS
-    $DOMAIN = "stage2.dreamwidth.org";
+    $DOMAIN = "mark-dev.dreamwidth.org";
 
     # MemCache information, if you have MemCache servers running
     @MEMCACHE_SERVERS = ('127.0.0.1:11211');

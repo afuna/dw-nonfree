@@ -60,6 +60,8 @@ accountlinks<=
 
     if ( $remote ) {
         my $userpic = $remote->userpic;
+        my $inbox = $remote->notification_inbox;
+        my $unread = $inbox->unread_count;
         my $wh = "";
         if ( $userpic ) {
             if ( $userpic->width > $userpic->height ) {
@@ -86,8 +88,11 @@ accountlinks<=
         $ret .= "<ul>";
         $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a></li>";
         $ret .= "<li><a href='" . $remote->journal_base . "/friends'>$ML{'tropo.accountlinks.readinglist'}</a></li>";
-        $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}</a></li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
+        $ret .= " ($unread)" if $unread;
+        $ret .= "</a></li>";
         $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/friends/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a></li>";
         $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'tropo.accountlinks.help'}</a></li>";
         $ret .= "</ul>";
         $ret .= "</div>";
@@ -151,7 +156,7 @@ menunav<=
                 $ret .= "<ul id='${cat}_subnav' class='subnav_container'>";
                 foreach my $link ( @$nav_links ) {
                     next unless $link->{loggedin};
-                    $ret .= "<li class='subnav'><a href='$link->{url}'>$ML{$link->{text}}</a></li>";
+                    $ret .= "<li class='subnav'><a href='$link->{url}'>" . BML::ml("$link->{text}", $link->{text_opts}) . "</a></li>";
                 }
                 $ret .= "</ul>";
                 $ret .= "</li>";
@@ -169,7 +174,7 @@ menunav<=
                 $ret .= "<ul id='${cat}_subnav' class='subnav_container'>";
                 foreach my $link ( @$nav_links ) {
                     next unless $link->{loggedout};
-                    $ret .= "<li class='subnav'><a href='$link->{url}'>$ML{$link->{text}}</a></li>";
+                    $ret .= "<li class='subnav'><a href='$link->{url}'>" . BML::ml("$link->{text}", $link->{text_opts}) . "</a></li>";
                 }
                 $ret .= "</ul>";
                 $ret .= "</li>";
