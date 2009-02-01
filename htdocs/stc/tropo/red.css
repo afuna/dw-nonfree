@@ -348,10 +348,10 @@ a:active,
     background-color: #f4717a;
     color: #444;
     border: 1px solid #c1272d;
-    margin-top: 5px;
+    margin-top: 0.5em;
     margin-left: auto;
     margin-right: auto;
 }
 .standout .standout-inner td {
-    padding: 10px;
+    padding: 0.5em;
 }
