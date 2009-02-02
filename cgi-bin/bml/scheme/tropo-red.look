@@ -109,7 +109,7 @@ accountlinks<=
             name => "user",
             id => "login_user",
             size => 20,
-            maxlength => 17,
+            maxlength => 27,
             tabindex => 1,
         }) . " <a href='$LJ::SITEROOT/openid/'>$ML{'tropo.accountlinks.login.openid'}</a></td></tr>";
         $ret .= "<tr><td><label for='login_password'>$ML{'tropo.accountlinks.login.password'}</label></td>";
