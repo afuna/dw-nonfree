@@ -242,7 +242,7 @@ a:active,
     font-style: italic;
     font-size: 0.8em;
 }
-#content ul {
+#content ul.bullet-list {
     list-style: disc outside;
     margin-left: 2em;
     margin-bottom: 1em;
