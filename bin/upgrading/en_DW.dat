@@ -1,5 +1,15 @@
 ;; -*- coding: utf-8 -*-
 
+invitecodes.userclass.paidusers=Paid users
+
+invitecodes.userclass.permusers=Permanent users
+
+invitecodes.userclass.active30d=Users active during the past 30 days
+
+invitecodes.userclass.noinvleft=Users with no unused invites
+
+invitecodes.userclass.noinvleft_apinv=Users with no unused invites and at least 1 active, paid, or permanent invitee
+
 langname.en_DW=English
 
 tropo.accountlinks.account=Account
