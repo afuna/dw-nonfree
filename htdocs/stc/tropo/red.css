@@ -4,6 +4,7 @@
  *     Janine Costanzo <janine@netrophic.com>
  *     Jesse Proulx <jproulx@jproulx.net>
  *     Elizabeth Lubowitz <grrliz@gmail.com>
+ *     Denise Paolucci <denise@dreamwidth.org>
  * 
  * Copyright (c) 2009 by Dreamwidth Studios, LLC.
  *
@@ -372,4 +373,186 @@ a:active,
 }
 .standout .standout-inner td {
     padding: 0.5em;
+}
+/** 
+ * Start overriding some classes set in dw-free/htdocs/stc/
+ * Other site scheme designers: use your own colors here
+ * /
+
+/* editpics.css */
+#uploadBox {
+    background-color: #ffd8d8;
+    border: 1px solid #c1272c;
+    margin: 0 20px 0 0;
+}
+
+/* profile.css */
+
+.section, .username, .actions li {
+    background-color: #f7f7f7;
+    border-bottom: 1px dotted #666;
+    border-left: 1px dotted #666;
+    color: #c1272d;
+} 
+
+.section img, .username img {
+    padding-left: 3px;
+}
+
+/* customize.css */
+
+.theme-current {
+    background-color: #ffd8d8;
+    border: 1px solid #c1272c;
+}
+
+/* widgets/customizetheme.css, themechooser.css, themenav.css, 
+currenttheme.css */
+
+.theme-current h2.widget-header, .layout-item.current {
+    background-color: #ffd8d8;
+    border: 1px solid #c1272c;
+}
+
+h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-item .theme-icons {
+    border: 1px solid #c1272c;
+}
+
+.theme-item .theme-button-disabled, .layout-item .layout-button-disabled {
+    background: #f4717a;
+}
+
+.theme-item {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.customize-button, .theme-item .theme-button, .layout-item 
+.layout-button {
+    background: #f4717a;
+    border: 2px solid #541e1a;
+    border-top: 2px solid #f4717a;
+    border-left: 2px solid #f4717a;
+}
+
+
+.theme-nav-content, .customize-content {
+    border: 1px solid #c1272c;
+    border-left: none;
+}
+
+.theme-selector-nav {
+    background-color: #ffd8d8;
+}
+
+.theme-nav li a, .theme-nav-small li {
+    border-right: 1px solid #c1272c;
+}
+
+.theme-nav li.on a {
+    border: 1px solid #c1272c;
+    border-right: none;
+}
+
+.theme-nav-separator {
+    border-right: 1px solid #c1272c;
+}
+
+.theme-nav-separator hr {
+    border-top: 1px solid #f4717a;
+}
+
+.customize-content .subheader {
+    background-color: #ffd8d8;
+    border-bottom: 1px solid #c1272c;
+}
+
+.customize-content .subheader.on {
+    background-color: #ffd8d8;
+}
+
+.customize-nav {
+    background-color: #ffd8d8;
+}
+
+.customize-nav li a, .customize-nav li li  {
+    border-right: 1px solid #c1272c;
+}
+
+.customize-nav li.on a, .customize-nav li.on ul {
+    border: 1px solid #c1272c;
+    border-right: none;
+    border-top: none;
+}
+
+.customize-nav li.on {
+    border-top: 1px solid #c1272c;
+}
+
+.moodtheme-preview, .appwidget-linkslist .tips-box {
+    background-color: #ffd8d8;
+    border: 1px solid #c1272c;
+}
+
+.theme-current-links {
+    border-bottom: 1px solid #c1272c;
+    border-right: 1px solid #c1272c;
+}
+
+.theme-nav li a:visited, .customize-nav li a:visited {
+    color: #c1272c;
+    font-weight: bold;
+}
+
+/* inbox */
+
+#esn_folder_all {
+    background-color: #ffd8d8 !important;
+}
+
+/* lj_settings.css */
+
+.section_head, table.alternating-rows th, div.username {
+    background-color: #d1ced2;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #c1272c;
+}
+
+/* comm_promo.css */
+
+div.CommunityPromoBox {
+    border: 1px solid #f4717a;
+}
+
+/* settings.css */
+
+#settings_save {
+    background: #ffd8d8;
+}
+
+#settings_nav li a {
+    background: #f4717a;
+    border: 1px solid #c1272c;
+    border-bottom: none;
+}
+
+#settings_nav li a:hover, #settings_nav li a.active {
+    background: #ffd8d8;
+}
+
+#settings_nav_title p {
+    background: #ffd8d8;
+    border-left: 1px solid #c1272c;
+}
+
+/* cprod.css */
+
+.cprod.h3 {
+    background: #f4717a;
+    
+}
+
+.cprod content {
+    border: 1px solid #c1271c;
 }
