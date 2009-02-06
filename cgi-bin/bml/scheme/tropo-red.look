@@ -92,7 +92,7 @@ accountlinks<=
         $ret .= " ($unread)" if $unread;
         $ret .= "</a></li>";
         $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li>";
-        $ret .= "<li><a href='$LJ::SITEROOT/friends/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a></li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a></li>";
         $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'tropo.accountlinks.help'}</a></li>";
         $ret .= "</ul>";
         $ret .= "</div>";

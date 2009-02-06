@@ -89,13 +89,13 @@ LJ::register_hook('nav_links', sub {
                 loggedout => 0,
             },
             {
-                url => "$LJ::SITEROOT/friends/edit.bml",
+                url => "$LJ::SITEROOT/manage/circle/edit.bml",
                 text => "tropo.nav.organize.managerelationships",
                 loggedin => 1,
                 loggedout => 0,
             },
             {
-                url => "$LJ::SITEROOT/friends/editgroups.bml",
+                url => "$LJ::SITEROOT/manage/circle/editgroups.bml",
                 text => "tropo.nav.organize.managefilters",
                 loggedin => 1,
                 loggedout => 0,
