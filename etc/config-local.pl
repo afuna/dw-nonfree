@@ -26,9 +26,10 @@
 
     # human readable name of this site as well as shortened versions
     # CHANGE THIS
-    $SITENAME = "Dreamwidth.org";
+    $SITENAME = "Dreamwidth Studios";
     $SITENAMESHORT = "Dreamwidth";
     $SITENAMEABBREV = "DW";
+    $SITECOMPANY = "Dreamwidth Studios, LLC";
 
     # the base domain of your site.
     # CHANGE THIS
