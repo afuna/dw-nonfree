@@ -121,13 +121,13 @@ LJ::register_hook('nav_links', sub {
         ],
         read => [
             {
-                url => $remote ? $remote->journal_base . "/friends" : "",
+                url => $remote ? $remote->journal_base . "/read" : "",
                 text => "tropo.nav.read.readinglist",
                 loggedin => 1,
                 loggedout => 0,
             },
             {
-                url => $remote ? $remote->journal_base . "/friends?show=Y" : "",
+                url => $remote ? $remote->journal_base . "/read?show=Y" : "",
                 text => "tropo.nav.read.syndicatedfeeds",
                 loggedin => 1,
                 loggedout => 0,

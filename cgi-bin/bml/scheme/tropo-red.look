@@ -87,7 +87,7 @@ accountlinks<=
         $ret .= "</form>";
         $ret .= "<ul>";
         $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a></li>";
-        $ret .= "<li><a href='" . $remote->journal_base . "/friends'>$ML{'tropo.accountlinks.readinglist'}</a></li>";
+        $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a></li>";
         $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
         $ret .= " ($unread)" if $unread;
         $ret .= "</a></li>";

@@ -36,7 +36,7 @@ tropo.accountlinks.login.username=Username:
 
 tropo.accountlinks.post=Post
 
-tropo.accountlinks.readinglist=Reading List
+tropo.accountlinks.readinglist=Reading Page
 
 tropo.accountlinks.userpic.alt=Upload Userpics
 
@@ -92,7 +92,7 @@ tropo.nav.read=Read
 
 tropo.nav.read.profile=Profile
 
-tropo.nav.read.readinglist=Reading List
+tropo.nav.read.readinglist=Reading Page
 
 tropo.nav.read.recentcomments=Recent Comments
 
