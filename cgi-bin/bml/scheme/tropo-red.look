@@ -86,13 +86,13 @@ accountlinks<=
         $ret .= " <input type='submit' value=\"$ML{'tropo.accountlinks.btn.logout'}\" />";
         $ret .= "</form>";
         $ret .= "<ul>";
-        $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a></li>";
-        $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a></li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>";
+        $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
         $ret .= " ($unread)" if $unread;
-        $ret .= "</a></li>";
-        $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li>";
-        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a></li>";
+        $ret .= "</a> &bull; </li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li> <br />";
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'tropo.accountlinks.help'}</a></li>";
         $ret .= "</ul>";
         $ret .= "</div>";
@@ -191,10 +191,11 @@ _code?>
 
 footer<=
 <ul>
-    <li><a href="<?siteroot?>/legal/privacy.bml"><?_ml tropo.footer.legal.privacypolicy _ml?></a></li>
-    <li><a href="<?siteroot?>/legal/tos.bml"><?_ml tropo.footer.legal.tos _ml?></a></li>
-    <li><a href="<?siteroot?>/legal/diversity.bml"><?_ml tropo.footer.legal.diversitystatement _ml?></a></li>
-    <li><a href="<?siteroot?>/legal/principles.bml"><?_ml tropo.footer.legal.guidingprinciples _ml?></a></li>
+    <li><a href="<?siteroot?>/legal/privacy.bml"><?_ml tropo.footer.legal.privacypolicy _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/tos.bml"><?_ml tropo.footer.legal.tos _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/diversity.bml"><?_ml tropo.footer.legal.diversitystatement _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/principles.bml"><?_ml tropo.footer.legal.guidingprinciples _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/site/"><?_ml tropo.footer.sitemap _ml?></a></li>
 </ul>
 <p><?_ml tropo.footer.info _ml?></p>
 <=footer
