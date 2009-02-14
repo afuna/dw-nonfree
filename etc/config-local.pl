@@ -54,6 +54,7 @@
                    'dbname' => 'dw',
                    'role' => {
                        'cluster1' => 1,
+                       'slow' => 1,
 
                        # optionally, apache write its access logs to a mysql database
                        #logs => 1,
