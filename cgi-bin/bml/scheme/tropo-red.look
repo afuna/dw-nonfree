@@ -243,6 +243,27 @@ page<=
             </div>
         </div>
         <?_code LJ::final_body_html(); _code?>
+
+<?_code
+    # this is hardcoded to the production site because we don't want development/staging
+    # environments using our Google Analytics ID.  (it probably wouldn't hurt anything,
+    # but no sense in tempting fate...)
+    if ( BML::get_hostname() eq "www.dreamwidth.org" ) {
+        return qq{
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4595135-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+        };
+    }
+    return "";
+_code?>
+
     </body>
 </html>
 <=page
