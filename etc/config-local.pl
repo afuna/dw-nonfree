@@ -22,8 +22,11 @@
     $ENABLE_BETA_TOOLS = 1;
 
     # home directory
+    $HOME = $ENV{'LJHOME'};
+
+    # the base domain of your site.
     # CHANGE THIS
-    $HOME = "/home/dw/current";
+    $DOMAIN = $DW::PRIVATE::DOMAIN;
 
     # human readable name of this site as well as shortened versions
     # CHANGE THIS
@@ -31,10 +34,6 @@
     $SITENAMESHORT = "Dreamwidth";
     $SITENAMEABBREV = "DW";
     $SITECOMPANY = "Dreamwidth Studios, LLC";
-
-    # the base domain of your site.
-    # CHANGE THIS
-    $DOMAIN = "mark-dev.dreamwidth.org";
 
     # MemCache information, if you have MemCache servers running
     @MEMCACHE_SERVERS = ('127.0.0.1:11211');
