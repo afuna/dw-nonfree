@@ -1,0 +1,129 @@
+<?page
+
+#
+# staff.bml
+#
+# Some people involved in the Dreamwidth project.
+#
+# Authors:
+#     Denise Paolucci <denise@dreamwidth.org>
+#
+# Copyright (c) 2009 by Dreamwidth Studios, LLC.
+#
+# This program is free software; you may redistribute it and/or modify it under
+# the same terms as Perl itself.  For a copy of the license, please reference
+# 'perldoc perlartistic' or 'perldoc perlgpl'.
+#
+
+body<=
+<p>Our team has several decades of combined experience in social 
+networking architecture, design, and support. We're all passionate about 
+social networking, online community, and creating things that people 
+want to use. </p>
+
+<h2>Dreamwidth Studios, LLC's Owners</h2>
+
+<img src="http://www.dreamwidth.org/userpic/256/6" style="float: left; padding: 5px;">
+
+<p><b>Denise Paolucci</b> (the Suit) began working on the 
+LiveJournal.com project in 2001. Since then, she's done everything from 
+customer service to product planning to documentation to user advocacy 
+to QA testing to falling over exhausted because she's trying to do too 
+much at once. She left LiveJournal in 2007 to pursue a career in 
+writing. She hopes that with Dreamwidth Studios, she'll be able to use 
+her experience to create a place where creative people of all types will 
+find a home for their expression where they feel safe, welcomed, and 
+supported.</p>
+
+<p>Denise lives in Baltimore, Maryland, with her long-suffering 
+girlfriend, who fortunately enjoys the frequent "c'mere, look, isn't 
+this <em>cool</em>?" invocations, and two cats, who don't care about the 
+internet as long as they get fed on time.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/257/6" style="float: left; padding: 5px;">
+
+<p><b>Mark Smith</b> (the Geek) began volunteering with LiveJournal.com 
+in 2001 in technical support and code development. He joined the staff 
+in 2004, concentrating both on feature development and backend 
+development, where he contributed heavily to utilities, such as Perlbal 
+and MogileFS, that are in wide use by many other sites. After 
+transitioning to Six Apart, Mark worked to design and build out the 
+systems infrastructure for the Vox.com product launch. In 2007, he moved 
+to Iceland to program for CCP Games' EVE Online, before moving back to 
+the US in early 2008 as a Senior Systems Administrator for the Mozilla 
+Corporation. He currently works for Google.</p>
+
+<p>Mark currently resides near San Francisco, CA with his fiancee Janine and their canine companion. From time to time, he can be heard on the air as KC8BCW, typically on the local 2M repeaters. 73s!</p>
+<br />
+
+<h2>Community Project Leaders</h2>
+
+<p>People who are currently working on major projects for Dreamwidth!</p><br />
+
+<img src="http://www.dreamwidth.org/userpic/258/6" style="float: left; padding: 5px;">
+<p><b>Afuna</b> first learned Perl from looking at the LiveJournal code (for fun), which ended in her volunteering as part of the Support team from 2007 to 2008. There, she picked up a love of digging through code and diagnosing the freaky stuff. She bounces from one interesting thing to another, and is currently focused on overhauling S2 along with Aveleh and the team. She is interested in improving site accessibility, and is trying to find both the right questions and the right answers to improve the site so it's usable by everyone.</p>
+
+<p>Fu lives in the Philippines, and has dreams of traveling the world one day. When she remembers there's a world outside work and the internet (which is rarely), she hits the gym and kicks stuff around. In her spare time, she hangs out in IRC with The Awesomest Boyfriend and tries not to get pulled in too many directions at once.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/259/6" style="float: left; padding: 5px;">
+<p><b>Aveleh</b> likes learning, helping others, and adding to Afuna's task list. As the project manager of the styles team, she has the good fortune to be working with a great team who's helping her accomplish all three. Her passions include user-friendly interfaces, brain-friendly code, and making the Dreamwidth journal-styling system Just Do The Right Thing.</p>
+
+<p>Abby lives in Winnipeg, Canada, and will one day learn how to write about herself.</p>
+
+<br clear='all'/>
+
+<img src="http://www.dreamwidth.org/userpic/260/6" style="float: left; padding: 5px;">
+<p><b>Janine Costanzo</b> works on Dreamwidth's front-end Perl development. Previously, she worked as a software engineer at LiveJournal for three years, coming to the position after having volunteered for the Support and Abuse teams. She implemented many new page designs on LiveJournal, such as the customization area, profile page, and account settings area.</p>
+
+<p>Janine lives in the Bay Area with her fiance Mark and Fudge, the cutest mutt in the world. She loves animals and biology, and volunteers at a local animal shelter.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/261/6" style="float: left; padding: 5px;">
+
+<b>Audra Johnson</b> (the Information Architect) joined Dreamwidth because she's passionate about online community and user experiences, as evidenced by her work running the LJ community no_lj_ads. As Mistress of Project Organization, she has insatiable needs to collate and organize information of all kinds, mostly manifesting in the site wiki and stalking everyone to make sure things are properly documented and categorized. If you ask her where someone put something, she can tell you in three seconds or less ... unless you mean her keys.</p>
+
+<p>Audra lives in Seattle, WA, where she works as a bioinformatics software engineer, which involves sifting through massive amounts of data using code and math for biology research.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/262/6" style="float: left; padding: 5px;">
+<p><b>Andrea Nall</b> has been working on the Dreamwidth project since inception. Her area of specialty is the importer, which will allow anyone to migrate their journal from any other LiveJournal-based site. You can ask her where practically anything in the codebase is hiding and she'll know where to look to find the answer. Her other interests, besides writing pages of Perl code, include writing pages of code in other various languges, technical theatre, game development, and breaking (and hopefully fixing) stuff in fun and obscure ways.</p>
+
+<p>Dre lives near Lakewood, Colorado, and is currently being enslaved by that evil thing called "college". In her spare time ... what spare time? Between staring at pages of code for hours on end and school? If only she didn't have to sleep.</p> 
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/263/6" style="float: left; padding: 5px;">
+<p><b>Pau Amma</b> has been volunteering for LiveJournal since early 2005, in support, translation, documentation, and occasionally coding. He has held jobs in programming, networks, operations, resume database wrangling, technical support, and office gophering.</p>
+
+<p>His interests include writing code and documentation for Dreamwidth, light reading, listening to classical music, making too many puns, drinking preposterous amounts of coffee, looking for a day job, and hanging out on IRC with The Awesomest Girlfriend. He's a permanent resident of There.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/264/6" style="float: left; padding: 5px;">
+<p><b>Jesse Proulx</b> was one of LiveJournal.com's first employees, 
+where he worked on documentation, customer support, feature development, 
+and human interface design. He left his position as Technical Product 
+Manager to work as a software engineer for Dogster, a social network for 
+pet owners, and is currently a frontend developer at Jaxtr, a 
+voice-based social networking service.</p>
+
+<p>Jesse lives just outside of San Francisco, CA with his wife and their 
+two dogs. He is an avid musician, and spends entirely too much of his 
+free time playing video games.</p>
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/265/6" style="float: left; padding: 5px;">
+
+<p><b>Rachel Walmsley</b> started volunteering on LiveJournal.com in 2002, continuing until 2005. During that time, she did various tasks ranging from work on the Abuse team to documentation writing to technical support administration to general dogsbody. For Dreamwidth, she's excited to be heading up the documentation team, and is looking forward to being able to help shape the project direction.</p>
+
+<p>Rachel lives in Lancaster, England, where she lives on her own, unless you count the collection of sheep ornaments, plushies, and fridge magnets. She has a tendency to get far too animated when talking about her beloved science of physics.</p>
+<br />
+<=body
+title=>Our People
+page?>
