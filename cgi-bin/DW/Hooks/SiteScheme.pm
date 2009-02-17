@@ -127,7 +127,7 @@ LJ::register_hook('nav_links', sub {
                 loggedout => 0,
             },
             {
-                url => $remote ? $remote->journal_base . "/read?show=Y" : "",
+                url => "$LJ::SITEROOT/syn/",
                 text => "tropo.nav.read.syndicatedfeeds",
                 loggedin => 1,
                 loggedout => 0,
