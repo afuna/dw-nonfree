@@ -77,14 +77,8 @@ LJ::register_hook('nav_links', sub {
         ],
         organize => [
             {
-                url => "$LJ::SITEROOT/community/manage.bml",
-                text => "tropo.nav.organize.managecommunities",
-                loggedin => 1,
-                loggedout => 0,
-            },
-            {
-                url => "$LJ::SITEROOT/manage/tags.bml",
-                text => "tropo.nav.organize.managetags",
+                url => "$LJ::SITEROOT/manage/settings/",
+                text => "tropo.nav.organize.manageaccount",
                 loggedin => 1,
                 loggedout => 0,
             },
@@ -101,8 +95,14 @@ LJ::register_hook('nav_links', sub {
                 loggedout => 0,
             },
             {
-                url => "$LJ::SITEROOT/manage/settings/",
-                text => "tropo.nav.organize.manageaccount",
+                url => "$LJ::SITEROOT/manage/tags.bml",
+                text => "tropo.nav.organize.managetags",
+                loggedin => 1,
+                loggedout => 0,
+            },
+            {
+                url => "$LJ::SITEROOT/community/manage.bml",
+                text => "tropo.nav.organize.managecommunities",
                 loggedin => 1,
                 loggedout => 0,
             },
