@@ -179,7 +179,7 @@ a:active,
     position: absolute;
     top: 2.5em;
     left: 0;
-    width: 15em;
+    width: 16em;
     background-color: #f4717a;
 }
 #menu ul li ul li {
@@ -555,3 +555,24 @@ div.CommunityPromoBox {
 .cprod content {
     border: 1px solid #c1271c;
 }
+
+
+/* allpics styling */
+
+table.allpics {
+    margin-left: 50px;
+}
+
+.allpics td {
+    vertical-align: bottom;
+}
+
+.allpics img {
+	margin-right: 1em;
+	margin-top: 15px;
+}
+
+.allpics blank {
+	width: 50px;
+}
+
