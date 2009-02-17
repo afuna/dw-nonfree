@@ -32,7 +32,6 @@
  * @colordef        #26bbb6 Turquoise (body background)
  * @colordef        #444444 Dark Gray (copy)
  */
-@import "reset.css";
 body {
     background-color: #c1272d;
     font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
