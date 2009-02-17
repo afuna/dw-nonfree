@@ -24,10 +24,11 @@ use base 'DW::BusinessRules::InviteCodes';
 
 use DW::InviteCodes;
 use LJ::User;
+use DW::Pay;
 
 =head1 NAME
 
-DW::BusinessRules::InviteCodes - business rules for invite code distribution
+DW::BusinessRules::InviteCodes::DWS - DWS-specific invite code business rules
 
 =head1 DESCRIPTION
 
@@ -42,12 +43,20 @@ search_class, and adj_invites).
 # key is also used for long cat name (invitecodes.userclass.*), and first
 # argument is always max users to return.
 my %user_classes = (
-    paidusers       => { search => \&_search_caps, search_arg => 'paid_user' },
-    permusers       => { search => \&_search_caps, search_arg => 'perm_user' },
-    active30d       => { search => \&_search_ctrk, search_arg => 30 }, # days
-    noinvleft       => { search => \&_search_noinvleft }, # used all invites
+    basic_paid      => { search => \&_search_paystatus,
+                         search_arg => [ typeid => 1 ] },
+    premium_paid    => { search => \&_search_paystatus,
+                         search_arg => [ typeid => 2 ] },
+    permanent_paid  => { search => \&_search_paystatus,
+                         search_arg => [ permanent => 1 ] },
+    # Users active in the last 30 days
+    active30d       => { search => \&_search_ctrk,
+                         search_arg => 30 },
+    # Users with no invites left
+    noinvleft       => { search => \&_search_noinvleft }, # No search arg
+    # Users with no invites left and 1 invitee paid/perm/active in last 30 days
     noinvleft_apinv => { search => \&_search_noinvleft_apinvitee,
-                         search_arg => 30 }, # same + paid/perm/active invitee
+                         search_arg => 30 },
 );
 
 sub user_classes {
@@ -73,16 +82,15 @@ sub search_class {
     Carp::croak( "$uckey not a known user class" )
         unless exists $user_classes{$uckey};
 
-    my $uclass = $user_classes{uckey};
+    my $uclass = $user_classes{$uckey};
     return $uclass->{search}->( $uckey, $max_nusers, $uclass->{search_arg} );
 }
 
-# Search in "user" (unclustered) for capability.
-sub _search_caps {
-    my ($uckey, $max_nusers, $capkey) = @_;
-    my $mask = LJ::mask_from_classes( $capkey )
-        or die "$capkey not defined in \%LJ::CAP";
-    my $dbslow = LJ::get_dbh( 'slow' ) or die "Can't get slow role";
+# Search pay status
+sub _search_paystatus {
+    my ($uckey, $max_nusers, $search_arg) = @_;
+    my $uids = DW::Pay::get_current_paid_userids( limit => $max_nusers,
+                                                  @$search_arg );
 
     # TODO: Allow nonvalidated email addresses? We need to deal with users who
     # shouldn't be send email for some reason anyway (eg because they opted out
@@ -90,14 +98,9 @@ sub _search_caps {
     # addition) or discarding it altogether, so might as well handle
     # nonvalidated addresses the same way. (Note that this applies to all
     # search functions, not just this one.)
-    my $sth = $dbslow->prepare( "SELECT userid FROM user " .
-                             "WHERE journaltype = 'P' AND status = 'A' " .
-                                 "AND statusvis = 'V' AND (caps & ?) > 0 " .
-                             "LIMIT ?" )
-        or die $dbslow->errstr;
-    my $uids = $dbslow->selectcol_arrayref( $sth, {}, $mask, $max_nusers )
-        or die $dbslow->errstr;
-    return $uids;
+
+    # Don't filter if too many, otherwise we lose that information
+    return ($max_nusers <= scalar @$uids) ? $uids : _filter_pav( $uids );
 }
 
 # Search in "clustertrack2" (clustered) for recent activity
@@ -127,6 +130,7 @@ sub _search_ctrk {
     return ($max_nusers <= scalar @uids) ? \@uids : _filter_pav( \@uids );
 }
 
+# TODO: refactor into DW::InviteCodes
 # Search "acctcode" (unclustered) for users with no invite left
 sub _search_noinvleft {
     my ($uckey, $max_nusers) = @_;
@@ -134,17 +138,19 @@ sub _search_noinvleft {
 
     # Second column will be all 0 here (and is unneeded anyway), but putting it
     # in HAVING and not SELECT is non-standard SQL.
-    my $sth = $dbslow->prepare( "SELECT userid, count(a.rcptid) as unused " .
-                             "FROM acctcode WHERE a.rcptid = 0 " .
-                             "GROUP BY a.userid HAVING unused = 0 LIMIT ?" )
+    # TODO: this won't include users who never had any invite codes, which
+    # isn't ideal.
+    my $sth = $dbslow->prepare( "SELECT userid, min(rcptid) FROM acctcode " .
+                                "GROUP BY userid HAVING min(rcptid) > 0 LIMIT ?" )
         or die $dbslow->errstr;
-    # Keep only a.userid
+    # Keep only userid
     my $uids = $dbslow->selectcol_arrayref( $sth, { Columns => [1] }, $max_nusers )
         or die $dbslow->errstr;
     # Don't filter if too many, otherwise we lose that information
     return ($max_nusers <= scalar @$uids) ? $uids : _filter_pav( $uids );
 }
 
+# TODO: refactor into DW::InviteCodes
 # Search "acctcode" (unclustered) for users with no invite left, then restrict
 # to those having at least one active or paid invitee
 sub _search_noinvleft_apinvitee {
@@ -153,11 +159,12 @@ sub _search_noinvleft_apinvitee {
 
     # Second column will be all 0 here (and is unneeded anyway), but putting it
     # in HAVING and not SELECT is non-standard SQL.
-    my $sth = $dbslow->prepare( "SELECT userid, count(rcptid) as unused " .
-                             "FROM acctcode WHERE rcptid = 0 " .
-                             "GROUP BY userid HAVING unused = 0 LIMIT ?" )
+    # TODO: this won't include users who never had any invite codes, which
+    # isn't ideal.
+    my $sth = $dbslow->prepare( "SELECT userid, min(rcptid) FROM acctcode " .
+                                "GROUP BY userid HAVING min(rcptid) > 0 LIMIT ?" )
         or die $dbslow->errstr;
-    # Keep only a.userid
+    # Keep only userid
     my $uids = $dbslow->selectcol_arrayref( $sth, { Columns => [1] }, $max_nusers )
         or die $dbslow->errstr;
     # Don't filter if too many, otherwise we lose that information
@@ -165,18 +172,18 @@ sub _search_noinvleft_apinvitee {
 
     $uids = _filter_pav( $uids );
     my @filtered_uids;
-    OWNER: foreach my $uid (@$uids) {
-        my @ics = DW::InviteCodes->by_owner( userid => $uid );
+    OWNER: foreach my $ouid (@$uids) {
+        my @ics = DW::InviteCodes->by_owner( userid => $ouid );
         my @inv_uids;
         foreach my $code (@ics) {
             push @inv_uids, $code->recipient if $code->recipient;
         }
-        my @inv_users = LJ::load_userids( @inv_uids );
+        my $inv_uhash = LJ::load_userids( @inv_uids );
 
-        foreach my $iu (@inv_users) {
-            if ($iu->in_class( 'paid_user' ) || $iu->in_class( 'perm_user' )
-                    || $iu->get_timeactive >= time() - $days * 86400) {
-                push @filtered_uids, $iu->id;
+        foreach my $iuser (values %$inv_uhash) {
+            if ( defined( DW::Pay::get_current_account_status( $iuser ) )
+                    || $iuser->get_timeactive >= time() - $days * 86400) {
+                push @filtered_uids, $ouid;
                 next OWNER;
             }
         }
@@ -193,9 +200,9 @@ sub _filter_pav {
     # TODO: make magic number configurable.
     for (my $start = 0; $start < @$in_uids; $start += 1000) {
         my $end = ($start + 999 <= $#$in_uids) ? $start + 999 : $#$in_uids;
-        my @slice_users = LJ::load_userids( $in_uids->[$start..$end] );
-        foreach my $user (@slice_users) {
-            push @out_uids, $user->{userid}
+        my $uhash = LJ::load_userids( @{$in_uids}[$start..$end] );
+        while (my ($uid, $user) = each %$uhash) {
+            push @out_uids, $uid
                 if $user->is_person && $user->is_visible && $user->is_validated;
         }
     }
@@ -203,22 +210,18 @@ sub _filter_pav {
     return \@out_uids;
 }
 
-=head2 C<< DW::BusinessRules::InviteCodes::adj_invites( $ninv, $nusers ) >>
-
-Returns an adjusted number of invites "close" to $ninv and that can be evenly
-divided among $nusers recipients, or 0 if that adjustment is impossible or
-would be too different from $ninv. Note that the returned value can be larger
-than $inv if the site-specific business rules allow adjustement upward.
-
-The default implementation returns the largest multiple of $ninv no larger than
-$nusers.
-
-=cut
-
+# Returns $ninv adjusted to next higher multiple of $nusers if remainder is at
+# least 75% of $nusers, to next lower multiple instead.
 sub adj_invites {
     my ($ninv, $nusers) = @_;
 
-    return ($ninv <= 0 || $nusers <= 0) ? 0 : ($ninv - $ninv % $nusers);
+    return 0 if $ninv <= 0 || $nusers <= 0;
+
+    my $remainder = $ninv % $nusers;
+
+    return ( $remainder < 0.75 * $nusers )
+        ? $ninv - $remainder
+        : $ninv + $nusers - $remainder;
 }
 
 1;

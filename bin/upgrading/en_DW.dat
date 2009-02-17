@@ -1,14 +1,16 @@
 ;; -*- coding: utf-8 -*-
 
-invitecodes.userclass.paidusers=Paid users
-
-invitecodes.userclass.permusers=Permanent users
-
 invitecodes.userclass.active30d=Users active during the past 30 days
+
+invitecodes.userclass.basic_paid=Basic paid users
 
 invitecodes.userclass.noinvleft=Users with no unused invites
 
 invitecodes.userclass.noinvleft_apinv=Users with no unused invites and at least 1 active, paid, or permanent invitee
+
+invitecodes.userclass.permanent_paid=Permanent paid users
+
+invitecodes.userclass.premium_paid=Premium paid users
 
 langname.en_DW=English
 
