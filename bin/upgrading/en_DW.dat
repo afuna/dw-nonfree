@@ -92,6 +92,10 @@ tropo.nav.organize.selectstyle=Select Style
 
 tropo.nav.read=Read
 
+tropo.nav.read.inbox.nounread=Inbox
+
+tropo.nav.read.inbox.unread=Inbox ([[num]])
+
 tropo.nav.read.profile=Profile
 
 tropo.nav.read.readinglist=Reading Page

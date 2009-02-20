@@ -29,10 +29,13 @@ LJ::register_hook('nav_links', sub {
     my $category = $opts{category};
 
     my $remote = LJ::get_remote();
-    my ($userpic_count, $userpic_max);
-    if ($remote) {
+    my ( $userpic_count, $userpic_max, $inbox_count );
+    if ( $remote ) {
         $userpic_count = $remote->get_userpic_count;
         $userpic_max = $remote->userpic_quota;
+
+        my $inbox = $remote->notification_inbox;
+        $inbox_count = $inbox->unread_count;
     }
 
     my %nav = (
@@ -145,8 +148,9 @@ LJ::register_hook('nav_links', sub {
                 loggedout => 0,
             },
             {
-                url => $remote ? $remote->journal_base . "/profile" : "",
-                text => "tropo.nav.read.profile",
+                url => "$LJ::SITEROOT/inbox/",
+                text => $inbox_count ? "tropo.nav.read.inbox.unread" : "tropo.nav.read.inbox.nounread",
+                text_opts => { num => $inbox_count },
                 loggedin => 1,
                 loggedout => 0,
             },
