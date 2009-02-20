@@ -60,13 +60,13 @@ tropo.nav.create.createaccount=Create Account
 
 tropo.nav.create.createcommunity=Create Community
 
-tropo.nav.create.editjournal=Edit Journal
+tropo.nav.create.editjournal=Edit Entries
 
 tropo.nav.create.editprofile=Edit Profile
 
 tropo.nav.create.updatejournal=Update Journal
 
-tropo.nav.create.uploaduserpics=Upload Userpics ([[num]] of [[max]])
+tropo.nav.create.uploaduserpics=Upload Icons ([[num]] of [[max]])
 
 tropo.nav.explore=Explore
 
