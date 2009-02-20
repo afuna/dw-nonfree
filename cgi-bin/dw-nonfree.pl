@@ -13,9 +13,8 @@ LJ::register_hook("journal_base", sub {
 
     my $rules = {
         'P' => [1, "users.$LJ::DOMAIN"],
-        'S' => [1, "users.$LJ::DOMAIN"],
-        'Y' => [0, "syndicated.$LJ::DOMAIN"],
-        'C' => [0, "community.$LJ::DOMAIN"],
+        'Y' => [1, "syndicated.$LJ::DOMAIN"],
+        'C' => [1, "community.$LJ::DOMAIN"],
     };
     my $rule = $rules->{$u->{journaltype}} || $rules->{'P'};
 
