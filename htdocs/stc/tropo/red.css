@@ -373,6 +373,11 @@ a:active,
 .standout .standout-inner td {
     padding: 0.5em;
 }
+
+.standout-inner a:hover, .standout-inner a:active, .standout-inner a:hover {
+    color: #000;
+}
+
 /** 
  * Start overriding some classes set in dw-free/htdocs/stc/
  * Other site scheme designers: use your own colors here
