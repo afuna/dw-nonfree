@@ -92,7 +92,7 @@ LJ::register_hook('nav_links', sub {
                 loggedout => 0,
             },
             {
-                url => "$LJ::SITEROOT/manage/circle/editgroups.bml",
+                url => "$LJ::SITEROOT/manage/circle/editfilters.bml",
                 text => "tropo.nav.organize.managefilters",
                 loggedin => 1,
                 loggedout => 0,

@@ -573,11 +573,17 @@ table.allpics {
 }
 
 .allpics img {
-	margin-right: 1em;
-	margin-top: 15px;
+    margin-right: 1em;
+    margin-top: 15px;
 }
 
 .allpics blank {
-	width: 50px;
+    width: 50px;
 }
 
+
+/* editfilters styling */
+
+table.editfilters td {
+    padding: 5px;
+}
