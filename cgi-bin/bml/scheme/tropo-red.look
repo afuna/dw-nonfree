@@ -63,6 +63,7 @@ accountlinks<=
         my $userpic = $remote->userpic;
         my $inbox = $remote->notification_inbox;
         my $unread = $inbox->unread_count;
+        my $identity = $remote->is_identity;
         my $wh = "";
         if ( $userpic ) {
             if ( $userpic->width > $userpic->height ) {
@@ -87,13 +88,13 @@ accountlinks<=
         $ret .= " <input type='submit' value=\"$ML{'tropo.accountlinks.btn.logout'}\" />";
         $ret .= "</form>";
         $ret .= "<ul>";
-        $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>" unless $identity;
         $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
         $ret .= " ($unread)" if $unread;
         $ret .= "</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li> <br />";
-        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>" unless $identity;
         $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'tropo.accountlinks.help'}</a></li>";
         $ret .= "</ul>";
         $ret .= "</div>";
