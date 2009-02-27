@@ -223,20 +223,7 @@ page<=
                 </div>
                 <div id="menu">
                     <?menunav?>
-                    <div id="site-search">
-                        <form action='<?siteroot?>/multisearch.bml' method='post'>
-                        <input type="text" name="q" value="" id="search" title="<?_ml tropo.search _ml?>" size="20" />
-                        <select name="type">
-                            <option value='int' selected='selected'><?_ml tropo.search.interest _ml?></option>
-                            <option value='region'><?_ml tropo.search.region _ml?></option>
-                            <option value='nav_and_user'><?_ml tropo.search.siteuser _ml?></option>
-                            <option value='faq'><?_ml tropo.search.faq _ml?></option>
-                            <option value='email'><?_ml tropo.search.email _ml?></option>
-                            <option value='im'><?_ml tropo.search.iminfo _ml?></option>
-                        </select>
-                        <input type="submit" value="<?_ml tropo.search.btn.go _ml?>" />
-                        </form>
-                    </div>
+                    <?_code return LJ::Widget::Search->render; _code?>
                 </div>
                 <div id="footer">
                     <?footer?>

@@ -191,12 +191,13 @@ a:active,
     display: block;
     width: 100%;
 }
-#menu #site-search {
+#menu .appwidget-search {
     text-align: right;
     line-height: 2.1em;
     padding-right: 0.833333em;
+    position: static;
 }
-#menu #site-search input#search {
+#menu .appwidget-search input#search {
     width: 15.5em;
 }
 /**
