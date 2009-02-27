@@ -587,3 +587,28 @@ table.allpics {
 table.editfilters td {
     padding: 5px;
 }
+
+
+/* FAQ */
+
+.faqlist {
+    list-style: disc outside;
+    margin-bottom: 2em;
+}
+
+/* Inbox - Compose */
+
+.inbox-compose {
+    width: 100%;
+}
+
+.inbox-compose td {
+    vertical-align: top;
+}
+
+
+/* manage/invitecodes.bml */
+
+.invitecodes td {
+    padding: 5px;
+} 
