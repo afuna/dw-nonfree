@@ -252,7 +252,7 @@ pageTracker._trackPageview();
     }
     return "";
 _code?>
-
+        <div id="shim-alpha"> </div>
     </body>
 </html>
 <=page

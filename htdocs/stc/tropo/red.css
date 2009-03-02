@@ -61,7 +61,7 @@ a:active,
     font-size: 0.75em;
     line-height: 1.5;
     margin: 2em 0 2em 0;
-    background: #f7f7f7 url(/img/tropo-red/bg_masthead.png) repeat-x top center;
+    background-color: #f7f7f7;
     width: 100%;
 }
 #page {
@@ -153,11 +153,11 @@ a:active,
     width: auto;
 }
 #menu ul li a {
-    background: transparent url(/img/tropo-red/icon_menu_swirl.png) 10px 11px no-repeat;
+    background: transparent url(/img/tropo-red/icon_menu_swirl.png) 0.833333em 0.916667em no-repeat;
     display: block;
     color: #444;
     text-decoration: none;
-    text-indent: 2.1em;
+    text-indent: 2em;
     padding-right: 0.75em;
 }
 /* .hover is a class added by js for the currently hovered/focused menu */
@@ -353,6 +353,22 @@ a:active,
 #content .panel-first {
     border-top: 0 !important;
 }
+
+/**
+ * Scheme-specific blocks
+ */
+#shim-alpha {
+    font-size: 0.75em;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    height: 7.833333em;
+    width: 100%;
+    background: #fff;
+    border-top: 0.5em solid #e3e3e3;
+    border-bottom: 0.5em solid #f4717a;
+}
+
 /**
  * Form field styles
  */
