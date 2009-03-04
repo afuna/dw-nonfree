@@ -142,55 +142,6 @@ accountlinks<=
 _code?>
 <=accountlinks
 
-menunav<=
-<?_code
-{
-    my $remote = LJ::get_remote();
-    my $ret;
-
-    if ( $remote ) {
-        $ret .= "<ul>";
-
-        foreach my $cat ( qw( create organize read explore ) ) {
-            my $nav_links = LJ::run_hook( "nav_links", category => $cat );
-            if ( @$nav_links ) {
-                $ret .= "<li id='${cat}_topnav' class='topnav'><a href='$LJ::SITEROOT/nav.bml?cat=$cat'>$ML{\"tropo.nav.$cat\"}</a>";
-                $ret .= "<ul id='${cat}_subnav' class='subnav_container'>";
-                foreach my $link ( @$nav_links ) {
-                    next unless $link->{loggedin};
-                    $ret .= "<li class='subnav'><a href='$link->{url}'>" . BML::ml("$link->{text}", $link->{text_opts}) . "</a></li>";
-                }
-                $ret .= "</ul>";
-                $ret .= "</li>";
-            }
-        }
-
-        $ret .= "</ul>";
-    } else {
-        $ret .= "<ul>";
-
-        foreach my $cat ( qw( create explore ) ) {
-            my $nav_links = LJ::run_hook( "nav_links", category => $cat );
-            if ( @$nav_links ) {
-                $ret .= "<li id='${cat}_topnav' class='topnav'><a href='$LJ::SITEROOT/nav.bml?cat=$cat'>$ML{\"tropo.nav.$cat\"}</a>";
-                $ret .= "<ul id='${cat}_subnav' class='subnav_container'>";
-                foreach my $link ( @$nav_links ) {
-                    next unless $link->{loggedout};
-                    $ret .= "<li class='subnav'><a href='$link->{url}'>" . BML::ml("$link->{text}", $link->{text_opts}) . "</a></li>";
-                }
-                $ret .= "</ul>";
-                $ret .= "</li>";
-            }
-        }
-
-        $ret .= "</ul>";
-    }
-
-    return $ret;
-}
-_code?>
-<=menunav
-
 footer<=
 <ul>
     <li><a href="<?siteroot?>/legal/privacy.bml"><?_ml tropo.footer.legal.privacypolicy _ml?></a> &bull; </li>
