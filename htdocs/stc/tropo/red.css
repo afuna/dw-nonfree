@@ -369,6 +369,10 @@ a:active,
     border-bottom: 0.5em solid #f4717a;
 }
 
+#updateinsobject {
+    z-index: 5;
+}
+
 /**
  * Form field styles
  */
