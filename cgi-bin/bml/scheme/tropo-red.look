@@ -41,7 +41,11 @@ head<=
         LJ::need_res( "stc/lj_base-app.css" );
         LJ::need_res( "stc/tropo/reset.css" );
         LJ::need_res( "stc/tropo/red.css" );
-        LJ::need_res( "js/tropo/nav.js" );
+
+        # we support both old style and new style pages; only one of these will get
+        # loaded ...
+        LJ::need_res( {group=>'jquery'}, "js/tropo/nav-jquery.js" );
+        LJ::need_res( {group=>'default'}, "js/tropo/nav.js" );
     _code?>
     <?_code LJ::res_includes(); _code?>
 
