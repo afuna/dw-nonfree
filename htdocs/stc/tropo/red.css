@@ -207,6 +207,7 @@ a:active,
     width: 100%;
     height: 4.166667em;
     background: #ddd url(/img/tropo-red/bg_footer_gradient.png) repeat-x;
+    clear: both;
 }
 #footer ul {
     overflow: hidden;
@@ -632,4 +633,4 @@ table.editfilters td {
 
 .invitecodes td {
     padding: 5px;
-} 
+}
