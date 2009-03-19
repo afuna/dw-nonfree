@@ -634,3 +634,45 @@ table.editfilters td {
 .invitecodes td {
     padding: 5px;
 }
+
+
+/* create flow */
+
+.create-form td {
+    padding: 5px;
+}
+
+.appwidget-createaccount .create-button {
+    color: #444;
+    background-color: #f4717a;
+}
+
+.appwidget-createaccountprogressmeter .step-block-active {
+    color: #fff;
+    background-color: #c1272d;
+}
+
+.appwidget-createaccountprogressmeter .step-block-inactive {
+    color: #fff;
+    background-color: #f4717a;
+}
+
+.appwidget-createaccountprogressmeter .step-selected {
+    color: #c1272d;
+}
+
+.appwidget-createaccountprogressmeter .step-previous {
+    color: #f4717a;
+}
+
+.appwidget-createaccountprogressmeter .step-next {
+    color: #666;
+}
+
+.appwidget-createaccountprofile .header {
+    color: #c1272d;
+}
+
+.appwidget-createaccountprofile .field-name {
+    background-color: #e0e0e0;
+}
