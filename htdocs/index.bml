@@ -1,8 +1,8 @@
 <?page
 TITLE=><?sitename?>
 HEAD<=
-<meta name="description" content="<?sitename?> ... words words.">
-<meta name="keywords" content="diary,journal">
+<meta name="description" content="<?sitename?>: A blog/journal system for people who create.">
+<meta name="keywords" content="diary,journal,blog,dreamwidth">
 <meta name="rating" content="General"> 
 <meta name="ROBOTS" content="All">
 <meta name="revisit-after" Content="14 days">
@@ -10,6 +10,10 @@ HEAD<=
 BODY<=
 
 <?h1 Open Source. Open expression. Open operations. h1?>
+
+<br />
+<center><div style='font-weight: bold; background-color: #f4717a; width: 50%; border: 1px solid #000; padding: 3em;'>Dreamwidth Studios will open to the public on the evening of April 30, 2009. At that time, you can create an account with an invite code from an existing user, or purchase a <a href='http://www.dreamwidth.org/support/faqbrowse.bml?faqid=4'>paid account</a>. We will announce our exact opening time soon.</div></center>
+<br />
 
 <?p
 <?sitename?> is an Open Source social networking, content management, and personal publishing platform. Our mission in life is to make it easy for you to share the things you make, and easy to find the people who are making the things you want to enjoy. p?>
