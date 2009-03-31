@@ -55,7 +55,7 @@ head<=
 <=head
 
 logo<=
-<a href="<?siteroot?>"><img src="<?imgprefix?>/tropo-red/dw_logo.png" alt="<?_code $LJ::SITENAMESHORT _code?>" /></a>
+<a href="<?siteroot?>"><img src="<?imgprefix?>/tropo-red/dw_logo_beta.png" alt="<?_code $LJ::SITENAMESHORT _code?>" /></a>
 <=logo
 
 accountlinks<=
