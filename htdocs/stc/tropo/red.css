@@ -400,6 +400,11 @@ a:active,
     color: #000;
 }
 
+/* update.bml */
+#draft {
+    font-size: medium;
+}
+
 /** 
  * Start overriding some classes set in dw-free/htdocs/stc/
  * Other site scheme designers: use your own colors here
