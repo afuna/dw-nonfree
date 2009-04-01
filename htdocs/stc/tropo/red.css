@@ -681,3 +681,22 @@ table.editfilters td {
 .appwidget-createaccountprofile .field-name {
     background-color: #e0e0e0;
 }
+
+/* Comments */
+.cmtbar-odd {
+    border-bottom: 1px solid #c1272c;
+    border-right: 1px solid #c1272c;
+    background-color: #c0c0c0;
+}
+
+.cmtbar-even {
+    border-bottom: 1px solid #f4717a;
+    border-right: 1px solid #f4717a;
+    background-color: #e2e2e2;
+}
+
+/* Profile */
+.username {
+    border-bottom: 1px solid #c7e0f6;
+    background-color: #ecf6ff;
+}
