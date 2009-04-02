@@ -65,8 +65,8 @@ a:active,
     width: 100%;
 }
 #page {
-    width: 80em;
-    margin: 0 auto;
+    max-width: 80em;
+    margin: 0 2%;
     position: relative;
     z-index: 1;
 }
