@@ -112,6 +112,18 @@
         paidaccountinfo => "http://www.dreamwidth.org/support/faqbrowse.bml?faqid=4",
     );
 
+    # shop/pricing configuration
+    %SHOP = (
+        # key => [ $USD, months, account type ],
+        prem6  => [  20,  6, 'premium' ],
+        prem12 => [  40, 12, 'premium' ],
+        paid1  => [   3,  1, 'paid'    ],
+        paid2  => [   5,  2, 'paid'    ],
+        paid6  => [  13,  6, 'paid'    ],
+        paid12 => [  25, 12, 'paid'    ],
+        seed   => [ 200, 99, 'seed'    ],
+    );
+
 }
 
 1;
