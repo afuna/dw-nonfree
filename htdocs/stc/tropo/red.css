@@ -688,12 +688,19 @@ table.editfilters td {
     border-bottom: 1px solid #c1272c;
     border-right: 1px solid #c1272c;
     background-color: #c0c0c0;
+    min-width: 50em;
 }
 
 .cmtbar-even {
     border-bottom: 1px solid #f4717a;
     border-right: 1px solid #f4717a;
     background-color: #e2e2e2;
+    min-width: 50em;
+}
+
+#Comments {
+    overflow: auto;
+    max-width: 80em;
 }
 
 /* Profile */
