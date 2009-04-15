@@ -20,6 +20,8 @@ LJ::register_hook('modify_scheme_list', sub {
 
     @$schemesref = (
         { scheme => "tropo-red", title => "Tropospherical Red" },
+        { scheme => "tropo-purple", title => "Tropospherical Purple" },
+        { scheme => "lynx", title => "Lynx (light mode)" },
     );
 });
 

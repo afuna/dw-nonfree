@@ -1,0 +1,682 @@
+/** Tropospherical Purple CSS
+ *
+ * Original Authors:
+ *     Janine Costanzo <janine@netrophic.com>
+ *     Jesse Proulx <jproulx@jproulx.net>
+ *     Elizabeth Lubowitz <grrliz@gmail.com>
+ *     Denise Paolucci <denise@dreamwidth.org>
+ * 
+ * Purple Scheme by Rue Silver <pseudelight@gmail.com>
+ *
+ * Copyright (c) 2009 by Dreamwidth Studios, LLC.
+ *
+ * This program is NOT free software or open-source; you can use it as an
+ * example of how to implement your own site-specific extensions to the
+ * Dreamwidth Studios open-source code, but you cannot use it on your site
+ * or redistribute it, with or without modifications.
+ *
+ */
+
+/**
+ * Dreamwidth Site Scheme
+ *
+ * Standard layout for Dreamwidth
+ *
+ * Mockups designed by grrliz, hence grrliz.css
+ *
+ * @project         Dreamwidth Site Design
+ * @author          Jesse Proulx
+ * @date            2009-01-07
+ * @version         Alpha
+ * @revision        $Revision$
+ * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
+ *
+ * @colordef        #26bbb6 Turquoise (body background)
+ * @colordef        #444444 Dark Gray (copy)
+ */
+body {
+    background-color: #3A155A;
+    font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
+    color: #444;
+}
+/**
+ * Links and a pseudo link class
+ */
+a:link,
+a:visited,
+.link {
+    color: #3A155A;
+    text-decoration: underline;
+}
+a:hover,
+a:active,
+.link:hover {
+    color: #5E3DA6;
+}
+/**
+ * Default browser font size is 16px, we want 12px. All width/height measurements
+ * are now calculated using the element's font-size in pixels.
+ *
+ * For example, a 30px wide box with a font-size of 12px = 30/12 = 2.5em
+ */
+#canvas {
+    font-size: 0.75em;
+    line-height: 1.5;
+    margin: 2em 0 2em 0;
+    background-color: #f7f7f7;
+    width: 100%;
+}
+#page {
+    width: 80em;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+/**
+ * Masthead is the space for our logo and account links
+ */
+ 
+#masthead {
+    height: 8.833333em;
+    width: 100%;
+    position: relative;
+}
+#masthead #logo {
+    display: block;
+    position: absolute;
+    top: 2.25em;
+    left: 0;
+}
+
+#account-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 1em;
+    text-align: right;
+}
+#account-links ul li {
+    float: left;
+    margin: 0 0.5em;
+}
+#account-links #login-table {
+    margin-top: 1em;
+}
+#account-links #login-table td {
+    padding: 3px;
+    text-align: right;
+}
+#account-links #login-table td.input-cell,
+#account-links #login-table td.remember-me-cell {
+    text-align: left;
+}
+#account-links #login-table td.input-cell a {
+    font-size: 0.8em;
+}
+#account-links-text {
+    float: right;
+    padding-right: 1em;
+    padding-top: 2em;
+}
+#account-links-text .ljuser {
+    font-size: 1.5em;
+}
+#account-links-text .ljuser img {
+    vertical-align: middle !important;
+}
+#account-links-userpic {
+    float: right;
+}
+#account-links-userpic img {
+    margin-top: 10px;
+}
+/**
+ * Menu navigation
+ *
+ * The menu follows the content in the markup source, so we absolutely position it underneath the masthead
+ */
+ 
+#menu {
+    position: absolute;
+    top: 8.833333em;
+    left: 0;
+    background: #F3D2FC; 
+    height: 2.5em;
+    width: 100%;
+    line-height: 2.5em;
+    clear: both;
+}
+#menu ul li {
+    float: left;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 0;
+}
+#menu ul > li {
+    width: auto;
+}
+#menu ul li a {
+    background: transparent url(http://s.dreamwidth.org/img/tropo-red/icon_menu_swirl.png) 0.833333em 0.916667em no-repeat;
+    display: block;
+    color: #444;
+    text-decoration: none;
+    text-indent: 2em;
+    padding-right: 0.75em;
+}
+/* .hover is a class added by js for the currently hovered/focused menu */
+#menu ul li.hover a {
+    height: 100%;
+    background-color: #5E3DA6;
+    color: #fff;
+    width: 100%;
+}
+#menu ul li.hover a:hover {
+    background-color: #3A155A;
+    cursor: pointer;
+}
+#menu ul li ul {
+    display: none;
+}
+#menu ul li.hover ul {
+    display: block;
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    width: 16em;
+    background-color: #5E3DA6;
+}
+#menu ul li ul li {
+    float: none;
+    width: 100%;
+}
+#menu ul li ul li a {
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+#menu .appwidget-search {
+    text-align: right;
+    line-height: 2.1em;
+    padding-right: 0.833333em;
+    position: static;
+}
+#menu .appwidget-search input#search {
+    width: 15.5em;
+}
+/**
+ * Footer
+ */
+#footer {
+    width: 100%;
+    height: 4.166667em;
+    background: #F3D2FC;
+    clear: both;
+}
+#footer ul {
+    overflow: hidden;
+}
+#footer ul li {
+    float: left;
+    margin-right: 0.8em;
+}
+/**
+ * #content houses the page-specific innards, and creates margins for the absolutely
+ * positioned masthead and footer
+ */
+#content {
+    margin-top: 4.6em;
+    margin-bottom: 2.75em;
+    overflow: hidden;
+}
+#content h1 {
+    font: bold 2em/1.5 Arial, sans-serif;
+    color: #3A155A;
+    margin: 0;
+    padding: 0;
+}
+#content h2 {
+    font: 1.5em/1.5 Arial, sans-serif;
+    color: #3A155A;
+    margin: 0;
+    padding: 0;
+}
+#content p {
+    margin-bottom: 1em;
+}
+#content p.note {
+    font-style: italic;
+    font-size: 0.8em;
+}
+#content ul.bullet-list {
+    list-style: disc outside;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+/**
+ * Content Layouts
+ *
+ * Content layouts are determined based on the class assigned to #content. Potential layouts include:
+ * -- wide sidebars
+ * -- thin sidebars
+ * -- equal width/height columns
+ * -- full page (default)
+ *
+ * Columns/rows inside of #content are named primary, secondary, tertiary, etc and
+ * content is placed inside based on order of importance.
+ */
+
+/* full page (default) */
+#primary,
+#secondary {
+    width: 100%;
+    margin-bottom: 2em;
+}
+/* 2 column wide right sidebar */
+.layout-wide-right-sidebar #primary {
+    width: 53.333333em;
+    margin-right: 1.25em;
+    float: left;
+    padding: 0;
+}
+.layout-wide-right-sidebar #secondary {
+    float: right;
+    width: 25.416667em;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5em;
+}
+/**
+ * Panels are generic boxes for divs inside of #content
+ */
+#content #primary .panel,
+#content #secondary .panel {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-color: #ccc;
+    border-style: solid;
+    margin: 0 0 0.166667em 0;
+    overflow: hidden;
+}
+#content #primary .panel h2 {
+    color: #3A155A;
+    height: 2em;
+    line-height: 2em;
+    border-bottom: 1px solid #ccc;
+    font: bold 1.5em/2 Arial, sans-serif;
+}
+#content #primary .panel p {
+    clear: both;
+}
+#content #secondary .panel h3 {
+    color: #3A155A;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    font: bold 1.166667em/2.142857 Arial, sans-serif;
+}
+/**
+ * Panels have different styles for different content layouts
+ */
+.layout-wide-right-sidebar #primary .panel .sidebar {
+    float: left;
+    width: 12.5em;
+}
+.layout-wide-right-sidebar #primary .panel .contents {
+    float: left;
+    padding-top: 6px;
+    padding-left: 14px;
+    border-left: 1px solid #F3D2FC;
+    width: 39.583333em;
+    line-height: 1.8;
+}
+.layout-wide-right-sidebar #secondary .panel .contents {
+    margin: 0.5em 0;
+    line-height: 1.8;
+}
+/**
+ * Panels have unique IDs for CSS hooks
+ */
+#panel-quick-update .sidebar p {
+    height: 3em;
+    line-height: 3em;
+}
+#panel-quick-update .contents label {
+    display: block;
+    width: 100%;
+    color: #3A155A;
+    font-weight: bold;
+}
+#panel-quick-update .contents input,
+#panel-quick-update .contents textarea {
+    width: 95%;
+}
+#panel-quick-update .contents textarea {
+    height: 120px;
+}
+/* panel-first class is added through js */
+#content .panel-first {
+    border-top: 0 !important;
+}
+
+/**
+ * Scheme-specific blocks
+ */
+#shim-alpha {
+    font-size: 0.75em;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    height: 7.833333em;
+    width: 100%;
+    background: #fff;
+    border-top: 0.5em solid #F3D2FC;
+    border-bottom: 0.5em solid #5E3DA6;
+}
+
+#updateinsobject {
+    z-index: 5;
+}
+
+/**
+ * Form field styles
+ */
+.dw-field-default {
+    color: #333;
+    font-style: italic;
+}
+.standout {
+    text-align: center;
+}
+.standout .standout-inner {
+    background-color: #5E3DA6;
+    color: #444;
+    border: 1px solid #3A155A;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.standout .standout-inner td {
+    padding: 0.5em;
+}
+
+.standout-inner a:hover, .standout-inner a:active, .standout-inner a:hover {
+    color: #000;
+}
+
+/** 
+ * Start overriding some classes set in dw-free/htdocs/stc/
+ * Other site scheme designers: use your own colors here
+ * /
+
+/* editpics.css */
+#uploadBox {
+    background-color: #d3afec;
+    border: 1px solid #7e27c1;
+    margin: 0 20px 0 0;
+}
+
+/* profile.css */
+
+.section, .username, .actions li {
+    background-color: #F3D2FC;
+    border-bottom: 1px dotted #666;
+    border-left: 1px dotted #666;
+    color: #3A155A;
+} 
+
+.section img, .username img {
+    padding-left: 3px;
+}
+
+/* customize.css */
+
+.theme-current {
+    background-color: #d3afec;
+    border: 1px solid #7e27c1;
+}
+
+/* widgets/customizetheme.css, themechooser.css, themenav.css, 
+currenttheme.css */
+
+.theme-current h2.widget-header, .layout-item.current {
+    background-color: #d3afec;
+    border: 1px solid #7e27c1;
+}
+
+h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-item .theme-icons {
+    border: 1px solid #7e27c1;
+}
+
+.theme-item .theme-button-disabled, .layout-item .layout-button-disabled {
+    background: #5E3DA6;
+}
+
+.theme-item {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.customize-button, .theme-item .theme-button, .layout-item 
+.layout-button {
+    background: #5E3DA6;
+    border: 2px solid #541e1a;
+    border-top: 2px solid #5E3DA6;
+    border-left: 2px solid #5E3DA6;
+}
+
+
+.theme-nav-content, .customize-content {
+    border: 1px solid #7e27c1;
+    border-left: none;
+}
+
+.theme-selector-nav {
+    background-color: #d3afec;
+}
+
+.theme-nav li a, .theme-nav-small li {
+    border-right: 1px solid #7e27c1;
+}
+
+.theme-nav li.on a {
+    border: 1px solid #7e27c1;
+    border-right: none;
+}
+
+.theme-nav-separator {
+    border-right: 1px solid #7e27c1;
+}
+
+.theme-nav-separator hr {
+    border-top: 1px solid #5E3DA6;
+}
+
+.customize-content .subheader {
+    background-color: #d3afec;
+    border-bottom: 1px solid #7e27c1;
+}
+
+.customize-content .subheader.on {
+    background-color: #d3afec;
+}
+
+.customize-nav {
+    background-color: #d3afec;
+}
+
+.customize-nav li a, .customize-nav li li  {
+    border-right: 1px solid #7e27c1;
+}
+
+.customize-nav li.on a, .customize-nav li.on ul {
+    border: 1px solid #7e27c1;
+    border-right: none;
+    border-top: none;
+}
+
+.customize-nav li.on {
+    border-top: 1px solid #7e27c1;
+}
+
+.moodtheme-preview, .appwidget-linkslist .tips-box {
+    background-color: #d3afec;
+    border: 1px solid #7e27c1;
+}
+
+.theme-current-links {
+    border-bottom: 1px solid #7e27c1;
+    border-right: 1px solid #7e27c1;
+}
+
+.theme-nav li a:visited, .customize-nav li a:visited {
+    color: #7e27c1;
+    font-weight: bold;
+}
+
+/* inbox */
+
+#esn_folder_all {
+    background-color: #d3afec !important;
+}
+
+/* lj_settings.css */
+
+.section_head, table.alternating-rows th, div.username {
+    background-color: #F3D2FC;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #7e27c1;
+}
+
+/* comm_promo.css */
+
+div.CommunityPromoBox {
+    border: 1px solid #5E3DA6;
+}
+
+/* settings.css */
+
+#settings_save {
+    background: #d3afec;
+}
+
+#settings_nav li a {
+    background: #5E3DA6;
+    border: 1px solid #7e27c1;
+    border-bottom: none;
+}
+
+#settings_nav li a:hover, #settings_nav li a.active {
+    background: #d3afec;
+}
+
+#settings_nav_title p {
+    background: #d3afec;
+    border-left: 1px solid #7e27c1;
+}
+
+/* cprod.css */
+
+.cprod.h3 {
+    background: #5E3DA6;
+    
+}
+
+.cprod content {
+    border: 1px solid #c1271c;
+}
+
+
+/* allpics styling */
+
+table.allpics {
+    margin-left: 50px;
+}
+
+.allpics td {
+    vertical-align: bottom;
+}
+
+.allpics .pic img {
+    margin-right: 1em;
+    margin-top: 15px;
+}
+
+.allpics blank {
+    width: 50px;
+}
+
+
+/* editfilters styling */
+
+table.editfilters td {
+    padding: 5px;
+}
+
+
+/* FAQ */
+
+.faqlist {
+    list-style: disc outside;
+    margin-bottom: 2em;
+}
+
+/* Inbox - Compose */
+
+.inbox-compose {
+    width: 100%;
+}
+
+.inbox-compose td {
+    vertical-align: top;
+}
+
+
+/* manage/invitecodes.bml */
+
+.invitecodes td {
+    padding: 5px;
+}
+
+
+/* create flow */
+
+.create-form td {
+    padding: 5px;
+}
+
+.appwidget-createaccount .create-button {
+    color: #444;
+    background-color: #5E3DA6;
+}
+
+.appwidget-createaccountprogressmeter .step-block-active {
+    color: #fff;
+    background-color: #3A155A;
+}
+
+.appwidget-createaccountprogressmeter .step-block-inactive {
+    color: #fff;
+    background-color: #5E3DA6;
+}
+
+.appwidget-createaccountprogressmeter .step-selected {
+    color: #3A155A;
+}
+
+.appwidget-createaccountprogressmeter .step-previous {
+    color: #5E3DA6;
+}
+
+.appwidget-createaccountprogressmeter .step-next {
+    color: #666;
+}
+
+.appwidget-createaccountprofile .header {
+    color: #3A155A;
+}
+
+.appwidget-createaccountprofile .field-name {
+    background-color: #F3D2FC;
+}
