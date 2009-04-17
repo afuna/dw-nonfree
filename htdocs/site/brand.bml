@@ -25,7 +25,7 @@ body<=
 
     $ret .= <<PAGE;
 
-<p>In order to protect our users from confusion and to protect our identity and reputation, we have set forth guidelines for using our name and our logos. This applies to anyone who would like to run a production site using any of the code developed or maintaned by Dreamwidth Studios, LLC, as well as to anyone who would like to write a client or tool that interfaces with Dreamwidth code.</p>
+<p>In order to protect our users from confusion and to protect our identity and reputation, we have set forth guidelines for using our name and our logos. This applies to anyone who would like to run a production site using any of the code developed or maintained by Dreamwidth Studios, LLC, as well as to anyone who would like to write a client or tool that interfaces with Dreamwidth code.</p>
 
 <p>These are basic guidelines. If you have a question that isn't covered here, please <a href='http://www.dreamwidth.org/support/submit.bml'>contact us</a> with details about your planned use. We are happy to answer any questions you might have, and we are more than willing to grant express written permission for the use of any of our service marks in most cases as long as we feel there's no chance of causing confusion among our users.</p>
 
