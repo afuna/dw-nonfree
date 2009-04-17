@@ -1,0 +1,6 @@
+################################################################
+# base filename         layer type      parent
+
+transmogrified/layout   layout          core2
+transmogrified/themes   theme+          transmogrified/layout
+

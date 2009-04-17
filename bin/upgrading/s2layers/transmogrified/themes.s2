@@ -1,0 +1,5 @@
+#NEWLAYER: transmogrified/basic
+layerinfo type = "theme";
+layerinfo name = "Transmogrified Basic";
+layerinfo redist_uniq = "transmogrified/basic";
+
