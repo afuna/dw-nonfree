@@ -31,11 +31,11 @@
  * @revision        $Revision$
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  *
- * @colordef        #26bbb6 Turquoise (body background)
+ * @colordef        #f7f7f7 Almost White (body background)
  * @colordef        #444444 Dark Gray (copy)
  */
 body {
-    background-color: #3A155A;
+    background-color: #3a155a;
     font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
     color: #444;
 }
@@ -45,13 +45,13 @@ body {
 a:link,
 a:visited,
 .link {
-    color: #3A155A;
+    color: #3a155a;
     text-decoration: underline;
 }
 a:hover,
 a:active,
 .link:hover {
-    color: #5E3DA6;
+    color: #5e3da6;
 }
 /**
  * Default browser font size is 16px, we want 12px. All width/height measurements
@@ -64,7 +64,8 @@ a:active,
     line-height: 1.5;
     margin: 2em 0 2em 0;
     background-color: #f7f7f7;
-    width: 100%;
+    width: 92%;
+    padding: 0 4%;
 }
 #page {
     width: 80em;
@@ -140,7 +141,7 @@ a:active,
     position: absolute;
     top: 8.833333em;
     left: 0;
-    background: #F3D2FC; 
+    background: #f3d2fc; 
     height: 2.5em;
     width: 100%;
     line-height: 2.5em;
@@ -157,7 +158,7 @@ a:active,
     width: auto;
 }
 #menu ul li a {
-    background: transparent url(http://s.dreamwidth.org/img/tropo-red/icon_menu_swirl.png) 0.833333em 0.916667em no-repeat;
+    background: transparent url(/img/tropo-red/icon_menu_swirl_dropdown.png) 0.833333em 0.916667em no-repeat;
     display: block;
     color: #444;
     text-decoration: none;
@@ -167,12 +168,13 @@ a:active,
 /* .hover is a class added by js for the currently hovered/focused menu */
 #menu ul li.hover a {
     height: 100%;
-    background-color: #5E3DA6;
+    background-color: #5e3da6;
     color: #fff;
     width: 100%;
 }
 #menu ul li.hover a:hover {
-    background-color: #3A155A;
+    background-color: #3a155a;
+    color: #fff;
     cursor: pointer;
 }
 #menu ul li ul {
@@ -183,8 +185,8 @@ a:active,
     position: absolute;
     top: 2.5em;
     left: 0;
-    width: 16em;
-    background-color: #5E3DA6;
+    width: 18em;
+    background-color: #5e3da6;
 }
 #menu ul li ul li {
     float: none;
@@ -210,7 +212,7 @@ a:active,
 #footer {
     width: 100%;
     height: 4.166667em;
-    background: #F3D2FC;
+    background: #f3d2fc;
     clear: both;
 }
 #footer ul {
@@ -231,13 +233,13 @@ a:active,
 }
 #content h1 {
     font: bold 2em/1.5 Arial, sans-serif;
-    color: #3A155A;
+    color: #3a155a;
     margin: 0;
     padding: 0;
 }
 #content h2 {
     font: 1.5em/1.5 Arial, sans-serif;
-    color: #3A155A;
+    color: #3a155a;
     margin: 0;
     padding: 0;
 }
@@ -299,7 +301,7 @@ a:active,
     overflow: hidden;
 }
 #content #primary .panel h2 {
-    color: #3A155A;
+    color: #3a155a;
     height: 2em;
     line-height: 2em;
     border-bottom: 1px solid #ccc;
@@ -309,7 +311,7 @@ a:active,
     clear: both;
 }
 #content #secondary .panel h3 {
-    color: #3A155A;
+    color: #3a155a;
     height: 30px;
     line-height: 30px;
     border-bottom: 1px solid #ccc;
@@ -344,7 +346,7 @@ a:active,
 #panel-quick-update .contents label {
     display: block;
     width: 100%;
-    color: #3A155A;
+    color: #3a155a;
     font-weight: bold;
 }
 #panel-quick-update .contents input,
@@ -371,7 +373,7 @@ a:active,
     width: 100%;
     background: #fff;
     border-top: 0.5em solid #F3D2FC;
-    border-bottom: 0.5em solid #5E3DA6;
+    border-bottom: 0.5em solid #5e3da6;
 }
 
 #updateinsobject {
@@ -389,9 +391,9 @@ a:active,
     text-align: center;
 }
 .standout .standout-inner {
-    background-color: #5E3DA6;
-    color: #444;
-    border: 1px solid #3A155A;
+    background-color: #5e3da6;
+    color: #fff;
+    border: 1px solid #3a155a;
     margin-top: 0.5em;
     margin-left: auto;
     margin-right: auto;
@@ -401,7 +403,12 @@ a:active,
 }
 
 .standout-inner a:hover, .standout-inner a:active, .standout-inner a:hover {
-    color: #000;
+    color: #fff;
+}
+
+/* update.bml */
+#draft {
+    font-size: medium;
 }
 
 /** 
@@ -422,7 +429,7 @@ a:active,
     background-color: #F3D2FC;
     border-bottom: 1px dotted #666;
     border-left: 1px dotted #666;
-    color: #3A155A;
+    color: #3a155a;
 } 
 
 .section img, .username img {
@@ -449,7 +456,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 
 .theme-item .theme-button-disabled, .layout-item .layout-button-disabled {
-    background: #5E3DA6;
+    background: #5e3da6;
 }
 
 .theme-item {
@@ -459,10 +466,10 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 
 .customize-button, .theme-item .theme-button, .layout-item 
 .layout-button {
-    background: #5E3DA6;
+    background: #5e3da6;
     border: 2px solid #541e1a;
-    border-top: 2px solid #5E3DA6;
-    border-left: 2px solid #5E3DA6;
+    border-top: 2px solid #5e3da6;
+    border-left: 2px solid #5e3da6;
 }
 
 
@@ -489,7 +496,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 
 .theme-nav-separator hr {
-    border-top: 1px solid #5E3DA6;
+    border-top: 1px solid #5e3da6;
 }
 
 .customize-content .subheader {
@@ -552,7 +559,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 /* comm_promo.css */
 
 div.CommunityPromoBox {
-    border: 1px solid #5E3DA6;
+    border: 1px solid #5e3da6;
 }
 
 /* settings.css */
@@ -562,7 +569,8 @@ div.CommunityPromoBox {
 }
 
 #settings_nav li a {
-    background: #5E3DA6;
+    color: #fff;
+    background: #5e3da6;
     border: 1px solid #7e27c1;
     border-bottom: none;
 }
@@ -579,7 +587,7 @@ div.CommunityPromoBox {
 /* cprod.css */
 
 .cprod.h3 {
-    background: #5E3DA6;
+    background: #5e3da6;
     
 }
 
@@ -648,25 +656,25 @@ table.editfilters td {
 
 .appwidget-createaccount .create-button {
     color: #444;
-    background-color: #5E3DA6;
+    background-color: #5e3da6;
 }
 
 .appwidget-createaccountprogressmeter .step-block-active {
     color: #fff;
-    background-color: #3A155A;
+    background-color: #3a155a;
 }
 
 .appwidget-createaccountprogressmeter .step-block-inactive {
     color: #fff;
-    background-color: #5E3DA6;
+    background-color: #5e3da6;
 }
 
 .appwidget-createaccountprogressmeter .step-selected {
-    color: #3A155A;
+    color: #3a155a;
 }
 
 .appwidget-createaccountprogressmeter .step-previous {
-    color: #5E3DA6;
+    color: #5e3da6;
 }
 
 .appwidget-createaccountprogressmeter .step-next {
@@ -674,7 +682,7 @@ table.editfilters td {
 }
 
 .appwidget-createaccountprofile .header {
-    color: #3A155A;
+    color: #3a155a;
 }
 
 .appwidget-createaccountprofile .field-name {

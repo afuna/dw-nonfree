@@ -62,7 +62,8 @@ a:active,
     line-height: 1.5;
     margin: 2em 0 2em 0;
     background-color: #f7f7f7;
-    width: 100%;
+    width: 92%;
+    padding: 0 4%;
 }
 #page {
     max-width: 80em;
@@ -179,7 +180,7 @@ a:active,
     position: absolute;
     top: 2.5em;
     left: 0;
-    width: 16em;
+    width: 18em;
     background-color: #f4717a;
 }
 #menu ul li ul li {
