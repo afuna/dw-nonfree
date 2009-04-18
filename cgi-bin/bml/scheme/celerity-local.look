@@ -1,0 +1,5 @@
+_parent=>celerity.look
+
+logo<=
+<a href="<?siteroot?>"><img src="<?imgprefix?>/celerity/dw_logo_celerity_beta.png" alt="<?_code $LJ::SITENAMESHORT _code?>" /></a>
+<=logo
