@@ -138,14 +138,25 @@ sub _search_noinvleft {
 
     # Second column will be all 0 here (and is unneeded anyway), but putting it
     # in HAVING and not SELECT is non-standard SQL.
-    # TODO: this won't include users who never had any invite codes, which
-    # isn't ideal.
     my $sth = $dbslow->prepare( "SELECT userid, min(rcptid) FROM acctcode " .
                                 "GROUP BY userid HAVING min(rcptid) > 0 LIMIT ?" )
         or die $dbslow->errstr;
     # Keep only userid
-    my $uids = $dbslow->selectcol_arrayref( $sth, { Columns => [1] }, $max_nusers )
+    my $nomorecodes = $dbslow->selectcol_arrayref( $sth, { Columns => [1] }, 
+                                                   $max_nusers )
         or die $dbslow->errstr;
+    # Users who haven't had any codes yet will have a row in user but not in
+    # acctcode
+    $sth = $dbslow->prepare( "SELECT user.userid FROM user LEFT JOIN acctcode " .
+                             "ON user.userid = acctcode.userid " .
+                             "WHERE acctcode.userid IS NULL LIMIT ?" )
+        or die $dbslow->errstr;
+    my $noprevcodes = $dbslow->selectcol_arrayref( $sth, { Columns => [1] },
+                                                  $max_nusers ) 
+        or die $dbslow->errstr;
+
+    my $uids = [ @$nomorecodes, @$noprevcodes ];
+
     # Don't filter if too many, otherwise we lose that information
     return ($max_nusers <= scalar @$uids) ? $uids : _filter_pav( $uids );
 }
@@ -159,8 +170,6 @@ sub _search_noinvleft_apinvitee {
 
     # Second column will be all 0 here (and is unneeded anyway), but putting it
     # in HAVING and not SELECT is non-standard SQL.
-    # TODO: this won't include users who never had any invite codes, which
-    # isn't ideal.
     my $sth = $dbslow->prepare( "SELECT userid, min(rcptid) FROM acctcode " .
                                 "GROUP BY userid HAVING min(rcptid) > 0 LIMIT ?" )
         or die $dbslow->errstr;
