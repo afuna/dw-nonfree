@@ -630,7 +630,6 @@ function print_stylesheet () {
     }
 
     .hfeed .navigation {
-        display: none;
     }
 
     .navigation {
