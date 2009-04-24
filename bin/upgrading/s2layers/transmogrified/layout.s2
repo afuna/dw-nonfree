@@ -613,7 +613,7 @@ function print_stylesheet () {
     .entry .metadata-label {
         font-weight: bold;
     }
-    .comment .contents span {
+    .comment-poster {
         display: inline-block;
         min-width: 40%;
     }
