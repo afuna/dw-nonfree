@@ -23,6 +23,12 @@ property string sidebar_width {
 set sidebar_position = "right";
 set sidebar_width = "230px";
 
+propgroup presentation {
+    property use num_items_recent;
+    property use num_items_reading;
+    property use use_journalstyle_entry_page;
+}
+
 propgroup modules {
     property use module_userprofile_group;
     property use module_navlinks_group;
