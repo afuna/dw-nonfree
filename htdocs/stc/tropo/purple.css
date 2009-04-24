@@ -68,7 +68,7 @@ a:active,
     padding: 0 4%;
 }
 #page {
-    width: 80em;
+    max-width: 80em;
     margin: 0 auto;
     position: relative;
     z-index: 1;
