@@ -469,45 +469,45 @@ function print_stylesheet () {
         text-decoration: none;
     }
 
-    .entry-wrapper-a .entry, .comment-wrapper-a .comment, .text_noentries_day {
+    .entry-wrapper-odd .entry, .comment-wrapper-odd .comment, .text_noentries_day {
         border: solid 1px $*color_entry_border;
         background-color: $*color_entry_background;
         color: $*color_entry_text;
     }
-    .entry-wrapper-a .userpic a, .comment-wrapper-a .userpic a {
+    .entry-wrapper-odd .userpic a, .comment-wrapper-odd .userpic a {
         background-color: $*color_entry_title_background;
         border: solid 1px $*color_entry_title_border;
     }
-    .entry-wrapper-a .entry-title, .comment-wrapper-a .comment-title {
+    .entry-wrapper-odd .entry-title, .comment-wrapper-odd .comment-title {
         border: solid 1px $*color_entry_title_border;
         color: $*color_entry_title;
         background-color: $*color_entry_title_background;
     }
-    .entry-wrapper-a .entry-title a, .comment-wrapper-a .comment-title a {
+    .entry-wrapper-odd .entry-title a, .comment-wrapper-odd .comment-title a {
         color: $*color_entry_title;
     }
-    a, .entry-wrapper-a a, .comment-wrapper-a a {
+    a, .entry-wrapper-odd a, .comment-wrapper-odd a {
         color: $*color_entry_link;
     }
 
-    .entry-wrapper-b .entry, .comment-wrapper-b .comment {
+    .entry-wrapper-even .entry, .comment-wrapper-even .comment {
         border: solid 1px $*color_entry_border_alt;
         background-color: $*color_entry_background_alt;
         color: $*color_entry_text_alt;
     }
-    .entry-wrapper-b .userpic a, .comment-wrapper-b .userpic a {
+    .entry-wrapper-even .userpic a, .comment-wrapper-even .userpic a {
         background-color: $*color_entry_subject_alt_background;
         border: solid 1px $*color_entry_subject_alt_border;
     }
-    .entry-wrapper-b .entry-title, .comment-wrapper-b .comment-title {
+    .entry-wrapper-even .entry-title, .comment-wrapper-even .comment-title {
         border: solid 1px $*color_entry_subject_alt_border;
         color: $*color_entry_subject_alt;
         background-color: $*color_entry_subject_alt_background;
     }
-    .entry-wrapper-b .entry-title a, .comment-wrapper-b .comment-title a {
+    .entry-wrapper-even .entry-title a, .comment-wrapper-even .comment-title a {
         color: $*color_entry_subject_alt;
     }
-    .entry-wrapper-b a, .comment-wrapper-b a {
+    .entry-wrapper-even a, .comment-wrapper-even a {
         color: $*color_entry_link_alt;
     }
 
