@@ -11,8 +11,38 @@ BODY<=
 
 <?h1 Open Source. Open expression. Open operations. h1?>
 
-<br />
-<center><div style='font-weight: bold; background-color: #f4717a; width: 50%; border: 1px solid #000; padding: 3em;'>Dreamwidth Studios will open to the public on the evening of April 30, 2009. At that time, you can create an account with an invite code from an existing user, or purchase a <a href='http://www.dreamwidth.org/support/faqbrowse.bml?faqid=4'>paid account</a>. We will announce our exact opening time soon.</div></center>
+<br/>
+
+<center><div style='font-weight: bold; background-color: #f4717a;
+width: 50%; border: 1px solid #000; padding: 3em;'>Dreamwidth
+Studios will open to the public at 9PM EDT on the evening
+of April 30, 2009. At that time, you can create an account
+with an invite code from an existing user, or purchase a <a
+href='http://www.dreamwidth.org/support/faqbrowse.bml?faqid=4'>paid
+account</a>.<br /><br />
+
+<?_code
+{
+    my $x = 1241139600 - time();
+    my $str = '';
+
+    my $tmp = sub {
+        my $y = int ( $x / $_[0] );
+        $str .= sprintf( '%d ' . $_[1] . ( $y == 1 ? ' ' : 's ' ), $y );
+        $x %= $_[0];
+    };
+
+    $tmp->( 86400, 'day' );
+    $tmp->( 3600, 'hour' );
+    $tmp->( 60, 'minute' );
+    $tmp->( 1, 'second' );
+    $str =~ s/\s+$//;
+
+    return "Open Beta will begin in $str!";
+}
+_code?>
+</div></center>
+
 <br />
 
 <?p
