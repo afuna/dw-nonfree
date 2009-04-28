@@ -1,5 +1,10 @@
 _parent=>celerity.look
 
 logo<=
-<a href="<?siteroot?>"><img src="<?imgprefix?>/celerity/dw_logo_celerity_beta.png" alt="<?_code $LJ::SITENAMESHORT _code?>" /></a>
+<?_code
+{
+    my $imgprefix = $LJ::IS_SSL ? $LJ::SSLIMGPREFIX : $LJ::IMGPREFIX;
+    return "<a href='$LJ::SITEROOT/'><img src='$imgprefix/celerity/dw_logo_celerity_beta.png' alt='$LJ::SITENAMESHORT' /></a>";
+}
+_code?>
 <=logo

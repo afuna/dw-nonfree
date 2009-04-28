@@ -55,12 +55,18 @@ head<=
 <=head
 
 logo<=
-<a href="<?siteroot?>"><img src="<?imgprefix?>/tropo-red/dw_logo_beta_purple.png" alt="<?_code $LJ::SITENAMESHORT _code?>" /></a>
+<?_code
+{
+    my $imgprefix = $LJ::IS_SSL ? $LJ::SSLIMGPREFIX : $LJ::IMGPREFIX;
+    return "<a href='$LJ::SITEROOT/'><img src='$imgprefix/tropo-red/dw_logo_beta_purple.png' alt='$LJ::SITENAMESHORT' /></a>";
+}
+_code?>
 <=logo
 
 accountlinks<=
 <?_code
 {
+    my $imgprefix = $LJ::IS_SSL ? $LJ::SSLIMGPREFIX : $LJ::IMGPREFIX;
     my $remote = LJ::get_remote();
     my $ret;
 
@@ -79,10 +85,10 @@ accountlinks<=
         }
 
         $ret .= "<div id='account-links-userpic'><a href='$LJ::SITEROOT/editpics.bml'>";
-        if ( $userpic ) {
+        if ( $userpic && !$LJ::IS_SSL ) {
             $ret .= "<img src='" . $userpic->url . "' $wh alt=\"$ML{'tropo.accountlinks.userpic.alt'}\" />";
         } else {
-            $ret .= "<img src='$LJ::IMGPREFIX/nouserpic.png' width='80' alt=\"$ML{'tropo.accountlinks.userpic.alt'}\" />";
+            $ret .= "<img src='$imgprefix/nouserpic.png' width='80' alt=\"$ML{'tropo.accountlinks.userpic.alt'}\" />";
         }
         $ret .= "</a></div>";
         $ret .= "<div id='account-links-text'>";
