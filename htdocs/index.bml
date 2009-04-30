@@ -1,112 +1,179 @@
-<?page
-TITLE=><?sitename?>
-HEAD<=
+<?_c
+#
+# index.bml
+#
+# Dreamwidth.org-specific homepage, for both logged-in and logged-out users.
+#
+# Authors:
+#      Sophie Hamilton <sophie-dw@theblob.org>
+#
+# Copyright (c) 2009 by Dreamwidth Studios, LLC.
+#
+# This program is NOT free software or open-source; you can use it as an
+# example of how to implement your own site-specific extensions to the
+# Dreamwidth Studios open-source code, but you cannot use it on your site
+# or redistribute it, with or without modifications.
+#
+_c?><?page
+body<=
+<?_code
+{
+    use strict;
+    use vars qw( %GET %POST $title $windowtitle $headextra @errors @warnings );
+
+    use DW::InviteCodes;
+
+    LJ::need_res( "js/tropo/homepage.js" );
+    LJ::need_res( "stc/tropo/homepage.css" );
+
+    $windowtitle = $LJ::SITENAME;
+
+    my $remote = LJ::get_remote();
+
+    my $ret = "";
+
+    $headextra = <<HEAD;
 <meta name="description" content="<?sitename?>: A blog/journal system for people who create.">
 <meta name="keywords" content="diary,journal,blog,dreamwidth">
 <meta name="rating" content="General"> 
 <meta name="ROBOTS" content="All">
 <meta name="revisit-after" Content="14 days">
-<=HEAD
-BODY<=
+HEAD
 
-<?h1 Open Source. Open expression. Open operations. h1?>
+    if ( $remote ) {
+        # logged-in homepage goes here
+        my $readpage = $remote->journal_base . "/read";
+        $ret .= <<HTML;
+<p>The logged-in homepage hasn't been created yet, but here are some links to use while you're waiting:</p>
+<ul>
+<li><a href="$LJ::SITEROOT/update">Update Journal</a></li>
+<li><a href="$readpage">Reading Page</a></li>
+</ul>
+HTML
+    }
+    else {
+        # logged-out homepage
+        $headextra .= <<HEAD;
+<script type="text/javascript">
+    var ml = new Object();
 
-<br/>
+HEAD
+        $headextra .= "    ml.joinheading = \"" . BML::ml( ".create.join_dreamwidth",  { sitename => $LJ::SITENAMESHORT } ) . "\";\n";
+        $headextra .= <<HEAD;
+    ml.entercode   = "$ML{'.create.enter_code'}";
+    ml.usecode     = "$ML{'.create.use_code'}";
+    ml.cancel      = "$ML{'.create.cancel'}";
 
-<center><div style='font-weight: bold; background-color: #f4717a;
-width: 50%; border: 1px solid #000; padding: 3em;'>Dreamwidth
-Studios will open to the public at 9PM EDT on the evening
-of April 30, 2009. At that time, you can create an account
-with an invite code from an existing user, or purchase a <a
-href='http://www.dreamwidth.org/support/faqbrowse.bml?faqid=4'>paid
-account</a>.<br /><br />
+HEAD
+        $headextra .= "    var invitelength = " . DW::InviteCodes::CODE_LEN . ";\n";
+        $headextra .= "    var siteroot = \"" . $LJ::SITEROOT . "\";\n";
+        $headextra .= "</script>\n";
 
-<?_code
-{
-    my $x = 1241139600 - time();
-    my $str = '';
+        $ret .= <<HTML;
+<div id="intro-box">
+    <div id="intro-box-main">
+        <div id="intro-border-main-top"></div>
+        <div id="intro-border-main-bottom"></div>
+        <div id="intro-border-main-left">
+            <div id="intro-border-main-bottomleft"></div>
+            <div id="intro-border-main-topleft"></div>
+        </div>
+        <div id="intro-border-main-right">
+            <div id="intro-border-main-bottomright"></div>
+            <div id="intro-border-main-topright"></div>
+        </div>
+        <div id="intro-main-content">
+HTML
+        $ret .= "<h1>" . BML::ml( ".intro.what_is_dreamwidth", { sitename => $LJ::SITENAME } ) . "</h1>\n";
+        $ret .= "<p>" . BML::ml( ".intro.what_is_dreamwidth.content", { sitename => $LJ::SITENAME } ) . "</p>\n";
+        $ret .= <<HTML;
+        </div>
+    </div>
+    <div id="intro-box-create">
+        <div id="intro-border-create-top"></div>
+        <div id="intro-border-create-bottom"></div>
+        <div id="intro-border-create-right">
+            <div id="intro-border-create-bottomright"></div>
+            <div id="intro-border-create-topright"></div>
+        </div>
+        <div id="intro-create-content">
+HTML
+        $ret .= "<h1>" . BML::ml( ".create.join_dreamwidth", { sitename => $LJ::SITENAMESHORT } ) . "</h1>\n";
+        $ret .= "<p>" . BML::ml( LJ::is_enabled( 'payments' ) ?
+                                     ".create.join_dreamwidth.content" :
+                                     ".create.join_dreamwidth.content.nopayments",
+                                 { aopts => "href=\"$LJ::SITEROOT/support/faqbrowse?faqid=105\"" }
+                               ) . "</p>\n";
+        $ret .= <<HTML;
+            <ul id="create-links">
+                <li><a href="$LJ::SITEROOT/create" onClick="return nocreatejs || displayCreateDiv(&quot;invite&quot;);">$ML{'.create.invitelink'}</a></li>
+HTML
+        $ret .= <<HTML if LJ::is_enabled( 'payments' );
+                <li class="lastli"><a href="$LJ::SITEROOT/shop/account?for=new">$ML{'.create.paymentlink'}</a></li>
+HTML
+        $ret .= <<HTML;
+            </ul>
+        </div>
+    </div>
+</div>
 
-    my $tmp = sub {
-        my $y = int ( $x / $_[0] );
-        $str .= sprintf( '%d ' . $_[1] . ( $y == 1 ? ' ' : 's ' ), $y );
-        $x %= $_[0];
-    };
+<div id="frontpage-links">
+HTML
+        # if you change the number of columns here, you'll need to tweak the width
+        # percentage for .links-column in the CSS file accordingly.
+        my @columns = (
+            {
+                name => 'about',
+                items => [
+                    [ 'about', 'about_dreamwidth' ],
+#                    [ '#', 'site_tour' ],
+                    [ 'legal/principles', 'guiding_principles' ],
+                ],
+            },
+            {
+                name => 'community',
+                items => [
+                    [ 'news', 'site_news' ],
+                    [ 'random', 'random_journal', 'footnote' ],
+                    [ 'community/random', 'random_community', 'footnote' ],
+                ],
+                footnote => 'no_screening',
+            },
+            {
+                name => 'support',
+                items => [
+                    [ 'support/faq', 'faq' ],
+                    [ 'support/', 'support' ],
+                ],
+            },
+        );
 
-    $tmp->( 86400, 'day' );
-    $tmp->( 3600, 'hour' );
-    $tmp->( 60, 'minute' );
-    $tmp->( 1, 'second' );
-    $str =~ s/\s+$//;
+        foreach my $column ( @columns ) {
+            my $name = $column->{name};
+            $ret .= "    <div id=\"links-$name\" class=\"links-column\">\n";
+            $ret .= "        <h2>" . BML::ml( ".links.$name", { sitename => $LJ::SITENAMESHORT } ) . "</h2>\n";
+            $ret .= "        <dl>\n";
+            foreach my $item ( @{$column->{items}} ) {
+                my ( $href, $ml, $postfix ) = @{$item};
+                $ret .= "            <dt><a href=\"$LJ::SITEROOT/$href\">" . BML::ml( ".links.$name.$ml", { sitename => $LJ::SITENAMESHORT } ) . "</a>";
+                $ret .= " " . $ML{".links.$name.$postfix"} if $postfix;
+                $ret .= "</dt>\n";
+                $ret .= "            <dd>" . BML::ml( ".links.$name.$ml.desc", { sitename => $LJ::SITENAMESHORT } ) . "</dd>\n";
+            }
+            $ret .= "        </dl>\n";
+            $ret .= "        <p><small>" . BML::ml( ".links.$name." . $column->{footnote}, { sitename => $LJ::SITENAMESHORT } ) . "</small></p>\n" if defined $column->{footnote};
+            $ret .= "    </div>\n";
+        }
+        $ret .= "</div>\n";
+    }
 
-    return "Open Beta will begin in $str!";
+    return $ret;
 }
 _code?>
-</div></center>
-
-<br />
-
-<?p
-<?sitename?> is an Open Source social networking, content management, and personal publishing platform. Our mission in life is to make it easy for you to share the things you make, and easy to find the people who are making the things you want to enjoy. p?>
-
-<?p
-We have all the features you've come to love in social networking sites, including privacy and security features, community interaction, content aggregation, multimedia support, and more. We're committed to adding features that you'll find useful and relevant, as well as working to integrate our site with the other Internet services you regularly use. p?>
-
-<?h1 Open source: h1?>
-
-<?p
-<?sitename?> is based upon the <a href="http://www.livejournal.com">LiveJournal</a> codebase offered by LiveJournal, Inc. We've taken the LiveJournal server code and updated, modernized, and streamlined it -- and we make all of our changes available under an Open Source license. 
-p?>
-
-<?p 
-Our development community is already healthy and thriving. We've got room for everyone to contribute, whether you've just learned how to say "hello world" or you've been programming for thirty years. Check out our <a href="http://bugs.dwscoalition.org">bug tracker</a> for information on what projects we have open, and our <a href="http://wiki.dwscoalition.org/notes/Category:Development">Development</a> wiki category for useful getting-started notes. 
-p?>
-
-<?h1 Open expression: h1?>
-
-<?p
-We know we can never be all things to all people, and we're not going to try. We are, however, hoping to be the best option available for people who want to make things and share them with other people, and we want you to have confidence in our operations and our decisions.
-p?>
-
-<?p
-We believe that you should always be able to figure out why we make the decisions we make. We'll communicate with you, openly and honestly, as people and not as a corporate face. We'll make our decisions and our process as transparent as possible, and look for community feedback and opinions at all stages. We think you should always know what we're doing, why we're doing it, and what we hope to accomplish.
-p?>
-
-<?p
-We believe in sustainability, not profiteering. We want to grow our business slowly and steadily, in a way that can support the community instead of exploiting it. We don't own you or your content -- we hope that you'll empower us to be your hands and trust us to build a community that can last.
-p?>
-
-<?p
-We will remain third-party-advertising-free. We believe it's possible to run a sustainable hosted service without resorting to third-party advertising or third-party sponsorship -- and we're committed to showing you what we're taking in, what we're spending, and where the money's going.
-p?>
-
-<?p
-To learn more about our business operations, check out our <a href="http://wiki.dwscoalition.org/notes/Category:Dreamwidth.org">Dreamwidth.org</a> wiki pages.
-p?>
-
-
-<?h1 Open operations: h1?>
-
-<?p We value creative expression of all types and kinds. We will never place a limit on open expression, except as required by United States law or as required to protect the health of the service (such as by removing spam). p?>
-
-<?p We believe in providing you with the tools you want to make your chosen form of creative expression easy. We'll provide you with the tools -- what you build with them is entirely up to you. p?>
-
-<?h1 Learn More h1?>
-
-<?p We're in internal beta testing now, and hope to launch to the public shortly. In the meantime, to learn more about us, you can join one of our <a href="http://lists.dwscoalition.org/cgi-bin/mailman/listinfo">mailing lists</a>:
-
-<ul><li><b><a href="http://lists.dwscoalition.org/cgi-bin/mailman/listinfo/dw-discuss">dw-discuss</a></b>: An unmoderated mailing list that will allow you to ask questions and offer feedback. We can't promise to answer everything, but we want to hear from you and find out what you want to know more about.</li>
-<li> <b><a 
-href="http://lists.dwscoalition.org/cgi-bin/mailman/listinfo/dw-progress">dw-progress</a></b>: 
-A moderated mailing list for us to give you regular updates about what we've accomplished and what we're doing next.</li>
-<li> <b><a 
-href="http://lists.dwscoalition.org/cgi-bin/mailman/listinfo/dw-help">dw-help</a></b>: A moderated mailing list for us to post volunteer opportunities -- in case you want to lend us a hand.</li>
-<li> <b><a 
-href="http://lists.dwscoalition.org/cgi-bin/mailman/listinfo/dw-launch">dw-launch</a></b>: A moderated mailing list that's the definition of low traffic -- we'll post here once to announce when we're moving into closed beta, and again when we launch to the public.</li></ul>
-
-p?>
-
-<?p For even more information, you can read our <a href="http://wiki.dwscoalition.org/notes/">Dreamwidth wiki</a>. We'd also love to hear from you in our irc channel: irc.dwscoalition.org (port 6667), channel #dw. p?>
-
-
-<=BODY
+<=body
+title=><?_code return $title; _code?>
+windowtitle=><?_code return $windowtitle; _code?>
+head<=
+<?_code return $headextra; _code?>
+<=head
 page?>
