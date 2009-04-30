@@ -201,6 +201,7 @@ function Page::print()
         $this->print_head_title();    
     println "</head>";
     println "<body>";
+    $this->print_control_strip();
     $this->print_wrapper_start();
     """
             <div id="container">
