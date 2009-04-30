@@ -688,3 +688,12 @@ table.editfilters td {
 .appwidget-createaccountprofile .field-name {
     background-color: #F3D2FC;
 }
+
+
+/* shop pages */
+
+.shopbox, .appwidget-shopitemgroupdisplay,
+.shop-account-status, .shop-error, .shop-cart-status,
+.shop-cart td, .shop-cart th, .shop-item-highlight {
+    border: 1px solid #3a155a;
+}
