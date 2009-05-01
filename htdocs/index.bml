@@ -125,25 +125,25 @@ HTML
             {
                 name => 'about',
                 items => [
-                    [ 'about', 'about_dreamwidth' ],
+                    [ '/about', 'about_dreamwidth' ],
 #                    [ '#', 'site_tour' ],
-                    [ 'legal/principles', 'guiding_principles' ],
+                    [ '/legal/principles', 'guiding_principles' ],
                 ],
             },
             {
                 name => 'community',
                 items => [
-                    [ 'news', 'site_news' ],
-                    [ 'random', 'random_journal', 'footnote' ],
-                    [ 'community/random', 'random_community', 'footnote' ],
+                    [ 'http://dw-news.dreamwidth.org/', 'site_news' ],
+                    [ '/random', 'random_journal', 'footnote' ],
+                    [ '/community/random', 'random_community', 'footnote' ],
                 ],
                 footnote => 'no_screening',
             },
             {
                 name => 'support',
                 items => [
-                    [ 'support/faq', 'faq' ],
-                    [ 'support/', 'support' ],
+                    [ '/support/faq', 'faq' ],
+                    [ '/support/', 'support' ],
                 ],
             },
         );
@@ -155,7 +155,10 @@ HTML
             $ret .= "        <dl>\n";
             foreach my $item ( @{$column->{items}} ) {
                 my ( $href, $ml, $postfix ) = @{$item};
-                $ret .= "            <dt><a href=\"$LJ::SITEROOT/$href\">" . BML::ml( ".links.$name.$ml", { sitename => $LJ::SITENAMESHORT } ) . "</a>";
+                if ( $href=~/^\// ) {
+                    $href = "$LJ::SITEROOT$href";
+                }
+                $ret .= "            <dt><a href=\"$href\">" . BML::ml( ".links.$name.$ml", { sitename => $LJ::SITENAMESHORT } ) . "</a>";
                 $ret .= " " . $ML{".links.$name.$postfix"} if $postfix;
                 $ret .= "</dt>\n";
                 $ret .= "            <dd>" . BML::ml( ".links.$name.$ml.desc", { sitename => $LJ::SITENAMESHORT } ) . "</dd>\n";
