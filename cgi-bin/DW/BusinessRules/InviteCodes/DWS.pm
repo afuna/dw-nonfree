@@ -44,9 +44,9 @@ search_class, and adj_invites).
 # argument is always max users to return.
 my %user_classes = (
     basic_paid      => { search => \&_search_paystatus,
-                         search_arg => [ typeid => 1 ] },
+                         search_arg => [ typeid => 3 ] },
     premium_paid    => { search => \&_search_paystatus,
-                         search_arg => [ typeid => 2 ] },
+                         search_arg => [ typeid => 4 ] },
     permanent_paid  => { search => \&_search_paystatus,
                          search_arg => [ permanent => 1 ] },
     # Users active in the last 30 days
