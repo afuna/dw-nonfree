@@ -155,11 +155,12 @@ _code?>
 
 footer<=
 <ul>
-    <li><a href="<?siteroot?>/legal/privacy.bml"><?_ml tropo.footer.legal.privacypolicy _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/legal/tos.bml"><?_ml tropo.footer.legal.tos _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/legal/diversity.bml"><?_ml tropo.footer.legal.diversitystatement _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/legal/principles.bml"><?_ml tropo.footer.legal.guidingprinciples _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/site/"><?_ml tropo.footer.sitemap _ml?></a></li>
+    <li><a href="<?siteroot?>/legal/privacy"><?_ml tropo.footer.legal.privacypolicy _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/tos"><?_ml tropo.footer.legal.tos _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/diversity"><?_ml tropo.footer.legal.diversitystatement _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/principles"><?_ml tropo.footer.legal.guidingprinciples _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/site/"><?_ml tropo.footer.sitemap _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/site/opensource"?><?_ml tropo.footer.opensource _ml?></a></li>
 </ul>
 <p><?_ml tropo.footer.info _ml?></p>
 <=footer
