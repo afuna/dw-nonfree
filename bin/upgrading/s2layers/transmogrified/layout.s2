@@ -200,7 +200,6 @@ function Page::print()
         $this->print_stylesheets();
         $this->print_head_title();    
     println "</head>";
-    println "<body>";
     $this->print_control_strip();
     $this->print_wrapper_start();
     """
@@ -236,7 +235,6 @@ function Page::print()
     """;
     $this->print_wrapper_end();
     """
-    </body>
     </html>
     """;
 }
