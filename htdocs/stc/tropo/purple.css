@@ -615,6 +615,10 @@ table.allpics {
     width: 50px;
 }
 
+.allpics td.desc {
+padding-right: 10px;
+}
+
 
 /* editfilters styling */
 
