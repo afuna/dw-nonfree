@@ -4,6 +4,9 @@ use base qw( LJ::S2Theme );
 sub cats { qw( featured ) }
 sub designer { "Yvonne" }
 
+sub layouts { ( "2r" => "two-columns-right" ) }
+sub layout_prop { "layout_type" }
+
 sub page_props {
     my $self = shift;
     my @props = qw( color_page_title_background color_main_background );

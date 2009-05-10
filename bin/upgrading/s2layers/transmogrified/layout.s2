@@ -11,23 +11,16 @@ set entry_management_links = "text";
 set comment_management_links = "text";
 set all_commentsubjects = true;
 
-property string sidebar_position { 
-    des = "Set the position of the sidebar";
-    values = "left|Left|right|Right";
-    noui = 1;
-}
-property string sidebar_width {
-    des = "How wide should the sidebar be?";
-    noui = 1;
-}
-set sidebar_position = "right";
-set sidebar_width = "230px";
-
 propgroup presentation {
     property use num_items_recent;
     property use num_items_reading;
     property use use_journalstyle_entry_page;
+    property use layout_type;
+    property use sidebar_width;
 }
+
+set layout_type = "two-columns-right";
+set sidebar_width = "230px";
 
 propgroup modules {
     property use module_userprofile_group;
@@ -267,15 +260,8 @@ function print_module_userprofile() {
 
 function print_stylesheet () {
     var string sidebar_positioning = "margin-right: -$*sidebar_width;";
+    var string sidebar_position = "right";
     var string sidebar_position_alt = "left";
-    if ($*sidebar_position == "left") {
-        $sidebar_positioning = "right: $*sidebar_width;
-        margin-left: -100%;
-    }
-    *+html .module-section-two {
-        right: -19px";
-        $sidebar_position_alt = "right";
-    }
 
     """
     /* believe me, this style is much easier to deal with if you 
@@ -318,7 +304,7 @@ function print_stylesheet () {
 
     #wrap {
         color: $*color_page_text;
-        padding-$*sidebar_position: $*sidebar_width;
+        padding-$sidebar_position: $*sidebar_width;
         padding-top: 20px;
         padding-$sidebar_position_alt: 20px;
 	}
