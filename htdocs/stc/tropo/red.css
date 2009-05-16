@@ -1098,16 +1098,16 @@ span.InboxItem_Read:hover a {
 #infobox {
     border-left: 1px solid #000;
 }
-#entry {
+#compose-entry {
     /*background: url("/img/tropo-red/tropred-borderpixel.gif") repeat-x 0 bottom;*/
 	border-bottom: 1px solid #bbb;
 }
-#entry ul li a {
+#compose-entry ul li a {
     background-color: #fff;
     border: 1px solid #f4717a;
 	border-bottom: none;
 }
-#entry ul li.on a {
+#compose-entry ul li.on a {
 	border-bottom: 1px solid #fff;
 }
 #draft-container {
