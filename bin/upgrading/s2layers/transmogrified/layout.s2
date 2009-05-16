@@ -166,6 +166,21 @@ set color_tagspage_border = "#739adf";
 set color_tagspage_title_background = "#cfe0e6";
 set color_comments_form_border = "#fc7f3f";
 
+# Images
+propgroup images {
+    property use image_background_page_group;
+    property use image_background_header_group;
+    property use image_background_header_height;
+    property use image_background_entry_group;
+    property use image_background_module_group;
+}
+
+set image_background_page_url = "";
+set image_background_header_url = "";
+set image_background_entry_url = "";
+set image_background_module_url = "";
+
+
 # Fonts
 property string font_size { des = "Font size"; noui = 1; }
 property string font_sidebar_title_size { des = "Font size of sidebar titles"; noui = 1; }
@@ -263,6 +278,28 @@ function print_stylesheet () {
     var string sidebar_position = "right";
     var string sidebar_position_alt = "left";
 
+    var string page_background = generate_background_css ($*image_background_page_url, $*image_background_page_repeat, $*image_background_page_position, $*color_page_background);
+    var string header_background = generate_background_css ($*image_background_header_url, $*image_background_header_repeat, $*image_background_header_position, new Color);
+    if ($*image_background_header_height > 0) {
+        $header_background = """
+            $header_background
+            height: """ + $*image_background_header_height + """px;""";
+    }
+
+    var string entry_background = generate_background_css ($*image_background_entry_url, $*image_background_entry_repeat, $*image_background_entry_position, $*color_entry_background);
+    var string module_background = generate_background_css ($*image_background_module_url, $*image_background_module_repeat, $*image_background_module_position, $*color_module_background);
+   
+    var string page_colors = generate_color_css($*color_page_text, $*color_main_background, $*color_page_border);
+    var string page_title_colors = generate_color_css($*color_page_title, new Color, new Color);
+
+    var string page_link_colors = generate_color_css($*color_page_link, new Color, new Color);
+    var string page_link_active_colors = generate_color_css($*color_page_link_active, new Color, new Color);
+    var string page_link_hover_colors = generate_color_css($*color_page_link_hover, new Color, new Color);
+    var string page_link_visited_colors = generate_color_css($*color_page_link_visited, new Color, new Color);
+
+# NB Background image stuff in container, not in body, and colors fixed accordingly. Otherwise it messes up the layout.
+# Homegrown logic for entry and module colors to fit with Transmog specialist options for alternating
+
     """
     /* believe me, this style is much easier to deal with if you 
     just leave this here.  It says "lets use the IE box model" for
@@ -278,14 +315,16 @@ function print_stylesheet () {
     }
 
     #container {
-        background-color: $*color_main_background;
+                $page_background
+                $page_colors
     }
 
     #header {
-		background-color: $*color_page_title_background;
-		color: $*color_page_title;
-		margin: 0;
-        padding: 0;
+                $header_background
+                background-color: $*color_page_title_background;
+                color: $*color_page_title;
+                margin: 0;
+                padding: 0;
 	}
 
     #header a {
@@ -326,7 +365,9 @@ function print_stylesheet () {
     .page-tags #wrap {
         margin-$sidebar_position_alt: 20px;
     }
-    
+    .module {
+        $module_background
+    }
     .module-section-two {
         position: relative;
         width: $*sidebar_width;
