@@ -136,29 +136,19 @@ sub _search_noinvleft {
     my ($uckey, $max_nusers) = @_;
     my $dbslow = LJ::get_dbh( 'slow' ) or die "Can't get slow role";
 
-    # Second column will be all 0 here (and is unneeded anyway), but putting it
-    # in HAVING and not SELECT is non-standard SQL.
-    my $sth = $dbslow->prepare( "SELECT userid, min(rcptid) FROM acctcode " .
-                                "GROUP BY userid HAVING min(rcptid) > 0 LIMIT ?" )
-        or die $dbslow->errstr;
-    # Keep only userid
-    my $nomorecodes = $dbslow->selectcol_arrayref( $sth, { Columns => [1] }, 
-                                                   $max_nusers )
-        or die $dbslow->errstr;
-    # Users who haven't had any codes yet will have a row in user but not in
-    # acctcode
-    $sth = $dbslow->prepare( "SELECT user.userid FROM user LEFT JOIN acctcode " .
-                             "ON user.userid = acctcode.userid " .
-                             "WHERE acctcode.userid IS NULL LIMIT ?" )
-        or die $dbslow->errstr;
-    my $noprevcodes = $dbslow->selectcol_arrayref( $sth, { Columns => [1] },
-                                                  $max_nusers ) 
-        or die $dbslow->errstr;
-
-    my $uids = [ @$nomorecodes, @$noprevcodes ];
-
-    # Don't filter if too many, otherwise we lose that information
-    return ($max_nusers <= scalar @$uids) ? $uids : _filter_pav( $uids );
+    # return all personal, active, visible journals... no need to use _filter_pav
+    # later, when we can do it all on the user table to begin with.  this returns
+    # all users that either have no invites OR 
+    my $uids = $dbslow->selectcol_arrayref(
+        q{SELECT DISTINCT u.userid
+          FROM user u
+            LEFT JOIN acctcode a
+              ON a.userid = u.userid AND a.rcptid = 0
+          WHERE (u.journaltype = 'P' AND u.status = 'A' AND u.statusvis = 'V')
+            AND a.userid IS NULL
+        }
+    );
+    return $uids;
 }
 
 # TODO: refactor into DW::InviteCodes
@@ -207,6 +197,7 @@ sub _filter_pav {
     my @out_uids;
 
     # TODO: make magic number configurable.
+    # TODO: use splice() # perldoc -f splice
     for (my $start = 0; $start < @$in_uids; $start += 1000) {
         my $end = ($start + 999 <= $#$in_uids) ? $start + 999 : $#$in_uids;
         my $uhash = LJ::load_userids( @{$in_uids}[$start..$end] );
