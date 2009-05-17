@@ -17,10 +17,12 @@ propgroup presentation {
     property use use_journalstyle_entry_page;
     property use layout_type;
     property use sidebar_width;
+    property use tags_page_type;
 }
 
 set layout_type = "two-columns-right";
 set sidebar_width = "230px";
+set tags_page_type = "";
 
 propgroup modules {
     property use module_userprofile_group;
