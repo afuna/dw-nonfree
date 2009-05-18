@@ -273,32 +273,6 @@ function Page::print()
     """;
 }
 
-function print_module_userprofile() {
-    var Page p = get_page();
-    var string title = "Profile";
-
-    open_module("userprofile", $title, "");
-
-    if ($*module_userprofile_opts_userpic) {
-        if (defined $p.journal.default_pic) { 
-            """<div class="userpic">""";
-            $p.journal->print_userpic();
-            """</div>""";
-        }
-    }
-    if ($*module_userprofile_opts_name or $*module_userprofile_opts_website) {
-        if ($*module_userprofile_opts_name) {
-            println "<p>"+$p.journal.name+"</p>";
-        }
-        if ($*module_userprofile_opts_website and $p.journal.website_url != "") {
-            var string website_name = ( $p.journal.website_name != "" ) ? $p.journal.website_name : $*text_website_default_name;
-            println "<p><a href='$p.journal.website_url'>$website_name</a></p>";
-        }
-    }
-    $p.journal->print_interaction_links();
-    close_module();
-}
-
 function print_stylesheet () {
     var string sidebar_positioning = "margin-right: -$*sidebar_width;";
     var string sidebar_position = "right";
