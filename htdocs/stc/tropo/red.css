@@ -795,6 +795,13 @@ table.editfilters td {
 }
 
 
+/* Support Highscores */
+
+table#support-highscores {
+    line-height: 2.2;
+}
+
+
 /* manage/invitecodes.bml */
 
 .invitecodes td {

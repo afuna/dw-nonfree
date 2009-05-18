@@ -773,6 +773,14 @@ table.editfilters td {
     margin-bottom: 2em;
 }
 
+
+/* Support Highscores */
+
+table#support-highscores {
+    line-height: 2.2;
+}
+
+
 /* Inbox - Compose */
 
 .inbox-compose {
