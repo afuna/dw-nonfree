@@ -18,11 +18,13 @@ propgroup presentation {
     property use layout_type;
     property use sidebar_width;
     property use tags_page_type;
+    property use userpics_position; 
 }
 
 set layout_type = "two-columns-right";
 set sidebar_width = "230px";
 set tags_page_type = "";
+set userpics_position = "right";
 
 propgroup modules {
     property use module_userprofile_group;
@@ -297,6 +299,18 @@ function print_stylesheet () {
     var string page_link_hover_colors = generate_color_css($*color_page_link_hover, new Color, new Color);
     var string page_link_visited_colors = generate_color_css($*color_page_link_visited, new Color, new Color);
 
+    var string userpic_css = "";
+    if($*userpics_position == "left") {
+         $userpic_css = """.entry-title, .comment-title {margin: 0; } 
+         .has-userpic .header {margin: 0 0 0 120px; } 
+         .entry .userpic a, .comment .userpic a {left: 10px; right: auto; }""";
+        }
+    elseif($*userpics_position == "right") {
+         $userpic_css = """.entry-title, .comment-title {margin: 0; margin-right: 120px; }
+         .entry .userpic a, .comment .userpic a {right: 10px; left: auto; }""";
+        }
+
+
 # NB Background image stuff in container, not in body, and colors fixed accordingly. Otherwise it messes up the layout.
 # Homegrown logic for entry and module colors to fit with Transmog specialist options for alternating
 
@@ -476,10 +490,10 @@ function print_stylesheet () {
         position: relative;
         margin-bottom: 10px;
     }
+    $userpic_css
     .entry .userpic a, .comment .userpic a {
         display: block;
         position: absolute;
-        right: 10px;
         top: -66px;
         padding: 5px;
     }
@@ -488,8 +502,6 @@ function print_stylesheet () {
     }
     .entry-title, .comment-title {
         padding: 0.2em;
-        margin: 0;
-        margin-right: 120px;
     }
     .entry-title a, .comment-title a {
         text-decoration: none;
