@@ -476,7 +476,7 @@ function print_stylesheet () {
         padding: 5px;
         list-style: none;
     }
-    .module-calendar {
+    .module-calendar .module-content {
         text-align: center;
     }
     .module-calendar table {
