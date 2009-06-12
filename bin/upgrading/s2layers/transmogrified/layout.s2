@@ -324,13 +324,14 @@ function print_stylesheet () {
         background-color: $*color_page_background;
         font-family: $*font_base , $*font_fallback;
         font-size: $*font_size;
-        margin: 0 10%;
+        margin: 0;
         padding: 0;
     }
 
     #container {
                 $page_background
                 $page_colors
+                margin: 0 10%;
     }
 
     #header {
