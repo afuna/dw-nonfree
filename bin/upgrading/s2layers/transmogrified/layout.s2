@@ -556,6 +556,18 @@ function print_stylesheet () {
     .entry-content, .comment-content {
         padding: 10px 0px;
     }
+
+    .no-userpic .comment {
+        margin-top: 20px;
+    }
+    .no-userpic .comment-title {
+        margin: 0px;
+    }
+
+    .partial .comment-title {
+        display: inline;
+    }
+
     .tag {
         font-weight: bold;
         text-align: left;
