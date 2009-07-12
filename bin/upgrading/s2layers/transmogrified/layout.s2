@@ -331,7 +331,7 @@ function print_stylesheet () {
     #container {
                 $page_background
                 $page_colors
-                margin: 0 10%;
+                margin: 0 2%;
     }
 
     #header {
