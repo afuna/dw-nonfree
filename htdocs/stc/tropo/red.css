@@ -1243,3 +1243,18 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
 {
     background-color: #eee;
 }
+
+/* CSS-style some things that users like to use */
+
+q { 
+    margin-left: 1em;
+    font-style: italic;
+}
+
+small {
+    font-size: smaller;
+}
+
+big {
+    font-size: larger;
+}
