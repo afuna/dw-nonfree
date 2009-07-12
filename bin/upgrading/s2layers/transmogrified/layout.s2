@@ -236,8 +236,8 @@ function Page::print()
         $this->print_stylesheets();
         $this->print_head_title();    
     println "</head>";
-    $this->print_control_strip();
     $this->print_wrapper_start();
+    $this->print_control_strip();
     """
             <div id="container">
             <div id="header">
