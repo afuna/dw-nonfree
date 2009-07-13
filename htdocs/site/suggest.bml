@@ -1,0 +1,211 @@
+<?_c
+#
+# site/suggest.bml
+#
+# Simple form suggestion generator that will take input, process it, and 
+# post it to a community's moderation queue.  The post will include a 
+# simple opinion poll to easily get the opinions of the readers. In
+# addition to posting a public entry to the comm, it also posts a
+# members-only entry (aka, community maintainers only, as the only
+# people who'll be members of the comm will be maintainers) with the
+# text of the suggestion formatted for autopost to Bugzilla, which
+# will not only save some time in opening up the bug, but also ensure
+# that the text of the suggestion is preserved if the poster of the
+# entry decides to delete it after getting some disagreeing comments.
+#
+# Authors:
+#      Denise Paolucci <denise@dreamwidth.org>
+#
+# Copyright (c) 2009 by Dreamwidth Studios, LLC.
+#
+# This program is NOT free software or open-source; you can use it as an
+# example of how to implement your own site-specific extensions to the
+# Dreamwidth Studios open-source code, but you cannot use it on your site
+# or redistribute it, with or without modifications.
+#
+
+_c?><?page
+body<=
+<?_code
+{
+    use strict;
+    use vars qw/ %POST @errors @warnings /;
+
+    # for pages that require authentication
+    my $remote = LJ::get_remote();
+    return "<?needlogin?>" unless $remote;
+
+    my ( $ret, $suggestion, $response, $response2 );
+
+    # the poll that will be auto-posted with each suggestion:
+    my $poll .= "<poll name='' whovote='all' whoview='all'><poll-question type='radio'>This suggestion:<poll-item>Should be implemented as-is.</poll-item><poll-item>Should be implemented with changes.</poll-item><poll-item>Shouldn't be implemented.</poll-item><poll-item>(Other: please comment)</poll-item></poll-question></poll>";
+
+    # the community to post to:
+    my $destination = LJ::load_user( 'dw_suggestions' );
+
+    # the user to post the maintainer-only address as:
+    my $suggestions_bot = LJ::load_user( 'suggestions_bot' );
+
+    # handle the results of a POST request:
+
+    if ( LJ::did_post() ) {
+
+        # verify that all fields are filled out:
+        my @pieces = ( "title", "area", "summary", "description" );
+
+        foreach my $field ( @pieces ) {
+            push @errors, "You need to fill out the $field section." unless $POST{$field};
+        }
+        return LJ::bad_input( @errors ) if @errors;
+
+        # We have all the pieces, so let's build the post for DW:
+
+        $suggestion .= "<p><em><strong>Title:</strong></em>\n";
+        $suggestion .= LJ::ehtml( $POST{title} ) . "</p>";
+        $suggestion .= "<p><em><strong>Area:</strong></em>\n";
+        $suggestion .= LJ::ehtml( $POST{area} ) . "</p>";
+        $suggestion .= "<p><em><strong>Summary:</strong></em>\n";
+        $suggestion .= LJ::ehtml( $POST{summary} ) . "</p>";
+        $suggestion .= "<p><em><strong>Description:</strong></em>\n";
+        $suggestion .= LJ::ehtml( $POST{description} ) . "</p>";
+        $suggestion .= $poll;
+
+        # and now we post it. For this, we're going to post as the
+        # user (so they get any comments, etc), and we're going to
+        # auto-tag it as "untagged", so the suggestions maintainer
+        # can find new/untagged posts when they want to.
+
+        my $journalpost = LJ::Protocol::do_request( 'postevent', {
+            'ver'             => $LJ::PROTOCOL_VER,
+            'username'        => $remote->user,
+            'subject'         => $POST{title},
+            'event'           => $suggestion,
+            'usejournal'      => $destination->user,
+            'security'        => 'public',
+            'usejournal_okay' => 1,
+            'props'           => { 'taglist' => 'untagged' },
+            'tz'              => 'guess',
+            }, \$response, {
+            'nopassword'      => 1,
+            } );
+
+
+        # having built the post for public display, we now do 
+        # a second post containing the link to create the new bug
+        # for the suggestion. we can't use $suggestion that we built,
+        # because we need to use a different escaping function, but
+        # that's okay, because we want to format this a little
+        # differently anyway. The Bugzilla template is going to need
+        # some messing with at the time of posting, but I'd rather do
+        # that manually at the time of posting than try to fuss with it
+        # here.
+
+        my ( $bugzilla_subject, $bugzilla_desc, $bugzilla_post );
+
+        $bugzilla_subject = LJ::eurl( $POST{title} );
+
+        $bugzilla_desc .= "Summary%3A%0D%0A%0D%0A";
+        $bugzilla_desc .= LJ::eurl( $POST{summary} );
+        $bugzilla_desc .= "%0D%0A%0D%0ADescription%3A%0D%0A%0D%0A";
+        $bugzilla_desc .= LJ::eurl( $POST{description} );
+        $bugzilla_desc .= "%0D%0A%0D%0ASuggested by%3A%0D%0A%0D%0A";
+        $bugzilla_desc .= LJ::eurl( $remote->user );
+
+        $bugzilla_post .= "To post this entry to Bugzilla, use this link and change any of the fields as appropriate:<br /><br />&nbsp;&nbsp;&nbsp;<a href='";
+
+        # oh my god bugzilla makes ugly URLs:
+        $bugzilla_post .= "http://bugs.dwscoalition.org/enter_bug.cgi?assigned_to=&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=enhancement&bug_status=NEW&comment=" . $bugzilla_desc . "&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&dependson=&description=&flag_type-1=X&flag_type-10=X&flag_type-11=X&flag_type-2=X&flag_type-3=X&flag_type-5=X&flag_type-7=X&form_name=enter_bug&keywords=&op_sys=All&priority=P-&product=Dreamwidth%20Development&qa_contact=&rep_platform=All&short_desc=" . $bugzilla_subject . "&target_milestone=-undecided-&version=1.0";
+
+        $bugzilla_post .= "'>Post '$POST{title}' to Bugzilla</a>.<br /><br />Once you do, retag both this entry and the public entry it belongs with.";
+
+        # and we post that post to the community. (the suggestions_bot
+        # account should have unmoderated posting ability, so that the
+        # post is posted directly to the comm without having to go 
+        # through moderation.) for this post, we tag it as 
+        # "bugzilla_unmigrated", so the suggestions maintainer can find
+        # any/all unposted bugzilla links.
+
+        my $bugzillapost = LJ::Protocol::do_request( 'postevent', {
+            'ver'             => $LJ::PROTOCOL_VER,
+            'username'        => $suggestions_bot->user,
+            'subject'         => $POST{title},
+            'event'           => $bugzilla_post,
+            'usejournal'      => $destination->user,
+            'security'        => 'usemask',
+            'allowmask'       => 1,
+            'usejournal_okay' => 1,
+            'props'           => { 'taglist' => 'bugzilla_unmigrated' },
+            'tz'              => 'guess',
+            }, \$response2, {
+            'nopassword'      => 1,
+            } );
+
+        # once all of that's done, let's tell the user it worked. (or,
+        # if it didn't work, tell them why.)
+
+        if ( $response || $response2 ) {
+            my $err = LJ::Protocol::error_message( $response || $response2 );
+            return LJ::bad_input( $err );
+        } else {
+            my $commname = $destination->ljuser_display; 
+            return "<h2>Success!</h2>\n<p>Your suggestion has been submitted to the moderation queue of $commname. Once approved, it will appear in the community for discussion and evaluation.";
+        }
+
+    }
+
+
+
+    # Build the suggestions form. All fields required. 
+
+    $ret .= "<p>Have a way to make Dreamwidth better? This is where you submit it! Filling out this form will send an entry to the moderation queue of the " . $destination->ljuser_display . " community. If your suggestion hasn't been submitted before, it will be posted for discussion, voting, and possible implementation.</p>";
+    $ret .= "<p>Anyone can submit a suggestion. Other members of the Dreamwidth community will consider the suggestion, make comments for improvement to the suggestion, and talk about its benefits and drawbacks. The entry will also include a poll for people to register their like or dislike for an idea.</p>";
+    $ret .= "<p>We'll use the results of the discussion and polling, along with our plans for the site and our knowledge of the technical issues involved, to determine which suggestions get moved into our bug-tracking database. (Neither positive comments nor good results in the poll will guarantee that the suggestion will get implemented, but they're one of the tools we'll use to see how popular an idea is.)</p>";
+    $ret .= "<p>All fields are required. HTML will be escaped, so don't use any tags unless you want them to display as the tag.</p>";
+
+    $ret .= "<hr><form method='POST'>";
+
+    # Title:
+    $ret .= "<h2>Title</h2><p>This will be the title of your entry. (Be as specific as possible.)</p>";
+    $ret .= LJ::html_text( { 
+                            name => 'title',
+                            size => 60,
+                            maxlength => 100
+                          } );
+
+    # Area (for tag cues)
+    $ret .= "<h2>Area</h2><p>The area of the site your suggestion is about. (e.g.: tags, crossposting, styles, entries, etc)</p>";
+    $ret .= LJ::html_text( { 
+                            name => 'area',
+                            size => 60,
+                            maxlength => 100
+                          } );
+
+
+    # Summary:
+    $ret .= "<h2>Summary</h2><p>A short paragraph summarizing your suggestion.</p>";
+    $ret .= LJ::html_textarea( { 
+                                name => 'summary',
+                                rows => 3,
+                                cols => 60,
+                                wrap => 'soft'
+                              } );
+
+    # Full description:
+    $ret .= "<h2>Full Description</h2><p>The full description of your idea. Be as specific and detailed as you can. Tell us what problem your suggestion is intended to solve, why you think your suggestion is the best solution to that problem, what problems or drawbacks your suggestion might have, and if there are any other ways you can think to do it. The more detail you provide, the better chances your suggestion has of being implemented.</p>";
+    $ret .= LJ::html_textarea( { 
+                                name => 'description',
+                                rows => 7,
+                                cols => 60,
+                                wrap => 'soft'
+                              } );
+
+    # and, the submit button:
+
+    $ret .= "<p>" . LJ::html_submit( "Post Suggestion" ) . "</p></form>";
+
+    return $ret;
+}
+_code?>
+<=body
+title=>Suggest an Improvement
+page?>
