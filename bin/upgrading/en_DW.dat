@@ -1,5 +1,7 @@
 ;; -*- coding: utf-8 -*-
 
+entryform.pollcreator=Poll Creator
+
 invitecodes.userclass.active30d=Users active during the past 30 days
 
 invitecodes.userclass.basic_paid=Basic paid users
