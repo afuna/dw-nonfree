@@ -170,7 +170,7 @@ a:active,
     height: 100%;
     background-color: #5e3da6;
     color: #fff;
-    width: 100%;
+    width: auto;
 }
 #menu ul li.hover a:hover {
     background-color: #3a155a;
