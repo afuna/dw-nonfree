@@ -336,6 +336,10 @@ function print_stylesheet () {
                 margin: 0 2%;
     }
 
+    #footer {
+        margin: 0 2%;
+    }
+
     #header {
                 $header_background
                 background-color: $*color_page_title_background;
