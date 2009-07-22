@@ -112,6 +112,9 @@
         paidaccountinfo => "http://www.dreamwidth.org/support/faqbrowse.bml?faqid=4",
     );
 
+    # 404 page
+    $PAGE_404 = "404-error-local.bml";
+ 
     # shop/pricing configuration
     %SHOP = (
         # key => [ $USD, months, account type ],
