@@ -19,12 +19,14 @@ propgroup presentation {
     property use sidebar_width;
     property use tags_page_type;
     property use userpics_position; 
+    property use use_custom_friend_colors;
 }
 
 set layout_type = "two-columns-right";
 set sidebar_width = "230px";
 set tags_page_type = "";
 set userpics_position = "right";
+set custom_colors_template = "%%new%% .userpic a {background-color: %%background%%; border: solid 1px %%foreground%%;}";
 
 propgroup modules {
     property use module_userprofile_group;
