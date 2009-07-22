@@ -30,12 +30,12 @@
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  *
  * @colordef        #f7f7f7 Almost White (body background)
- * @colordef        #444444 Dark Gray (copy)
+ * @colordef        #111111 Almost Black (copy)
  */
 body {
     background-color: #c1272d;
     font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
-    color: #444;
+    color: #111;
 }
 /**
  * Links and a pseudo link class
@@ -156,7 +156,7 @@ a:active,
 #menu ul li a {
     background: transparent url(/img/tropo-red/icon_menu_swirl.png) 0.833333em 0.916667em no-repeat;
     display: block;
-    color: #444;
+    color: #111;
     text-decoration: none;
     text-indent: 2em;
     padding-right: 0.75em;
@@ -388,7 +388,7 @@ a:active,
 }
 .standout .standout-inner {
     background-color: #f4717a;
-    color: #444;
+    color: #111;
     border: 1px solid #c1272d;
     margin-top: 0.5em;
     margin-left: auto;
@@ -816,7 +816,7 @@ table#support-highscores {
 }
 
 .appwidget-createaccount .create-button {
-    color: #444;
+    color: #111;
     background-color: #f4717a;
 }
 
@@ -898,7 +898,7 @@ select.select {
     border-left: 1px solid #999;
 }
 .detail {
-    color: #444;
+    color: #111;
 }
 h2.widget-header {
     border-bottom: 1px solid #ccc;
@@ -1179,13 +1179,13 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
         color: #000;
     }
 .section_body .inner_section_header {
-        color: #444;
+        color: #111;
     }
 .section_body_title {
-    color: #444;
+    color: #111;
 }
 .userinfo th {
-    color: #444;
+    color: #111;
 }
 
 /* tags.css */
