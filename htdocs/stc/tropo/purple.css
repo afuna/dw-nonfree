@@ -5,7 +5,7 @@
  *     Jesse Proulx <jproulx@jproulx.net>
  *     Elizabeth Lubowitz <grrliz@gmail.com>
  *     Denise Paolucci <denise@dreamwidth.org>
- * 
+ *
  * Purple Scheme by Rue Silver <pseudelight@gmail.com>
  *
  * Copyright (c) 2009 by Dreamwidth Studios, LLC.
@@ -76,7 +76,7 @@ a:active,
 /**
  * Masthead is the space for our logo and account links
  */
- 
+
 #masthead {
     height: 8.833333em;
     width: 100%;
@@ -136,12 +136,12 @@ a:active,
  *
  * The menu follows the content in the markup source, so we absolutely position it underneath the masthead
  */
- 
+
 #menu {
     position: absolute;
     top: 8.833333em;
     left: 0;
-    background: #f3d2fc; 
+    background: #f3d2fc;
     height: 2.5em;
     width: 100%;
     line-height: 2.5em;
@@ -411,7 +411,7 @@ a:active,
     font-size: medium;
 }
 
-/** 
+/**
  * Start overriding some classes set in dw-free/htdocs/stc/
  * Other site scheme designers: use your own colors here
  * /
@@ -430,7 +430,7 @@ a:active,
     border-bottom: 1px dotted #666;
     border-left: 1px dotted #666;
     color: #3a155a;
-} 
+}
 
 .section img, .username img {
     padding-left: 3px;
@@ -443,7 +443,7 @@ a:active,
     border: 1px solid #7e27c1;
 }
 
-/* widgets/customizetheme.css, themechooser.css, themenav.css, 
+/* widgets/customizetheme.css, themechooser.css, themenav.css,
 currenttheme.css */
 
 .theme-current h2.widget-header, .layout-item.current {
@@ -464,7 +464,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     overflow-y: visible;
 }
 
-.customize-button, .theme-item .theme-button, .layout-item 
+.customize-button, .theme-item .theme-button, .layout-item
 .layout-button {
     background: #5e3da6;
     border: 2px solid #541e1a;
@@ -543,7 +543,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 
 /* more, detailed by page*/
 /*customizetheme.css*/
-.customize-button {    
+.customize-button {
     color: #fff;
     background: #d3afec;
     border: 2px solid #f3d2fc;
@@ -555,14 +555,14 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 .customize-content .subheader {
     background-image: url("/img/tropo-purple/troppurp-arrow-right.gif");
-	background-position: left center;
-	background-repeat: no-repeat;
+    background-position: left center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid #F3D2FC;
 }
 .customize-content .subheader.on {
     background-image: url("/img/tropo-purple/troppurp-arrow-down.gif");
-	background-position: left center ;
-	background-repeat: no-repeat;
+    background-position: left center ;
+    background-repeat: no-repeat;
 }
 .customize-content fieldset legend {
     color: #777;
@@ -597,7 +597,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     background-color: #d3afec;
 }
 .theme-nav li.on a {
-	/*background: url("/img/tropo-purple/troppurp-arrow-right.gif") no-repeat right 50%;*/
+    /*background: url("/img/tropo-purple/troppurp-arrow-right.gif") no-repeat right 50%;*/
     background-color: #fff ;
 }
 .theme-nav li a:visited,
@@ -727,7 +727,7 @@ div.CommunityPromoBox {
 
 .cprod.h3 {
     background: #5e3da6;
-    
+
 }
 
 .cprod content {
@@ -877,8 +877,8 @@ table#support-highscores {
 
 /* lj_base-app.css */
 hr.hr {
-	color: #7e27c1; 
-	background-color: #7e27c1;
+    color: #7e27c1;
+    background-color: #7e27c1;
 }
 
 input.create-account {
@@ -947,7 +947,7 @@ div.right-sidebar {
     background-color: #d3afec;
     border: 1px solid #7e27c1;
 }
-.textbutton { 
+.textbutton {
     color: #7e27c1;
 }
 /*NOTE: corner.gif is white*/
@@ -1012,15 +1012,15 @@ input.bright {
 }
 
 #Subscriptions tr.lighter {
-	background-color: #F3D2FC;
+    background-color: #F3D2FC;
 }
 #Subscriptions tr.darker {
-	background-color: #d3afec;
+    background-color: #d3afec;
 }
 #SubscribeSaveButtons {
     border: 1px solid #333;
     }
-    
+
 .NotificationTable tr.Selected {
     background-color: #d3afec;
 }
@@ -1079,7 +1079,7 @@ span.InboxItem_Read:hover a {
     color: #000000
 }
 .ippu .track_title {
-	color: #d3afec;
+    color: #d3afec;
 }
 
 /* entry.css */
@@ -1106,19 +1106,19 @@ span.InboxItem_Read:hover a {
 }
 #compose-entry {
     /*background: url("/img/tropo-purple/troppurp-borderpixel.gif") repeat-x 0 bottom;*/
-	border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
 }
 #compose-entry ul li a {
     background-color: #fff;
     border: 1px solid #d3afec;
-	border-bottom: none;
+    border-bottom: none;
 }
 #compose-entry ul li.on a {
-	border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 #draft-container {
     border: 1px solid #bbb;
-	border-top: none;
+    border-top: none;
 }
 #draftstatus {
     background-color: #fff;
@@ -1130,7 +1130,7 @@ span.InboxItem_Read:hover a {
 #htmltools {
     border-right: 1px solid #bbb;
     border-left: 1px solid #bbb;
-	background: #fff;
+    background: #fff;
 }
 #htmltools ul {
     border-bottom: 1px solid #8D8D8D;
@@ -1144,14 +1144,14 @@ span.InboxItem_Read:hover a {
 }
 #submitbar {
     background-color: #ddd;
-    border: 1px solid #aaa; 
+    border: 1px solid #aaa;
 }
 
 /* contextualhover.css */
 div.ContextualPopup div.Inner {
     background-color: #fff !important;
     color: #000 !important;
-    border: 1px solid #7e27c1; 
+    border: 1px solid #7e27c1;
     }
 div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
         color: #7e27c1 !important;
@@ -1161,13 +1161,12 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
 .tooltip {
     border-bottom: 1px dotted #000;
 }
-.profile_join_disabled, .profile_postentry_disabled, 
-    .profile_sendvgift_disabled, .profile_sendmessage_disabled, 
-    .profile_addtrust_disabled, .profile_addsub_comm_disabled,
-    .profile_addsub_feed_disabled, .profile_addsub_person_disabled,
-    .profile_trackuser_disabled {
-        color: #999;
-    }
+li.profile_join_disabled, li.profile_addtrust_disabled,
+li.profile_addsub_comm_disabled, li.profile_addsub_feed_disabled,
+li.profile_addsub_person_disabled, li.profile_postentry_disabled,
+li.profile_trackuser_disabled, li.profile_sendmessage_disabled {
+    color: #999;
+}
 .details_stats p {
         color: #666;
     }
@@ -1197,12 +1196,12 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
     /*border-top: 1px solid #cdcdcd;*/
 }
 .tagfield {
-	color: #777;
-	border: 1px solid #CCC;
+    color: #777;
+    border: 1px solid #CCC;
 }
 .tagfield:focus
 {
-	color: #000;
+    color: #000;
     border: 1px solid #999;
 }
 .tagfield_error
@@ -1245,7 +1244,7 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
 
 /* CSS-style some things that users like to use */
 
-q { 
+q {
     margin-left: 1em;
     font-style: italic;
 }

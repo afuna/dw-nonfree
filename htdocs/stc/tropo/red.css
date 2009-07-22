@@ -5,7 +5,7 @@
  *     Jesse Proulx <jproulx@jproulx.net>
  *     Elizabeth Lubowitz <grrliz@gmail.com>
  *     Denise Paolucci <denise@dreamwidth.org>
- * 
+ *
  * Copyright (c) 2009 by Dreamwidth Studios, LLC.
  *
  * This program is NOT free software or open-source; you can use it as an
@@ -407,7 +407,7 @@ a:active,
     font-size: medium;
 }
 
-/** 
+/**
  * Start overriding some classes set in dw-free/htdocs/stc/
  * Other site scheme designers: use your own colors here
  * /
@@ -426,7 +426,7 @@ a:active,
     border-bottom: 1px dotted #666;
     border-left: 1px dotted #666;
     color: #c1272d;
-} 
+}
 
 .section img, .username img {
     padding-left: 3px;
@@ -442,7 +442,7 @@ h2.widget-header {
     border: 1px solid #c1272c;
 }
 
-/* widgets/customizetheme.css, themechooser.css, themenav.css, 
+/* widgets/customizetheme.css, themechooser.css, themenav.css,
 currenttheme.css */
 
 .theme-current h2.widget-header, .layout-item.current {
@@ -463,7 +463,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     overflow-y: visible;
 }
 
-.customize-button, .theme-item .theme-button, .layout-item 
+.customize-button, .theme-item .theme-button, .layout-item
 .layout-button {
     background: #f4717a;
     border: 2px solid #541e1a;
@@ -542,7 +542,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 
 /* more, detailed by page*/
 /*customizetheme.css*/
-.customize-button {    
+.customize-button {
     color: #fff;
     background: #f4717a;
     border: 2px solid #f6828b;
@@ -554,14 +554,14 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 .customize-content .subheader {
     background-image: url("/img/tropo-red/tropred-arrow-right.gif");
-	background-position: left center;
-	background-repeat: no-repeat;
+    background-position: left center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid #ffd8d8;
 }
 .customize-content .subheader.on {
     background-image: url("/img/tropo-red/tropred-arrow-down.gif");
-	background-position: left center ;
-	background-repeat: no-repeat;
+    background-position: left center ;
+    background-repeat: no-repeat;
 }
 .customize-content fieldset legend {
     color: #777;
@@ -596,7 +596,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     background-color: #ffd8d8;
 }
 .theme-nav li.on a {
-	/*background: url("/img/tropo-red/tropred-arrow-right.gif") no-repeat right 50%;*/
+    /*background: url("/img/tropo-red/tropred-arrow-right.gif") no-repeat right 50%;*/
     background-color: #fff ;
 }
 .theme-nav li a:visited,
@@ -613,7 +613,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 /*currentheme.css*/
 .theme-current h2.widget-header {
     background-color: #ffd8d8;
-	background-image: none;
+    background-image: none;
 }
 .theme-current-content h3 {
     color: #000;
@@ -739,7 +739,7 @@ div.CommunityPromoBox {
 
 .cprod.h3 {
     background: #f4717a;
-    
+
 }
 
 .cprod content {
@@ -878,8 +878,8 @@ table#support-highscores {
 
 /* lj_base-app.css */
 hr.hr {
-	color: #c1272d; 
-	background-color: #c1272d;
+    color: #c1272d;
+    background-color: #c1272d;
 }
 
 input.create-account {
@@ -948,7 +948,7 @@ div.right-sidebar {
     background-color: #f4717a;
     border: 1px solid #c1272d;
 }
-.textbutton { 
+.textbutton {
     color: #c1272c;
 }
 /*NOTE: corner.gif is white*/
@@ -1013,15 +1013,15 @@ input.bright {
 }
 
 #Subscriptions tr.lighter {
-	background-color: #ffd8d8;
+    background-color: #ffd8d8;
 }
 #Subscriptions tr.darker {
-	background-color: #f4717a;
+    background-color: #f4717a;
 }
 #SubscribeSaveButtons {
     border: 1px solid #333;
     }
-    
+
 .NotificationTable tr.Selected {
     background-color: #f4717a;
 }
@@ -1080,7 +1080,7 @@ span.InboxItem_Read:hover a {
     color: #000000
 }
 .ippu .track_title {
-	color: #f4717a;
+    color: #f4717a;
 }
 
 /* entry.css */
@@ -1107,19 +1107,19 @@ span.InboxItem_Read:hover a {
 }
 #compose-entry {
     /*background: url("/img/tropo-red/tropred-borderpixel.gif") repeat-x 0 bottom;*/
-	border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
 }
 #compose-entry ul li a {
     background-color: #fff;
     border: 1px solid #f4717a;
-	border-bottom: none;
+    border-bottom: none;
 }
 #compose-entry ul li.on a {
-	border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 #draft-container {
     border: 1px solid #bbb;
-	border-top: none;
+    border-top: none;
 }
 #draftstatus {
     background-color: #fff;
@@ -1131,7 +1131,7 @@ span.InboxItem_Read:hover a {
 #htmltools {
     border-right: 1px solid #bbb;
     border-left: 1px solid #bbb;
-	background: #fff;
+    background: #fff;
 }
 #htmltools ul {
     border-bottom: 1px solid #8D8D8D;
@@ -1145,14 +1145,14 @@ span.InboxItem_Read:hover a {
 }
 #submitbar {
     background-color: #ddd;
-    border: 1px solid #aaa; 
+    border: 1px solid #aaa;
 }
 
 /* contextualhover.css */
 div.ContextualPopup div.Inner {
     background-color: #fff !important;
     color: #000 !important;
-    border: 1px solid #c1272c; 
+    border: 1px solid #c1272c;
     }
 div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
         color: #c1272c !important;
@@ -1162,13 +1162,12 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
 .tooltip {
     border-bottom: 1px dotted #000;
 }
-.profile_join_disabled, .profile_postentry_disabled, 
-    .profile_sendvgift_disabled, .profile_sendmessage_disabled, 
-    .profile_addtrust_disabled, .profile_addsub_comm_disabled,
-    .profile_addsub_feed_disabled, .profile_addsub_person_disabled,
-    .profile_trackuser_disabled {
-        color: #999;
-    }
+li.profile_join_disabled, li.profile_addtrust_disabled,
+li.profile_addsub_comm_disabled, li.profile_addsub_feed_disabled,
+li.profile_addsub_person_disabled, li.profile_postentry_disabled,
+li.profile_trackuser_disabled, li.profile_sendmessage_disabled {
+    color: #999;
+}
 .details_stats p {
         color: #666;
     }
@@ -1198,12 +1197,12 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
     /*border-top: 1px solid #cdcdcd;*/
 }
 .tagfield {
-	color: #777;
-	border: 1px solid #CCC;
+    color: #777;
+    border: 1px solid #CCC;
 }
 .tagfield:focus
 {
-	color: #000;
+    color: #000;
     border: 1px solid #999;
 }
 .tagfield_error
@@ -1246,7 +1245,7 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
 
 /* CSS-style some things that users like to use */
 
-q { 
+q {
     margin-left: 1em;
     font-style: italic;
 }
