@@ -37,9 +37,6 @@ body<=
 
     my ( $ret, $suggestion, $response, $response2 );
 
-    # the poll that will be auto-posted with each suggestion:
-    my $poll .= "<poll name='' whovote='all' whoview='all'><poll-question type='radio'>This suggestion:<poll-item>Should be implemented as-is.</poll-item><poll-item>Should be implemented with changes.</poll-item><poll-item>Shouldn't be implemented.</poll-item><poll-item>(Other: please comment)</poll-item></poll-question></poll>";
-
     # the community to post to:
     my $destination = LJ::load_user( 'dw_suggestions' );
 
@@ -60,15 +57,19 @@ body<=
 
         # We have all the pieces, so let's build the post for DW:
 
+        $suggestion .= "<div class='suggestions-entry'>";
         $suggestion .= "<p><em><strong>Title:</strong></em>\n";
         $suggestion .= LJ::ehtml( $POST{title} ) . "</p>";
         $suggestion .= "<p><em><strong>Area:</strong></em>\n";
         $suggestion .= LJ::ehtml( $POST{area} ) . "</p>";
         $suggestion .= "<p><em><strong>Summary:</strong></em>\n";
         $suggestion .= LJ::ehtml( $POST{summary} ) . "</p>";
+        $suggestion .= "<div class='suggestions-longdescription'>";
         $suggestion .= "<p><em><strong>Description:</strong></em>\n";
         $suggestion .= LJ::ehtml( $POST{description} ) . "</p>";
-        $suggestion .= $poll;
+
+        # add the poll, with the title of the suggestion
+        $suggestion .= "<div class='suggestions-poll'><poll name='" . LJ::ehtml( $POST{title} ) . "' whovote='all' whoview='all'><poll-question type='radio'>This suggestion:<poll-item>Should be implemented as-is.</poll-item><poll-item>Should be implemented with changes.</poll-item><poll-item>Shouldn't be implemented.</poll-item><poll-item>(I have no opinion)</poll-item><poll-item>(Other: please comment)</poll-item></poll-question></poll></div></div></div>";
 
         # and now we post it. For this, we're going to post as the
         # user (so they get any comments, etc), and we're going to
