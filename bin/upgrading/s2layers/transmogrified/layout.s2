@@ -105,6 +105,9 @@ propgroup colors {
     property use color_page_text;
 
     property use color_module_link;
+    property use color_module_link_hover;
+    property use color_module_link_active;
+    property use color_module_link_visited;
     property use color_module_border;
     property use color_module_text;
     property use color_module_background;
@@ -115,6 +118,9 @@ propgroup colors {
     property use color_entry_border;
     property use color_entry_background;
     property use color_entry_link;
+    property use color_entry_link_hover;
+    property use color_entry_link_active;
+    property use color_entry_link_visited;
     property use color_entry_text;
     property use color_entry_title;
     property Color color_entry_title_border { des = "Entry\Comment subject border"; }
@@ -123,6 +129,9 @@ propgroup colors {
     property Color color_entry_border_alt { des = "Alternate entry\Comment border"; }
     property Color color_entry_background_alt { des = "Alternate entry\Comment background b"; }
     property Color color_entry_link_alt { des = "Alternate entry\Comment b links"; }
+    property Color color_entry_link_hover_alt { des = "Alternate entry\Comment b hover links"; }
+    property Color color_entry_link_active_alt { des = "Alternate entry\Comment b active links"; }
+    property Color color_entry_link_visited_alt { des = "Alternate entry\Comment b visited links"; }
     property Color color_entry_text_alt { des = "Alternate entry\Comment b text"; }
     property Color color_entry_subject_alt { des = "Alternate entry\Comment subject b"; }
     property Color color_entry_subject_alt_border { des = "Alternate entry\Comment subject border b"; }
@@ -159,6 +168,9 @@ set color_header_text = "#ffeba6";
 set color_header_hover_background = "#000000";
 set color_header_hover = "#fc7f3f";
 set color_module_link = "#fc7f3f";
+set color_module_link_active = "#b3592d";
+set color_module_link_hover = "#fc5603";
+set color_module_link_visited = "#fca87e";
 set color_module_border = "#fc7f3f";
 set color_module_text = "#666666";
 set color_module_background = "#ffffff";
@@ -168,6 +180,9 @@ set color_module_title_border = "#fc7f3f";
 set color_entry_border = "#739adf";
 set color_entry_background = "#ffffff";
 set color_entry_link = "#1f558b";
+set color_entry_link_hover = "#162ac2";
+set color_entry_link_active = "#111185";
+set color_entry_link_visited = "#618dbb";
 set color_entry_text = "#666666";
 set color_entry_title = "#1f558b";
 set color_entry_title_border = "#739adf";
@@ -175,6 +190,9 @@ set color_entry_title_background = "#cfe0e6";
 set color_entry_border_alt = "#fc7f3f";
 set color_entry_background_alt = "#ffffff";
 set color_entry_link_alt = "#fc7f3f";
+set color_entry_link_hover_alt = "#fc5603";
+set color_entry_link_active_alt = "#b3592d";
+set color_entry_link_visited_alt = "#fca87e";
 set color_entry_text_alt = "#666666";
 set color_entry_subject_alt = "#fc7f3f";
 set color_entry_subject_alt_border = "#fc7f3f";
@@ -437,6 +455,19 @@ function print_stylesheet () {
     .module-section-two a {
         color: $*color_module_link;
     }
+
+    .module-section-two a:hover {
+         color: $*color_module_link_hover;
+     }
+
+     .module-section-two a:active {
+         color: $*color_module_link_active;
+     }
+
+    .module-section-two a:visited {
+         color: $*color_module_link_visited;
+     }
+
     .module-section-two .module-header a {
         text-decoration: none;
     }
@@ -531,8 +562,17 @@ function print_stylesheet () {
     .entry-wrapper-odd .entry-title a, .comment-wrapper-odd .comment-title a {
         color: $*color_entry_title;
     }
-    a, .entry-wrapper-odd a, .comment-wrapper-odd a {
+    .entry-wrapper-odd a, .comment-wrapper-odd a {
         color: $*color_entry_link;
+    }
+    .entry-wrapper-odd a:hover, .comment-wrapper-odd a:hover {
+        color: $*color_entry_link_hover;
+    }
+    .entry-wrapper-odd a:active, .comment-wrapper-odd a:active {
+        color: $*color_entry_link_active;
+    }
+    .entry-wrapper-odd a:visited, .comment-wrapper-odd a:visited {
+        color: $*color_entry_link_visited;
     }
 
     .entry-wrapper-even .entry, .comment-wrapper-even .comment {
@@ -554,6 +594,15 @@ function print_stylesheet () {
     }
     .entry-wrapper-even a, .comment-wrapper-even a {
         color: $*color_entry_link_alt;
+    }
+    .entry-wrapper-even a:hover, .comment-wrapper-even a:hover {
+        color: $*color_entry_link_hover_alt;
+    }
+    .entry-wrapper-even a:active, .comment-wrapper-even a:active {
+        color: $*color_entry_link_active_alt;
+    }
+    .entry-wrapper-even a:visited, .comment-wrapper-even a:visited {
+        color: $*color_entry_link_visited_alt;
     }
 
     .entry .time, .entry .date {

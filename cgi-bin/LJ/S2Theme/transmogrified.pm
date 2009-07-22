@@ -33,6 +33,9 @@ sub entry_props {
         color_entry_border_alt
         color_entry_background_alt
         color_entry_link_alt
+        color_entry_link_hover_alt
+        color_entry_link_active_alt
+        color_entry_link_visited_alt
         color_entry_text_alt
         color_entry_subject_alt
         color_entry_subject_alt_border
