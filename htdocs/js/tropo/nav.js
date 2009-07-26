@@ -1,7 +1,7 @@
 // Tropospherical Navigation JavaScript
 //
 // Authors:
-//     Janine Costanzo <janine@netrophic.com>
+//     Janine Smith <janine@netrophic.com>
 //     Jesse Proulx <jproulx@jproulx.net>
 //     Elizabeth Lubowitz <grrliz@gmail.com>
 //
