@@ -21,11 +21,6 @@ body<=
     use strict;
     use vars qw( %GET %POST $title $windowtitle $headextra @errors @warnings );
 
-    use DW::InviteCodes;
-
-    LJ::need_res( "js/tropo/homepage.js" );
-    LJ::need_res( "stc/tropo/homepage.css" );
-
     $windowtitle = $LJ::SITENAME;
 
     my $remote = LJ::get_remote();
@@ -41,18 +36,30 @@ body<=
 HEAD
 
     if ( $remote ) {
-        # logged-in homepage goes here
-        my $readpage = $remote->journal_base . "/read";
-        $ret .= <<HTML;
-<p>The logged-in homepage hasn't been created yet, but here are some links to use while you're waiting:</p>
-<ul>
-<li><a href="$LJ::SITEROOT/update">Update Journal</a></li>
-<li><a href="$readpage">Reading Page</a></li>
-</ul>
-HTML
+        # logged-in homepage
+
+        use DW::Panel;
+
+        LJ::set_active_resource_group( 'jquery' );
+        LJ::need_res( { group => 'jquery' }, 'js/homepage_loggedin.js' );
+
+        my $panels = DW::Panel->init( u => $remote );
+        $ret .= '<div id="primary">';
+        $ret .= $panels->render_primary;
+        $ret .= '</div>';
+
+        $ret .= '<div id="secondary">';
+        $ret .= $panels->render_secondary;
+        $ret .= '</div><div class="clear-floats"></div>';
     }
     else {
         # logged-out homepage
+
+        use DW::InviteCodes;
+
+        LJ::need_res( "js/tropo/homepage.js" );
+        LJ::need_res( "stc/tropo/homepage.css" );
+
         $headextra .= <<HEAD;
 <script type="text/javascript">
     var ml = new Object();
