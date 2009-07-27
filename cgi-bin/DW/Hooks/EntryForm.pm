@@ -20,7 +20,7 @@ LJ::register_hook( 'entryforminfo', sub {
     my ( $journal, $remote ) = @_;
 
     my $make_list = sub {
-        my $ret;
+        my $ret = '';
         foreach my $link_info ( @_ ) {
             $ret .= "<li><a href='$link_info->[0]'>$link_info->[1]</a></li>"
                 if $link_info->[2];
