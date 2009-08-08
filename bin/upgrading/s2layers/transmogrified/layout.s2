@@ -7,6 +7,8 @@ layerinfo des = "Transmogrified, a style you can change easily";
 layerinfo source_viewable = 1;
 layerinfo is_public = 1;
 
+set layout_authors = [ { "name" => "Yvonne" } ];
+
 set entry_management_links = "text";
 set comment_management_links = "text";
 set all_commentsubjects = true;
@@ -39,6 +41,7 @@ propgroup modules {
     property use module_time_group;
     property use module_poweredby_group;
     property use module_customtext_group;
+    property use module_credit_group;
 }
 
 set module_layout_sections = "none|(none)|one|Header|two|Sidebar|three|Footer";
@@ -52,6 +55,7 @@ set module_calendar_section = "two";
 set module_poweredby_section = "three";
 set module_time_section = "none";
 set module_customtext_section = "two";
+set module_credit_section = "two";
 
 propgroup text {
     property use text_view_recent;
@@ -520,6 +524,15 @@ function print_stylesheet () {
     .module-calendar table {
         margin-left: auto;
         margin-right: auto;
+    }
+    .module-credit dt, .module-credit dd {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+    .module-credit dt {
+        font-weight: bold;
+        margin-right: 0.5em;
     }
 
     .entry, .comment, .text_noentries_day {
