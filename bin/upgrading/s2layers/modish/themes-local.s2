@@ -1,0 +1,45 @@
+#NEWLAYER: modish/scarlet
+layerinfo "type" = "theme";
+layerinfo "name" = "Modish Scarlet";
+layerinfo redist_uniq = "modish/scarlet";
+layerinfo author_name = "branchandroot";
+
+set layout_resources = [ { "name" => "Stock.XCHNG", "url" => "http://www.sxc.hu" } ];
+
+##===============================
+## Page Colors
+##===============================
+
+set color_page_background = "#ffffff";
+set color_page_text = "#222222";
+set color_page_link = "#B82015";
+set color_page_link_active = "#444444";
+set color_page_link_visited = "#850B0D";
+set color_page_title = "#ffffff";
+
+set color_header_background = "#B82015";
+set color_footer_background = "#B82015";
+
+##===============================
+## Entry Colors
+##===============================
+
+set color_entry_title = "#222222";
+set color_entry_title_background = "";
+set color_entry_border = "#B82015";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_title = "#222222";
+set color_module_border = "#B82015";
+
+#=================
+# Images
+#=================
+
+set image_background_header_url = "modish/scarlet.jpg";
+set image_background_header_repeat = "no-repeat";
+set image_background_header_position = "bottom right";
+set image_background_header_height = 100;

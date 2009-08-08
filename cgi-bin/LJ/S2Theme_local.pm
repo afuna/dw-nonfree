@@ -4,6 +4,7 @@ use Carp qw(croak);
 
 sub local_default_themes {
     return (
+        modish => 'modish/scarlet',
         transmogrified => 'transmogrified/basic',
     );
 }
