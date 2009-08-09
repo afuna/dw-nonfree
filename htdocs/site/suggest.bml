@@ -111,6 +111,8 @@ body<=
         $bugzilla_desc .= LJ::eurl( $POST{description} );
         $bugzilla_desc .= "%0D%0A%0D%0ASuggested by%3A%0D%0A%0D%0A";
         $bugzilla_desc .= LJ::eurl( $remote->user );
+        $bugzilla_desc .= "%0D%0A%0D%0ASuggested at%3A%0D%0A%0D%0A";
+        $bugzilla_desc .= LJ::eurl( $journalpost->{url} );
 
         $bugzilla_post .= "To post this entry to Bugzilla, use this link and change any of the fields as appropriate:<br /><br />&nbsp;&nbsp;&nbsp;<a href='";
 
