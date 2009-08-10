@@ -1,0 +1,44 @@
+#NEWLAYER: colorside/nadeshiko
+layerinfo "type" = "theme";
+layerinfo "name" = "Nadeshiko";
+layerinfo redist_uniq = "colorside/nadeshiko";
+layerinfo author_name = "branchandroot";
+
+set layout_resources = [ { "name" => "Stock.XCHNG", "url" => "http://www.sxc.hu" } ];
+
+##===============================
+## Page Colors
+##===============================
+
+set color_page_background = "#ffffff";
+set color_page_text = "#000000";
+set color_page_link = "#FA2B6D";
+set color_page_link_visited = "#FBAED5";
+set color_page_border = "#2D3366";
+
+##===============================
+## Entry Colors
+##===============================
+
+set color_entry_title = "#ffffff";
+set color_entry_title_background = "#8092CA";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#8092CA";
+set color_module_text = "#fff9ee";
+set color_module_link = "#fff9ee";
+set color_module_title = "#000000";
+set color_module_title_background = "#ffffff";
+
+##===============================
+## Images
+##===============================
+
+set image_background_header_url = "colorside/nadeshiko.jpg";
+set image_background_header_height = 250;
+set image_background_header_position = "top right";
+set image_background_header_repeat = "no-repeat";
+

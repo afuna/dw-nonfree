@@ -1,6 +1,8 @@
 ################################################################
 # base filename         layer type      parent
 
+colorside/themes-local  theme+          colorside/layout
+
 modish/themes-local     theme+          modish/layout
 
 transmogrified/layout   layout          core2
