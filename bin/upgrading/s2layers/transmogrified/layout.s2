@@ -299,7 +299,7 @@ function Page::print()
     """;
 }
 
-function print_stylesheet () {
+function Page::print_default_stylesheet () {
     var string sidebar_positioning = "margin-right: -$*sidebar_width;";
     var string sidebar_position = "right";
     var string sidebar_position_alt = "left";
@@ -338,6 +338,8 @@ function print_stylesheet () {
 # NB Background image stuff in container, not in body, and colors fixed accordingly. Otherwise it messes up the layout.
 # Homegrown logic for entry and module colors to fit with Transmog specialist options for alternating
 
+    """<style type="text/css">""";
+    start_css();
     """
     /* believe me, this style is much easier to deal with if you 
     just leave this here.  It says "lets use the IE box model" for
@@ -869,4 +871,6 @@ function print_stylesheet () {
         width: 95%;
     }
     """;
+    end_css();
+    "</style>\n";
 }
