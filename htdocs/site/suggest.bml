@@ -69,7 +69,7 @@ body<=
         $suggestion .= LJ::ehtml( $POST{description} ) . "</p>";
 
         # add the poll, with the title of the suggestion
-        $suggestion .= "<div class='suggestions-poll'><poll name='" . LJ::ehtml( $POST{title} ) . "' whovote='all' whoview='all'><poll-question type='radio'>This suggestion:<poll-item>Should be implemented as-is.</poll-item><poll-item>Should be implemented with changes.</poll-item><poll-item>Shouldn't be implemented.</poll-item><poll-item>(I have no opinion)</poll-item><poll-item>(Other: please comment)</poll-item></poll-question></poll></div></div></div>";
+        $suggestion .= "<div class='suggestions-poll'><poll name='" . LJ::ehtml( $POST{title} ) . "' whovote='all' whoview='all'><poll-question type='radio'>This suggestion:<poll-item>Should be implemented as-is.</poll-item><poll-item>Should be implemented with changes. (please comment)</poll-item><poll-item>Shouldn't be implemented.</poll-item><poll-item>(I have no opinion)</poll-item><poll-item>(Other: please comment)</poll-item></poll-question></poll></div></div></div>";
 
         # and now we post it. For this, we're going to post as the
         # user (so they get any comments, etc), and we're going to
