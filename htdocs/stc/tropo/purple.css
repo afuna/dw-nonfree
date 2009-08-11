@@ -385,7 +385,7 @@ a:active,
     text-align: center;
 }
 .standout .standout-inner {
-    background-color: #5e3da6;
+    background-color: #8356E6;
     color: #fff;
     border: 1px solid #3a155a;
     margin-top: 0.5em;
@@ -398,6 +398,10 @@ a:active,
 
 .standout-inner a:hover, .standout-inner a:active, .standout-inner a:hover {
     color: #fff;
+}
+
+.standout a:visited, .standout a:link {
+    color: #1D1333;
 }
 
 /* update.bml */
