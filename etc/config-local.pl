@@ -25,7 +25,6 @@
     $HOME = $ENV{'LJHOME'};
 
     # the base domain of your site.
-    # CHANGE THIS
     $DOMAIN = $DW::PRIVATE::DOMAIN;
 
     # human readable name of this site as well as shortened versions
@@ -42,47 +41,6 @@
     # optional SMTP server if it is to be used instead of sendmail
     $SMTP_SERVER = "localhost";
     $MAIL_TO_THESCHWARTZ = 1;
-
-    # database info.  only the master is necessary.
-    # you should probably CHANGE THIS
-    %DBINFO = (
-               'master' => {  # master must be named 'master'
-                   'host' => "localhost",
-                   'port' => 3306,
-                   'user' => 'dw',
-                   'pass' => $DW::PRIVATE::DBINFO{master}->{pass},
-                   'dbname' => 'dw',
-                   'role' => {
-                       'cluster1' => 1,
-                       'slow' => 1,
-
-                       # optionally, apache write its access logs to a mysql database
-                       #logs => 1,
-                   },
-               },
-               # example of a TCP-based DB connection
-               #'somehostname' => {
-               #    'host' => "somehost",
-               #    'port' => 1234,
-               #    'user' => 'username',
-               #    'pass' => 'password',
-               #},
-               # example of a UNIX domain-socket DB connection
-               #'otherhost' => {
-               #    'sock' => "$HOME/var/mysqld.sock",
-               #    'user' => 'username',
-               #    'pass' => 'password',
-               #},
-    );
-
-    # Schwartz DB configuration
-    @THESCHWARTZ_DBS = (
-            {
-                dsn => 'dbi:mysql:dw_schwartz;host=localhost',
-                user => 'dw',
-                pass => $DW::PRIVATE::THESCHWARTZ_DBS{pass},
-            },
-        );
 
     # setup recaptcha
     %RECAPTCHA = (
