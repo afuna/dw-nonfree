@@ -158,9 +158,9 @@ _code?>
     <hr />
 
     <p class="left">
-        <a href="<?siteroot?>/privacy.bml">Privacy Policy</A> |
-        <a href="<?siteroot?>/coppa.bml">COPPA</a> |
-        <a href="<?siteroot?>/disclaimer.bml">Legal Disclaimer</a>
+        <a href="<?siteroot?>/privacy">Privacy Policy</A> |
+        <a href="<?siteroot?>/coppa">COPPA</a> |
+        <a href="<?siteroot?>/disclaimer">Legal Disclaimer</a>
     </p>
 
     <p class="right">

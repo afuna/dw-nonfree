@@ -85,27 +85,27 @@ accountlinks<=
         }
         $ret .= "</a></div>";
         $ret .= "<div id='account-links-text'>";
-        $ret .= "<form action='$LJ::SITEROOT/logout.bml?ret=1' method='post'>";
+        $ret .= "<form action='$LJ::SITEROOT/logout?ret=1' method='post'>";
         $ret .= $remote->ljuser_display;
         $ret .= "<input type='hidden' name='user' value='" . $remote->user . "' />";
         $ret .= "<input type='hidden' name='sessid' value='$remote->{_session}->{sessid}' />";
         $ret .= " <input type='submit' value=\"$ML{'tropo.accountlinks.btn.logout'}\" />";
         $ret .= "</form>";
         $ret .= "<ul>";
-        $ret .= "<li><a href='$LJ::SITEROOT/update.bml'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>" unless $identity;
+        $ret .= "<li><a href='$LJ::SITEROOT/update'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>" unless $identity;
         $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
         $ret .= " ($unread)" if $unread;
         $ret .= "</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li> <br />";
-        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite.bml'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>" unless $identity;
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>" unless $identity;
         $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'tropo.accountlinks.help'}</a></li>";
         $ret .= "</ul>";
         $ret .= "</div>";
     } else {
         my $chal = LJ::challenge_generate(300);
 
-        $ret .= "<form action='$LJ::SITEROOT/login.bml?ret=1' method='post'>";
+        $ret .= "<form action='$LJ::SITEROOT/login?ret=1' method='post'>";
         $ret .= LJ::html_hidden( returnto => $GET{returnto} );
         $ret .= "<input type='hidden' name='chal' class='lj_login_chal' value='$chal' />\n";
         $ret .= "<input type='hidden' name='response' class='lj_login_response' value='' />\n";
@@ -125,7 +125,7 @@ accountlinks<=
             id => "login_password",
             size => 20,
             tabindex => 2,
-        }) . " <a href='$LJ::SITEROOT/lostinfo.bml'>$ML{'tropo.accountlinks.login.forgotpassword'}</a></td></tr>";
+        }) . " <a href='$LJ::SITEROOT/lostinfo'>$ML{'tropo.accountlinks.login.forgotpassword'}</a></td></tr>";
         $ret .= "<tr><td>&nbsp;</td>";
         $ret .= "<td class='remember-me-cell'>";
         $ret .= LJ::html_check({

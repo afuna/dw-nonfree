@@ -27,7 +27,7 @@ body<=
 
 <p>In order to protect our users from confusion and to protect our identity and reputation, we have set forth guidelines for using our name and our logos. This applies to anyone who would like to run a production site using any of the code developed or maintained by Dreamwidth Studios, LLC, as well as to anyone who would like to write a client or tool that interfaces with Dreamwidth code.</p>
 
-<p>These are basic guidelines. If you have a question that isn't covered here, please <a href='http://www.dreamwidth.org/support/submit.bml'>contact us</a> with details about your planned use. We are happy to answer any questions you might have, and we are more than willing to grant express written permission for the use of any of our service marks in most cases as long as we feel there's no chance of causing confusion among our users.</p>
+<p>These are basic guidelines. If you have a question that isn't covered here, please <a href='http://www.dreamwidth.org/support/submit'>contact us</a> with details about your planned use. We are happy to answer any questions you might have, and we are more than willing to grant express written permission for the use of any of our service marks in most cases as long as we feel there's no chance of causing confusion among our users.</p>
 
 <p>In all cases, the guiding principle in any use of our brand and/or service marks should be to avoid any possibility for reasonable confusion. An average person should never be able to accidentally mistake your use of our brand and/or mark as an official or sponsored use.</p>
 
@@ -63,7 +63,7 @@ body<=
  <li>The site name is only capitalized at the beginning: <em>Dreamwidth</em>, not <em>DreamWidth</em>.</li>
  <li>You <b>may not</b> use the site name in merchandise, including but not limited to t-shirts, stickers, mugs, or jewelry, without our express written permission.</li>
  <li>You <b>may not</b> use the site name in any way that indicates or implies our sponsorship, endorsement, or approval, without our express written permission.</li>
- <li>You <b>may not</b> use the site name in conjunction with any content that is explicit, hateful, discriminatory, exclusionary, or that violates our <a href='http://www.dreamwidth.org/legal/principles.bml'>Guiding Principles</a>.</li>
+ <li>You <b>may not</b> use the site name in conjunction with any content that is explicit, hateful, discriminatory, exclusionary, or that violates our <a href='http://www.dreamwidth.org/legal/principles'>Guiding Principles</a>.</li>
 </ul><br />
 
 <h2>Site Logo</h2><br />
@@ -73,20 +73,20 @@ body<=
  <li>You <b>may not</b> use any of these trademarks in merchandise, including but not limited to t-shirts, stickers, mugs, or jewelry, without our express written permission.</li>
  <li>You <b>may not</b> use any of these trademarks in any way that indicates or implies our sponsorship, endorsement, or approval, without our express written permission.</li>
  <li>You <b>may not</b> use any of our trademarks in banners, icons, and graphics if doing so would cause a reasonable person to mistake your use as speaking for or representing Dreamwidth Studios, LLC. (For instance, in an icon captioned 'Dreamwidth Staff'.)</li>
- <li>You <b>may not</b> use our trademarks in conjunction with any content that is explicit, hateful, discriminatory, exclusionary, or that violates our <a href='http://www.dreamwidth.org/legal/principles.bml'>Guiding Principles</a>.</li>
+ <li>You <b>may not</b> use our trademarks in conjunction with any content that is explicit, hateful, discriminatory, exclusionary, or that violates our <a href='http://www.dreamwidth.org/legal/principles'>Guiding Principles</a>.</li>
 </ul><br />
 
 <h2>Site Design</h2><br />
  <ul><li>The default site design visible on www.dreamwidth.org, known as 'Tropospherical Red', is our default visual identity. Because of this, and because of the potential for confusion, you should refrain from using these design elements in these colors for your client's website, without our express written permission.</li>
  <li>The client homepage -- whether the tool itself is web-based or the page is hosting a downloadable application -- must clearly indicate that the client is not created by, affiliated with, or sponsored by Dreamwidth Studios, LLC.</li>
  <li>The client homepage should include your name and contact information in a prominent place, and indicate that people should contact you and not Dreamwidth Studios, LLC with questions about your client.</li>
- <li>The client homepage should not contain any content that is explicit, hateful, discriminatory, exclusionary, or that violates our <a href='http://www.dreamwidth.org/legal/principles.bml'>Guiding Principles</a>.</li>
+ <li>The client homepage should not contain any content that is explicit, hateful, discriminatory, exclusionary, or that violates our <a href='http://www.dreamwidth.org/legal/principles'>Guiding Principles</a>.</li>
  </ul><br />
 
 <h2>Source Code</h2><br />
  <ul><li>The <a href='http://hg.dwscoalition.org/'>source code</a> for Dreamwidth Studios is based on code developed and maintained by LiveJournal.com. Code in the dw-free repository authored by LiveJournal is released under the GNU General Public License. Code in the dw-free repository authored by Dreamwidth Studios, LLC is dual-released under the GPL and Artistic Licenses.</li>
  <li>Code in the dw-nonfree repository is source-available but not Open Source. You may not use code from the dw-nonfree repository to run a production site. You may only use code from the dw-nonfree repository in a development environment for the purposes of improving the source code. If your development environment is publicly web-accessible, you may only use code from the dw-nonfree repository with our express written permission.</li>
- <li>If you are running a production site based on the Dreamwidth code, please let us know! We would like to add a link to your site to our <a href='http://www.dreamwidth.org/site/opensource.bml'>Open Source</a> page.</li>
+ <li>If you are running a production site based on the Dreamwidth code, please let us know! We would like to add a link to your site to our <a href='http://www.dreamwidth.org/site/opensource'>Open Source</a> page.</li>
 </ul><br />
 
 
