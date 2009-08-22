@@ -108,6 +108,11 @@ propgroup colors {
     property Color color_main_background { des = "Main background"; }
     property use color_page_text;
 
+    property use color_page_link;
+    property use color_page_link_hover;
+    property use color_page_link_active;
+    property use color_page_link_visited;
+
     property use color_module_link;
     property use color_module_link_hover;
     property use color_module_link_active;
@@ -167,6 +172,10 @@ set color_main_background = "#ffffff";
 set color_page_text = "#666666";
 set color_page_title_background = "#1f558b";
 set color_page_title = "#ffffff";
+set color_page_link = "#1f558b";
+set color_page_link_hover = "#162ac2";
+set color_page_link_active = "#111185";
+set color_page_link_visited = "#618dbb";
 set color_header_background = "#fc7f3f";
 set color_header_text = "#ffeba6";
 set color_header_hover_background = "#000000";
@@ -363,6 +372,11 @@ function Page::print_default_stylesheet () {
         margin: 0;
         padding: 0;
     }
+
+    a { $page_link_colors  }
+    a:active { $page_link_active_colors }
+    a:hover { $page_link_hover_colors }
+    a:visited { $page_link_visited_colors }
 
     #container {
                 $page_background
