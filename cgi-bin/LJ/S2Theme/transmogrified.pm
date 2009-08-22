@@ -78,4 +78,33 @@ sub navigation_props {
     return $self->_append_props( "navigation_props", @props );
 }
 
+
+package LJ::S2Theme::transmogrified::blackorwhite;
+use base qw( LJ::S2Theme::transmogrified );
+
+sub cats { qw() }
+sub designer { "zvi" }
+
+
+package LJ::S2Theme::transmogrified::goldenticket;
+use base qw( LJ::S2Theme::transmogrified );
+
+sub cats { qw() }
+sub designer { "zvi" }
+
+
+package LJ::S2Theme::transmogrified::subtlealmond;
+use base qw( LJ::S2Theme::transmogrified );
+
+sub cats { qw() }
+sub designer { "zvi" }
+
+
+package LJ::S2Theme::transmogrified::whiteorblack;
+use base qw( LJ::S2Theme::transmogrified );
+
+sub cats { qw() }
+sub designer { "zvi" }
+
+
 1;
