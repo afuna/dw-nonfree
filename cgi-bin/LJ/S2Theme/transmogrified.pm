@@ -86,6 +86,20 @@ sub cats { qw() }
 sub designer { "zvi" }
 
 
+package LJ::S2Theme::transmogrified::cottoncandydust;
+use base qw( LJ::S2Theme::transmogrified );
+
+sub cats { qw() }
+sub designer { "zvi" }
+
+
+package LJ::S2Theme::transmogrified::earthandsky;
+use base qw( LJ::S2Theme::transmogrified );
+
+sub cats { qw() }
+sub designer { "zvi" }
+
+
 package LJ::S2Theme::transmogrified::goldenticket;
 use base qw( LJ::S2Theme::transmogrified );
 
