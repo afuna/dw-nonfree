@@ -1,0 +1,281 @@
+#NEWLAYER: sundaymorning/greensquiggle
+layerinfo type = "theme";
+layerinfo name = "Green Squiggle";
+layerinfo redist_uniq = "sundaymorning/greensquiggle";
+layerinfo author_name = "Calla";
+
+set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
+set image_background_page_url = "sundaymorning/greensquiggle.png";
+
+set color_page_background = "#e6f8e4";
+set color_page_text = "#666666";
+set color_page_link = "#538f4d";
+set color_page_link_hover = "#333";
+set color_page_link_visited = "#113311";
+
+set color_page_title = "#333";
+set color_page_title_background = "#c4c4c4";
+set color_header_text = "#333";
+set color_header_background = "#fff";
+set color_header_hover = "#333";
+set color_header_hover_background = "#e7e7e7";
+
+set color_module_text = "#333";
+set color_module_link = "#538f4d";
+set color_module_link_hover = "#333";
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+
+set color_module_title = "#333";
+set color_module_title_background = "#e7e7e7";
+set color_module_title_border = "#999";
+
+set color_entry_text = "#333";
+set color_entry_background = "#fff";
+set color_entry_border = "#999";
+
+set color_entry_title = "#333";
+set color_entry_title_background = "#c4c4c4";
+set color_entry_title_border = "#ddd";
+
+set color_entry_link = "#538f4d";
+set color_entry_link_hover = "#333";
+set color_entry_link_visited = "#113311";
+
+set color_navigation_text = "#333000";
+
+
+#NEWLAYER: sundaymorning/greenswirls
+layerinfo type = "theme";
+layerinfo name = "Green Swirls";
+layerinfo redist_uniq = "sundaymorning/greenswirls";
+layerinfo author_name = "Calla";
+
+set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
+set image_background_page_url = "sundaymorning/greenswirls.png";
+
+set color_page_background = "#fff";
+set color_page_text = "#666666";
+set color_page_link = "#599ea5";
+set color_page_link_hover = "#444";
+set color_page_link_visited = "#698e95";
+
+set color_page_title = "#444";
+set color_page_title_background = "#b0e1e4";
+set color_header_text = "#444";
+set color_header_background = "#e0f1e1";
+set color_header_hover = "#444";
+set color_header_hover_background = "#dceff0";
+
+set color_module_text = "#444";
+set color_module_link = "#599ea5";
+set color_module_link_hover = "#444";
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+
+set color_module_title = "#444";
+set color_module_title_background = "#e0f1e1";
+set color_module_title_border = "#999";
+
+set color_entry_text = "#444";
+set color_entry_background = "#fff";
+set color_entry_border = "#999";
+
+set color_entry_title = "#444";
+set color_entry_title_background = "#e0f1e1";
+set color_entry_title_border = "#ddd";
+
+set color_entry_link = "#599ea5";
+set color_entry_link_hover = "#444";
+set color_entry_link_visited = "#698e95";
+
+set color_navigation_text = "#444000";
+
+
+#NEWLAYER: sundaymorning/pinkswirls
+layerinfo type = "theme";
+layerinfo name = "Pink Swirls";
+layerinfo redist_uniq = "sundaymorning/pinkswirls";
+layerinfo author_name = "Calla";
+
+set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
+set image_background_page_url = "sundaymorning/pinkswirls.png";
+
+set color_page_background = "#e8eef1";
+set color_page_text = "#666666";
+set color_page_link = "#db127a";
+set color_page_link_hover = "#444";
+set color_page_link_visited = "#bb528a";
+
+set color_page_title = "#ffffff";
+set color_page_title_background = "#f2a5cd";
+set color_header_text = "#444";
+set color_header_background = "#f7fcfe";
+set color_header_hover = "#444";
+set color_header_hover_background = "#f0eaed";
+
+set color_module_text = "#444";
+set color_module_link = "#e0197e";
+set color_module_link_hover = "#444";
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+
+set color_module_title = "#444";
+set color_module_title_background = "#f0eaed";
+set color_module_title_border = "#999";
+
+set color_entry_text = "#444";
+set color_entry_background = "#f7fcfe";
+set color_entry_border = "#999";
+
+set color_entry_title = "#444";
+set color_entry_title_background = "#f0eaed";
+set color_entry_title_border = "#ddd";
+
+set color_entry_link = "#db127a";
+set color_entry_link_hover = "#444";
+set color_entry_link_visited = "#bb528a";
+
+set color_navigation_text = "#444000";
+
+
+#NEWLAYER: sundaymorning/purpleswirls
+layerinfo type = "theme";
+layerinfo name = "Purple Swirls";
+layerinfo redist_uniq = "sundaymorning/purpleswirls";
+layerinfo author_name = "Calla";
+
+set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
+set image_background_page_url = "sundaymorning/purpleswirls.png";
+
+set color_page_background = "#fff";
+set color_page_text = "#666666";
+set color_page_link = "#9675a7";
+set color_page_link_hover = "#444";
+set color_page_link_visited = "#8685b7";
+
+set color_page_title = "#eee";
+set color_page_title_background = "#673e7b";
+set color_header_text = "#444";
+set color_header_background = "#f7ebf4";
+set color_header_hover = "#444";
+set color_header_hover_background = "#e0d8e4";
+
+set color_module_text = "#444";
+set color_module_link = "#9675a7";
+set color_module_link_hover = "#444";
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+
+set color_module_title = "#444";
+set color_module_title_background = "#f7ebf4";
+set color_module_title_border = "#999";
+
+set color_entry_text = "#666";
+set color_entry_background = "#f7fcfe";
+set color_entry_border = "#999";
+
+set color_entry_title = "#444";
+set color_entry_title_background = "#e0d8e4";
+set color_entry_title_border = "#ddd";
+
+set color_entry_link = "#9675a7";
+set color_entry_link_hover = "#444";
+set color_entry_link_visited = "#8685b7";
+
+set color_navigation_text = "#444000";
+
+
+#NEWLAYER: sundaymorning/redsquiggle
+layerinfo type = "theme";
+layerinfo name = "Red Squiggle";
+layerinfo redist_uniq = "sundaymorning/redsquiggle";
+layerinfo author_name = "Calla";
+
+set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
+set image_background_page_url = "sundaymorning/redsquiggle.png";
+
+set color_page_background = "#ffeeed";
+set color_page_text = "#666666";
+set color_page_link = "#8e2f2d";
+set color_page_link_hover = "#333";
+set color_page_link_visited = "#6e3f3d";
+
+set color_page_title = "#eee";
+set color_page_title_background = "#8e2f2d";
+set color_header_text = "#333";
+set color_header_background = "#fff";
+set color_header_hover = "#333";
+set color_header_hover_background = "#e5d4d4";
+
+set color_module_text = "#333";
+set color_module_link = "#8e2f2d";
+set color_module_link_hover = "#333";
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+
+set color_module_title = "#333";
+set color_module_title_background = "#e5d4d4";
+set color_module_title_border = "#999";
+
+set color_entry_text = "#333";
+set color_entry_background = "#fff";
+set color_entry_border = "#999";
+
+set color_entry_title = "#333";
+set color_entry_title_background = "#e5d4d4";
+set color_entry_title_border = "#ddd";
+
+set color_entry_link = "#8e2f2d";
+set color_entry_link_hover = "#333";
+set color_entry_link_visited = "#6e3f3d";
+
+set color_navigation_text = "#333000";
+
+
+#NEWLAYER: sundaymorning/yellowsquiggle
+layerinfo type = "theme";
+layerinfo name = "Yellow Squiggle";
+layerinfo redist_uniq = "sundaymorning/yellowsquiggle";
+layerinfo author_name = "Calla";
+
+set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
+set image_background_page_url = "sundaymorning/yellowsquiggle.png";
+
+set color_page_background = "#f5f8e4";
+set color_page_text = "#666666";
+set color_page_link = "#998a8e";
+set color_page_link_hover = "#333";
+set color_page_link_visited = "#797a7e";
+
+set color_page_title = "#333";
+set color_page_title_background = "#ccc6be";
+set color_header_text = "#333";
+set color_header_background = "#fff";
+set color_header_hover = "#333";
+set color_header_hover_background = "#e6dfd6";
+
+set color_module_text = "#333";
+set color_module_link = "#998a8e";
+set color_module_link_hover = "#333";
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+
+set color_module_title = "#333";
+set color_module_title_background = "#cbc5bd";
+set color_module_title_border = "#999";
+
+set color_entry_text = "#333";
+set color_entry_background = "#fff";
+set color_entry_border = "#999";
+
+set color_entry_title = "#333";
+set color_entry_title_background = "#cbc5bd";
+set color_entry_title_border = "#ddd";
+
+set color_entry_link = "#998a8e";
+set color_entry_link_hover = "#333";
+set color_entry_link_visited = "#797a7e";
+
+set color_navigation_text = "#333000";
+

@@ -5,6 +5,9 @@ colorside/themes-local  theme+          colorside/layout
 
 modish/themes-local     theme+          modish/layout
 
+sundaymorning/layout    layout          core2
+sundaymorning/themes    theme+          sundaymorning/layout
+
 transmogrified/layout   layout          core2
 transmogrified/themes   theme+          transmogrified/layout
 
