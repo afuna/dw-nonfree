@@ -1,7 +1,6 @@
 package LJ::S2Theme::transmogrified;
 use base qw( LJ::S2Theme );
 
-sub cats { qw( featured ) }
 sub designer { "Yvonne" }
 
 sub layouts { ( "2r" => "two-columns-right" ) }
@@ -78,6 +77,8 @@ sub navigation_props {
     return $self->_append_props( "navigation_props", @props );
 }
 
+package LJ::S2Theme::transmogrified::basic;
+sub cats { qw() }
 
 package LJ::S2Theme::transmogrified::blackorwhite;
 use base qw( LJ::S2Theme::transmogrified );
@@ -117,7 +118,7 @@ sub designer { "zvi" }
 package LJ::S2Theme::transmogrified::whiteorblack;
 use base qw( LJ::S2Theme::transmogrified );
 
-sub cats { qw() }
+sub cats { qw( featured ) }
 sub designer { "zvi" }
 
 

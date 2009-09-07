@@ -13,7 +13,7 @@ sub cats { qw() }
 
 package LJ::S2Theme::sundaymorning::greenswirls;
 use base qw( LJ::S2Theme::sundaymorning );
-sub cats { qw( featured ) }
+sub cats { qw() }
 
 package LJ::S2Theme::sundaymorning::pinkswirls;
 use base qw( LJ::S2Theme::sundaymorning );
