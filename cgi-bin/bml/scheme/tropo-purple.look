@@ -153,6 +153,7 @@ footer<=
     <li><a href="<?siteroot?>/legal/diversity"><?_ml tropo.footer.legal.diversitystatement _ml?></a> &bull; </li>
     <li><a href="<?siteroot?>/legal/principles"><?_ml tropo.footer.legal.guidingprinciples _ml?></a> &bull; </li>
     <li><a href="<?siteroot?>/site/"><?_ml tropo.footer.sitemap _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/site/suggest"><?_ml tropo.footer.suggestion _ml?></a> &bull; </li>
     <li><a href="<?siteroot?>/site/opensource"?><?_ml tropo.footer.opensource _ml?></a></li>
 </ul>
 <p><?_ml tropo.footer.info _ml?></p>
