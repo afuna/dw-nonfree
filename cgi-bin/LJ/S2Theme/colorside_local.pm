@@ -12,7 +12,7 @@ sub cats { qw( featured ) }
 
 package LJ::S2Theme::colorside::nadeshiko;
 use base qw( LJ::S2Theme::colorside );
-sub cats { qw() }
+sub cats { qw( base ) }
 
 package LJ::S2Theme::colorside::wintergreen;
 use base qw( LJ::S2Theme::colorside );

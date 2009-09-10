@@ -9,7 +9,7 @@ sub designer { "Calla" }
 
 package LJ::S2Theme::sundaymorning::greensquiggle;
 use base qw( LJ::S2Theme::sundaymorning );
-sub cats { qw() }
+sub cats { qw( base ) }
 
 package LJ::S2Theme::sundaymorning::greenswirls;
 use base qw( LJ::S2Theme::sundaymorning );
