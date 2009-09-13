@@ -7,7 +7,7 @@ layerinfo "lang" = "en";
 # Originally a Transmogrified theme
 
 set layout_type = "two-columns-left";
-set layout_authors = [ { "name" => "Calla", "type" => "user" } ];
+set layout_authors = [ { "name" => "regna", "type" => "user" } ];
 
 set entry_management_links = "text";
 set comment_management_links = "text";

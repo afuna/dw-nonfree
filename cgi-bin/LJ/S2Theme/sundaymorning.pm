@@ -4,7 +4,7 @@ use base qw( LJ::S2Theme );
 sub layouts { ( "2l" => "two-columns-left" ) }
 sub layout_prop { "layout_type" }
 
-sub designer { "Calla" }
+sub designer { "regna" }
 
 
 package LJ::S2Theme::sundaymorning::greensquiggle;
