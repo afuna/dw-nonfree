@@ -72,6 +72,7 @@ layerinfo author_name = "zvi";
 set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_page_background = "#fff";
+set color_main_background = "#ffffff";
 set color_page_text = "#000";
 set color_page_title = "#333";
 set color_page_title_background = "#eeeeee";
@@ -81,6 +82,7 @@ set color_page_link_active = "#800000";
 set color_page_link_hover = "#000080";
 set color_page_link_visited = "#800080";
 
+set color_archivemonth_background = "#ffffff";
 set color_archivemonth_border = "#000";
 set color_archivemonth_title = "#333";
 set color_archivemonth_title_background = "#eee";
@@ -92,6 +94,8 @@ set color_tagspage_title_background = "#eee";
 set color_tagspage_title_border = "#000";
 
 set color_navigation_border = "#000";
+set color_navigation_text = "#000000";
+set color_navigation_background = "#ffffff";
 
 set color_header_background = "#eee";
 set color_header_hover = "#fff";
@@ -102,6 +106,8 @@ set color_footer_background = "#fff";
 set color_footer_link = "#008000";
 set color_footer_text = "#000";
 
+set color_entry_background = "#ffffff";
+set color_entry_background_alt = "#ffffff";
 set color_entry_border = "#000";
 set color_entry_border_alt = "#000";
 set color_entry_text = "#000";
@@ -122,6 +128,7 @@ set color_entry_link_hover_alt = "#000080";
 set color_entry_link_visited = "#800080";
 set color_entry_link_visited_alt = "#800080";
 
+set color_module_background = "#ffffff";
 set color_module_border = "#000000";
 set color_module_text = "#000000";
 set color_module_title = "#000000";
@@ -184,6 +191,7 @@ set color_module_link = "#6b68ec";
 set color_module_link_active = "#68edad";
 set color_module_link_hover = "#68ed6b";
 set color_module_link_visited = "#ed68eb";
+set color_module_text = "#666666";
 set color_module_title = "#666666";
 set color_module_title_background = "#fef6f6";
 set color_module_title_border = "#fef6f6";
@@ -191,6 +199,11 @@ set color_navigation_background = "#f3eceb";
 set color_navigation_border = "#6b68ec";
 set color_navigation_text = "#666666";
 set color_page_background = "#f3eceb";
+set color_page_link = "#6b68ec";
+set color_page_link_hover = "#68edad";
+set color_page_link_active = "#68ed6b";
+set color_page_link_visited = "#ed68eb";
+set color_page_text = "#666666";
 set color_page_title = "#666666";
 set color_page_title_background = "#f3eceb";
 set color_tagspage_border = "#666666";
@@ -270,6 +283,11 @@ set color_page_text = "#6f3e09";
 set color_page_title_background = "#6f3e09";
 set color_page_title = "#ffd6aa";
 
+set color_page_link = "#0a1f6c";
+set color_page_link_active = "#6cf9ad";
+set color_page_link_hover = "#7c97f8";
+set color_page_link_visited = "#096c37";
+
 set color_tagspage_border = "#987f65";
 set color_tagspage_title = "#6f3e09";
 set color_tagspage_title_background = "#987f65";
@@ -284,6 +302,7 @@ layerinfo author_name = "zvi";
 
 set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
 
+set color_main_background = "#ffffff";
 set color_page_background = "#deb968";
 set color_page_text = "#685250";
 set color_page_title = "#000000";
@@ -299,6 +318,7 @@ set color_tagspage_title = "#685250";
 set color_tagspage_title_background = "#e4dfc9";
 set color_tagspage_title_border = "#deb968";
 
+set color_archivemonth_background = "#ffffff";
 set color_archivemonth_border = "#deb968";
 set color_archivemonth_title = "#685250";
 set color_archivemonth_title_background = "#e4dfc9";
@@ -317,6 +337,8 @@ set color_footer_background = "#e4dfc9";
 set color_footer_link = "#d32634";
 set color_footer_text = "#685250";
 
+set color_entry_background = "#ffffff";
+set color_entry_background_alt = "#ffffff";
 set color_entry_border = "#deb968";
 set color_entry_border_alt = "#000000";
 set color_entry_subject_alt = "#ffffff";
@@ -337,6 +359,7 @@ set color_entry_link_hover_alt = "#deb968";
 set color_entry_link_visited = "#a0525d";
 set color_entry_link_visited_alt = "#a0525d";
 
+set color_module_background = "#ffffff";
 set color_module_border = "#deb968";
 set color_module_text = "#685250";
 set color_module_title = "#685250";
@@ -461,6 +484,7 @@ set color_tagspage_title_border = "#ffffff";
 
 set color_navigation_background = "#000000";
 set color_navigation_border = "#ffffff";
+set color_navigation_text = "#ffffff";
 
 set color_header_background = "#333";
 set color_header_hover = "#000000";
