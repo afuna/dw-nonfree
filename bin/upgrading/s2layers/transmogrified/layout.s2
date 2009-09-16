@@ -346,13 +346,16 @@ function Page::print_default_stylesheet () {
 
     var string userpic_css = "";
     if($*userpics_position == "left") {
-         $userpic_css = """.entry-title, .comment-title {margin: 0; } 
-         .has-userpic .header {margin: 0 0 0 120px; } 
-         .entry .userpic a, .comment .userpic a {left: 10px; right: auto; }""";
+         $userpic_css = """
+      .entry-title, .comment-title {margin: 0; } 
+      .has-userpic .header {margin: 0 0 0 120px; } 
+      .entry .userpic a, .comment .userpic a {left: 10px; right: auto; }""";
         }
     elseif($*userpics_position == "right") {
-         $userpic_css = """.entry-title, .comment-title {margin: 0; margin-right: 120px; }
-         .entry .userpic a, .comment .userpic a {right: 10px; left: auto; }""";
+         $userpic_css = """
+      .entry-title, .comment-title {margin: 0; } 
+      .has-userpic .entry-title, .has-userpic .comment-title { margin-right: 120px; }
+      .entry .userpic a, .comment .userpic a {right: 10px; left: auto; }""";
         }
 
 
