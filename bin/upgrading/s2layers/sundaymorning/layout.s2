@@ -271,7 +271,8 @@ function Page::print_default_stylesheet() {
     if($*userpics_position == "left") {
          $userpic_css = """
       .entry-title, .comment-title {margin: 0; } 
-      .has-userpic .header {margin: 0 0 0 120px; } 
+       /* make sure userpic can't overlap the poster's username */
+      .has-userpic .header { margin: 0 0 0 120px; min-height: 55px; } 
       .entry .userpic a, .comment .userpic a {left: 10px; right: auto; }""";
         }
     elseif($*userpics_position == "right") {
