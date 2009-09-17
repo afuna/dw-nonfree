@@ -633,9 +633,6 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 .theme-selector-content h3 {
     color: #777;
 }
-.theme-item {
-    border: 1px solid #fff;
-}
 .theme-item.current {
     border: 1px solid #d3afec;
     background-color: #F3D2FC;
