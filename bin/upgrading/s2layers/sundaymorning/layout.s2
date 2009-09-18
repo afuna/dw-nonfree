@@ -301,15 +301,15 @@ a {
     $page_link_colors
     text-decoration: none;
 }
-a:active {
-    $page_link_active_colors
-}
 a:visited {
     $page_link_visited_colors
 }
 a:hover {
     $page_link_hover_colors
     text-decoration: none;
+}
+a:active {
+    $page_link_active_colors
 }
 
 #container {
@@ -537,14 +537,14 @@ $userpic_css
 .entry-wrapper a, .comment-wrapper a {
     $entry_link_colors
 }
-.entry-wrapper a:active, .comment-wrapper a:active {
-    $entry_link_active_colors
-}
 .entry-wrapper a:visited, .comment-wrapper a:visited {
     $entry_link_visited_colors
 }
 .entry-wrapper a:hover, .comment-wrapper a:hover {
     $entry_link_hover_colors
+}
+.entry-wrapper a:active, .comment-wrapper a:active {
+    $entry_link_active_colors
 }
 
 .entry .time, .entry .date {
