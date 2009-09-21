@@ -19,7 +19,6 @@ package DW::BusinessRules::InviteCodes::DWS;
 use strict;
 use warnings;
 use Carp ();
-use lib "$LJ::HOME/cgi-bin";
 use base 'DW::BusinessRules::InviteCodes';
 
 use DW::InviteCodes;
