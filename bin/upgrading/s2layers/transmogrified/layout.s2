@@ -417,7 +417,6 @@ function Page::print_default_stylesheet () {
 
     #wrap {
         color: $*color_page_text;
-        padding-$sidebar_position: $*sidebar_width;
         padding-top: 20px;
         padding-$sidebar_position_alt: 20px;
 	}
@@ -426,7 +425,6 @@ function Page::print_default_stylesheet () {
 	    margin: 0 0;
         position: relative;
         width: 100%;
-        float: left;
         padding-bottom: 20px;
         z-index: 20;
      }
@@ -446,7 +444,6 @@ function Page::print_default_stylesheet () {
     .module-section-two {
         position: relative;
         width: $*sidebar_width;
-        float: left;
         /* this must stay at the bottom of this code as in some circumstances
         it closes one declaration and opens another one */
         $sidebar_positioning;
@@ -900,6 +897,14 @@ function Page::print_default_stylesheet () {
     #commenttext {
         width: 95%;
     }
+
+    .one-column #content {float: none;}
+    .one-column .module-section-two {float: none; padding-bottom: 10px; margin-bottom: 20px;}
+    .one-column #wrap {padding-left: 20px; padding-right: 20px;}
+    .two-columns-right #content {float: left;}
+    .two-columns-right .module-section-two {float: left;}
+    .two-columns-right #wrap {padding-$sidebar_position: $*sidebar_width;}
+
     """;
     end_css();
     "</style>\n";
