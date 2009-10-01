@@ -63,6 +63,76 @@ set color_tagspage_border = "#739adf";
 set color_tagspage_title_background = "#cfe0e6";
 set color_comments_form_border = "#fc7f3f";
 
+
+#NEWLAYER: transmogrified/blackeye
+layerinfo type = "theme";
+layerinfo name = "Black Eye";
+layerinfo redist_uniq = "transmogrified/blackeye";
+layerinfo author_name = "dancing_serpent";
+
+set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" }];
+
+set color_module_title_border = "#8a5598";
+set color_header_hover = "#8a5598";
+set color_entry_subject_alt = "#000000";
+set color_module_link_hover = "#b8aae5";
+set color_entry_title_border = "#8a5598";
+set color_archivemonth_title = "#8a5598";
+set color_header_background = "#8a5598";
+set color_header_text = "#000000";
+set color_tagspage_title_border = "#000000";
+set color_entry_background_alt = "#000000";
+set color_page_background = "#8a5598";
+set color_footer_text = "#b8aae5";
+set color_entry_link_hover_alt = "#b8aae5";
+set color_archivemonth_border = "#8a5598";
+set color_entry_link_hover = "#b8aae5";
+set color_module_border = "#8a5598";
+set color_entry_link = "#6e368b";
+set color_page_title_background = "#000000";
+set color_tagspage_border = "#000000";
+set color_entry_title = "#000000";
+set color_entry_link_active_alt = "#6e368b";
+set color_navigation_border = "#000000";
+set color_archivemonth_background = "#000000";
+set color_page_link_hover = "#b8aae5";
+set color_entry_link_active = "#6e368b";
+set color_tagspage_title_background = "#8a5598";
+set color_entry_background = "#000000";
+set color_entry_subject_alt_background = "#8a5598";
+set color_main_background = "#000000";
+set color_page_link_active = "#6e368b";
+set color_page_link = "#6e368b";
+set color_module_background = "#000000";
+set color_page_text = "#b8aae5";
+set color_header_hover_background = "#000000";
+set color_module_title = "#b8aae5";
+set color_entry_border = "#8a5598";
+set color_entry_text = "#b8aae5";
+set color_footer_background = "#8a5598";
+set color_entry_border_alt = "#8a5598";
+set color_entry_link_alt = "#6e368b";
+set color_entry_subject_alt_border = "#8a5598";
+set color_navigation_background = "#000000";
+set color_module_title_background = "#000000";
+set color_archivemonth_title_background = "#000000";
+set color_page_title = "#8a5598";
+set color_entry_text_alt = "#b8aae5";
+set color_module_link = "#6e368b";
+set color_entry_link_visited = "#6e368b";
+set color_comments_form_border = "#000000";
+set color_module_link_visited = "#6e368b";
+set color_page_link_visited = "#6e368b";
+set color_navigation_text = "#b8aae5";
+set color_entry_title_background = "#8a5598";
+set color_entry_link_visited_alt = "#6e368b";
+set color_archivemonth_title_border = "#000000";
+set color_module_link_active = "#6e368b";
+set color_tagspage_title = "#000000";
+set color_module_text = "#b8aae5";
+set color_footer_link = "#000000";
+
+
 #NEWLAYER: transmogrified/blackorwhite
 layerinfo "type" = "theme";
 layerinfo "name" = "Black or White";

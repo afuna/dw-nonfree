@@ -81,52 +81,49 @@ package LJ::S2Theme::transmogrified::basic;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw( base ) }
 
+package LJ::S2Theme::transmogrified::blackeye;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "dancing_serpent" }
+
 package LJ::S2Theme::transmogrified::blackorwhite;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw() }
 sub designer { "zvi" }
 
 
 package LJ::S2Theme::transmogrified::cottoncandydust;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw() }
 sub designer { "zvi" }
 
 
 package LJ::S2Theme::transmogrified::earthandsky;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw() }
 sub designer { "zvi" }
 
 
 package LJ::S2Theme::transmogrified::goldenticket;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw() }
 sub designer { "zvi" }
 
 package LJ::S2Theme::transmogrified::ocean;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 
 package LJ::S2Theme::transmogrified::subtlealmond;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw() }
 sub designer { "zvi" }
 
 
 package LJ::S2Theme::transmogrified::whiteorblack;
 use base qw( LJ::S2Theme::transmogrified );
-
 sub cats { qw( featured ) }
 sub designer { "zvi" }
-
 
 1;
