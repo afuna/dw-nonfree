@@ -186,6 +186,50 @@ set color_entry_link_visited = "#8685b7";
 set color_navigation_text = "#444000";
 
 
+#NEWLAYER: sundaymorning/redcontrast
+layerinfo type = "theme";
+layerinfo name = "Red Contrast";
+layerinfo redist_uniq = "sundaymorning/redcontrast";
+layerinfo author_name = "ambrya";
+
+set layout_authors = [ { "name" => "ambrya", "type" => "user" }];
+
+set color_page_background = "#5a0000";
+set color_page_text = "#82fa64";
+set color_page_link = "#fff499";
+set color_page_link_active = "#e2b586";
+set color_page_link_hover = "#e2b586";
+set color_page_link_visited = "#fff499";
+
+set color_page_title = "#82fa64";
+set color_header_text = "#82fa64";
+set color_header_hover = "#5a0000";
+set color_header_hover_background = "#82fa64";
+
+set color_module_text = "#c3ffb1";
+set color_module_link = "#e2b586";
+set color_module_link_active = "#fff499";
+set color_module_link_hover = "#fff499";
+set color_module_link_visited = "#e2b586";
+set color_module_background = "#3c0000";
+set color_module_border = "#82fa64";
+
+set color_module_title_background = "#5a0000";
+set color_module_title_border = "#1a4918";
+
+set color_entry_text = "#b7ff78";
+set color_entry_background = "#3c0000";
+set color_entry_border = "#82fa64";
+
+set color_entry_title_background = "#5a0000";
+set color_entry_title_border = "#82fa64";
+
+set color_entry_link = "#82fa64";
+set color_entry_link_active = "#c3ffb1";
+set color_entry_link_hover = "#c3ffb1";
+set color_entry_link_visited = "#82fa64";
+
+
 #NEWLAYER: sundaymorning/redsquiggle
 layerinfo type = "theme";
 layerinfo name = "Red Squiggle";

@@ -23,6 +23,10 @@ package LJ::S2Theme::sundaymorning::purpleswirls;
 use base qw( LJ::S2Theme::sundaymorning );
 sub cats { qw() }
 
+package LJ::S2Theme::sundaymorning::redcontrast;
+use base qw( LJ::S2Theme::sundaymorning );
+sub cats { qw( ) }
+sub designer { "ambrya" }
 package LJ::S2Theme::sundaymorning::redsquiggle;
 use base qw( LJ::S2Theme::sundaymorning );
 sub cats { qw( featured ) }
