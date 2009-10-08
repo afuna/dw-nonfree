@@ -92,6 +92,58 @@ set color_entry_link_visited = "#698e95";
 set color_navigation_text = "#444000";
 
 
+#NEWLAYER: sundaymorning/lightondark
+layerinfo type = "theme";
+layerinfo name = "Light On Dark";
+layerinfo redist_uniq = "sundaymorning/lightondark";
+layerinfo author_name = "cesy";
+
+set layout_authors = [ { "name" => "cesy", "type" => "user" }];
+set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
+
+set image_background_page_url = "sundaymorning/whitesquiggle.png";
+
+set color_page_background = "#000000";
+set color_page_title_background = "#000000";
+set color_page_title = "#ffffff";
+set color_page_text = "#ffffff";
+set color_page_link = "#ddddff";
+set color_page_link_hover = "#ccffcc";
+set color_page_link_visited = "#ffffcc";
+set color_page_link_active = "#ffcccc";
+
+set color_header_background = "#666666";
+set color_header_text = "#cccccc";
+set color_header_hover_background = "#006600";
+set color_header_hover = "#ccffcc";
+
+set color_navigation_background = "#000000";
+set color_navigation_border = "#ffffff";
+set color_navigation_text = "#ffffff";
+
+set color_entry_background = "#000000";
+set color_entry_border = "#ffffff";
+set color_entry_title_background = "#000000";
+set color_entry_title_border = "#ffffff";
+set color_entry_title = "#ffffff";
+set color_entry_text = "#ffffff";
+set color_entry_link = "#ddddff";
+set color_entry_link_visited = "#ffffcc";
+set color_entry_link_hover = "#ccffcc";
+set color_entry_link_active = "#ffcccc";
+
+set color_module_background = "#000000";
+set color_module_border = "#ffffff";
+set color_module_title_background = "#000000";
+set color_module_title_border = "#ffffff";
+set color_module_title = "#ffffff";
+set color_module_text = "#ffffff";
+set color_module_link = "#ddddff";
+set color_module_link_visited = "#ffffcc";
+set color_module_link_hover = "#ccffcc";
+set color_module_link_active = "#ffcccc";
+
+
 #NEWLAYER: sundaymorning/pinkswirls
 layerinfo type = "theme";
 layerinfo name = "Pink Swirls";

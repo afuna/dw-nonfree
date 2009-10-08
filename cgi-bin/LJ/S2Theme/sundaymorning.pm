@@ -19,6 +19,11 @@ package LJ::S2Theme::sundaymorning::pinkswirls;
 use base qw( LJ::S2Theme::sundaymorning );
 sub cats { qw() }
 
+package LJ::S2Theme::sundaymorning::lightondark;
+use base qw( LJ::S2Theme::sundaymorning );
+sub cats { qw( ) }
+sub designer { "cesy" }
+
 package LJ::S2Theme::sundaymorning::purpleswirls;
 use base qw( LJ::S2Theme::sundaymorning );
 sub cats { qw() }
