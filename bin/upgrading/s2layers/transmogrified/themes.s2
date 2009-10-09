@@ -59,6 +59,7 @@ set color_archivemonth_title_border = "#739adf";
 set color_archivemonth_title_background = "#cfe0e6";
 set color_tagspage_title = "#1f558b";
 set color_tagspage_title_border = "#739adf";
+set color_tagspage_background = "#ffffff";
 set color_tagspage_border = "#739adf";
 set color_tagspage_title_background = "#cfe0e6";
 set color_comments_form_border = "#fc7f3f";
@@ -131,7 +132,7 @@ set color_module_link_active = "#6e368b";
 set color_tagspage_title = "#000000";
 set color_module_text = "#b8aae5";
 set color_footer_link = "#000000";
-
+set color_tagspage_background = "#000000";
 
 #NEWLAYER: transmogrified/blackorwhite
 layerinfo "type" = "theme";
@@ -158,6 +159,7 @@ set color_archivemonth_title = "#333";
 set color_archivemonth_title_background = "#eee";
 set color_archivemonth_title_border = "#000";
 
+set color_tagspage_background = "#ffffff";
 set color_tagspage_border = "#000";
 set color_tagspage_title = "#333";
 set color_tagspage_title_background = "#eee";
@@ -276,6 +278,7 @@ set color_page_link_visited = "#ed68eb";
 set color_page_text = "#666666";
 set color_page_title = "#666666";
 set color_page_title_background = "#f3eceb";
+set color_tagspage_background = "#fef6f6";
 set color_tagspage_border = "#666666";
 set color_tagspage_title = "#666666";
 set color_tagspage_title_background = "#fef6f6";
@@ -358,6 +361,7 @@ set color_page_link_active = "#6cf9ad";
 set color_page_link_hover = "#7c97f8";
 set color_page_link_visited = "#096c37";
 
+set color_tagspage_background = "#ffedd9";
 set color_tagspage_border = "#987f65";
 set color_tagspage_title = "#6f3e09";
 set color_tagspage_title_background = "#987f65";
@@ -383,6 +387,7 @@ set color_page_link_active = "#deb968";
 set color_page_link_hover = "#deb968";
 set color_page_link_visited = "#a0525d";
 
+set color_tagspage_background = "#ffffff";
 set color_tagspage_border = "#deb968";
 set color_tagspage_title = "#685250";
 set color_tagspage_title_background = "#e4dfc9";
@@ -510,7 +515,7 @@ set color_module_link_active = "#0a566c";
 set color_tagspage_title = "#000000";
 set color_module_text = "#000000";
 set color_footer_link = "#6ab1b2";
-
+set color_tagspage_background = "#effeff";
 
 #NEWLAYER: transmogrified/subtlealmond
 layerinfo "type" = "theme";
@@ -537,6 +542,7 @@ set color_archivemonth_title = "#300000";
 set color_archivemonth_title_background = "#f0f0f0";
 set color_archivemonth_title_border = "#300000";
 
+set color_tagspage_background = "#f0f0f0";
 set color_tagspage_border = "#300000";
 set color_tagspage_title = "#f0f0f0";
 set color_tagspage_title_background = "#f0f0f0";
@@ -615,6 +621,7 @@ set color_archivemonth_title = "#eee";
 set color_archivemonth_title_background = "#333";
 set color_archivemonth_title_border = "#ffffff";
 
+set color_tagspage_background = "#000000";
 set color_tagspage_border = "#ffffff";
 set color_tagspage_title = "#eee";
 set color_tagspage_title_background = "#333";

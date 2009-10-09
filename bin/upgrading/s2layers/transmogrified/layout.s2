@@ -164,6 +164,7 @@ propgroup colors {
     property Color color_navigation_text { des = "Page back/forwards text"; }
     property Color color_navigation_border { des = "Page back/forwards border"; }
 
+    property Color color_tagspage_background { des = "Tags page background"; }
     property Color color_tagspage_border { des = "Tags page border"; }
     property Color color_tagspage_title { des = "Tags page title text"; }
     property Color color_tagspage_title_border { des = "Tags page title border"; }
@@ -225,6 +226,7 @@ set color_archivemonth_title_border = "";
 set color_archivemonth_title_background = "";
 set color_tagspage_title = "";
 set color_tagspage_title_border = "";
+set color_tagspage_background = "";
 set color_tagspage_border = "";
 set color_tagspage_title_background = "";
 set color_comments_form_border = "";
@@ -430,6 +432,7 @@ function Page::print_default_stylesheet () {
      }
 
     .tags-container {
+        background-color: $*color_tagspage_background;
 	   border: 1px solid $*color_tagspage_border;
         padding: 10px;
         margin-top: 10px;
