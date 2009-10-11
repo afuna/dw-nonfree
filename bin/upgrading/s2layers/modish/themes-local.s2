@@ -147,19 +147,31 @@ set image_background_header_position = "top right";
 
 
 #to add second header background image
-function Page::print_custom_head() {
+function Page::print_default_stylesheets() {
+    $this->print_default_stylesheet();
 
-  if ($*image_background_header_url == "modish/bluestrip.jpg") {
-    print safe """
-        <style>
-        #header .inner { background: url('$*STATDIR/modish/whtleaves.jpg') top right no-repeat; 
-        margin-right: -200px; 
-        padding-right: 200px; 
-        padding-top: 1px;
-        min-height: 75px; }
-        </style>
-    """;
-  }
+    if ($*external_stylesheet) {
+        println safe """<link rel="stylesheet" href="$.stylesheet_url" type="text/css" />""";
+    }
+    else {
+        println """<style type="text/css">""";
+        start_css();
+        print_stylesheet();
+        end_css();
+        println """</style>""";
+    }
+
+    if ($*image_background_header_url == "modish/bluestrip.jpg") {
+        print safe """
+            <style type="text/css">
+            #header .inner { background: url('$*STATDIR/modish/whtleaves.jpg') top right no-repeat; 
+            margin-right: -200px; 
+            padding-right: 200px; 
+            padding-top: 1px;
+            min-height: 75px; }
+            </style>
+        """;
+    }
 
 }
 
