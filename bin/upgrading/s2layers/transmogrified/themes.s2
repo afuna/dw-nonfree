@@ -544,7 +544,7 @@ set color_archivemonth_title_border = "#300000";
 
 set color_tagspage_background = "#f0f0f0";
 set color_tagspage_border = "#300000";
-set color_tagspage_title = "#f0f0f0";
+set color_tagspage_title = "#300000";
 set color_tagspage_title_background = "#f0f0f0";
 set color_tagspage_title_border = "#300000";
 
