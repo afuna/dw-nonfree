@@ -131,7 +131,7 @@ set color_archivemonth_title_border = "#000000";
 set color_module_link_active = "#6e368b";
 set color_tagspage_title = "#000000";
 set color_module_text = "#b8aae5";
-set color_footer_link = "#000000";
+set color_footer_link = "#6e368b";
 set color_tagspage_background = "#000000";
 
 #NEWLAYER: transmogrified/blackorwhite
