@@ -19,6 +19,17 @@ propgroup presentation {
     property use use_journalstyle_entry_page;
     property use layout_type;
     property use sidebar_width;
+
+    property string margins_size {
+        des = "Size of left and right margins";
+        size = 5;
+    }
+
+    property string margins_unit {
+        des = "Unit for margins size";
+        values = "em|em|%|%|px|px";
+    }
+
     property use tags_page_type;
     property use userpics_position; 
     property use use_custom_friend_colors;
@@ -26,6 +37,8 @@ propgroup presentation {
 
 set layout_type = "two-columns-right";
 set sidebar_width = "230px";
+set margins_size = "2";
+set margins_unit = "%";
 set tags_page_type = "";
 set userpics_position = "right";
 set custom_colors_template = "%%new%% .userpic a {background-color: %%background%%; border: solid 1px %%foreground%%;}";
@@ -388,11 +401,10 @@ function Page::print_default_stylesheet () {
     #container {
                 $page_background
                 $page_colors
-                margin: 0 2%;
     }
 
-    #footer {
-        margin: 0 2%;
+    #container, #footer {
+        margin: 0 $*margins_size$*margins_unit;
     }
 
     #header {
