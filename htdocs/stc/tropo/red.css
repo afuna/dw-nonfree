@@ -427,7 +427,7 @@ a:active,
 
 /* customize.css */
 h2.widget-header {
-    background: #ededed url(/img/corner.gif) no-repeat 0 0;
+    background: #ededed url(/img/tropo-red/corner.gif) no-repeat 0 0;
     color: #222;
 }
 .theme-current {
@@ -941,13 +941,13 @@ div.right-sidebar {
 .textbutton {
     color: #c1272c;
 }
-/*NOTE: corner.gif is white*/
+/*NOTE: tropo-red/corner.gif is #f7f7f7*/
 h2.solid-neutral {
-    background: #ededed url("/img/corner.gif") no-repeat 0 0;
+    background: #ededed url("/img/tropo-red/corner.gif") no-repeat 0 0;
     color: #222;
 }
 h2.solid-blue { /*which is now solid pink*/
-    background: #f4717a url("/img/corner.gif") no-repeat 0 0;
+    background: #f4717a url("/img/tropo-red/corner.gif") no-repeat 0 0;
     color: #222;
 }
 .solid-neutral {
