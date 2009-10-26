@@ -473,6 +473,14 @@ a:active {
     margin-right: auto;
 }
 
+/* wrap long content, particularly openid usernames */
+.module-pagesummary .ljuser {
+    white-space: normal !important;
+}
+.module-pagesummary .module-content {
+    word-wrap: break-word;
+}
+
 .module-credit dl {
     margin: 0 1em;
 }
