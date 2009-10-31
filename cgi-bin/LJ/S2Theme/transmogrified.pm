@@ -109,6 +109,16 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
+package LJ::S2Theme::transmogrified::zvi;   
+use base qw( LJ::S2Theme::transmogrified );   
+sub cats { qw() }
+sub designer { "zvi" }   
+
+package LJ::S2Theme::transmogrified::nnwm2009;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "zvi" }
+
 package LJ::S2Theme::transmogrified::ocean;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }

@@ -15,6 +15,12 @@ package LJ::S2Theme::sundaymorning::greenswirls;
 use base qw( LJ::S2Theme::sundaymorning );
 sub cats { qw(featured) }
 
+
+package LJ::S2Theme::sundaymorning::nnwm2009;
+use base qw( LJ::S2Theme::sundaymorning );
+sub cats { qw(featured) }
+sub designer { "zvi" }
+
 package LJ::S2Theme::sundaymorning::pinkswirls;
 use base qw( LJ::S2Theme::sundaymorning );
 sub cats { qw() }
