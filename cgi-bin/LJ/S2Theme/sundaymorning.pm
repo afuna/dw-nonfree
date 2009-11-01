@@ -13,7 +13,7 @@ sub cats { qw( base ) }
 
 package LJ::S2Theme::sundaymorning::greenswirls;
 use base qw( LJ::S2Theme::sundaymorning );
-sub cats { qw(featured) }
+sub cats { qw() }
 
 
 package LJ::S2Theme::sundaymorning::nnwm2009;
@@ -36,7 +36,7 @@ sub cats { qw() }
 
 package LJ::S2Theme::sundaymorning::redcontrast;
 use base qw( LJ::S2Theme::sundaymorning );
-sub cats { qw( ) }
+sub cats { qw( featured ) }
 sub designer { "ambrya" }
 package LJ::S2Theme::sundaymorning::redsquiggle;
 use base qw( LJ::S2Theme::sundaymorning );

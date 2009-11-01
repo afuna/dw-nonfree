@@ -83,7 +83,7 @@ sub cats { qw( base ) }
 
 package LJ::S2Theme::transmogrified::blackeye;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw(featured) }
+sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::blackorwhite;
@@ -121,7 +121,7 @@ sub designer { "zvi" }
 
 package LJ::S2Theme::transmogrified::ocean;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw() }
+sub cats { qw( featured ) }
 sub designer { "dancing_serpent" }
 
 
