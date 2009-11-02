@@ -237,10 +237,10 @@ body<=
                               } );
 
     # and, the submit button:
-    $ret .= "<p>" . LJ::html_submit( 'post', "Post Suggestion" ) . "</form>";
+    $ret .= "<p>" . LJ::html_submit( 'post', "Post Suggestion" );
 
     # preview and spellcheck button:
-    $ret .= "&nbsp" . LJ::html_submit( 'preview', "Preview & Spellcheck" ) . "</p></form>";
+    $ret .= "&nbsp;" . LJ::html_submit( 'preview', "Preview & Spellcheck" ) . "</p></form>";
 
     return $ret;
 }
