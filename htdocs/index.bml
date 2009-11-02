@@ -120,6 +120,9 @@ HTML
 HTML
         $ret .= <<HTML;
             </ul>
+HTML
+        $ret .= "<p style=\"margin-top: 1em;\">" . BML::ml( ".create.join_dreamwidth.codeshare" ) . "</p>\n";
+        $ret .= <<HTML;
         </div>
     </div>
 </div>
@@ -143,6 +146,7 @@ HTML
                     [ 'http://dw-news.dreamwidth.org/', 'site_news' ],
                     [ '/random', 'random_journal', 'footnote' ],
                     [ '/community/random', 'random_community', 'footnote' ],
+                    [ 'http://dw-codesharing.dreamwidth.org/', 'codeshare' ],
                 ],
                 footnote => 'no_screening',
             },
