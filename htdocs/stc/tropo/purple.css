@@ -1077,7 +1077,7 @@ span.InboxItem_Read:hover a {
 }
 
 /* entry.css */
-#lj_userpicselect {
+a#lj_userpicselect {
     color: #7e27c1;
 }
 #lj_userpicselect_img {
