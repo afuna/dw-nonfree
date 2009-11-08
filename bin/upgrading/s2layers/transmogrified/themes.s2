@@ -517,6 +517,83 @@ set color_module_text = "#000000";
 set color_footer_link = "#6ab1b2";
 set color_tagspage_background = "#effeff";
 
+#NEWLAYER: transmogrified/palejewels
+layerinfo type = "theme";
+layerinfo name = "Pale Jewels";
+layerinfo redist_uniq = "transmogrified/palejewels";
+layerinfo author_name = "dancing_serpent";
+ 
+set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+
+set color_page_background = "#886c9d";
+set color_main_background = "#e9faee";
+set color_page_text = "#363636";
+set color_page_title_background = "#a3a68a";
+set color_page_title = "#363636";
+set color_page_link = "#ad5176";
+set color_page_link_hover = "#ff9966";
+set color_page_link_active = "#ff9966";
+set color_page_link_visited = "#ad5176";
+
+set color_header_background = "#886c9d";
+set color_header_text = "#363636";
+set color_header_hover_background = "#e9faee";
+set color_header_hover = "#ff9966";
+
+set color_module_link = "#ad5176";
+set color_module_link_hover = "#ff9966";
+set color_module_link_active = "#ff9966";
+set color_module_link_visited = "#ad5176";
+set color_module_border = "#886c9d";
+set color_module_text = "#363636";
+set color_module_background = "#e9faee";
+set color_module_title = "#363636";
+set color_module_title_background = "#a3a68a";
+set color_module_title_border = "#a3a68a";
+
+set color_entry_border = "#e9faee";
+set color_entry_background = "#e9faee";
+set color_entry_link = "#ad5176";
+set color_entry_link_hover = "#ff9966";
+set color_entry_link_active = "#ff9966";
+set color_entry_link_visited = "#ad5176";
+set color_entry_text = "#363636";
+set color_entry_title = "#363636";
+set color_entry_title_border = "#a3a68a";
+set color_entry_title_background = "#a3a68a";
+set color_entry_border_alt = "#e9faee";
+set color_entry_background_alt = "#e9faee";
+set color_entry_link_alt = "#ad5176";
+set color_entry_link_hover_alt = "#ff9966";
+set color_entry_link_active_alt = "#ff9966";
+set color_entry_link_visited_alt = "#ad5176";
+set color_entry_text_alt = "#363636";
+set color_entry_subject_alt = "#363636";
+set color_entry_subject_alt_border = "#886c9d";
+set color_entry_subject_alt_background = "#886c9d";
+
+set color_footer_background = "#a3a68a";
+set color_footer_text = "#363636";
+set color_footer_link = "#ad5176";
+
+set color_navigation_text = "#363636";
+set color_navigation_background = "#e9faee";
+set color_navigation_border = "#e9faee";
+
+set color_archivemonth_background = "#e9faee";
+set color_archivemonth_border = "#e9faee";
+set color_archivemonth_title = "#363636";
+set color_archivemonth_title_border = "#a3a68a";
+set color_archivemonth_title_background = "#a3a68a";
+
+set color_tagspage_title = "#363636";
+set color_tagspage_title_border = "#a3a68a";
+set color_tagspage_background = "#e9faee";
+set color_tagspage_border = "#e9faee";
+set color_tagspage_title_background = "#a3a68a";
+
+set color_comments_form_border = "#e9faee";
+
 #NEWLAYER: transmogrified/subtlealmond
 layerinfo "type" = "theme";
 layerinfo "name" = "Subtle Almond";

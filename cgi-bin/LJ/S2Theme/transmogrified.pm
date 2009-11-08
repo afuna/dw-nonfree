@@ -124,6 +124,10 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw( featured ) }
 sub designer { "dancing_serpent" }
 
+package LJ::S2Theme::transmogrified::palejewels;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw( ) }
+sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::subtlealmond;
 use base qw( LJ::S2Theme::transmogrified );
