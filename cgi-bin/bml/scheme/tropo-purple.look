@@ -95,7 +95,7 @@ accountlinks<=
         $ret .= "<li><a href='$LJ::SITEROOT/update'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>" unless $identity;
         $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
-        $ret .= " ($unread)" if $unread;
+        $ret .= " <span id='Inbox_Unread_Count'>($unread)</span>" if $unread;
         $ret .= "</a> &bull; </li>";
         $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li> <br />";
         $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>" unless $identity;
