@@ -29,10 +29,11 @@ LJ::register_hook( 'entryforminfo', sub {
     };
 
     my $usejournal = $journal ? "?usejournal=$journal" : "";
+    my $ju = LJ::load_user( $journal ) if $journal;
 
     my $can_make_poll = 0;
-    $can_make_poll = LJ::get_cap( $remote, "makepoll" ) if $remote;
-    $can_make_poll ||= LJ::get_cap( LJ::load_user( $journal ), "makepoll" ) if $journal;
+    $can_make_poll = $remote->can_create_polls if $remote;
+    $can_make_poll ||= $ju->can_create_polls if $ju;
 
     return $make_list->(
         # URL, link text, whether to show or not
