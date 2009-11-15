@@ -97,12 +97,20 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
+package LJ::S2Theme::transmogrified::darkforest;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw( ) }
+sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::earthandsky;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
+package LJ::S2Theme::transmogrified::forestgreen;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw( ) }
+sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::goldenticket;
 use base qw( LJ::S2Theme::transmogrified );
