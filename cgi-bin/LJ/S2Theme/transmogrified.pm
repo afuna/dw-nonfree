@@ -86,11 +86,20 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "dancing_serpent" }
 
+package LJ::S2Theme::transmogrified::brickhearth;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
+
 package LJ::S2Theme::transmogrified::blackorwhite;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
+package LJ::S2Theme::transmogrified::comingdownblue;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::cottoncandydust;
 use base qw( LJ::S2Theme::transmogrified );
@@ -102,6 +111,16 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw( ) }
 sub designer { "dancing_serpent" }
 
+package LJ::S2Theme::transmogrified::dignified;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
+
+package LJ::S2Theme::transmogrified::dustyraspberry;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
+
 package LJ::S2Theme::transmogrified::earthandsky;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
@@ -112,6 +131,11 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw( ) }
 sub designer { "dancing_serpent" }
 
+package LJ::S2Theme::transmogrified::frozensky;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "dancing_serpent" }
+
 package LJ::S2Theme::transmogrified::goldenticket;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
@@ -120,7 +144,12 @@ sub designer { "zvi" }
 package LJ::S2Theme::transmogrified::zvi;   
 use base qw( LJ::S2Theme::transmogrified );   
 sub cats { qw() }
-sub designer { "zvi" }   
+sub designer { "zvi" }
+
+package LJ::S2Theme::transmogrified::midnight;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::nnwm2009;
 use base qw( LJ::S2Theme::transmogrified );
@@ -137,11 +166,30 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw( ) }
 sub designer { "dancing_serpent" }
 
+package LJ::S2Theme::transmogrified::roseicecream;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
+
+package LJ::S2Theme::transmogrified::slowgreen;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
+
+package LJ::S2Theme::transmogrified::springgreen;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
+
 package LJ::S2Theme::transmogrified::subtlealmond;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
+package LJ::S2Theme::transmogrified::summerpeach;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::whiteorblack;
 use base qw( LJ::S2Theme::transmogrified );
