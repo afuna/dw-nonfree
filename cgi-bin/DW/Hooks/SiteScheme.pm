@@ -22,6 +22,7 @@ LJ::register_hook('modify_scheme_list', sub {
         { scheme => "tropo-red", title => "Tropospherical Red" },
         { scheme => "tropo-purple", title => "Tropospherical Purple" },
         { scheme => "celerity-local", title => "Celerity" },
+        { scheme => "gradation-vertical-local", title => "Gradation Vertical" },
         { scheme => "lynx", title => "Lynx (light mode)" },
     );
 });
