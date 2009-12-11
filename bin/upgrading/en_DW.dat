@@ -16,48 +16,4 @@ invitecodes.userclass.premium_paid=Premium paid users
 
 langname.en_DW=English
 
-tropo.accountlinks.account=Account
-
-tropo.accountlinks.btn.login=Log in
-
-tropo.accountlinks.btn.logout=Log out
-
-tropo.accountlinks.help=Help
-
-tropo.accountlinks.inbox=Inbox
-
-tropo.accountlinks.invitefriend=Invite a Friend
-
-tropo.accountlinks.login.forgotpassword=Forgot password?
-
-tropo.accountlinks.login.openid=Log in with OpenID?
-
-tropo.accountlinks.login.password=Password:
-
-tropo.accountlinks.login.rememberme=Remember me
-
-tropo.accountlinks.login.username=Username:
-
-tropo.accountlinks.post=Post
-
-tropo.accountlinks.readinglist=Reading Page
-
-tropo.accountlinks.userpic.alt=Upload Userpics
-
-tropo.footer.info=Copyright &copy; 2009 Dreamwidth Studios, LLC. All rights reserved.
-
-tropo.footer.legal.abusepolicy=Abuse Policy
-
-tropo.footer.legal.diversitystatement=Diversity Statement
-
-tropo.footer.legal.guidingprinciples=Guiding Principles
-
-tropo.footer.legal.privacypolicy=Privacy Policy
-
-tropo.footer.legal.tos=Terms of Service
-
 tropo.footer.opensource=Open Source
-
-tropo.footer.sitemap=Site Map
-
-tropo.footer.suggestion=Make a Suggestion

@@ -79,9 +79,9 @@ accountlinks<=
         $ret .= "<div id='account-links-userpic'><a href='$LJ::SITEROOT/editpics'>";
         if ( $userpic && !$LJ::IS_SSL ) {
             my $wh = $userpic->img_fixedsize( width => 80, height => 80 );
-            $ret .= "<img src='" . $userpic->url . "' $wh alt=\"$ML{'tropo.accountlinks.userpic.alt'}\" />";
+            $ret .= "<img src='" . $userpic->url . "' $wh alt=\"$ML{'sitescheme.accountlinks.userpic.alt'}\" />";
         } else {
-            $ret .= "<img src='$imgprefix/nouserpic.png' width='80' height='80' alt=\"$ML{'tropo.accountlinks.userpic.alt'}\" />";
+            $ret .= "<img src='$imgprefix/nouserpic.png' width='80' height='80' alt=\"$ML{'sitescheme.accountlinks.userpic.alt'}\" />";
         }
         $ret .= "</a></div>";
         $ret .= "<div id='account-links-text'>";
@@ -89,17 +89,17 @@ accountlinks<=
         $ret .= $remote->ljuser_display;
         $ret .= "<input type='hidden' name='user' value='" . $remote->user . "' />";
         $ret .= "<input type='hidden' name='sessid' value='$remote->{_session}->{sessid}' />";
-        $ret .= " <input type='submit' value=\"$ML{'tropo.accountlinks.btn.logout'}\" />";
+        $ret .= " <input type='submit' value=\"$ML{'sitescheme.accountlinks.btn.logout'}\" />";
         $ret .= "</form>";
         $ret .= "<ul>";
-        $ret .= "<li><a href='$LJ::SITEROOT/update'>$ML{'tropo.accountlinks.post'}</a>  &bull; </li>" unless $identity;
-        $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'tropo.accountlinks.readinglist'}</a> &bull; </li>";
-        $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'tropo.accountlinks.inbox'}";
+        $ret .= "<li><a href='$LJ::SITEROOT/update'>$ML{'sitescheme.accountlinks.post'}</a>  &bull; </li>" unless $identity;
+        $ret .= "<li><a href='" . $remote->journal_base . "/read'>$ML{'sitescheme.accountlinks.readinglist'}</a> &bull; </li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/inbox/'>$ML{'sitescheme.accountlinks.inbox'}";
         $ret .= " <span id='Inbox_Unread_Count'>($unread)</span>" if $unread;
         $ret .= "</a> &bull; </li>";
-        $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'tropo.accountlinks.account'}</a></li> <br />";
-        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite'>$ML{'tropo.accountlinks.invitefriend'}</a> &bull; </li>" unless $identity;
-        $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'tropo.accountlinks.help'}</a></li>";
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/settings/'>$ML{'sitescheme.accountlinks.account'}</a></li> <br />";
+        $ret .= "<li><a href='$LJ::SITEROOT/manage/circle/invite'>$ML{'sitescheme.accountlinks.invitefriend'}</a> &bull; </li>" unless $identity;
+        $ret .= "<li><a href='$LJ::SITEROOT/support/'>$ML{'sitescheme.accountlinks.help'}</a></li>";
         $ret .= "</ul>";
         $ret .= "</div>";
     } else {
@@ -110,22 +110,22 @@ accountlinks<=
         $ret .= "<input type='hidden' name='chal' class='lj_login_chal' value='$chal' />\n";
         $ret .= "<input type='hidden' name='response' class='lj_login_response' value='' />\n";
         $ret .= "<table id='login-table'>";
-        $ret .= "<tr><td><label for='login_user'>$ML{'tropo.accountlinks.login.username'}</label></td>";
+        $ret .= "<tr><td><label for='login_user'>$ML{'sitescheme.accountlinks.login.username'}</label></td>";
         $ret .= "<td class='input-cell' colspan='2'>" . LJ::html_text({
             name => "user",
             id => "login_user",
             size => 20,
             maxlength => 27,
             tabindex => 1,
-        }) . " <a href='$LJ::SITEROOT/openid/'>$ML{'tropo.accountlinks.login.openid'}</a></td></tr>";
-        $ret .= "<tr><td><label for='login_password'>$ML{'tropo.accountlinks.login.password'}</label></td>";
+        }) . " <a href='$LJ::SITEROOT/openid/'>$ML{'sitescheme.accountlinks.login.openid'}</a></td></tr>";
+        $ret .= "<tr><td><label for='login_password'>$ML{'sitescheme.accountlinks.login.password'}</label></td>";
         $ret .= "<td class='input-cell' colspan='2'>" . LJ::html_text({
             type => "password",
             name => "password",
             id => "login_password",
             size => 20,
             tabindex => 2,
-        }) . " <a href='$LJ::SITEROOT/lostinfo'>$ML{'tropo.accountlinks.login.forgotpassword'}</a></td></tr>";
+        }) . " <a href='$LJ::SITEROOT/lostinfo'>$ML{'sitescheme.accountlinks.login.forgotpassword'}</a></td></tr>";
         $ret .= "<tr><td>&nbsp;</td>";
         $ret .= "<td class='remember-me-cell'>";
         $ret .= LJ::html_check({
@@ -134,8 +134,8 @@ accountlinks<=
             value => 1,
             tabindex => 3,
         });
-        $ret .= " <label for='login_remember_me'>$ML{'tropo.accountlinks.login.rememberme'}</label></td>";
-        $ret .= "<td>" . LJ::html_submit( login => $ML{'tropo.accountlinks.btn.login'}, { tabindex => 4 }) . "</td>";
+        $ret .= " <label for='login_remember_me'>$ML{'sitescheme.accountlinks.login.rememberme'}</label></td>";
+        $ret .= "<td>" . LJ::html_submit( login => $ML{'sitescheme.accountlinks.btn.login'}, { tabindex => 4 }) . "</td>";
         $ret .= "</tr>";
         $ret .= "</table>";
         $ret .= "</form>";
@@ -148,15 +148,15 @@ _code?>
 
 footer<=
 <ul>
-    <li><a href="<?siteroot?>/legal/privacy"><?_ml tropo.footer.legal.privacypolicy _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/legal/tos"><?_ml tropo.footer.legal.tos _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/legal/diversity"><?_ml tropo.footer.legal.diversitystatement _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/legal/principles"><?_ml tropo.footer.legal.guidingprinciples _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/site/"><?_ml tropo.footer.sitemap _ml?></a> &bull; </li>
-    <li><a href="<?siteroot?>/site/suggest"><?_ml tropo.footer.suggestion _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/privacy"><?_ml sitescheme.footer.legal.privacypolicy _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/tos"><?_ml sitescheme.footer.legal.tos _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/diversity"><?_ml sitescheme.footer.legal.diversitystatement _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/legal/principles"><?_ml sitescheme.footer.legal.guidingprinciples _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/site/"><?_ml sitescheme.footer.sitemap _ml?></a> &bull; </li>
+    <li><a href="<?siteroot?>/site/suggest"><?_ml sitescheme.footer.suggestion _ml?></a> &bull; </li>
     <li><a href="<?siteroot?>/site/opensource"><?_ml tropo.footer.opensource _ml?></a></li>
 </ul>
-<p><?_ml tropo.footer.info _ml?></p>
+<p><?_ml sitescheme.footer.info _ml?></p>
 <=footer
 
 page<=
