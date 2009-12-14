@@ -69,6 +69,7 @@ set module_calendar_section = "two";
 set module_poweredby_section = "three";
 set module_time_section = "none";
 set module_customtext_section = "two";
+set module_active_section = "two";
 set module_credit_section = "two";
 
 propgroup text {
