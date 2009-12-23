@@ -15,8 +15,9 @@ package DW::Hooks::EntryForm;
 
 use strict;
 use warnings;
+use LJ::Hooks;
 
-LJ::register_hook( 'entryforminfo', sub {
+LJ::Hooks::register_hook( 'entryforminfo', sub {
     my ( $journal, $remote ) = @_;
 
     my $make_list = sub {

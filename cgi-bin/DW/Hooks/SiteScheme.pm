@@ -14,8 +14,9 @@
 package DW::Hooks::SiteScheme;
 
 use strict;
+use LJ::Hooks;
 
-LJ::register_hook('modify_scheme_list', sub {
+LJ::Hooks::register_hook('modify_scheme_list', sub {
     my $schemesref = shift;
 
     @$schemesref = (

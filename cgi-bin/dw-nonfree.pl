@@ -3,7 +3,7 @@
 # THIS IS NOT LICENSED FOR USE.
 #
 
-LJ::register_hook("journal_base", sub {
+LJ::Hooks::register_hook("journal_base", sub {
     my ($u, $vhost) = @_;
     return undef unless $LJ::ONLY_USER_VHOSTS;
     return "#" unless $u;
