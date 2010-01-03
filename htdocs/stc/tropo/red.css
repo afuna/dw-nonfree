@@ -669,11 +669,12 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     color: #c1272c;
 }
 
-
 /* inbox */
 
-#esn_folder_all {
-    background-color: #ffd8d8 !important;
+.folders a.active {
+    font-weight: bold;
+    background-color: #ffd8d8;
+    border: 1px solid #bbb;
 }
 
 /* lj_settings.css */
