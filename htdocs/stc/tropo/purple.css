@@ -1237,6 +1237,14 @@ li.profile_trackuser_disabled, li.profile_sendmessage_disabled {
     background-color: #eee;
 }
 
+/* Adult warning interstitals */
+
+div.adult_warning {
+    background-color: #f3d2fc;
+    border: 1px solid #5e3da6;
+    padding: 0 10px;
+}
+
 /* CSS-style some things that users like to use */
 
 q {
