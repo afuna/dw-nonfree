@@ -137,7 +137,7 @@ sub _search_noinvleft {
 
     # return all personal, active, visible journals... no need to use _filter_pav
     # later, when we can do it all on the user table to begin with.  this returns
-    # all users that either have no invites OR 
+    # all users that either have no invites OR
     my $uids = $dbslow->selectcol_arrayref(
         q{SELECT DISTINCT u.userid
           FROM user u
