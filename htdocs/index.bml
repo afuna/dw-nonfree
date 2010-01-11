@@ -144,6 +144,7 @@ HTML
                 name => 'community',
                 items => [
                     [ 'http://dw-news.dreamwidth.org/', 'site_news' ],
+                    [ '/latest', 'latest_things', 'footnote' ],
                     [ '/random', 'random_journal', 'footnote' ],
                     [ '/community/random', 'random_community', 'footnote' ],
                     [ 'http://dw-codesharing.dreamwidth.org/', 'codeshare' ],

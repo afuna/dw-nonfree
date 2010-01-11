@@ -42,6 +42,10 @@
 
 .links.community.footnote=*
 
+.links.community.latest_things=Latest Things
+
+.links.community.latest_things.desc=Read the latest things posted on the site.
+
 .links.community.no_screening=* [[sitename]] does not pre-screen content for appropriateness.
 
 .links.community.random_community=Random Community
