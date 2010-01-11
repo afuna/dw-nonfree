@@ -1259,3 +1259,13 @@ small {
 big {
     font-size: larger;
 }
+
+/* For the manage/banusers page */
+
+.userslist-table tr.odd {
+    background-color: #f3d2fc;
+}
+
+.userslist-table tr.even {
+    background-color: #f7f7f7;
+}
