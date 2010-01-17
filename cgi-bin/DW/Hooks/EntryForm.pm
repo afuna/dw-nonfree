@@ -30,7 +30,7 @@ LJ::Hooks::register_hook( 'entryforminfo', sub {
     };
 
     my $usejournal = $journal ? "?usejournal=$journal" : "";
-    my $ju = LJ::load_user( $journal ) if $journal;
+    my $ju = $journal ? LJ::load_user( $journal ) : undef;
 
     my $can_make_poll = 0;
     $can_make_poll = $remote->can_create_polls if $remote;
