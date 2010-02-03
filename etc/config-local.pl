@@ -49,20 +49,20 @@
         );
 
     # PayPal configuration
-    %PAYPAL_CONFIG = (
-            # express checkout URL, the token gets appended to this
-            url       => 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=',
-            api_url   => 'https://api-3t.sandbox.paypal.com/nvp',
+    #%PAYPAL_CONFIG = (
+    #        # express checkout URL, the token gets appended to this
+    #        url       => 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=',
+    #        api_url   => 'https://api-3t.sandbox.paypal.com/nvp',
 
-            # credentials for the API
-            user      => $DW::PRIVATE::PAYPAL{user},
-            password  => $DW::PRIVATE::PAYPAL{password},
-            signature => $DW::PRIVATE::PAYPAL{signature},
+    #        # credentials for the API
+    #        user      => $DW::PRIVATE::PAYPAL{user},
+    #        password  => $DW::PRIVATE::PAYPAL{password},
+    #        signature => $DW::PRIVATE::PAYPAL{signature},
 
-            # set this to someone who is responsible for getting emails about
-            # various PayPal related events
-            email     => $DW::PRIVATE::PAYPAL{email},
-        );
+    #        # set this to someone who is responsible for getting emails about
+    #        # various PayPal related events
+    #        email     => $DW::PRIVATE::PAYPAL{email},
+    #    );
 
     # if you define these, little help bubbles appear next to common
     # widgets to the URL you define:
