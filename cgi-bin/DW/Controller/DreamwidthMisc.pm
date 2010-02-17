@@ -20,13 +20,9 @@ package DW::Controller::DreamwidthMisc;
 use strict;
 use warnings;
 use DW::Controller;
-use DW::Routing::Apache2;
-use DW::Template::Apache2;
+use DW::Routing;
+use DW::Template;
 
-DW::Routing::Apache2->register_string( '/about', \&about_handler, app => 1 );
-
-sub about_handler {
-    return DW::Template::Apache2->render_template( 'misc/about.tt' );
-}
+DW::Routing->register_static( '/about', 'misc/about.tt', app => 1 );
 
 1;
