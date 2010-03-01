@@ -262,13 +262,15 @@ set image_background_module_url = "";
 
 
 # Fonts
-property use font_base;
-property use font_fallback;
-property use font_base_size;
-property use font_base_units;
-property use font_module_heading;
-property use font_module_heading_size;
-property use font_module_heading_units;
+propgroup fonts {
+    property use font_base;
+    property use font_fallback;
+    property use font_base_size;
+    property use font_base_units;
+    property use font_module_heading;
+    property use font_module_heading_size;
+    property use font_module_heading_units;
+}
 
 set font_base = "Verdana";
 set font_fallback = "sans-serif";
