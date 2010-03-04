@@ -1009,6 +1009,83 @@ set color_tagspage_border = "#232029";
 set color_tagspage_title_background = "#483D41";
 set color_comments_form_border = "#232029";
 
+#NEWLAYER: transmogrified/newocean
+layerinfo type = "theme";
+layerinfo name = "New Ocean";
+layerinfo redist_uniq = "transmogrified/newocean";
+layerinfo author_name = "dancing_serpent";
+
+set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+
+set color_page_background = "#6ab1b2";
+set color_main_background = "#cfe0e6";
+set color_page_link = "#0a566c";
+set color_page_link_active = "#6ab1b2";
+set color_page_link_hover = "#6ab1b2";
+set color_page_link_visited = "#0a566c";
+set color_page_text = "#021341";
+set color_page_title = "#cfe0e6";
+set color_page_title_background = "#556b80";
+
+set color_header_background = "#6ab1b2";
+set color_header_hover = "#021341";
+set color_header_hover_background = "#cfe0e6";
+set color_header_text = "#021341";
+
+set color_module_background = "#effeff";
+set color_module_border = "#effeff";
+set color_module_link = "#0a566c";
+set color_module_link_active = "#021341";
+set color_module_link_hover = "#021341";
+set color_module_link_visited = "#0a566c";
+set color_module_text = "#021341";
+set color_module_title = "#021341";
+set color_module_title_background = "#6ab1b2";
+set color_module_title_border = "#6ab1b2";
+
+set color_entry_background = "#effeff";
+set color_entry_background_alt = "#effeff";
+set color_entry_border = "#effeff";
+set color_entry_border_alt = "#effeff";
+set color_entry_link = "#021341";
+set color_entry_link_active = "#6ab1b2";
+set color_entry_link_active_alt = "#0a566c";
+set color_entry_link_alt = "#021341";
+set color_entry_link_hover = "#6ab1b2";
+set color_entry_link_hover_alt = "#0a566c";
+set color_entry_link_visited = "#021341";
+set color_entry_link_visited_alt = "#021341";
+set color_entry_subject_alt = "#021341";
+set color_entry_subject_alt_background = "#6ab1b2";
+set color_entry_subject_alt_border = "#6ab1b2";
+set color_entry_text = "#000000";
+set color_entry_text_alt = "#000000";
+set color_entry_title = "#021341";
+set color_entry_title_background = "#556b80";
+set color_entry_title_border = "#556b80";
+
+set color_footer_background = "#556b80";
+set color_footer_link = "#6ab1b2";
+set color_footer_text = "#021341";
+
+set color_navigation_background = "#effeff";
+set color_navigation_border = "#effeff";
+set color_navigation_text = "#021341";
+
+set color_archivemonth_background = "#effeff";
+set color_archivemonth_border = "#effeff";
+set color_archivemonth_title = "#021341";
+set color_archivemonth_title_background = "#6ab1b2";
+set color_archivemonth_title_border = "#6ab1b2";
+
+set color_tagspage_background = "#effeff";
+set color_tagspage_border = "#effeff";
+set color_tagspage_title = "#021341";
+set color_tagspage_title_background = "#6ab1b2";
+set color_tagspage_title_border = "#6ab1b2";
+
+set color_comments_form_border = "#effeff";
+
 #NEWLAYER: transmogrified/ocean
 layerinfo type = "theme";
 layerinfo name = "Ocean";
