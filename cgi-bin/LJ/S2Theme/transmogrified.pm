@@ -141,11 +141,6 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
-package LJ::S2Theme::transmogrified::zvi;   
-use base qw( LJ::S2Theme::transmogrified );   
-sub cats { qw() }
-sub designer { "zvi" }
-
 package LJ::S2Theme::transmogrified::midnight;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
@@ -155,11 +150,6 @@ package LJ::S2Theme::transmogrified::newocean;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw( ) }
 sub designer { "dancing_serpent" }
-
-package LJ::S2Theme::transmogrified::nnwm2009;
-use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw() }
-sub designer { "zvi" }
 
 package LJ::S2Theme::transmogrified::ocean;
 use base qw( LJ::S2Theme::transmogrified );
