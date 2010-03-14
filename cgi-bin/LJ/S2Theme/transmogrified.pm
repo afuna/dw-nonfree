@@ -166,6 +166,11 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "branchandroot" }
 
+package LJ::S2Theme::transmogrified::shadowboxing;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw( ) }
+sub designer { "baggyeyes" }
+
 package LJ::S2Theme::transmogrified::slowgreen;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
@@ -185,6 +190,11 @@ package LJ::S2Theme::transmogrified::summerpeach;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "branchandroot" }
+
+package LJ::S2Theme::transmogrified::tehotenion;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw( ) }
+sub designer { "baggyeyes" }
 
 package LJ::S2Theme::transmogrified::whiteorblack;
 use base qw( LJ::S2Theme::transmogrified );

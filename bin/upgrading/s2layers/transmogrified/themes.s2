@@ -1303,6 +1303,235 @@ set color_tagspage_border = "#BD95A3";
 set color_tagspage_title_background = "#CFB0BB";
 set color_comments_form_border = "#BD95A3";
 
+
+#NEWLAYER: transmogrified/shadowboxing
+layerinfo type = "theme";
+layerinfo name = "Shadow Boxing";
+layerinfo redist_uniq = "transmogrified/shadowboxing";
+layerinfo author_name = "baggyeyes";
+
+set layout_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
+
+set color_page_background = "#ffffff";
+
+set color_page_text = "#4A4A4A";
+set color_page_link = "#6C3E49";
+set color_page_link_active = "#824957";
+set color_page_link_hover = "#995667";
+set color_page_link_visited = "#553039";
+
+set color_header_hover = "#ffffff";
+set color_header_hover_background = "#6C3E49";
+
+set color_module_border = "#000000";
+set color_module_link_active = "#995667";
+set color_module_title_border = "#000000";
+set color_module_title = "#4A4A4A";
+
+set color_entry_border = "#000000";
+set color_entry_title = "#6c3e49";
+set color_entry_title_border = "#ffffff";
+set color_entry_link_hover = "#b2637b";
+set color_entry_link_active = "#914b65";
+set color_entry_link_visited = "#995667";
+
+set color_entry_border_alt = "#2d1f4c";
+set color_entry_link_alt = "#8587a5";
+set color_entry_link_hover_alt = "#525568";
+set color_entry_link_active_alt = "#999bc0";
+set color_entry_link_visited_alt = "#696b84";
+set color_entry_subject_alt = "#2d1f4c";
+set color_entry_subject_alt_border = "#ffffff";
+
+set color_footer_link = "#e6f8e4";
+
+set color_navigation_border = "#ffffff";
+set color_navigation_text = "#6C3E49";
+
+set color_archivemonth_border = "#000000";
+set color_archivemonth_title_border = "#000000";
+
+set color_tagspage_border = "#000000";
+set color_tagspage_title_border = "#000000";
+
+set color_comments_form_border = "#402c6a";
+
+set font_base_size = "100";
+set font_base_units = "%";
+
+function Page::print_theme_stylesheet() {
+    """
+   
+/* Header */
+
+    #header {
+        height: 10em;
+        }
+
+    h1#title {
+        text-shadow: 3px 4px 4px #94978B;
+        }
+
+/* Navigation */
+
+    .module-section-one .module-navlinks {
+        border-top: 4px solid #000;
+        }
+
+    .module-navlinks a:hover {
+        background-color: #585862;
+        border-top: 4px solid #371f25;
+        color: $*color_page_link_hover;
+        }
+
+    .module-navlinks a:active {
+        background-color: #585862;
+        border-top: 4px solid #371f25;
+        color: $*color_page_link_active;
+        }
+
+    .navigation .page-back a:before,
+    .navigation .page-forward a:after {
+        color: $*color_page_link_hover;
+        }
+
+/* Entries */
+
+    .entry.userpic { padding: 4px 12px 4px 4px; }
+
+    .entry .userpic img, .comment .userpic img {
+        box-shadow: 4px 5px 5px #94978B;
+        -o-box-shadow: 4px 5px 5px #94978B;
+        -moz-box-shadow: 4px 5px 5px #94978B;
+        -webkit-box-shadow: 4px 5px 5px #94978B;
+        }
+
+    .entry, .comment {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+    .entry-wrapper-odd .entry, .comment-wrapper-odd .comment, .text_noentries_day,
+    .entry-wrapper-even .entry, .comment-wrapper-even .comment {
+        border-left: 1px solid $*color_entry_border;
+        border-top: 1px solid $*color_entry_border;
+        border-right: 3px solid $*color_entry_border;
+        border-bottom: 3px solid $*color_entry_border;
+        }
+
+/* Archive Pages */
+
+  .month-wrapper, #archive-month dl {
+        border-left: solid 1px $*color_archivemonth_border;
+        border-top: solid 1px $*color_archivemonth_border;
+        border-right: solid 3px $*color_archivemonth_border;
+        border-bottom: solid 3px $*color_archivemonth_border;
+        }
+
+    .month-wrapper {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+    .month .inner dl {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        padding: 10px;
+        }
+
+     .month-wrapper h3 {
+        border-left: solid 1px $*color_archivemonth_title_border;
+        border-top: solid 1px $*color_archivemonth_title_border;
+        border-right: solid 3px $*color_archivemonth_title_border;
+        border-bottom: solid 3px $*color_archivemonth_title_border;
+        }
+
+    .month .day-has-entries {
+        color: $*color_page_link_visited;
+        text-decoration:none;
+        }
+
+    .month .day-has-entries a:hover {
+        color: $*color_page_link_hover;
+        text-decoration: none;
+        }
+
+     .month .day-has-entries p a { color: #4C2B33; font-weight: bold; }
+
+/* Tags Page */
+
+   .page-tags #content h2 {
+        border-left: solid 1px $*color_tagspage_title_border;
+        border-top: solid 1px $*color_tagspage_title_border;
+        border-right: solid 3px $*color_tagspage_title_border;
+        border-bottom: solid 3px $*color_tagspage_title_border;
+        }
+   
+    .tags-container {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+/* Modules */
+
+    .module-header {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+    .module-section-two h2 {
+        border-left: solid 1px $*color_module_title_border;
+        border-top: solid 1px $*color_module_title_border;
+        border-right: solid 3px $*color_module_title_border;
+        border-bottom: solid 3px $*color_module_title_border;
+        }
+
+    .module-section-two .module {
+        border-left: solid 1px $*color_module_border;
+        border-top: solid 1px $*color_module_border;
+        border-right: solid 3px $*color_module_border;
+        border-bottom: solid 3px $*color_module_border;
+        }
+
+    .module-pagesummary .module-list-item a { text-decoration: none; }
+
+    .module-calendar .entry-day,
+    .module-calendar .entry-day a {
+        background-color: $*color_page_link_hover;
+        color: #ccb5c6;
+        text-decoration: none;
+        }
+
+    .module-calendar .entry-day a:hover {
+        background-color: $*color_page_link_hover;
+        color: #FFFFCC;
+        text-decoration: none;
+        }
+
+    .module-calendar .empty-day {
+        background-color: #FFFFEF;
+        text-decoration: none;
+        }
+
+    .module-section-three .module {
+        background-color: $*color_module_border;
+        }
+
+/* Site Branding */
+
+    #site-branding {
+        color: #CC6F78;
+        }
+
+    """;
+}
+
+
 #NEWLAYER: transmogrified/slowgreen
 layerinfo type = "theme";
 layerinfo name = "Slow Green";
@@ -1595,6 +1824,230 @@ set color_tagspage_background = "#FFEBD6";
 set color_tagspage_border = "#FFCD9C";
 set color_tagspage_title_background = "#FFF6ED";
 set color_comments_form_border = "#FFCD9C";
+
+
+#NEWLAYER: transmogrified/tehotenion
+layerinfo type = "theme";
+layerinfo name = "Tehotenion";
+layerinfo redist_uniq = "transmogrified/tehotenion";
+layerinfo author_name = "baggyeyes";
+
+set layout_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
+
+set color_page_background = "#000000";
+set color_page_text = "#4A4A4A";
+set color_page_link = "#431b51";
+set color_page_link_hover = "#7d00ca";
+set color_page_link_active = "#6300a3";
+set color_page_link_visited = "#1800ca";
+
+set color_page_title = "#ffffff";
+set color_page_title_background = "#5c3f9a";
+
+set color_header_background = "#5c3f9a";
+set color_header_text = "#ffffff";
+set color_header_hover_background = "#ffffff";
+set color_header_hover = "#5c3f9a";
+
+set color_module_background = "#000000";
+set color_module_border = "#000000";
+set color_module_title = "#ffffff";
+set color_module_title_background = "#402c6a";
+set color_module_title_border = "#000000";
+set color_module_text = "#ffffff";
+set color_module_link = "#cdb9dd";
+set color_module_link_active = "#e5e9d6";
+set color_module_link_hover = "#e6f8e4";
+set color_module_link_visited = "#cbcebe";
+
+set color_entry_border = "#5c3f9a";
+set color_entry_background = "#ffffff";
+set color_entry_text = "#4A4A4A";
+set color_entry_link = "#57428b";
+set color_entry_link_hover = "#5716c2";
+set color_entry_link_active = "#8b02ff";
+set color_entry_link_visited = "#746cbb";
+set color_entry_title = "#584e8b";
+set color_entry_title_border = "#ffffff";
+set color_entry_title_background = "#ffffff";
+
+set color_entry_border_alt = "#2d1f4c";
+set color_entry_background_alt = "#ffffff";
+set color_entry_text_alt = "#4A4A4A";
+set color_entry_link_alt = "#8c5eed";
+set color_entry_link_hover_alt = "#422d71";
+set color_entry_link_active_alt = "#530089";
+set color_entry_link_visited_alt = "#184854";
+set color_entry_subject_alt = "#2d1f4c";
+set color_entry_subject_alt_background = "#ffffff";
+set color_entry_subject_alt_border = "#ffffff";
+
+set color_footer_background = "#5c3f9a";
+set color_footer_link = "#c4c4f8";
+set color_footer_text = "#ffffff";
+
+set color_navigation_border = "#000000";
+set color_navigation_text = "#7D00CA";
+
+set color_archivemonth_border = "#5c3f9f";
+set color_archivemonth_background = "#ffffff";
+set color_archivemonth_title = "#2d1f4c";
+set color_archivemonth_title_background = "#895de5";
+set color_archivemonth_title_border = "#402c6a";
+
+set color_tagspage_border = "#5c3f9f";
+set color_tagspage_background = "#ffffff";
+set color_tagspage_title = "#402c6a";
+set color_tagspage_title_border = "#895de5";
+set color_tagspage_title_background = "#d3a8ff";
+
+set color_comments_form_border = "#402c6a";
+
+set font_base_size = "100";
+set font_base_units = "%";
+
+
+function Page::print_theme_stylesheet() {
+    """
+/* Header */
+
+    #header {
+        height: 10em;
+        }
+
+    h1#title {
+        text-shadow: 3px 4px 4px #282926;
+        }
+        
+/* Navigation */
+             
+    .module-section-one .module-navlinks {
+        border-top: 4px solid $*color_header_background;
+        }
+
+    .module-section-one .module-navlinks a:hover,
+    .module-section-one .module-navlinks a:active {
+        background: $*color_header_text;
+        border-top: 4px solid $*color_module_title_background;
+        color: $*color_header_background;
+        }
+
+    .navigation li.page-back a {
+        background-color: $*color_page_background;
+        color: $*color_page_title;
+        text-decoration: none;
+        }
+
+    .navigation li.page-back a:hover {
+        background-color: $*color_page_title;
+        color: $*color_page_link_hover;
+        }
+
+    .navigation .page-back a:before {
+        color: $*color_page_link_active;
+        }
+
+    .navigation .page-forward a:after {
+        color: $*color_page_link_hover;
+        }
+
+/* Entries */
+
+    .entry.userpic { padding: 4px 12px 4px 4px; }
+
+    .entry .userpic img, .comment .userpic img {
+        box-shadow: 4px 5px 5px #94978B;
+        -o-box-shadow: 4px 5px 5px #94978B;
+        -moz-box-shadow: 4px 5px 5px #94978B;
+        -webkit-box-shadow: 4px 5px 5px #94978B;
+        }
+
+    .entry, .comment {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+  
+/* Archive Pages */
+
+    .month .inner dl {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        padding: 10px;
+        }
+
+    .month-wrapper {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+    .month .day-has-entries {
+        background-color: $*color_header_background;
+        color: $*color_header_text;
+        }
+
+    .month .day-has-entries a:hover {
+        background-color: $*color_header_text;
+        color: $*color_header_background;
+        text-decoration: none;
+        }
+
+    .month .day-has-entries p a {
+        color: #FCFFEE;
+        font-weight: bold;
+        }
+
+/* Tags Page */
+
+    .tags-container {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+/* Modules */
+
+    .module-header {
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        }
+
+    .module-calendar .entry-day,
+    .module-calendar .entry-day a,
+    .month .day-has-entries {
+        background-color: $*color_header_background;
+        color: $*color_header_text;
+        text-decoration: none;
+        }
+
+    .module-calendar .entry-day a:hover {
+        background-color: #DADCCD;
+        color: #2D1F4C;
+        display: block;
+        text-decoration: none;
+        }
+
+    .module-calendar .empty-day,
+    .month .day-has-entries a:hover {
+        background-color: $*color_header_text;
+        color: $*color_header_background;
+        text-decoration: none;
+        }
+
+    .module-pagesummary .module-list-item a { text-decoration: none; }
+
+/* Site Branding */
+
+    #site-branding {
+        color: #CC6F78;
+        }
+
+    """;
+}
+
 
 #NEWLAYER: transmogrified/whiteorblack
 layerinfo "type" = "theme";
