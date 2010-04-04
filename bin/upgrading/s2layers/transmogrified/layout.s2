@@ -267,9 +267,18 @@ propgroup fonts {
     property use font_fallback;
     property use font_base_size;
     property use font_base_units;
+    property use font_journal_title;
+    property use font_journal_title_size;
+    property use font_journal_title_units;
+    property use font_entry_title;
+    property use font_entry_title_size;
+    property use font_entry_title_units;
     property use font_module_heading;
     property use font_module_heading_size;
     property use font_module_heading_units;
+    property use font_module_text;
+    property use font_module_text_size;
+    property use font_module_text_units;
 }
 
 set font_base = "Verdana";
@@ -362,7 +371,11 @@ function Page::print_default_stylesheet () {
     var string page_link_visited_colors = generate_color_css($*color_page_link_visited, new Color, new Color);
 
     var string page_font = generate_font_css($*font_base, $*font_fallback, $*font_base_size, $*font_base_units);
+    var string page_title_font = generate_font_css($*font_journal_title, $*font_fallback, $*font_journal_title_size, $*font_journal_title_units);
+    var string entry_title_font = generate_font_css($*font_entry_title, $*font_fallback, $*font_entry_title_size, $*font_entry_title_units);
+    var string module_font = generate_font_css($*font_module_text, $*font_fallback, $*font_module_text_size, $*font_module_text_units);
     var string module_title_font = generate_font_css($*font_module_heading, $*font_fallback, $*font_module_heading_size, $*font_module_heading_units);
+
 
     var string userpic_css = "";
     if($*userpics_position == "left") {
@@ -427,6 +440,7 @@ function Page::print_default_stylesheet () {
     #header h1 {
         margin: 0px;
 		padding: 20px;
+        $page_title_font
 	}
 
 	#header h2 {
@@ -460,6 +474,15 @@ function Page::print_default_stylesheet () {
     .module {
         $module_background
     }
+
+    .module h2 {
+        $module_title_font
+    }
+
+    .module-content {
+        $module_font
+    }
+
     .module-section-two {
         position: relative;
         width: $*sidebar_width;
@@ -526,7 +549,6 @@ function Page::print_default_stylesheet () {
     .module-section-two h2 {
 		margin: 0;
         margin-bottom: 7px;
-		$module_title_font
 		padding: 0.2em;
 		background-color: $*color_module_title_background;
 		color: $*color_module_title;
@@ -608,6 +630,9 @@ function Page::print_default_stylesheet () {
     }
     .entry-title, .comment-title {
         padding: 0.2em;
+    }
+    .entry .entry-title {
+        $entry_title_font
     }
     .entry-title a, .comment-title a {
         text-decoration: none;

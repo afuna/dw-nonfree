@@ -144,15 +144,26 @@ propgroup fonts {
     property use font_fallback;
     property use font_base_size;
     property use font_base_units;
+    property use font_journal_title;
+    property use font_journal_title_size;
+    property use font_journal_title_units;
+    property use font_entry_title;
+    property use font_entry_title_size;
+    property use font_entry_title_units;
     property use font_module_heading;
     property use font_module_heading_size;
     property use font_module_heading_units;
+    property use font_module_text;
+    property use font_module_text_size;
+    property use font_module_text_units;
 }
 
 set font_base = "Arial";
 set font_fallback = "sans-serif";
 set font_base_size = "0.813";
 set font_base_units = "em";
+set font_journal_title_size = "2";
+set font_journal_title_units = "em";
 set font_module_heading_size = "1.1";
 set font_module_heading_units = "em";
 
@@ -227,8 +238,6 @@ function Page::print_default_stylesheet() {
     var string sidebar_position = "left";
     var string sidebar_position_alt = "right";
 
-    var string page_fonts = generate_font_css( $*font_base, $*font_fallback, $*font_base_size, $*font_base_units );
-
     var string page_background_colors = generate_color_css( new Color, $*color_page_background, new Color );
     var string page_colors = generate_color_css( $*color_page_text, new Color, new Color );
     var string page_link_colors = generate_color_css( $*color_page_link, new Color, new Color );
@@ -245,7 +254,6 @@ function Page::print_default_stylesheet() {
     var string header_colors = generate_color_css( $*color_header_text, $*color_header_background, $*color_module_border );
     var string header_hover_colors = generate_color_css( $*color_header_hover, $*color_header_hover_background, new Color );
 
-    var string module_heading_fonts = generate_font_css( $*font_module_heading, $*font_fallback $*font_module_heading_size, $*font_module_heading_units );
     var string module_base_colors = generate_color_css( $*color_module_text, new Color, new Color );
     var string module_link_colors = generate_color_css ( $*color_module_link, new Color, new Color );
     var string module_link_active_colors = generate_color_css( $*color_module_link_active, new Color, new Color );
@@ -266,6 +274,12 @@ function Page::print_default_stylesheet() {
 
     var string navigation_colors = generate_color_css( $*color_navigation_text, $*color_navigation_background, $*color_navigation_border );
     var string postform_colors = generate_color_css( new Color, $*color_entry_background, $*color_entry_border );
+
+    var string page_font = generate_font_css($*font_base, $*font_fallback, $*font_base_size, $*font_base_units);
+    var string page_title_font = generate_font_css($*font_journal_title, $*font_fallback, $*font_journal_title_size, $*font_journal_title_units);
+    var string entry_title_font = generate_font_css($*font_entry_title, $*font_fallback, $*font_entry_title_size, $*font_entry_title_units);
+    var string module_font = generate_font_css($*font_module_text, $*font_fallback, $*font_module_text_size, $*font_module_text_units);
+    var string module_title_font = generate_font_css($*font_module_heading, $*font_fallback, $*font_module_heading_size, $*font_module_heading_units);
 
     var string userpic_css = "";
     if($*userpics_position == "left") {
@@ -291,7 +305,7 @@ non IE browsers */
 
 body {
     $page_background_colors
-    $page_fonts
+    $page_font
     margin: 0 0%;
     padding: 0;
     width: 100%;   
@@ -332,8 +346,8 @@ a:active {
 
 #header h1 {
     margin: 0px;
-    font-size: 2em;
     padding: 1em;
+    $page_title_font
 }
 
 #header h2 {
@@ -356,6 +370,14 @@ a:active {
 
 .entry-wrapper {
     margin-top: -20px;
+}
+
+.module h2 {
+    $module_title_font
+}
+
+.module-content {
+    $module_font
 }
 
 .module-section-two {
@@ -415,7 +437,6 @@ a:active {
 .module-section-two h2 {
     margin: 0;
     margin-bottom: 7px;
-    $module_heading_fonts
     padding: 0.2em;
     text-align: center;
     $module_title_colors
@@ -524,10 +545,12 @@ $userpic_css
 .entry-title, .comment-title {
     padding: 0.2em;
 }
+.entry-title {
+    $entry_title_font
+}
 .entry-title a, .comment-title a {
     text-decoration: none;
 }
-
 .entry-wrapper .entry, .comment, .text_noentries_day {
     $entry_colors
     margin-top: 100px;
