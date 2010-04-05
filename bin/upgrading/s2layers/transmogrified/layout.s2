@@ -415,6 +415,8 @@ function Page::print_default_stylesheet () {
     a:hover { $page_link_hover_colors }
     a:active { $page_link_active_colors }
 
+    q { font-style: italic; }
+
     #container {
                 $page_background
                 $page_colors
