@@ -380,12 +380,14 @@ a:active,
     text-align: center;
 }
 .standout .standout-inner {
-    background-color: #ffafb6;
-    color: #111;
-    border: 1px solid #c1272d;
     margin-top: 0.5em;
     margin-left: auto;
     margin-right: auto;
+}
+.standout .standout-inner, .standout-colors {
+    background-color: #ffafb6;
+    color: #111;
+    border: 1px solid #c1272d;
 }
 .standout .standout-inner td {
     padding: 0.5em;

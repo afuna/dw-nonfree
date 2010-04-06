@@ -384,12 +384,14 @@ a:active,
     text-align: center;
 }
 .standout .standout-inner {
-    background-color: #8356E6;
-    color: #fff;
-    border: 1px solid #3a155a;
     margin-top: 0.5em;
     margin-left: auto;
     margin-right: auto;
+}
+.standout .standout-inner, .standout-colors {
+    background-color: #8356E6;
+    color: #fff;
+    border: 1px solid #3a155a;
 }
 .standout .standout-inner td {
     padding: 0.5em;
