@@ -75,14 +75,15 @@
  
     # shop/pricing configuration
     %SHOP = (
-        # key => [ $USD, months, account type ],
-        prem6  => [  20,  6, 'premium' ],
-        prem12 => [  40, 12, 'premium' ],
-        paid1  => [   3,  1, 'paid'    ],
-        paid2  => [   5,  2, 'paid'    ],
-        paid6  => [  13,  6, 'paid'    ],
-        paid12 => [  25, 12, 'paid'    ],
-        seed   => [ 200, 99, 'seed'    ],
+        # key => [ $USD, months, account type, cost in points ],
+        prem6  => [  20,  6, 'premium', 200 ],
+        prem12 => [  40, 12, 'premium', 400 ],
+        paid1  => [   3,  1, 'paid', 30    ],
+        paid2  => [   5,  2, 'paid', 50    ],
+        paid6  => [  13,  6, 'paid', 130   ],
+        paid12 => [  25, 12, 'paid', 250   ],
+        seed   => [ 200, 99, 'seed', 2000   ],
+        points => [],
     );
 
 }
