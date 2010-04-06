@@ -153,7 +153,7 @@ sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::ocean;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( featured ) }
+sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::palejewels;
@@ -193,7 +193,7 @@ sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::tehotenion;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( ) }
+sub cats { qw( featured ) }
 sub designer { "baggyeyes" }
 
 package LJ::S2Theme::transmogrified::whiteorblack;
