@@ -45,8 +45,8 @@ head<=
 
         # we support both old style and new style pages; only one of these will get
         # loaded ...
-        LJ::need_res( {group=>'jquery'}, "js/tropo/nav-jquery.js" );
-        LJ::need_res( {group=>'default'}, "js/tropo/nav.js" );
+        LJ::need_res( {group=>'jquery'}, "js/nav-jquery.js" );
+        LJ::need_res( {group=>'default'}, "js/nav.js" );
     _code?>
     <?_code LJ::res_includes(); _code?>
 
