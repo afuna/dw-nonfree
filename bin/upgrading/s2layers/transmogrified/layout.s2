@@ -283,8 +283,8 @@ propgroup fonts {
 
 set font_base = "Verdana";
 set font_fallback = "sans-serif";
-set font_base_size = "10";
-set font_base_units = "pt";
+set font_base_size = "1";
+set font_base_units = "em";
 set font_module_heading = "";
 set font_module_heading_size = "1.1";
 set font_module_heading_units = "em";

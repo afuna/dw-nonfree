@@ -160,11 +160,11 @@ propgroup fonts {
 
 set font_base = "Arial";
 set font_fallback = "sans-serif";
-set font_base_size = "0.813";
+set font_base_size = "1";
 set font_base_units = "em";
 set font_journal_title_size = "2";
 set font_journal_title_units = "em";
-set font_module_heading_size = "1.1";
+set font_module_heading_size = "1.353";
 set font_module_heading_units = "em";
 
 propgroup customcss {
