@@ -4,8 +4,6 @@ layerinfo redist_uniq = "transmogrified/layout";
 layerinfo author_name = "Yvonne (absolut)";
 layerinfo author_email = "absolut@livejournal.com";
 layerinfo des = "Transmogrified, a style you can change easily";
-layerinfo source_viewable = 1;
-layerinfo is_public = 1;
 
 set layout_authors = [ { "name" => "Yvonne" } ];
 
@@ -31,7 +29,7 @@ propgroup presentation {
     }
 
     property use tags_page_type;
-    property use userpics_position; 
+    property use userpics_position;
     property use use_custom_friend_colors;
 }
 
@@ -91,20 +89,20 @@ propgroup text {
 
     property use text_skiplinks_back;
     property use text_skiplinks_forward;
-    property use text_meta_music; 
-    property use text_meta_mood; 
-    property use text_meta_location; 
-    property use text_tags; 
+    property use text_meta_music;
+    property use text_meta_mood;
+    property use text_meta_location;
+    property use text_tags;
 
     property use text_entry_prev;
-    property use text_entry_next; 
-    property use text_edit_entry; 
-    property use text_edit_tags; 
-    property use text_tell_friend; 
-    property use text_mem_add; 
-    property use text_watch_comments; 
-    property use text_unwatch_comments; 
-    property use text_permalink; 
+    property use text_entry_next;
+    property use text_edit_entry;
+    property use text_edit_tags;
+    property use text_tell_friend;
+    property use text_mem_add;
+    property use text_watch_comments;
+    property use text_unwatch_comments;
+    property use text_permalink;
     property use text_stickyentry_subject;
     
     property use text_module_customtext;
@@ -114,7 +112,7 @@ propgroup text {
 
 propgroup colors {
     property use color_page_background;
-    
+
     property Color color_page_title_background { des = "Title background"; }
     property use color_page_title;
     property Color color_header_background { des = "Header background"; }
@@ -185,37 +183,15 @@ propgroup colors {
     property Color color_tagspage_title_border { des = "Tags page title border"; }
     property Color color_tagspage_title_background { des = "Tags page title background"; }
 }
-set color_page_background = "";
+
 set color_main_background = "";
-set color_page_text = "";
 set color_page_title_background = "";
-set color_page_title = "";
-set color_page_link = "";
-set color_page_link_hover = "";
-set color_page_link_active = "";
-set color_page_link_visited = "";
 set color_header_background = "";
 set color_header_text = "";
 set color_header_hover_background = "";
 set color_header_hover = "";
-set color_module_link = "";
-set color_module_link_active = "";
-set color_module_link_hover = "";
-set color_module_link_visited = "";
-set color_module_border = "";
-set color_module_text = "";
-set color_module_background = "";
-set color_module_title = "";
 set color_module_title_background = "";
 set color_module_title_border = "";
-set color_entry_border = "";
-set color_entry_background = "";
-set color_entry_link = "";
-set color_entry_link_hover = "";
-set color_entry_link_active = "";
-set color_entry_link_visited = "";
-set color_entry_text = "";
-set color_entry_title = "";
 set color_entry_title_border = "";
 set color_entry_title_background = "";
 set color_entry_border_alt = "";
@@ -255,12 +231,6 @@ propgroup images {
     property use image_background_module_group;
 }
 
-set image_background_page_url = "";
-set image_background_header_url = "";
-set image_background_entry_url = "";
-set image_background_module_url = "";
-
-
 # Fonts
 propgroup fonts {
     property use font_base;
@@ -285,7 +255,6 @@ set font_base = "Verdana";
 set font_fallback = "sans-serif";
 set font_base_size = "1";
 set font_base_units = "em";
-set font_module_heading = "";
 set font_module_heading_size = "1.1";
 set font_module_heading_units = "em";
 
@@ -330,7 +299,7 @@ function Page::print()
     """
             </div>
     """;
-    $this->print_module_section("two"); 
+    $this->print_module_section("two");
     """
             </div><div style="clear:both;"></div>
         </div>
@@ -379,17 +348,17 @@ function Page::print_default_stylesheet () {
 
     var string userpic_css = "";
     if($*userpics_position == "left") {
-         $userpic_css = """
-      .entry-title, .comment-title {margin: 0; } 
-      .has-userpic .header {margin: 0 0 0 120px; } 
-      .entry .userpic a, .comment .userpic a {left: 10px; right: auto; }""";
-        }
+        $userpic_css = """
+        .entry-title, .comment-title { margin: 0; }
+        .has-userpic .header { margin: 0 0 0 120px; }
+        .entry .userpic a, .comment .userpic a { left: 10px; right: auto; }""";
+    }
     elseif($*userpics_position == "right") {
-         $userpic_css = """
-      .entry-title, .comment-title {margin: 0; } 
-      .has-userpic .entry-title, .has-userpic .comment-title { margin-right: 120px; }
-      .entry .userpic a, .comment .userpic a {right: 10px; left: auto; }""";
-        }
+        $userpic_css = """
+        .entry-title, .comment-title { margin: 0; }
+        .has-userpic .entry-title, .has-userpic .comment-title { margin-right: 120px; }
+        .entry .userpic a, .comment .userpic a { right: 10px; left: auto; }""";
+    }
 
 
 # NB Background image stuff in container, not in body, and colors fixed accordingly. Otherwise it messes up the layout.
@@ -399,7 +368,7 @@ function Page::print_default_stylesheet () {
     start_css();
     """
     /* believe me, this style is much easier to deal with if you 
-    just leave this here.  It says "lets use the IE box model" for
+    just leave this here. It says "lets use the IE box model" for
     non IE browsers */
     * { box-sizing:border-box; -moz-box-sizing:border-box }
 
@@ -432,31 +401,31 @@ function Page::print_default_stylesheet () {
                 color: $*color_page_title;
                 margin: 0;
                 padding: 0;
-	}
+    }
 
     #header a {
-		color: $*color_page_title;
+        color: $*color_page_title;
         text-decoration: none;
     }
 
     #header h1 {
-        margin: 0px;
-		padding: 20px;
+        margin: 0;
+        padding: 20px;
         $page_title_font
-	}
+    }
 
-	#header h2 {
-		padding: 0 20px 20px 20px;
-	}
+    #header h2 {
+        padding: 0 20px 20px 20px;
+    }
 
     #wrap {
         color: $*color_page_text;
         padding-top: 20px;
         padding-$sidebar_position_alt: 20px;
-	}
+    }
 
     #content {
-	    margin: 0 0;
+        margin: 0 0;
         position: relative;
         width: 100%;
         padding-bottom: 20px;
@@ -465,7 +434,7 @@ function Page::print_default_stylesheet () {
 
     .tags-container {
         background-color: $*color_tagspage_background;
-	   border: 1px solid $*color_tagspage_border;
+       border: 1px solid $*color_tagspage_border;
         padding: 10px;
         margin-top: 10px;
     }
@@ -549,24 +518,24 @@ function Page::print_default_stylesheet () {
         text-decoration: none;
     }
     .module-section-two h2 {
-		margin: 0;
+        margin: 0;
         margin-bottom: 7px;
-		padding: 0.2em;
-		background-color: $*color_module_title_background;
-		color: $*color_module_title;
-		border: 1px solid $*color_module_title_border;			
-	}
+        padding: 0.2em;
+        background-color: $*color_module_title_background;
+        color: $*color_module_title;
+        border: 1px solid $*color_module_title_border;
+    }
 
     .module-section-two ul {
-		list-style-type: none;
-		margin-left: 0.5em;
-		padding: 0;
-	}
-	.module-section-two ul ul {
-		list-style-type: none;
-		margin-left: 0.5em;
-		padding: 0.5em;
-	}
+        list-style-type: none;
+        margin-left: 0.5em;
+        padding: 0;
+    }
+    .module-section-two ul ul {
+        list-style-type: none;
+        margin-left: 0.5em;
+        padding: 0.5em;
+    }
 
     .module-userprofile .userpic img {
         border: none;
@@ -576,14 +545,14 @@ function Page::print_default_stylesheet () {
         text-align: center;
     }
     .module-userprofile ul {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         text-align: center;
         margin-top: 5px;
     }
     .module-userprofile p {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .module-userprofile li {
         display: inline;
@@ -705,14 +674,14 @@ function Page::print_default_stylesheet () {
         display: inline-block;
     }
     .entry-content, .comment-content {
-        padding: 10px 0px;
+        padding: 10px 0;
     }
 
     .no-userpic .comment {
         margin-top: 20px;
     }
     .no-userpic .comment-title {
-        margin: 0px;
+        margin: 0;
     }
 
     .partial .comment-title {
@@ -731,15 +700,15 @@ function Page::print_default_stylesheet () {
     .tag li {
         display: inline;
         list-style: none;
-        padding: 0px;
+        padding: 0;
     }
     *+html .tag li {
         padding: 0 5px;
     }
 
     .entry .metadata ul {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
     }
     .entry .metadata li {
         list-style: none;
@@ -794,7 +763,7 @@ function Page::print_default_stylesheet () {
         background-image: url($*STATDIR/transmogrified/comment.gif);
         background-repeat: no-repeat;
         background-position: 0% 50%;
-        padding-left: 14px;  
+        padding-left: 14px;
         display: inline;
     }
     .comment-management-links .delete_comment a {
@@ -821,7 +790,7 @@ function Page::print_default_stylesheet () {
         background-color: $*color_footer_background;
         color: $*color_footer_text;
         margin: 0;
-        padding: 0.5em 0px;
+        padding: 0.5em 0;
     }
     .module-section-three a {
         color: $*color_footer_link;
@@ -830,17 +799,14 @@ function Page::print_default_stylesheet () {
         padding-left: 20px;
     }
 
-    .hfeed .navigation {
-    }
-
     .navigation {
-		margin: 0;
-		padding: 10px;
-		text-align: center;
-		border: 1px solid $*color_navigation_border;
-		background-color: $*color_navigation_background;	
-		color: $*color_navigation_text;	
-	}
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid $*color_navigation_border;
+        background-color: $*color_navigation_background;
+        color: $*color_navigation_text;
+    }
 
     .navigation ul {
         margin: 0;
@@ -854,14 +820,14 @@ function Page::print_default_stylesheet () {
     .navigation .page-back a:before {
         content: "<<  ";
         font-size: 0.5em;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         vertical-align: 40%;
         padding-right: 1px;
     }
     .navigation .page-forward a:after {
         content: " >>";
         font-size: 0.5em;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         vertical-align: 40%;
         padding-left: 1px;
     }
@@ -883,7 +849,7 @@ function Page::print_default_stylesheet () {
     .month-wrapper, #archive-month dl {
         padding: 10px;
         position: relative;
-        margin: 20px 0px;
+        margin: 20px 0;
         border: solid 1px $*color_archivemonth_border;
         background-color: $*color_archivemonth_background;
     }
@@ -916,7 +882,7 @@ function Page::print_default_stylesheet () {
         text-align: center;
     }
     /* IE only to line up the empty days neatly */
-    *+html .month .day span, *+html .month th span{
+    *+html .month .day span, *+html .month th span {
         vertical-align: 100%;
     }
     .month .day-has-entries {
@@ -925,7 +891,7 @@ function Page::print_default_stylesheet () {
     .month .footer {
         width: 250px;
         text-align: center;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
 
     #postform {
@@ -951,12 +917,12 @@ function Page::print_default_stylesheet () {
         width: 95%;
     }
 
-    .one-column #content {float: none;}
-    .one-column .module-section-two {float: none; padding-bottom: 10px; margin-bottom: 20px;}
-    .one-column #wrap {padding-left: 20px; padding-right: 20px;}
-    .two-columns-right #content {float: left;}
-    .two-columns-right .module-section-two {float: left;}
-    .two-columns-right #wrap {padding-$sidebar_position: $*sidebar_width;}
+    .one-column #content { float: none; }
+    .one-column .module-section-two { float: none; padding-bottom: 10px; margin-bottom: 20px; }
+    .one-column #wrap { padding-left: 20px; padding-right: 20px; }
+    .two-columns-right #content { float: left; }
+    .two-columns-right .module-section-two { float: left; }
+    .two-columns-right #wrap { padding-$sidebar_position: $*sidebar_width; }
 
     """;
     end_css();
