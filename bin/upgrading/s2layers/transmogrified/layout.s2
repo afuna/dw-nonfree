@@ -468,22 +468,30 @@ function Page::print_default_stylesheet () {
         background-color: $*color_module_background;
         margin: 20px;
         margin-$sidebar_position_alt: 10px;
-        padding: 10px;
-        
+        padding: 10px;        
     }
 
-    .module-section-one li {
+
+    .module-section-one .module {
+        padding: .5em 20px;
+    }
+
+    .module-section-one .module-navlinks.module {
+        padding: 0;
+    }
+
+    .module-section-one .module-navlinks li {
         display: inline;
         list-style: none;
     }
-    .module-section-one ul {
+    .module-section-one .module-navlinks ul {
         background-color: $*color_header_background;
         color: $*color_header_text;
         margin: 0;
         padding: 0.5em 20px;
     }
 
-    .module-section-one li a {
+    .module-section-one .module-navlinks li a {
         text-decoration: none;
         padding-top: 0.5em;
         padding-right: 20px;
@@ -493,7 +501,7 @@ function Page::print_default_stylesheet () {
         color: $*color_header_text;
     }
 
-    .module-section-one ul li a:hover, .module-section-one ul li.active a {
+    .module-section-one .module-navlinks ul li a:hover, .module-section-one .module-navlinks ul li.active a {
         background-color: $*color_header_hover_background;
         color: $*color_header_hover;
     }

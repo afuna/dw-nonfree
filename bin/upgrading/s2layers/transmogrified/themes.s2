@@ -1835,11 +1835,11 @@ layerinfo author_name = "baggyeyes";
 set layout_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
 
 set color_page_background = "#000000";
-set color_page_text = "#4A4A4A";
-set color_page_link = "#431b51";
-set color_page_link_hover = "#7d00ca";
-set color_page_link_active = "#6300a3";
-set color_page_link_visited = "#1800ca";
+set color_page_text = "#ffffff";
+set color_page_link = "#cdb9dd";
+set color_page_link_hover = "#e6f8e4";
+set color_page_link_active = "#e5e9d6";
+set color_page_link_visited = "#cbcebe";
 
 set color_page_title = "#ffffff";
 set color_page_title_background = "#5c3f9a";
@@ -1933,22 +1933,29 @@ function Page::print_theme_stylesheet() {
         }
 
     .navigation li.page-back a {
-        background-color: $*color_page_background;
         color: $*color_page_title;
         text-decoration: none;
         }
 
+    .navigation li.page-forward a {
+        color: $*color_footer_link;
+        }
+
     .navigation li.page-back a:hover {
         background-color: $*color_page_title;
-        color: $*color_page_link_hover;
+        color: $*color_navigation_text;
+        }
+
+    .navigation li.page-forward a:hover {
+        color: $*color_navigation_text;
         }
 
     .navigation .page-back a:before {
-        color: $*color_page_link_active;
+        color: $*color_navigation_text;
         }
 
     .navigation .page-forward a:after {
-        color: $*color_page_link_hover;
+        color: $*color_navigation_text;
         }
 
 /* Entries */
