@@ -41,7 +41,8 @@ head<=
     <?_code
         LJ::need_res( "stc/lj_base-app.css" );
         LJ::need_res( "stc/tropo/reset.css" );
-        LJ::need_res( "stc/tropo/purple.css" );
+        LJ::need_res( "stc/tropo/tropo-base.css" );
+        LJ::need_res( "stc/tropo/tropo-purple.css" );
 
         # we support both old style and new style pages; only one of these will get
         # loaded ...

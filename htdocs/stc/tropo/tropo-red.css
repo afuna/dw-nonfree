@@ -1,4 +1,4 @@
-/** Tropospherical CSS
+/** Tropospherical Red CSS
  *
  * Authors:
  *     Janine Smith <janine@netrophic.com>
@@ -32,14 +32,16 @@
  * @colordef        #f7f7f7 Almost White (body background)
  * @colordef        #111111 Almost Black (copy)
  */
+
 body {
     background-color: #c1272d;
-    font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
     color: #111;
 }
+
 /**
  * Links and a pseudo link class
  */
+
 a:link,
 a:visited,
 .link {
@@ -50,206 +52,53 @@ a:active,
 .link:hover {
     color: #f4717a;
 }
-/**
- * Default browser font size is 16px, we want 12px. All width/height measurements
- * are now calculated using the element's font-size in pixels.
- *
- * For example, a 30px wide box with a font-size of 12px = 30/12 = 2.5em
- */
 #canvas {
-    font-size: 0.75em;
-    line-height: 1.5;
-    margin: 2em 0 2em 0;
     background-color: #f7f7f7;
-    width: 92%;
-    padding: 0 4%;
-}
-#page {
-    max-width: 80em;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-/**
- * Masthead is the space for our logo and account links
- */
-#masthead {
-    height: 8.833333em;
-    width: 100%;
-    position: relative;
-}
-#masthead #logo {
-    display: block;
-    position: absolute;
-    top: 2.25em;
-    left: 0;
 }
 
-#account-links {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: 1em;
-    text-align: right;
-}
-#account-links ul li {
-    float: left;
-    margin: 0 0.5em;
-}
-#account-links #login-table {
-    margin-top: 1em;
-}
-#account-links #login-table td {
-    padding: 3px;
-    text-align: right;
-}
-#account-links #login-table td.input-cell,
-#account-links #login-table td.remember-me-cell {
-    text-align: left;
-}
-#account-links #login-table td.input-cell a {
-    font-size: 0.8em;
-}
-#account-links-text {
-    float: right;
-    padding-right: 1em;
-    padding-top: 2em;
-}
-#account-links-text .ljuser {
-    font-size: 1.5em;
-}
-#account-links-text .ljuser img {
-    vertical-align: middle !important;
-}
-#account-links-userpic {
-    float: right;
-}
-#account-links-userpic img {
-    margin-top: 10px;
-}
 /**
  * Menu navigation
- *
- * The menu follows the content in the markup source, so we absolutely position it underneath the masthead
  */
+
 #menu {
-    position: absolute;
-    top: 8.833333em;
-    left: 0;
     background: #ddd url(/img/tropo-red/bg_menu_gradient.png) repeat-x;
-    height: 2.5em;
-    width: 100%;
-    line-height: 2.5em;
-    clear: both;
-}
-#menu ul li {
-    float: left;
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 0;
-}
-#menu ul > li {
-    width: auto;
 }
 #menu ul li a {
     background: transparent url(/img/tropo-red/icon_menu_swirl.png) 0.833333em 0.916667em no-repeat;
-    display: block;
     color: #111;
-    text-decoration: none;
-    text-indent: 2em;
-    padding-right: 0.75em;
 }
 /* .hover is a class added by js for the currently hovered/focused menu */
 #menu ul li.hover a {
-    height: 100%;
     background: #f4717a url(/img/tropo-red/icon_menu_swirl_dropdown.png) 0.833333em 0.916667em no-repeat;
     color: #fff;
-    width: auto;
 }
 #menu ul li.hover a:hover {
     background-color: #c1272d;
-    cursor: pointer;
-}
-#menu ul li ul {
-    display: none;
 }
 #menu ul li.hover ul {
-    display: block;
-    position: absolute;
-    top: 2.5em;
-    left: 0;
-    width: 18em;
     background-color: #f4717a;
 }
-#menu ul li ul li {
-    float: none;
-    width: 100%;
-}
-#menu ul li ul li a {
-    text-align: left;
-    display: block;
-    width: 100%;
-}
-#menu .appwidget-search {
-    text-align: right;
-    line-height: 2.1em;
-    padding-right: 0.833333em;
-    position: static;
-}
-#menu .appwidget-search input#search {
-    width: 15.5em;
-}
+
 /**
  * Footer
  */
+
 #footer {
-    width: 100%;
-    height: 4.166667em;
     background: #ddd url(/img/tropo-red/bg_footer_gradient.png) repeat-x;
-    clear: both;
-    padding: 0.45em 0 0 0.63em;
 }
-#footer ul {
-    overflow: hidden;
-}
-#footer ul li {
-    float: left;
-    margin-right: 0.8em;
-}
+
 /**
  * #content houses the page-specific innards, and creates margins for the absolutely
  * positioned masthead and footer
  */
-#content {
-    margin-top: 4.6em;
-    margin-bottom: 2.75em;
-    overflow: hidden;
-}
+
 #content h1 {
-    font: bold 2em/1.5 Arial, sans-serif;
     color: #c1272d;
-    margin: 0;
-    padding: 0;
 }
 #content h2 {
-    font: 1.5em/1.5 Arial, sans-serif;
     color: #c1272d;
-    margin: 0;
-    padding: 0;
 }
-#content p {
-    margin-bottom: 1em;
-}
-#content p.note {
-    font-style: italic;
-    font-size: 0.8em;
-}
-#content ul.bullet-list {
-    list-style: disc outside;
-    margin-left: 2em;
-    margin-bottom: 1em;
-}
+
 /**
  * Content Layouts
  *
@@ -263,37 +112,13 @@ a:active,
  * content is placed inside based on order of importance.
  */
 
-/* full page (default) */
-#primary,
-#secondary {
-    width: 100%;
-    margin-bottom: 2em;
-}
-/* 2 column wide right sidebar */
-.layout-wide-right-sidebar #primary {
-    width: 65%;
-    margin-right: 1.25em;
-    float: left;
-    padding: 0;
-}
-.layout-wide-right-sidebar #secondary {
-    float: right;
-    width: 30%;
-    margin: 0;
-    padding: 0;
-    padding-top: 0.5em;
-}
 /**
  * Panels are generic boxes for divs inside of #content
  */
+
 #content #primary .panel,
 #content #secondary .panel {
-    width: 100%;
-    border-width: 1px 0 1px 0;
     border-color: #ccc;
-    border-style: solid;
-    margin: 0 0 0.166667em 0;
-    overflow: hidden;
 }
 #content .panel .sidebar,
 #content .panel .contents,
@@ -303,103 +128,45 @@ a:active,
 }
 #content #primary .panel h2 {
     color: #c1272d;
-    line-height: 2em;
-    border-style: none;
     border-bottom: 1px solid #ccc;
-    font: bold 1.5em/2 Arial, sans-serif;
-}
-#content #primary .panel p {
-    clear: both;
 }
 #content #secondary .panel h2 {
     color: #c1272d;
-    line-height: 30px;
-    border-style: none;
     border-bottom: 1px solid #ccc;
-    font: bold 1.166667em/2.142857 Arial, sans-serif;
 }
-#content .panel .sidebar ul {
-     list-style: none;
-     margin-left: 0;
-}
-#content .panel ul {
-    list-style: circle;
-    margin-left: 2em;
-}
+
 /**
  * Panels have different styles for different content layouts
  */
-.layout-wide-right-sidebar #primary .panel .sidebar {
-    float: left;
-    width: 22%;
-}
+
 .layout-wide-right-sidebar #primary .panel .contents {
-    float: left;
-    padding-top: 6px;
-    padding-left: 14px;
     border-left: 1px solid #ccc;
-    width: 75%;
-    line-height: 1.8;
-}
-.layout-wide-right-sidebar #secondary .panel .contents {
-    margin: 0.5em 0;
-    line-height: 1.8;
-}
-/* panel-first class is added through js */
-#content .panel-first {
-    border-top: 0 !important;
 }
 
 /**
  * Scheme-specific blocks
  */
+
 #shim-alpha {
-    font-size: 0.75em;
-    position: absolute;
-    top: 2em;
-    left: 0;
-    height: 7.833333em;
-    width: 100%;
     background: #fff;
     border-top: 0.5em solid #e3e3e3;
     border-bottom: 0.5em solid #f4717a;
 }
 
-#updateinsobject {
-    z-index: 5;
-}
-
 /**
  * Form field styles
  */
+
 .dw-field-default {
     color: #333;
-    font-style: italic;
-}
-.standout {
-    text-align: center;
-}
-.standout .standout-inner {
-    margin-top: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
 }
 .standout .standout-inner, .standout-colors {
     background-color: #ffafb6;
     color: #111;
     border: 1px solid #c1272d;
 }
-.standout .standout-inner td {
-    padding: 0.5em;
-}
-
 .standout-inner a:hover, .standout-inner a:active, .standout-inner a:hover {
     color: #000;
-}
-
-/* update.bml */
-#draft {
-    font-size: medium;
 }
 
 /**
@@ -411,20 +178,14 @@ a:active,
 #uploadBox {
     background-color: #ffd8d8;
     border: 1px solid #c1272c;
-    margin: 0 20px 0 0;
 }
 
 /* profile.css */
-
 .section, .username, .actions li {
     background-color: #f7f7f7;
     border-bottom: 1px dotted #666;
     border-left: 1px dotted #666;
     color: #c1272d;
-}
-
-.section img, .username img {
-    padding-left: 3px;
 }
 
 /* customize.css */
@@ -439,100 +200,73 @@ h2.widget-header {
 
 /* widgets/customizetheme.css, themechooser.css, themenav.css,
 currenttheme.css */
-
 .theme-current h2.widget-header, .layout-item.current {
     background-color: #ffd8d8;
     border: 1px solid #c1272c;
 }
-
 h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-item .theme-icons {
     border: 1px solid #c1272c;
 }
-
 .theme-item .theme-button-disabled, .layout-item .layout-button-disabled {
     background: #f4717a;
 }
-
-.theme-item {
-    overflow-x: visible;
-    overflow-y: visible;
-}
-
-.customize-button, .theme-item .theme-button, .layout-item
-.layout-button {
+.customize-button, .theme-item .theme-button, .layout-item .layout-button {
     background: #f4717a;
     border: 2px solid #541e1a;
     border-top: 2px solid #f4717a;
     border-left: 2px solid #f4717a;
 }
-
-
 .theme-nav-content, .customize-content {
     border: 1px solid #c1272c;
     border-left: none;
 }
-
 .theme-selector-nav {
     background-color: #ffd8d8;
 }
-
 .theme-nav li a, .theme-nav-small li {
     border-right: 1px solid #c1272c;
 }
-
 .theme-nav li.on a {
     border: 1px solid #c1272c;
     border-right: none;
 }
-
 .theme-nav-separator {
     border-right: 1px solid #c1272c;
 }
-
 .theme-nav-separator hr {
     border-top: 1px solid #f4717a;
 }
-
 .customize-content .subheader {
     background-color: #ffd8d8;
     border-bottom: 1px solid #c1272c;
 }
-
 .customize-content .subheader.on {
     background-color: #ffd8d8;
 }
-
 .customize-nav {
     background-color: #ffd8d8;
 }
-
 .customize-nav li a, .customize-nav li li  {
     border-right: 1px solid #c1272c;
 }
-
 .customize-nav li.on a, .customize-nav li.on ul {
     border: 1px solid #c1272c;
     border-right: none;
     border-top: none;
 }
-
 .customize-nav li.on {
     border-top: 1px solid #c1272c;
 }
-
 .moodtheme-preview, .appwidget-linkslist .tips-box {
     background-color: #ffd8d8;
     border: 1px solid #c1272c;
 }
-
 .theme-current-links {
     border-bottom: 1px solid #c1272c;
     border-right: 1px solid #c1272c;
 }
-
 .theme-nav li a:visited, .customize-nav li a:visited {
     color: #c1272c;
-    font-weight: bold;
 }
 
 /* more, detailed by page*/
@@ -549,14 +283,10 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 .customize-content .subheader {
     background-image: url("/img/tropo-red/tropred-arrow-right.gif");
-    background-position: left center;
-    background-repeat: no-repeat;
     border-bottom: 1px solid #ffd8d8;
 }
 .customize-content .subheader.on {
     background-image: url("/img/tropo-red/tropred-arrow-down.gif");
-    background-position: left center ;
-    background-repeat: no-repeat;
 }
 .customize-content fieldset legend {
     color: #777;
@@ -570,11 +300,11 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 .customize-nav li.on a {
     /*background: #fff url("/img/tropo-red/tropred-arrow-right.gif") no-repeat right 50%;*/
-    border-right: 1px solid #FFFFFF;
+    border-right: 1px solid #fff;
 }
 .customize-nav li.on li a {
     background: #fff;
-    border-right: 1px solid #FFFFFF;
+    border-right: 1px solid #fff;
 }
 .customize-nav li.on li {
     border-right: 1px solid #fff;
@@ -608,7 +338,6 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 /*currentheme.css*/
 .theme-current h2.widget-header {
     background-color: #ffd8d8;
-    background-image: none;
 }
 .theme-current-content h3 {
     color: #000;
@@ -620,7 +349,7 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     background-color: #fff;
     border-right: 1px solid #f4717a;
     border-bottom: 1px solid #f4717a;
-    padding: 3px 5px; color: #777;
+    color: #777;
 }
 .theme-current ul li {
     background: url("/img/customize/arrow.gif") no-repeat 0 5px;
@@ -672,19 +401,15 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 
 /* inbox */
-
 .folders a.active {
-    font-weight: bold;
     background-color: #ffd8d8;
     border: 1px solid #bbb;
 }
 
 /* lj_settings.css */
-
 .section_head, table.alternating-rows th, div.username {
     background-color: #d1ced2;
     color: #333;
-    border: none;
     border-bottom: 1px solid #c1272c;
 }
 .cat_head {
@@ -702,143 +427,60 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
 }
 
 /* comm_promo.css */
-
 div.CommunityPromoBox {
     border: 1px solid #f4717a;
 }
 
 /* settings.css */
-
 #settings_save {
     background: #ffd8d8;
 }
-
 #settings_nav li a {
     background: #f4717a;
     border: 1px solid #c1272c;
     border-bottom: none;
 }
-
 #settings_nav li a:hover, #settings_nav li a.active {
     background: #ffd8d8;
 }
-
 #settings_nav_title p {
     background: #ffd8d8;
     border-left: 1px solid #c1272c;
 }
 
 /* cprod.css */
-
 .cprod.h3 {
     background: #f4717a;
-
 }
-
 .cprod content {
     border: 1px solid #c1271c;
 }
 
-
-/* allpics styling */
-
-table.allpics {
-    margin-left: 50px;
-}
-
-.allpics td {
-    vertical-align: bottom;
-}
-
-.allpics .pic img {
-    margin-right: 1em;
-    margin-top: 15px;
-}
-
-.allpics blank {
-    width: 50px;
-}
-
-.allpics td.desc {
-padding-right: 10px;
-}
-
-/* editfilters styling */
-
-table.editfilters td {
-    padding: 5px;
-}
-
-
-/* FAQ */
-
-.faqlist {
-    list-style: disc outside;
-    margin-bottom: 2em;
-}
-
-/* Inbox - Compose */
-
-.inbox-compose {
-    width: 100%;
-}
-
-.inbox-compose td {
-    vertical-align: top;
-}
-
-
-/* Support Highscores */
-
-table#support-highscores {
-    line-height: 2.2;
-}
-
-
-/* manage/invitecodes.bml */
-
-.invitecodes td {
-    padding: 5px;
-}
-
-
 /* create flow */
-
-.create-form td {
-    padding: 5px;
-}
-
 .appwidget-createaccount .create-button {
     color: #111;
     background-color: #f4717a;
 }
-
 .appwidget-createaccountprogressmeter .step-block-active {
     color: #fff;
     background-color: #c1272d;
 }
-
 .appwidget-createaccountprogressmeter .step-block-inactive {
     color: #fff;
     background-color: #f4717a;
 }
-
 .appwidget-createaccountprogressmeter .step-selected {
     color: #c1272d;
 }
-
 .appwidget-createaccountprogressmeter .step-previous {
     color: #f4717a;
 }
-
 .appwidget-createaccountprogressmeter .step-next {
     color: #666;
 }
-
 .appwidget-createaccountprofile .header {
     color: #c1272d;
 }
-
 .appwidget-createaccountprofile .field-name {
     background-color: #e0e0e0;
 }
@@ -848,19 +490,11 @@ table#support-highscores {
     border-bottom: 1px solid #c1272c;
     border-right: 1px solid #c1272c;
     background-color: #c0c0c0;
-    min-width: 50em;
 }
-
 .cmtbar-even {
     border-bottom: 1px solid #f4717a;
     border-right: 1px solid #f4717a;
     background-color: #e2e2e2;
-    min-width: 50em;
-}
-
-#Comments {
-    overflow: auto;
-    max-width: 80em;
 }
 
 /* Profile */
@@ -874,7 +508,6 @@ hr.hr {
     color: #c1272d;
     background-color: #c1272d;
 }
-
 input.create-account {
     color: #fff;
     background: #f4717a;
@@ -896,7 +529,6 @@ select.select {
 h2.widget-header {
     border-bottom: 1px solid #ccc;
 }
-
 table.alternating-rows th {
     border-top: 1px solid #c1272d;
     border-bottom: 1px solid #c1272d;
@@ -911,31 +543,26 @@ table.alternating-rows tr.altrow2 {
 table.alternating-rows td {
     border-bottom: 1px solid #ccc;
 }
-
 .appwidget .more-link {
     color: #c1272d !important;
     background: url('/img/arrow-double-black.gif') no-repeat 0 60%;
 }
-
 .arrow-link,
 .more-link {
     background: url('/img/arrow-double-black.gif') no-repeat 0 50%;
 }
-
 .message {
     border: 5px solid #eee;
 }
 .message blockquote {
     border: 1px solid #aaa;
 }
-
 .standout-border {
     border: 1px solid #c1272d;
 }
 .standout-background {
     background-color: #f4717a;
 }
-
 div.right-sidebar {
     color: #000000;
     background-color: #f4717a;
@@ -964,35 +591,17 @@ input.bright {
 .helper {
     color: #666;
 }
-.rounded-box {
-    background: no-repeat;
-    zoom: 1;
-}
-.rounded-box .rounded-box-tr {
-    background: 100% 0 no-repeat;
-}
-.rounded-box .rounded-box-bl {
-    background: 0 100% no-repeat;
-}
-.rounded-box .rounded-box-br {
-    background: 100% 100% no-repeat;
-    padding: 2px; /* border width */
-}
-
 
 /* esn.css */
 .Subscribe tr.Inactive {
     color: #aaa;
 }
-
 .Subscribe tr.Disabled {
     background-color: #eee;
 }
-
 .Subscribe tr.altrow {
     background-color: #f1f1f1;
 }
-
 .Subscribe tr.Inactive a {
     color: #aaa;
 }
@@ -1000,11 +609,9 @@ input.bright {
     color: #666;
     background: #fff;
 }
-
 .CategoryRow td {
     border-bottom: 1px solid #ddd;
 }
-
 #Subscriptions tr.lighter {
     background-color: #ffd8d8;
 }
@@ -1013,27 +620,22 @@ input.bright {
 }
 #SubscribeSaveButtons {
     border: 1px solid #333;
-    }
-
+}
 .NotificationTable tr.Selected {
     background-color: #f4717a;
 }
-
 .NotificationTable tr.Selected td {
     border-top: 1px solid #ccc;
 }
-
 .NotificationTable td {
     border-top: 1px solid #ddd;
 }
 .NotificationTable .inbox {
     border-top: 1px solid #ddd;
 }
-
 .inbox .header {
     background: #ddd;
 }
-
 .InboxItem_Read {
     color: #888;
 }
@@ -1046,7 +648,6 @@ span.InboxItem_Read a {
 span.InboxItem_Read:hover a {
     color: inherit !important;
 }
-
 .inbox .alt {
     background: #f6f6f6;
 }
@@ -1056,7 +657,6 @@ span.InboxItem_Read:hover a {
 .inbox td.time {
     color: #555;
 }
-
 .folders a {
     color: #000;
     border: 1px solid #fff;
@@ -1068,9 +668,8 @@ span.InboxItem_Read:hover a {
     border: 1px solid #bbb;
     background-color: #eee;
 }
-
 .ippu {
-    color: #000000
+    color: #000;
 }
 .ippu .track_title {
     color: #f4717a;
@@ -1127,7 +726,7 @@ a#lj_userpicselect {
     background: #fff;
 }
 #htmltools ul {
-    border-bottom: 1px solid #8D8D8D;
+    border-bottom: 1px solid #8d8d8d;
 }
 #options, #public {
     border: 1px solid #bbb;
@@ -1146,10 +745,10 @@ div.ContextualPopup div.Inner {
     background-color: #fff !important;
     color: #000 !important;
     border: 1px solid #c1272c;
-    }
+}
 div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
-        color: #c1272c !important;
-        }
+    color: #c1272c !important;
+}
 
 /* profile.css */
 .tooltip {
@@ -1162,17 +761,17 @@ li.profile_trackuser_disabled, li.profile_sendmessage_disabled {
     color: #999;
 }
 .details_stats p {
-        color: #666;
-    }
+    color: #666;
+}
 .details_stats .account_level {
-        color: #000;
-    }
+    color: #000;
+}
 .section span.section_link {
-        color: #000;
-    }
+    color: #000;
+}
 .section_body .inner_section_header {
-        color: #111;
-    }
+    color: #111;
+}
 .section_body_title {
     color: #111;
 }
@@ -1181,90 +780,60 @@ li.profile_trackuser_disabled, li.profile_sendmessage_disabled {
 }
 
 /* tags.css */
-#selected_tags
-{
+#selected_tags {
     color: #777;
 }
-.tagsort
-{
+.tagsort {
     /*border-top: 1px solid #cdcdcd;*/
 }
 .tagfield {
     color: #777;
-    border: 1px solid #CCC;
+    border: 1px solid #ccc;
 }
-.tagfield:focus
-{
+.tagfield:focus {
     color: #000;
     border: 1px solid #999;
 }
-.tagfield_error
-{
+.tagfield_error {
     border: 1px solid red;
     background-color: #ecd7d7;
 }
-.proptbl .t
-{
+.proptbl .t {
     color: #777;
     background-color: #fbfbfb;
     border-right: 1px solid #cdcdcd;
 }
-.proptbl .r
-{
+.proptbl .r {
     color: #777;
     background-color: #fbfbfb;
     border-right: 1px solid #cdcdcd;
 }
-.proptbl .rv
-{
+.proptbl .rv {
     background-color: #eee;
 }
-.edittbl .l, .lsep
-{
+.edittbl .l, .lsep {
     border-right: 1px solid #777;
 }
-.edittbl .sep
-{
+.edittbl .sep {
     border-top: 1px solid #777;
 }
-.curtags
-{
+.curtags {
     color: #777;
 }
-.tagbox_nohist
-{
+.tagbox_nohist {
     background-color: #eee;
 }
 
 /* Adult warning interstitals */
-
 div.adult_warning {
     background-color: #ffd8d8;
     border: 1px solid #c1272d;
-    padding: 0 10px;
-}
-
-/* CSS-style some things that users like to use */
-
-q {
-    margin-left: 1em;
-    font-style: italic;
-}
-
-small {
-    font-size: smaller;
-}
-
-big {
-    font-size: larger;
 }
 
 /* For the manage/banusers page */
-
 .userslist-table tr.odd {
     background-color: #efefef;
 }
-
 .userslist-table tr.even {
-    background-color: #ffffff;
+    background-color: #fff;
 }
