@@ -20,7 +20,8 @@ propgroup presentation {
     property use layout_type;
     property use sidebar_width;
     property use tags_page_type;
-    property use userpics_position; 
+    property use userpics_position;
+    property use entry_metadata_position;
     property use use_custom_friend_colors;
     property use use_shared_pic;
 }
@@ -624,6 +625,9 @@ $userpic_css
     padding: 0 5px;
 }
 
+.entry .metadata.top-metadata {
+    padding-top: 10px;
+}
 .entry .metadata ul {
     margin: 0px;
     padding: 0px;

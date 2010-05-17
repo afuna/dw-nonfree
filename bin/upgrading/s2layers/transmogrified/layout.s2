@@ -30,6 +30,7 @@ propgroup presentation {
 
     property use tags_page_type;
     property use userpics_position;
+    property use entry_metadata_position;
     property use use_custom_friend_colors;
     property use use_shared_pic;
 }
@@ -715,6 +716,9 @@ function Page::print_default_stylesheet () {
         padding: 0 5px;
     }
 
+    .entry .metadata.top-metadata {
+        padding-top: 10px;
+    }
     .entry .metadata ul {
         margin: 0;
         padding: 0;
