@@ -32,6 +32,8 @@ set tags_page_type = "";
 
 set custom_colors_template = "%%new%% .userpic a {background-color: %%background%%; border: solid 1px %%foreground%%;}";
 
+set module_layout_sections = "none|(none)|two|Sidebar";
+
 propgroup modules {
     property use module_userprofile_group;
     property use module_navlinks_group;
@@ -45,7 +47,28 @@ propgroup modules {
     property use module_poweredby_group;
     property use module_customtext_group;
     property use module_credit_group;
+
+    property string module_navlinks_section_override {
+       values = "none|(none)|one|Header|two|Sidebar";
+       grouped = 1;
+       }
 }
+
+set grouped_property_override = { "module_navlinks_section" => "module_navlinks_section_override" };
+
+set module_navlinks_section = "one";
+set module_userprofile_section = "two";
+set module_pagesummary_section = "two";
+set module_tags_section = "two";
+set module_links_section = "two";
+set module_syndicate_section = "two";
+set module_calendar_section = "two";
+set module_time_section = "none";
+set module_customtext_section = "two";
+set module_active_section = "two";
+set module_credit_section = "two";
+set module_poweredby_section = "two";
+set module_poweredby_order = 20;
 
 propgroup text {
     property use text_view_recent;
@@ -174,21 +197,6 @@ propgroup customcss {
     property use linked_stylesheet;
     property use custom_css;
 }
-
-set module_layout_sections = "none|(none)|one|Header|two|Sidebar";
-set module_navlinks_section = "one";
-set module_userprofile_section = "two";
-set module_pagesummary_section = "two";
-set module_tags_section = "two";
-set module_links_section = "two";
-set module_syndicate_section = "two";
-set module_calendar_section = "two";
-set module_time_section = "none";
-set module_customtext_section = "two";
-set module_active_section = "two";
-set module_credit_section = "two";
-set module_poweredby_section = "two";
-set module_poweredby_order = 20;
 
 function Page::print()
 {
@@ -524,10 +532,18 @@ q { font-style: italic;
     font-weight: bold;
     margin-right: 0.5em;
 }
+.module-customtext .module-content {
+    padding: 0 .5em;
+}
 
+.module-section-two .module-time,
 .module-section-two .module-powered {
     font-size: 0.8em;
     text-align: center;
+}
+.module-section-two .module-navlinks ul {
+    margin-top: 0;
+    padding-top: 1em;
 }
 
 .entry, .comment, .text_noentries_day {
