@@ -463,7 +463,7 @@ function Page::print_default_stylesheet () {
         width: $*sidebar_width;
         /* this must stay at the bottom of this code as in some circumstances
         it closes one declaration and opens another one */
-        $sidebar_positioning;
+        $sidebar_positioning
     }
 
     .module-section-two .module {
