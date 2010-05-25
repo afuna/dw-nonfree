@@ -318,9 +318,11 @@ function Page::print()
 }
 
 function Page::print_default_stylesheet () {
-    var string sidebar_positioning = "margin-right: -$*sidebar_width;";
-    var string sidebar_position = "right";
-    var string sidebar_position_alt = "left";
+    var string sidebar_positioning = "";
+    var string sidebar_position = "";
+    var string sidebar_position_alt = "";
+    if ($*layout_type == "two-columns-right") { $sidebar_positioning = "margin-right: -$*sidebar_width;"; $sidebar_position = "right"; $sidebar_position_alt = "left"; }
+    elseif ($*layout_type == "two-columns-left") { $sidebar_positioning = "margin-left: -$*sidebar_width;"; $sidebar_position = "left"; $sidebar_position_alt = "right"; }
 
     var string page_background = generate_background_css ($*image_background_page_url, $*image_background_page_repeat, $*image_background_page_position, $*color_page_background);
     var string header_background = generate_background_css ($*image_background_header_url, $*image_background_header_repeat, $*image_background_header_position, new Color);
@@ -936,6 +938,9 @@ function Page::print_default_stylesheet () {
     .two-columns-right #content { float: left; }
     .two-columns-right .module-section-two { float: left; }
     .two-columns-right #wrap { padding-$sidebar_position: $*sidebar_width; }
+    .two-columns-left #content { float: right; }
+    .two-columns-left .module-section-two { float: right; }
+    .two-columns-left #wrap { padding-$sidebar_position: $*sidebar_width; }
 
     """;
     end_css();
