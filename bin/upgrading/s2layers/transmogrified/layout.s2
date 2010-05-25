@@ -811,7 +811,7 @@ function Page::print_default_stylesheet () {
         color: $*color_footer_link;
     }
     .module-section-three .module {
-        padding-left: 20px;
+        padding: .5em 20px;
     }
 
     .navigation {
