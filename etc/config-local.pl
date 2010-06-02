@@ -1,17 +1,20 @@
 #!/usr/bin/perl
 # -*-perl-*-
 
-# LiveJournal configuration file.  Copy this out of the documentation
+# Dreamwidth configuration file.  Copy this out of the documentation
 # directory to etc/config-local.pl and edit as necessary.  The reason
 # it's not in the etc directory already is to protect it from
-# getting clobbered when you upgrade to the newest LiveJournal code in
+# getting clobbered when you upgrade to the newest Dreamwidth code in
 # the future.
 
-# This should be the only file you need to change to get the
-# LiveJournal code to run on your site. Use the checkconfig.pl
-# utility to find any other config variables that might not
-# be documented here. You should be able to set config values
-# here and have the LJ code run; if you have to modify the
+# This, and config-private.pl should be the only files you need to 
+# change to get the Dreamwidth code to run on your site. Variables
+# which are set by $DW::PRIVATE::... should be configured in 
+# config-private.pl instead.
+
+# Use the  checkconfig.pl utility to find any other config variables 
+# that might not be documented here. You should be able to set config 
+# values here and have the DW code run; if you have to modify the
 # code itself, it's a bug and you should report it.
 
 {
@@ -48,7 +51,16 @@
             private_key => $DW::PRIVATE::RECAPTCHA{private_key},
         );
 
-    # PayPal configuration
+    # If enabled, disable people coming in over Tor exits from using various parts of the site.
+    $USE_TOR_CONFIGS = 0;
+
+    # Configure what you want blocked here.  Requires $USE_TOR_CONFIGS to be on.
+    %TOR_CONFIG = (
+        shop => 1,     # Disallow Tor users from accessing the Shop.
+    );
+
+    # PayPal configuration.  If you want to use PayPal, uncomment this
+    # section and make sure to fill in the fields at the bottom of config-private.pl.
     #%PAYPAL_CONFIG = (
     #        # express checkout URL, the token gets appended to this
     #        url       => 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=',
@@ -71,8 +83,10 @@
     );
 
     # 404 page
+    # Uncomment if you don't want the (dw-free) default, 404-error.bml
+    # (Note: you need to provide your own 404-error-local.bml)
     $PAGE_404 = "404-error-local.bml";
- 
+
     # shop/pricing configuration
     %SHOP = (
         # key => [ $USD, months, account type, cost in points ],
