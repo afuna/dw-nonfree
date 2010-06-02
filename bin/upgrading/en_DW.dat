@@ -23,3 +23,7 @@ shop.annivpromo.points=This order will earn you <strong>[[points]] Dreamwidth [[
 shop.annivpromo.nopoints=This order will not earn you any Dreamwidth Points as part of our Anniversary Promotion.  Bonus points are only given for orders that cost money.
 
 tropo.footer.opensource=Open Source
+
+widget.createaccountentercode.info=To create a new account, enter an account creation code (<a href="http://www.dreamwidth.org/support/faqbrowse?faqid=105">Why?</a>):
+
+widget.createaccountentercode.getcode=If you do not have an account creation code, you can find or request one in <?ljcomm dw_codesharing ljcomm?>.
