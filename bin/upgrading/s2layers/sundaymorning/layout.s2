@@ -48,6 +48,7 @@ propgroup modules {
     property use module_poweredby_group;
     property use module_customtext_group;
     property use module_credit_group;
+    property use module_search_group;
 
     property string module_navlinks_section_override {
        values = "none|(none)|one|Header|two|Sidebar";
@@ -70,6 +71,7 @@ set module_active_section = "two";
 set module_credit_section = "two";
 set module_poweredby_section = "two";
 set module_poweredby_order = 20;
+set module_search_section = "two";
 
 propgroup text {
     property use text_view_recent;
@@ -510,6 +512,10 @@ q { font-style: italic;
     margin-left: auto;
     margin-right: auto;
 }
+
+.module-search .search-form { margin: .5em; }
+.module-search .search-box { margin: .5em 0em; width: 100%;}
+.module-search .search-form { text-align: right; }
 
 /* wrap long content, particularly openid usernames */
 .module-pagesummary .ljuser {

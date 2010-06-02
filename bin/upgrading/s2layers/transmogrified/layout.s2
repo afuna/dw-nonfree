@@ -56,6 +56,7 @@ propgroup modules {
     property use module_poweredby_group;
     property use module_customtext_group;
     property use module_credit_group;
+    property use module_search_group;
 }
 
 set module_layout_sections = "none|(none)|one|Header|two|Sidebar|three|Footer";
@@ -71,6 +72,7 @@ set module_time_section = "none";
 set module_customtext_section = "two";
 set module_active_section = "two";
 set module_credit_section = "two";
+set module_search_section = "two";
 
 propgroup text {
     property use text_view_recent;
@@ -577,6 +579,12 @@ function Page::print_default_stylesheet () {
     .module-calendar table {
         margin-left: auto;
         margin-right: auto;
+    }
+    .module-search .search-form {
+        text-align: right;
+    }
+    .module-search .search-box {
+        width: 100%;
     }
     /* wrap long content, particularly openid usernames */
     .module-pagesummary .ljuser {
