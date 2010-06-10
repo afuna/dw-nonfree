@@ -1977,6 +1977,10 @@ function Page::print_theme_stylesheet() {
   
 /* Archive Pages */
 
+    .month {
+        color: $*color_entry_text;
+    }
+
     .month .inner dl {
         border-radius: 8px;
         -moz-border-radius: 8px;
@@ -2010,6 +2014,7 @@ function Page::print_theme_stylesheet() {
 
     .tags-container {
         border-radius: 8px;
+        color: $*color_entry_text;
         -moz-border-radius: 8px;
         -webkit-border-radius: 8px;
         }
