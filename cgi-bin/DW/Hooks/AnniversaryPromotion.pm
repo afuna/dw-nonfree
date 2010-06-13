@@ -79,6 +79,8 @@ LJ::Hooks::register_hook( 'shop_cart_render', sub {
 LJ::Hooks::register_hook( 'shop_cart_state_change', sub {
     my ( $cart, $newstate ) = @_;
 
+    return unless promo_valid();
+
     # if the cart is going INTO the paid state, then we apply the bonus points
     # to the user who bought the items
     if ( $newstate == $DW::Shop::STATE_PAID ) {
