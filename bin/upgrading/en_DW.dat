@@ -1,5 +1,11 @@
 ;; -*- coding: utf-8 -*-
 
+entryform.htmlfaq=Supported HTML
+
+entryform.htmlfaq.detail=HTML examples
+
+entryform.htmlfaq.site=Site-specific markup tags
+
 entryform.pollcreator=Poll Creator
 
 invitecodes.userclass.active30d=Users active during the past 30 days

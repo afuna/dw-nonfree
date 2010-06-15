@@ -38,7 +38,10 @@ LJ::Hooks::register_hook( 'entryforminfo', sub {
 
     return $make_list->(
         # URL, link text, whether to show or not
-        [ "/poll/create$usejournal", LJ::Lang::ml( 'entryform.pollcreator' ), $can_make_poll ]
+        [ "/poll/create$usejournal", LJ::Lang::ml( 'entryform.pollcreator' ), $can_make_poll ],
+        [ "/support/faqbrowse?faqid=103", LJ::Lang::ml( 'entryform.htmlfaq' ), 1 ],
+        [ "/support/faqbrowse?faqid=155", LJ::Lang::ml( 'entryform.htmlfaq.detail' ), 1 ],
+        [ "/support/faqbrowse?faqid=82", LJ::Lang::ml( 'entryform.htmlfaq.site' ), 1 ],
     );
     
 } );
