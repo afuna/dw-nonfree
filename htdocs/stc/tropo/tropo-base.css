@@ -485,11 +485,6 @@ table#support-highscores {
     min-width: 50em;
 }
 
-#Comments {
-    overflow: auto;
-    max-width: 80em;
-}
-
 /* lj_base-app.css */
 .rounded-box {
     background: no-repeat;
@@ -520,4 +515,14 @@ small {
 }
 big {
     font-size: larger;
+}
+
+/* for pages which we know may have wide content, and we want this content visible */
+.self_wrap  #content {
+    overflow: visible;
+}
+
+#page_talkread #entry, #page_talkread  #Comments .talk-comment,
+#page_inbox .InboxItem_Content {
+    max-width: 80em;
 }

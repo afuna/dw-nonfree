@@ -835,3 +835,9 @@ div.adult_warning {
 .userslist-table tr.even {
     background-color: #f7f7f7;
 }
+
+/* for items which could have wide content, that could overflow outside the bounds of #content */
+#page_talkread  #Comments .talk-comment td.commentbody,
+#page_inbox .InboxItem_Content {
+    background-color: #f7f7f7;
+}
