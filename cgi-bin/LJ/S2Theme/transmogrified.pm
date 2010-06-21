@@ -79,7 +79,7 @@ sub navigation_props {
 
 package LJ::S2Theme::transmogrified::basic;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( base ) }
+sub cats { qw() }
 
 package LJ::S2Theme::transmogrified::blackeye;
 use base qw( LJ::S2Theme::transmogrified );
