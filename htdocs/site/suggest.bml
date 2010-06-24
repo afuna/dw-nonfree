@@ -5,13 +5,12 @@
 # Simple form suggestion generator that will take input, process it, and 
 # post it to a community's moderation queue.  The post will include a 
 # simple opinion poll to easily get the opinions of the readers. In
-# addition to posting a public entry to the comm, it also posts a
-# members-only entry (aka, community maintainers only, as the only
-# people who'll be members of the comm will be maintainers) with the
-# text of the suggestion formatted for autopost to Bugzilla, which
-# will not only save some time in opening up the bug, but also ensure
-# that the text of the suggestion is preserved if the poster of the
-# entry decides to delete it after getting some disagreeing comments.
+# addition to posting a public entry to the comm, it also posts an
+# admin-only entry with the text of the suggestion formatted for autopost
+# to Bugzilla, which will not only save some time in opening up the bug,
+# but also ensure that the text of the suggestion is preserved if the
+# poster of the entry decides to delete it after getting some 
+# disagreeing comments.
 #
 # Authors:
 #      Denise Paolucci <denise@dreamwidth.org>
@@ -41,7 +40,8 @@ body<=
     # the community to post to:
     my $destination = LJ::load_user( 'dw_suggestions' );
 
-    # the user to post the maintainer-only address as:
+    # the user (which should also be an admin of the community)
+    # to post the maintainer-only address as:
     my $suggestions_bot = LJ::load_user( 'suggestions_bot' );
 
     # handle the results of a POST request:
@@ -133,7 +133,7 @@ body<=
             'subject'         => $POST{title},
             'event'           => $bugzilla_post,
             'usejournal'      => $destination->user,
-            'security'        => 'usemask',
+            'security'        => 'private',
             'allowmask'       => 1,
             'usejournal_okay' => 1,
             'props'           => { 'taglist' => 'bugzilla_unmigrated' },
