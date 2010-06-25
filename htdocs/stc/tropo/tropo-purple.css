@@ -838,6 +838,7 @@ div.adult_warning {
 
 /* for items which could have wide content, that could overflow outside the bounds of #content */
 #page_talkread  #Comments .talk-comment td.commentbody,
-#page_inbox .InboxItem_Content {
+#page_inbox .InboxItem_Content,
+#page_manageprofile td {
     background-color: #f7f7f7;
 }
