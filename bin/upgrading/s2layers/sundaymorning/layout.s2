@@ -572,6 +572,13 @@ $userpic_css
 .entry .userpic img, .comment .userpic img {
     border: none;
 }
+
+.comment-title h4 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: inherit;
+    padding: inherit;
+}
 .entry-title, .comment-title {
     padding: 0.2em;
 }
