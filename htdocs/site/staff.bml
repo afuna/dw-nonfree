@@ -23,7 +23,7 @@ want to use. </p>
 
 <h2>Dreamwidth Studios, LLC's Owners</h2>
 
-<img src="http://www.dreamwidth.org/userpic/256/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/256/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Denise Paolucci</b> (the Suit) began working on the 
 LiveJournal.com project in 2001. Since then, she's done everything from 
@@ -36,7 +36,7 @@ find a home for their expression where they feel safe, welcomed, and
 supported.</p>
 
 <p>Denise lives in Baltimore, Maryland, with her long-suffering 
-girlfriend, who fortunately enjoys the frequent "c'mere, look, isn't 
+wife, who fortunately enjoys the frequent "c'mere, look, isn't 
 this <em>cool</em>?" invocations, and two cats, who don't care about the 
 internet as long as they get fed on time.</p>
 
@@ -51,7 +51,7 @@ Official community: <span  lj:user='dw_biz' style='white-space: nowrap;'>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/257/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/257/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Mark Smith</b> (the Geek) began volunteering with LiveJournal.com 
 in 2001 in technical support and code development. He joined the staff 
@@ -62,7 +62,7 @@ transitioning to Six Apart, Mark worked to design and build out the
 systems infrastructure for the Vox.com product launch. In 2007, he moved 
 to Iceland to program for CCP Games' EVE Online, before moving back to 
 the US in early 2008 as a Senior Systems Administrator for the Mozilla 
-Corporation. He currently works for Google.</p>
+Corporation.</p>
 
 <p>Mark currently resides near San Francisco, CA with his wife Janine and
 their canine companions. From time to time, he can be heard on the air as
@@ -79,20 +79,16 @@ Official community: <span  lj:user='dw_dev' style='white-space: nowrap;'>
 
 <br />
 
-<h2>Community Project Leaders</h2>
+<h2>Dreamwidth Studios, LLC's Employees</h2>
 
-<p>People who are currently working on major projects for Dreamwidth!</p><br />
-
-<img src="http://www.dreamwidth.org/userpic/258/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/258/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Afuna</b> first learned Perl from looking at the LiveJournal code
 (for fun), which ended in her volunteering as part of the Support team
 from 2007 to 2008. There, she picked up a love of digging through code and
 diagnosing the freaky stuff. She bounces from one interesting thing to
-another, and is currently focused on overhauling S2 along with Aveleh and
-the team. She is interested in improving site accessibility, and is trying
-to find both the right questions and the right answers to improve the site
-so it's usable by everyone.</p>
+another, and was hired as Dreamwidth's first employee because she can
+do a little bit of everything -- and do it well!</p>
 
 <p>Fu lives in the Philippines, and has dreams of traveling the world one
 day. When she remembers there's a world outside work and the internet
@@ -102,24 +98,37 @@ get pulled in too many directions at once.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/259/6" style="float: left; padding: 5px;" />
 
-<p><b>Aveleh</b> likes learning, helping others, and adding to Afuna's task
-list. As the project manager of the styles team, she has the good fortune
-to be working with a great team who's helping her accomplish all three. Her
-passions include user-friendly interfaces, brain-friendly code, and making
-the Dreamwidth journal-styling system Just Do The Right Thing.</p>
+<h2>Community Project Leaders</h2>
 
-<p>Abby lives in Winnipeg, Canada, and will one day learn how to write about herself.</p>
+<p>People who are currently working on major projects for Dreamwidth:</p><br />
 
-<p>Official community: <span  lj:user='dw_styles' style='white-space: nowrap;'>
-<a href='http://dw-styles.dreamwidth.org/profile'>
-<img src='http://s.dreamwidth.org/img/comm_staff.png' alt='[info - site community] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' />
-</a><a href='http://dw-styles.dreamwidth.org/'><b>dw_styles</b></a></span>.</p>
+<img src="http://www.dreamwidth.org/userpic/529546/6" style="float: left; padding: 5px; clear: both;" />
+
+<p><b>Azurelunatic</b> came into the LiveJournal volunteer IRC channel during one
+of the early data center "power events" to find out what was going on.
+Denise obtained another minion shortly thereafter. Azz specializes in
+thoughtful analysis of any social media system she immerses herself in,
+and enjoys finding the root needs underlying any request for more bells
+and whistles, and thinking up a way to fulfil that need that fits in
+with the site's <cite>gestalt</cite> and actually could be implemented.
+She was in IRC not looking busy enough when Denise and Mark needed a
+team leader for antispam, and now enjoys squashing spammers.</p>
+
+<p>Azz lives in the foggy part of the San Francisco Bay Area. She
+dreamed of becoming a Communications Officer like Lt. Uhura when she was
+a child; now she spends much of her free time on IRC, on the phone with
+Kat, and having bizarre, one-sided conversations with the characters in
+her current draft novel.</p>
+
+<p>Official community: <span  lj:user='dw_antispam' style='white-space: nowrap;'>
+<a href='http://dw-antispam.dreamwidth.org/profile'>
+<img src='http://s.dreamwidth.org/img/comm_staff.png' alt='[info - site community] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a>
+<a href='http://dw-antispam.dreamwidth.org/'><b>dw_antispam</b></a></span>.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/357458/9611" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/529533/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>ChemicalLace</b> is &#8531; of the Dreamwidth Support Triumvirate.  She volunteered for LiveJournal Support and Abuse teams from 2001-2003, where she met Mark and Denise, and followed them to Dreamwidth during closed beta testing.</p>
 
@@ -132,7 +141,29 @@ the Dreamwidth journal-styling system Just Do The Right Thing.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/2564/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/529528/6" style="float: left; padding: 5px; clear: both;" />
+
+<p><b>John Chodan</b> joined up with Dreamwidth early in 2009 as a beta
+tester, but then started getting involved in more and more other things
+(including the occasional patch). Right now he heads up the Anti-Spam
+team and supports the volunteer Wiki, training other volunteers in both
+areas. His previous experience includes business and consumer technical
+support and administrating a card game service.</p>
+
+<p>John is a full-time student (studying Business while preparing for
+law school) and a full-time husband and parent to two wonderful young
+girls. When not meeting the demands of his ladies he enjoys renaissance
+dance, building custom computers, photography, and cooking (and
+eating!).</p>
+
+<p>Official community: <span  lj:user='dw_antispam' style='white-space: nowrap;'>
+<a href='http://dw-antispam.dreamwidth.org/profile'>
+<img src='http://s.dreamwidth.org/img/comm_staff.png' alt='[info - site community] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a>
+<a href='http://dw-antispam.dreamwidth.org/'><b>dw_antispam</b></a></span>.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/2564/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>DomTheKnight</b> is leading the user acceptance testing team for Dreamwidth and is &#8531; of the Support Triumvirate. At her day job in research administration, she has worked on database conversions, and currently manages data in several databases and trains her colleagues to use them.</p>
 
@@ -154,7 +185,7 @@ the 'Cats.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/210571/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/210571/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Jennifer Griffin</b> does Terms of Service enforcement because Mark
 asked her to, and submits tons of Bugzilla patches because it's fun.  An
@@ -179,7 +210,7 @@ children.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/261/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/261/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Audra Johnson</b> (the Information Architect) joined Dreamwidth
 because she's passionate about online community and user experiences, as
@@ -201,7 +232,7 @@ and math for biology research.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/262/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/262/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Andrea Nall</b> has been working on the Dreamwidth project since
 inception. Her area of specialty is the importer, which will allow anyone
@@ -219,7 +250,7 @@ she didn't have to sleep.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/263/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/263/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Pau Amma</b> has been volunteering for LiveJournal since early 2005,
 in support, translation, documentation, and occasionally coding. He has
@@ -234,22 +265,30 @@ IRC with The Awesomest Girlfriend. He's a permanent resident of There.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/264/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/529540/6" style="float: left; padding: 5px; clear: both;" />
 
-<p><b>Jesse Proulx</b> was one of LiveJournal.com's first employees,
-where he worked on documentation, customer support, feature development,
-and human interface design. He left his position as Technical Product
-Manager to work as a software engineer for Dogster, a social network for
-pet owners, and is currently a frontend developer at Jaxtr, a voice-based
-social networking service.</p>
+<p><b>Ricky Buchanan</b> continues her fight for an internet she can actually use by leading the accessibility team on Dreamwidth. She is a leading blogger on the topic of assistive technology, especially in regards to Apple products, and a staunch advocate for accessibility and disability awareness. Ricky also runs <a href="http://atmac.org/">ATMac</a>, a site about accessibility for Apple's products, <a href="http://italkmagazine.com/">iTalkMagazine</a> and <a href="http://nopitycity.com/">No Pity City</a> in her copious free time.</p>
 
-<p>Jesse lives just outside of San Francisco, CA with his wife and their 
-two dogs. He is an avid musician, and spends entirely too much of his 
-free time playing video games.</p>
+<p>Official community: <span  lj:user='dw_accessibility' style='white-space: nowrap;'>
+<a href='http://dw-accessibility.dreamwidth.org/profile'>
+<img src='http://s.dreamwidth.org/img/comm_staff.png' alt='[info - site community] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' />
+</a><a href='http://dw-accessibility.dreamwidth.org/'><b>dw_accessibility</b></a></span>.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/260/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/529553/6" style="float: left; padding: 5px; clear: both;" />
+
+<b>Sarah</b> serves as Dreamwidth's executive assistant, which involves
+much filing of paperwork and weekly trips to the credit union. Yes, she
+will get you coffee, but only if she's already getting some for herself.
+And if you drink it full-octane. And if she can find a second clean mug.</p>
+
+Sarah's superpowers include paying the bills on time, keeping the taxman from battering down the door, and keeping the pantry she shares with
+Denise well-stocked with Diet Coke with Lime.</p>
+
+<br />
+
+<img src="http://www.dreamwidth.org/userpic/260/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Janine Smith</b> works on Dreamwidth's front-end Perl
 development. Previously, she worked as a software engineer at LiveJournal
@@ -264,7 +303,7 @@ animal shelter.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/265/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/265/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Rachel Walmsley</b> started volunteering on LiveJournal.com in 2002,
 continuing until 2005. During that time, she did various tasks ranging
@@ -285,11 +324,11 @@ beloved science of physics.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/356753/4537" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/529542/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>Zarhooie</b>, also known as Kat, is &#8531; of the Dreamwidth Support Triumvirate. She specializes in volunteer training and wears her Tact Hat with pride and tenacity (whatever that means). Kat got sucked into Support shortly before Open Beta in April of 2009 after spending way too much time on IRC. She wasn't even supposed to BE here today!</p>
 
-<p>In her copious spare time (HA), Kat is a full-time college student majoring in Religion. When not  baking, cooking, knitting, sewing, studying, reading or composing, Kat enjoys playing rugby, messing around in the Society for Creative Anachronism, wearing stompy boots and sometimes even napping.</p>
+<p>In her copious spare time (HA), Kat is a full-time college student majoring in Religion. When not baking, cooking, knitting, sewing, studying, reading or composing, Kat enjoys playing rugby, messing around in the Society for Creative Anachronism, wearing stompy boots and sometimes even napping.</p>
 
 <p>Official community: <span  lj:user='dw_support' style='white-space: nowrap;'>
 <a href='http://dw-support.dreamwidth.org/profile'>
@@ -299,7 +338,7 @@ beloved science of physics.</p>
 
 <br />
 
-<img src="http://www.dreamwidth.org/userpic/2565/6" style="float: left; padding: 5px;" />
+<img src="http://www.dreamwidth.org/userpic/2565/6" style="float: left; padding: 5px; clear: both;" />
 
 <p><b>zvi LikesTV</b> got on the Internet to talk about speculative
 fiction novels. Her repertoire now includes television, queerness, and
