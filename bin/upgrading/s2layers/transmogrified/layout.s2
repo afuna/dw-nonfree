@@ -373,8 +373,6 @@ function Page::print_default_stylesheet () {
 # NB Background image stuff in container, not in body, and colors fixed accordingly. Otherwise it messes up the layout.
 # Homegrown logic for entry and module colors to fit with Transmog specialist options for alternating
 
-    """<style type="text/css">""";
-    start_css();
     """
     /* believe me, this style is much easier to deal with if you 
     just leave this here. It says "lets use the IE box model" for
@@ -961,6 +959,4 @@ function Page::print_default_stylesheet () {
     .two-columns-left #wrap { padding-$sidebar_position: $*sidebar_width; }
 
     """;
-    end_css();
-    "</style>\n";
 }

@@ -311,8 +311,6 @@ function Page::print_default_stylesheet() {
       .entry .userpic a, .comment .userpic a {right: 10px; left: auto; }""";
         }
 """
-
-<style type="text/css">
 /* believe me, this style is much easier to deal with if you 
 just leave this here.  It says "lets use the IE box model" for
 non IE browsers */
@@ -848,7 +846,6 @@ $userpic_css
     width: 95%;
 }
 
-</style>
 """;
 
 }
