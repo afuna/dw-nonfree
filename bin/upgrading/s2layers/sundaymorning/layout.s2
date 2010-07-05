@@ -574,8 +574,8 @@ $userpic_css
 .comment-title h4 {
     font-size: inherit;
     font-weight: inherit;
-    margin: inherit;
-    padding: inherit;
+    margin: 0;
+    padding: 0;
 }
 .entry-title, .comment-title {
     padding: 0.2em;
