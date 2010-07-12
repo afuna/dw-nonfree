@@ -484,6 +484,11 @@ q { font-style: italic;
     text-align: center;
 }
 
+.module-tags_cloud li, .tags_cloud li {
+    display: inline;
+    list-style-type: none;
+}
+
 .module-userprofile .userpic img {
     border: none;
     margin: 20px;
