@@ -133,6 +133,71 @@ set image_background_header_position = "top right";
 set image_background_header_repeat = "no-repeat";
 
 
+#NEWLAYER: colorside/mandala
+layerinfo "type" = "theme";
+layerinfo "name" = "Mandala";
+layerinfo redist_uniq = "colorside/mandala";
+layerinfo author_name = "dancing_serpent";
+
+set layout_resources = [ { "name" => "OpenClipart", "url" => "http://www.openclipart.org/" } ];
+
+##===============================
+## Page Colors
+##===============================
+
+set color_page_background = "#ffffff";
+set color_page_border = "#009f43";
+set color_page_link = "#0072b5";
+set color_page_link_active = "#0072b5";
+set color_page_link_hover = "#795c60";
+set color_page_link_visited = "#6c1913";
+set color_page_text = "#000000";
+set color_page_title = "#0072b5";
+set color_footer_background = "#ffffff";
+set color_footer_link = "#0072b5";
+set color_footer_link_active = "#0072b5";
+set color_footer_link_hover = "#795c60";
+set color_footer_link_visited = "#6c1913";
+set color_header_background = "#ffffff";
+
+##===============================
+## Entry Colors
+##===============================
+
+set color_entry_background = "#ffffff";
+set color_entry_interaction_links = "#0072b5";
+set color_entry_link = "#0072b5";
+set color_entry_link_active = "#0072b5";
+set color_entry_link_hover = "#795c60";
+set color_entry_link_visited = "#6c1913";
+set color_entry_text = "#000000";
+set color_entry_title = "#000000";
+set color_entry_title_background = "#f19c5b";
+set color_comment_title_background = "#f19c5b";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#f19c5b";
+set color_module_link = "#6c1913";
+set color_module_link_active = "#6c1913";
+set color_module_link_hover = "#ffee36";
+set color_module_link_visited = "#0072b5";
+set color_module_text = "#000000";
+set color_module_title = "#000000";
+set color_module_title_background = "#ffffff";
+
+##===============================
+## Images
+##===============================
+
+set image_background_header_height = 300;
+set image_background_header_position = "top right";
+set image_background_header_repeat = "no-repeat";
+set image_background_header_url = "colorside/mandala.jpg";
+
+
 #NEWLAYER: colorside/nadeshiko
 layerinfo "type" = "theme";
 layerinfo "name" = "Nadeshiko";

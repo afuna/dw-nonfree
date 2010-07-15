@@ -10,6 +10,11 @@ package LJ::S2Theme::colorside::fish;
 use base qw( LJ::S2Theme::colorside );
 sub cats { qw() }
 
+package LJ::S2Theme::colorside::mandala;
+use base qw( LJ::S2Theme::colorside );
+sub cats { qw () }
+sub designer { "dancing_serpent" }
+
 package LJ::S2Theme::colorside::nadeshiko;
 use base qw( LJ::S2Theme::colorside );
 sub cats { qw() }
