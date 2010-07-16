@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# DW::Controller::DreamwidthMisc
+# DW::Controller::Dreamwidth::Misc
 #
 # Controller for Dreamwidth specific miscellaneous pages.
 #
@@ -15,13 +15,11 @@
 # or redistribute it, with or without modifications.
 #
 
-package DW::Controller::DreamwidthMisc;
+package DW::Controller::Dreamwidth::Misc;
 
 use strict;
 use warnings;
-use DW::Controller;
 use DW::Routing;
-use DW::Template;
 
 DW::Routing->register_static( '/about', 'misc/about.tt', app => 1 );
 
