@@ -34,7 +34,7 @@ set userpics_position = "right";
 set sidebar_width = "200px";
 set tags_page_type = "";
 
-set custom_colors_template = "%%new%% .userpic a {background-color: %%background%%; border: solid 1px %%foreground%%;}";
+set custom_colors_template = "%%new%% .userpic a { background-color: %%background%%; border: solid 1px %%foreground%%; }";
 
 set module_layout_sections = "none|(none)|two|Sidebar";
 
@@ -54,9 +54,9 @@ propgroup modules {
     property use module_search_group;
 
     property string module_navlinks_section_override {
-       values = "none|(none)|one|Header|two|Sidebar";
-       grouped = 1;
-       }
+        values = "none|(none)|one|Header|two|Sidebar";
+        grouped = 1;
+        }
 }
 
 set grouped_property_override = { "module_navlinks_section" => "module_navlinks_section_override" };
@@ -95,20 +95,20 @@ propgroup text {
 
     property use text_skiplinks_back;
     property use text_skiplinks_forward;
-    property use text_meta_music; 
-    property use text_meta_mood; 
-    property use text_meta_location; 
-    property use text_tags; 
+    property use text_meta_music;
+    property use text_meta_mood;
+    property use text_meta_location;
+    property use text_tags;
 
     property use text_entry_prev;
-    property use text_entry_next; 
-    property use text_edit_entry; 
-    property use text_edit_tags; 
-    property use text_tell_friend; 
-    property use text_mem_add; 
-    property use text_watch_comments; 
-    property use text_unwatch_comments; 
-    property use text_permalink; 
+    property use text_entry_next;
+    property use text_edit_entry;
+    property use text_edit_tags;
+    property use text_tell_friend;
+    property use text_mem_add;
+    property use text_watch_comments;
+    property use text_unwatch_comments;
+    property use text_permalink;
 
     property use text_stickyentry_subject;
 
@@ -212,7 +212,7 @@ function Page::print()
     <head>""";
         $this->print_head();
         $this->print_stylesheets();
-        $this->print_head_title();    
+        $this->print_head_title();
     println "</head>";
     $this->print_wrapper_start();
     $this->print_control_strip();
@@ -237,7 +237,7 @@ function Page::print()
     """
             </div>
     """;
-    $this->print_module_section("two"); 
+    $this->print_module_section("two");
     """
             </div><div style="clear:both;"></div>
         </div>
@@ -298,30 +298,30 @@ function Page::print_default_stylesheet() {
 
     var string userpic_css = "";
     if($*userpics_position == "left") {
-         $userpic_css = """
-      .entry-title, .comment-title {margin: 0; } 
-       /* make sure userpic can't overlap the poster's username */
-      .has-userpic .header { margin: 0 0 0 120px; min-height: 55px; } 
-      .entry .userpic a, .comment .userpic a {left: 10px; right: auto; }""";
+        $userpic_css = """
+        .entry-title, .comment-title { margin: 0; }
+        /* make sure userpic can't overlap the poster's username */
+        .has-userpic .header { margin: 0 0 0 120px; min-height: 55px; }
+        .entry .userpic a, .comment .userpic a { left: 10px; right: auto; }""";
         }
     elseif($*userpics_position == "right") {
-         $userpic_css = """
-      .entry-title, .comment-title {margin: 0; } 
-      .has-userpic .entry-title, .has-userpic .comment-title { margin-right: 120px; }
-      .entry .userpic a, .comment .userpic a {right: 10px; left: auto; }""";
+        $userpic_css = """
+        .entry-title, .comment-title { margin: 0; }
+        .has-userpic .entry-title, .has-userpic .comment-title { margin-right: 120px; }
+        .entry .userpic a, .comment .userpic a { right: 10px; left: auto; }""";
         }
 """
 /* believe me, this style is much easier to deal with if you 
-just leave this here.  It says "lets use the IE box model" for
+just leave this here. It says "let's use the IE box model" for
 non IE browsers */
 * { box-sizing:border-box; -moz-box-sizing:border-box }
 
 body {
     $page_background_colors
     $page_font
-    margin: 0 0%;
+    margin: 0;
     padding: 0;
-    width: 100%;   
+    width: 100%;
 }
 
 a {
@@ -343,8 +343,8 @@ q { font-style: italic;
 }
 
 #container {
-    width: 100%; 
-    margin-left: 0px;
+    width: 100%;
+    margin-left: 0;
     position: relative;
     $container_background
 }
@@ -361,7 +361,7 @@ q { font-style: italic;
 }
 
 #header h1 {
-    margin: 0px;
+    margin: 0;
     padding: 1em;
     $page_title_font
 }
@@ -401,11 +401,11 @@ q { font-style: italic;
     left: 2em;
     top: 8em;
     width: $*sidebar_width;
-    max-width: 220px; 
+    max-width: 220px;
     height: 200px;
     $module_base_colors
-    padding-right: 5px; 
-    margin-right: -230px;;
+    padding-right: 5px;
+    margin-right: -230px;
 }
 
 .module-section-one li {
@@ -416,14 +416,14 @@ q { font-style: italic;
 .module-section-one ul {
     $module_base_colors
     margin: 1.5em 0 0 250px;
-    padding: 0.5em;
+    padding: .5em;
 }
 
 .module-section-one li a {
     text-decoration: none;
-    padding-top: 0.5em;
+    padding-top: .5em;
     padding-right: 20px;
-    padding-bottom: 0.5em;
+    padding-bottom: .5em;
     padding-left: 20px;
     $header_colors
 }
@@ -437,8 +437,7 @@ q { font-style: italic;
     $module_link_colors
 }
 
-.module-section-two a:visited, .module-section-two .module-header a:visited 
-{
+.module-section-two a:visited, .module-section-two .module-header a:visited {
     $module_link_visited_colors
 }
 
@@ -446,36 +445,38 @@ q { font-style: italic;
     $module_link_hover_colors
 }
 
-.module-section-two a:active, .module-section-two .module-header a:active  {
+.module-section-two a:active, .module-section-two .module-header a:active {
     $module_link_active_colors
 }
 
 .module-section-two h2 {
     margin: 0;
     margin-bottom: 7px;
-    padding: 0.2em;
+    padding: .2em;
     text-align: center;
     $module_title_colors
-    border-left: none; border-right: none; border-top: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 .module-section-two ul {
     list-style-type: none;
-    margin-left: 0.5em;
+    margin-left: .5em;
     padding: 0;
 }
 .module-section-two ul ul {
     list-style-type: none;
-    margin-left: 0.5em;
+    margin-left: .5em;
     padding: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .module-section-two .module {
     $module_colors
     border-top: none;
 }
-        
+
 .module-section-two .module:first-child {
     border-top: 1px solid $*color_module_border;
 }
@@ -497,14 +498,14 @@ q { font-style: italic;
     text-align: center;
 }
 .module-userprofile ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     text-align: center;
     margin-top: 5px;
 }
 .module-userprofile p {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .module-userprofile li {
     display: inline;
@@ -520,7 +521,7 @@ q { font-style: italic;
 }
 
 .module-search .search-form { margin: .5em; }
-.module-search .search-box { margin: .5em 0em; width: 100%;}
+.module-search .search-box { margin: .5em 0; width: 100%; }
 .module-search .search-form { text-align: right; }
 
 /* wrap long content, particularly openid usernames */
@@ -543,7 +544,7 @@ q { font-style: italic;
     float: left;
     clear: left;
     font-weight: bold;
-    margin-right: 0.5em;
+    margin-right: .5em;
 }
 .module-customtext .module-content {
     padding: 0 .5em;
@@ -551,7 +552,7 @@ q { font-style: italic;
 
 .module-section-two .module-time,
 .module-section-two .module-powered {
-    font-size: 0.8em;
+    font-size: .8em;
     text-align: center;
 }
 .module-section-two .module-navlinks ul {
@@ -583,7 +584,7 @@ $userpic_css
     padding: 0;
 }
 .entry-title, .comment-title {
-    padding: 0.2em;
+    padding: .2em;
 }
 .entry-title {
     $entry_title_font
@@ -623,7 +624,7 @@ $userpic_css
     display: inline-block;
 }
 .entry-content, .comment-content {
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 .tag {
     font-weight: bold;
@@ -637,9 +638,9 @@ $userpic_css
 .tag li {
     display: inline;
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
-  
+
 *+html .tag li {
     padding: 0 5px;
 }
@@ -648,8 +649,8 @@ $userpic_css
     padding-top: 10px;
 }
 .entry .metadata ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 .entry .metadata li {
     list-style: none;
@@ -666,16 +667,14 @@ $userpic_css
     padding: 0;
     display: inline;
 }
-.entry-management-links li, .entry-interaction-links li, 
-.comment-management-links li, .comment-interaction-links li {
+.entry-management-links li, .entry-interaction-links li, .comment-management-links li, .comment-interaction-links li {
     display: inline;
     list-style: none;
     margin: 0;
     padding: 5px;
 }
 /* lets have a default */
-.entry-management-links li a, .comment-management-links li a,
-.comment-interaction-links .thread a {
+.entry-management-links li a, .comment-management-links li a, .comment-interaction-links .thread a {
     padding-left: 1em;
 }
 
@@ -687,11 +686,11 @@ $userpic_css
     margin: 0;
     padding: 0; 
     display: inline;
-    font-size: 0.8em;
+    font-size: .8em;
     text-transform: lowercase;
     color: #bbb;
 }
-    
+
 .entry-management-links li, .entry-interaction-links li, .comment-management-links li, .comment-interaction-links li {
     display: inline;
     list-style: none;
@@ -699,9 +698,8 @@ $userpic_css
     padding: 0 0 0 1em;
 }
 
-.entry-interaction-links li a, .entry-management-links .tell_friend a,
-.comment-interaction-links li a { 
-    padding-left: 1em;  
+.entry-interaction-links li a, .entry-management-links .tell_friend a, .comment-interaction-links li a {
+    padding-left: 1em;
     display: inline;
 }
 .entry .footer hr {
@@ -720,17 +718,17 @@ $userpic_css
 
 .navigation {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     text-align: left;
     margin-top: 30px;
     $navigation_colors
 }
 
 .navigation ul {
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 5px;
     text-align: left;
-    font-size: 0.7em;
+    font-size: .7em;
 }
 
 .navigation li {
@@ -739,8 +737,8 @@ $userpic_css
 }
 .navigation .page-back a:before {
     content: " << ";
-    font-size: 0.9em;
-    letter-spacing: 0px;
+    font-size: .9em;
+    letter-spacing: 0;
     vertical-align: 40%;
     padding-right: 1px;
     text-decoration: none;
@@ -749,8 +747,8 @@ $userpic_css
 
 .navigation .page-forward a:after {
     content: " >>";
-    font-size: 0.9em;
-    letter-spacing: 0px;
+    font-size: .9em;
+    letter-spacing: 0;
     vertical-align: 40%;
     padding-left: 1px;
     text-decoration: none;
@@ -763,7 +761,7 @@ $userpic_css
 }
 
 .tags-container h2 {
-    padding: 0.2em;
+    padding: .2em;
     margin: 0 10px 20px 0;
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -771,7 +769,8 @@ $userpic_css
 }
 
 .tags-container ul {
-    margin: 10px; padding: 0;
+    margin: 10px;
+    padding: 0;
     text-align: left;
 }
 .tags-container li {
@@ -787,12 +786,12 @@ $userpic_css
 .month-wrapper, #archive-month dl {
     padding: 10px;
     position: relative;
-    margin: 20px 0px;
+    margin: 20px 0;
     $entry_colors
 }
 
  .month-wrapper h3 {
-    padding: 0.2em;
+    padding: .2em;
     margin: 0;
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -826,7 +825,7 @@ $userpic_css
 .month .footer {
     width: 250px;
     text-align: center;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 #postform {
