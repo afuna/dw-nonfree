@@ -6,12 +6,7 @@ layerinfo "lang" = "en";
 
 # Originally a Transmogrified theme
 
-set layout_type = "two-columns-left";
 set layout_authors = [ { "name" => "regna", "type" => "user" } ];
-
-set entry_management_links = "text";
-set comment_management_links = "text";
-set all_commentsubjects = true;
 
 propgroup presentation {
     property use num_items_recent;
@@ -29,10 +24,13 @@ propgroup presentation {
     property use comment_management_links;
 }
 
-set layout_type = "two-columns-right";
+set layout_type = "two-columns-left";
 set userpics_position = "right";
 set sidebar_width = "200px";
 set tags_page_type = "";
+set entry_management_links = "text";
+set comment_management_links = "text";
+set all_commentsubjects = true;
 
 set custom_colors_template = "%%new%% .userpic a { background-color: %%background%%; border: solid 1px %%foreground%%; }";
 
@@ -217,30 +215,28 @@ function Page::print()
     $this->print_wrapper_start();
     $this->print_control_strip();
     """
-            <div id="container">
-            <div id="header">
+    <div id="container">
+        <div id="header">
+            <a name="top">
     """;
+                $this->print_global_title();
     """
-                <a name="top">
+            </a>
+        </div>
     """;
-    $this->print_global_title();
+        $this->print_module_section("one");
     """
-                </a>
-            </div>
-    """;
-    $this->print_module_section("one");
-    """
-            <div id="wrap">
+        <div id="wrap">
             <div id="content">
     """;
-    $this->print_body();
+                $this->print_body();
     """
             </div>
     """;
-    $this->print_module_section("two");
+            $this->print_module_section("two");
     """
-            </div><div style="clear:both;"></div>
-        </div>
+        </div><div style="clear:both;"></div>
+    </div>
     """;
     $this->print_wrapper_end();
     """
