@@ -86,15 +86,15 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "dancing_serpent" }
 
-package LJ::S2Theme::transmogrified::brickhearth;
-use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw() }
-sub designer { "branchandroot" }
-
 package LJ::S2Theme::transmogrified::blackorwhite;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
+
+package LJ::S2Theme::transmogrified::brickhearth;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::comingdownblue;
 use base qw( LJ::S2Theme::transmogrified );
@@ -108,7 +108,7 @@ sub designer { "zvi" }
 
 package LJ::S2Theme::transmogrified::darkforest;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( ) }
+sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::dignified;
@@ -128,7 +128,7 @@ sub designer { "zvi" }
 
 package LJ::S2Theme::transmogrified::forestgreen;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( ) }
+sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::frozensky;
@@ -148,7 +148,7 @@ sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::newocean;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( ) }
+sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::ocean;
@@ -158,7 +158,7 @@ sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::palejewels;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( ) }
+sub cats { qw() }
 sub designer { "dancing_serpent" }
 
 package LJ::S2Theme::transmogrified::roseicecream;
@@ -168,7 +168,7 @@ sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::shadowboxing;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( ) }
+sub cats { qw() }
 sub designer { "baggyeyes" }
 
 package LJ::S2Theme::transmogrified::slowgreen;
