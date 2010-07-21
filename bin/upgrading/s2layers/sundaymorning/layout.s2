@@ -331,7 +331,6 @@ a:visited {
 }
 a:hover {
     $page_link_hover_colors
-    text-decoration: none;
 }
 a:active {
     $page_link_active_colors
@@ -342,7 +341,6 @@ q { font-style: italic;
 
 #container {
     width: 100%;
-    margin-left: 0;
     position: relative;
     $container_background
 }
@@ -355,7 +353,6 @@ q { font-style: italic;
 
 #header a {
     $page_title_anchor_colors
-    text-decoration: none;
 }
 
 #header h1 {
@@ -441,20 +438,15 @@ q { font-style: italic;
 }
 
 .module-section-one li a {
-    text-decoration: none;
-    padding-top: .5em;
-    padding-right: 20px;
-    padding-bottom: .5em;
-    padding-left: 20px;
+    padding: .5em 20px;
     $header_colors
 }
 
-.module-section-one ul li a:hover, .module-section-one ul li.active a {
+.module-section-one ul li a:hover {
     $header_hover_colors
 }
 
 .module-section-two a, .module-section-two .module-header a {
-    text-decoration: none;
     $module_link_colors
 }
 
@@ -520,9 +512,9 @@ q { font-style: italic;
 }
 .module-userprofile ul {
     margin: 0;
+    margin-top: 5px;
     padding: 0;
     text-align: center;
-    margin-top: 5px;
 }
 .module-userprofile p {
     margin-top: 0;
@@ -541,9 +533,8 @@ q { font-style: italic;
     margin-right: auto;
 }
 
-.module-search .search-form { margin: .5em; }
 .module-search .search-box { margin: .5em 0; width: 100%; }
-.module-search .search-form { text-align: right; }
+.module-search .search-form { margin: .5em; text-align: right; }
 
 /* wrap long content, particularly openid usernames */
 .module-pagesummary .ljuser {
@@ -610,9 +601,6 @@ $userpic_css
 .entry-title {
     $entry_title_font
 }
-.entry-title a, .comment-title a {
-    text-decoration: none;
-}
 .entry-wrapper .entry, .comment, .text_noentries_day {
     $entry_colors
     margin-top: 100px;
@@ -641,7 +629,7 @@ $userpic_css
 }
 
 .entry .time, .entry .date {
-    padding: 0.2em;
+    padding: .2em;
     display: inline-block;
 }
 .entry-content, .comment-content {
@@ -682,18 +670,6 @@ $userpic_css
 .entry .footer a {
     white-space: nowrap;
 }
-.entry-management-links, .entry-interaction-links, .comment-management-links, .comment-interaction-links {
-    text-align: right;
-    margin: 0;
-    padding: 0;
-    display: inline;
-}
-.entry-management-links li, .entry-interaction-links li, .comment-management-links li, .comment-interaction-links li {
-    display: inline;
-    list-style: none;
-    margin: 0;
-    padding: 5px;
-}
 /* lets have a default */
 .entry-management-links li a, .comment-management-links li a, .comment-interaction-links .thread a {
     padding-left: 1em;
@@ -708,6 +684,7 @@ $userpic_css
     padding: 0; 
     display: inline;
     font-size: .8em;
+    text-align: right;
     text-transform: lowercase;
     color: #bbb;
 }
@@ -739,9 +716,9 @@ $userpic_css
 
 .navigation {
     margin: 0;
+    margin-top: 30px;
     padding: 0;
     text-align: left;
-    margin-top: 30px;
     $navigation_colors
 }
 
@@ -762,8 +739,6 @@ $userpic_css
     letter-spacing: 0;
     vertical-align: 40%;
     padding-right: 1px;
-    text-decoration: none;
-
 }
 
 .navigation .page-forward a:after {
@@ -772,8 +747,6 @@ $userpic_css
     letter-spacing: 0;
     vertical-align: 40%;
     padding-left: 1px;
-    text-decoration: none;
-
 }
 
 .tags-container {
@@ -785,7 +758,6 @@ $userpic_css
     padding: .2em;
     margin: 0 10px 20px 0;
     font-size: 1.2em;
-    margin-bottom: 20px;
     $page_content_title_colors
 }
 
@@ -801,7 +773,7 @@ $userpic_css
 
 .manage-tags-link {
     text-align: center;
-    font-size: 0.7em;
+    font-size: .7em;
 }
 
 .month-wrapper, #archive-month dl {
@@ -814,8 +786,8 @@ $userpic_css
  .month-wrapper h3 {
     padding: .2em;
     margin: 0;
-    font-size: 1.2em;
     margin-bottom: 20px;
+    font-size: 1.2em;
     $page_content_title_colors
 }
 
