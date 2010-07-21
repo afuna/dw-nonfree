@@ -245,9 +245,11 @@ function Page::print()
 }
 
 function Page::print_default_stylesheet() {
-    # hardcoded for now
-    var string sidebar_position = "left";
-    var string sidebar_position_alt = "right";
+    var string sidebar_position = "";
+    var string sidebar_position_alt = "";
+    var string image_background_page_position = "100% 70px";
+    if ($*layout_type == "two-columns-right") { $sidebar_position = "right"; $sidebar_position_alt = "left"; $image_background_page_position = "0% 70px"; }
+    elseif ($*layout_type == "two-columns-left") { $sidebar_position = "left"; $sidebar_position_alt = "right"; }
 
     var string page_background_colors = generate_color_css( new Color, $*color_page_background, new Color );
     var string page_colors = generate_color_css( $*color_page_text, new Color, new Color );
@@ -258,7 +260,7 @@ function Page::print_default_stylesheet() {
 
     var string page_content_title_colors = generate_color_css( $*color_entry_title, $*color_entry_background, $*color_entry_border );
 
-    var string container_background = generate_background_css( $*image_background_page_url, $*image_background_page_repeat, "100% 70px", new Color );
+    var string container_background = generate_background_css( $*image_background_page_url, $*image_background_page_repeat, $image_background_page_position, new Color );
 
     var string page_title_colors = generate_color_css( $*color_page_title, $*color_page_title_background, new Color );
     var string page_title_anchor_colors = generate_color_css( $*color_page_title, new Color, new Color );
@@ -370,7 +372,6 @@ q { font-style: italic;
     $page_colors
     padding-$sidebar_position_alt: $*sidebar_width;
     padding-top: 10px;
-    padding-left: 0;
 }
 
 .one-column #wrap {
@@ -383,7 +384,7 @@ q { font-style: italic;
 
 #content {
     width: 100%;
-    margin-left: 10px;
+    margin-$sidebar_position: 10px;
     z-index: 20;
 }
 
@@ -404,24 +405,33 @@ q { font-style: italic;
     max-width: 220px;
     height: 200px;
     $module_base_colors
-    padding-right: 5px;
+    padding-$sidebar_position_alt: 5px;
 }
 
 .two-columns .module-section-two {
     position: absolute;
-    left: 2em;
+    $sidebar_position: 2em;
     top: 8em;
-    margin-right: -230px;
+    margin-$sidebar_position_alt: -230px;
 }
 
 .module-section-one ul {
     $module_base_colors
-    margin: 1.5em 0 0 2em;
+    margin: 0;
+    margin-top: 1.5em;
     padding: .5em;
 }
 
+.one-column .module-section-one ul {
+    margin-left: 2em;
+}
+
 .two-columns .module-section-one ul {
-    margin: 1.5em 0 0 250px;
+    margin-$sidebar_position: 250px;
+}
+
+.two-columns-right .module-section-one ul {
+    text-align: right;
 }
 
 .module-section-one li {
