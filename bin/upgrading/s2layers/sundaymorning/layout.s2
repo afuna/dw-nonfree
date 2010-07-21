@@ -371,6 +371,13 @@ q { font-style: italic;
     padding-$sidebar_position_alt: $*sidebar_width;
     padding-top: 10px;
     padding-left: 0;
+}
+
+.one-column #wrap {
+    margin-left: 2em;
+}
+
+.two-columns #wrap {
     margin-$sidebar_position: 250px;
 }
 
@@ -393,26 +400,34 @@ q { font-style: italic;
 }
 
 .module-section-two {
-    position: absolute;
-    left: 2em;
-    top: 8em;
     width: $*sidebar_width;
     max-width: 220px;
     height: 200px;
     $module_base_colors
     padding-right: 5px;
+}
+
+.two-columns .module-section-two {
+    position: absolute;
+    left: 2em;
+    top: 8em;
     margin-right: -230px;
+}
+
+.module-section-one ul {
+    $module_base_colors
+    margin: 1.5em 0 0 2em;
+    padding: .5em;
+}
+
+.two-columns .module-section-one ul {
+    margin: 1.5em 0 0 250px;
 }
 
 .module-section-one li {
     position: relative;
     display: inline;
     list-style: none;
-}
-.module-section-one ul {
-    $module_base_colors
-    margin: 1.5em 0 0 250px;
-    padding: .5em;
 }
 
 .module-section-one li a {

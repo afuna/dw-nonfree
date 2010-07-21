@@ -1,7 +1,7 @@
 package LJ::S2Theme::sundaymorning;
 use base qw( LJ::S2Theme );
 
-sub layouts { ( "2l" => "two-columns-left" ) }
+sub layouts { ( "1" => "one-column", "2l" => "two-columns-left" ) }
 sub layout_prop { "layout_type" }
 
 sub designer { "regna" }
