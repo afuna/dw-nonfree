@@ -438,6 +438,7 @@ q { font-style: italic;
 }
 
 .module-section-one li a {
+    line-height: 3em;
     padding: .5em 20px;
     $header_colors
 }
