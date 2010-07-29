@@ -719,7 +719,17 @@ function Page::print_default_stylesheet () {
 
     .partial .comment-title {
         display: inline;
-    }
+        margin-right: .3em;
+        line-height: 1.4em;
+        }
+
+    .partial .comment-title h4 {
+        display: inline;
+        }
+
+    .partial .comment-poster:before {
+        content: "- ";
+        }
 
     .tag {
         font-weight: bold;
@@ -813,7 +823,7 @@ function Page::print_default_stylesheet () {
     .entry .metadata-label {
         font-weight: bold;
     }
-    .comment-poster {
+    .full .comment-poster {
         display: inline-block;
         min-width: 40%;
     }
