@@ -193,7 +193,7 @@ sub designer { "branchandroot" }
 
 package LJ::S2Theme::transmogrified::tehotenion;
 use base qw( LJ::S2Theme::transmogrified );
-sub cats { qw( featured ) }
+sub cats { qw() }
 sub designer { "baggyeyes" }
 
 package LJ::S2Theme::transmogrified::whiteorblack;
