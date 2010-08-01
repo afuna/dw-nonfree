@@ -414,6 +414,13 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     color: #333;
     border-bottom: 1px solid #7e27c1;
 }
+.field_block td {
+    background-color: #f7f7f7;
+}
+.field_block .field_name {
+    color: #333;
+    background-color: #eee;
+}
 
 /* comm_promo.css */
 div.CommunityPromoBox {
@@ -840,7 +847,6 @@ div.adult_warning {
 }
 
 /* for items which could have wide content, that could overflow outside the bounds of #content */
-#page_talkread  #Comments .talk-comment td.commentbody,
-#page_manageprofile td {
+#page_talkread  #Comments .talk-comment td.commentbody {
     background-color: #f7f7f7;
 }
