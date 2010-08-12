@@ -938,6 +938,89 @@ set color_module_link_visited = "#a0525d";
 
 set color_comments_form_border = "#deb968";
 
+
+#NEWLAYER: transmogrified/greydays
+layerinfo type = "theme";
+layerinfo name = "Grey Days";
+layerinfo redist_uniq = "transmogrified/greydays";
+layerinfo author_name = "asenathwaite";
+
+set layout_authors = [ { "name" => "asenathwaite", "type" => "user" }];
+
+set color_archivemonth_background = "#888888";
+set color_archivemonth_title = "#3a3a3c";
+set color_archivemonth_title_background = "#a5a6a9";
+set color_archivemonth_title_border = "#47484c";
+set color_archivemonth_border = "#47484c";
+
+set color_comments_form_border = "#797b7f";
+
+set color_entry_background = "#bfbfbf";
+set color_entry_background_alt = "#bfbfbf";
+set color_entry_subject_alt = "#3a3a3c";
+set color_entry_subject_alt_background = "#888888";
+set color_entry_subject_alt_border = "#3a3a3c";
+set color_entry_title = "#3a3a3c";
+set color_entry_title_border = "47484c";
+set color_entry_link = "#3a3a3c";
+set color_entry_link_hover_alt = "#4F3E5C";
+set color_entry_link_hover = "#4F3E5C";
+set color_entry_link_active = "#3a3a3c";
+set color_entry_link_active_alt = "#3a3a3c";
+
+set color_entry_border = "#797b7f";
+set color_entry_border_alt = "#797b7f";
+set color_entry_text = "#000000";
+set color_entry_link_alt = "#3a3a3c";
+
+set color_entry_text_alt = "#000000";
+set color_entry_title_background = "#888888";
+set color_entry_link_visited_alt = "#61506e";
+set color_entry_link_visited = "#61506e";
+
+set color_footer_background = "#3a3a3c";
+set color_footer_link = "#d4d4d4";
+set color_footer_text = "#d4d4d4";
+
+set color_header_hover = "#d4d4d4";
+set color_header_hover_background = "#000000";
+set color_header_background = "#3a3a3c";
+set color_header_text = "#d4d4d4";
+
+set color_main_background = "#bfbfbf";
+
+set color_module_background = "#888888";
+set color_module_border = "#47484c";
+set color_module_text = "#000000";
+set color_module_title_border = "#47484c";
+set color_module_title = "#3a3a3c";
+set color_module_title_background = "#a5a6a9";
+set color_module_link_hover = "#4F3E5C";
+set color_module_link = "#3a3a3c";
+set color_module_link_visited = "#61506e";
+set color_module_link_active = "#3a3a3c";
+
+
+set color_navigation_text = "#050506";
+set color_navigation_border = "#3a3a3c";
+set color_navigation_background = "#888888";
+
+set color_page_background = "#47484c";
+set color_page_text = "#000000";
+set color_page_title_background = "#3a3a3c";
+set color_page_title = "#b4b4b4";
+set color_page_link_hover = "#4F3E5C";
+set color_page_link_active = "#3a3a3c";
+set color_page_link = "#3a3a3c";
+set color_page_link_visited = "#61506e";
+
+set color_tagspage_border = "#47484c";
+set color_tagspage_title_border = "#888888";
+set color_tagspage_title_background = "#a5a6a9";
+set color_tagspage_title = "#3a3a3c";
+set color_tagspage_background = "#bfbfbf";
+
+
 #NEWLAYER: transmogrified/midnight
 layerinfo type = "theme";
 layerinfo name = "Midnight";

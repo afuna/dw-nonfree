@@ -141,6 +141,11 @@ use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
 sub designer { "zvi" }
 
+package LJ::S2Theme::transmogrified::greydays;
+use base qw( LJ::S2Theme::transmogrified );
+sub cats { qw() }
+sub designer { "asenathwaite" }
+
 package LJ::S2Theme::transmogrified::midnight;
 use base qw( LJ::S2Theme::transmogrified );
 sub cats { qw() }
