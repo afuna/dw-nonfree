@@ -5,44 +5,56 @@ layerinfo redist_uniq = "sundaymorning/greensquiggle";
 layerinfo author_name = "Calla";
 
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
-set image_background_page_url = "sundaymorning/greensquiggle.png";
+
+##===============================
+## Page Colors
+##===============================
 
 set color_page_background = "#e6f8e4";
-set color_page_text = "#666666";
 set color_page_link = "#538f4d";
 set color_page_link_hover = "#333";
-set color_page_link_visited = "#113311";
-
+set color_page_link_visited = "#131";
+set color_page_text = "#666";
 set color_page_title = "#333";
 set color_page_title_background = "#c4c4c4";
-set color_header_text = "#333";
 set color_header_background = "#fff";
 set color_header_hover = "#333";
 set color_header_hover_background = "#e7e7e7";
+set color_header_text = "#333";
 
-set color_module_text = "#333";
-set color_module_link = "#538f4d";
-set color_module_link_hover = "#333";
-set color_module_background = "#f7fcfe";
-set color_module_border = "#999";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title = "#333";
-set color_module_title_background = "#e7e7e7";
-set color_module_title_border = "#999";
-
-set color_entry_text = "#333";
 set color_entry_background = "#fff";
 set color_entry_border = "#999";
-
+set color_entry_link = "#538f4d";
+set color_entry_link_hover = "#333";
+set color_entry_link_visited = "#131";
+set color_entry_text = "#333";
 set color_entry_title = "#333";
 set color_entry_title_background = "#c4c4c4";
 set color_entry_title_border = "#ddd";
 
-set color_entry_link = "#538f4d";
-set color_entry_link_hover = "#333";
-set color_entry_link_visited = "#113311";
+##===============================
+## Module Colors
+##===============================
 
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+set color_module_link = "#538f4d";
+set color_module_link_hover = "#333";
+set color_module_text = "#333";
+set color_module_title = "#333";
+set color_module_title_background = "#e7e7e7";
+set color_module_title_border = "#999";
 set color_navigation_text = "#333000";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/greensquiggle.png";
 
 
 #NEWLAYER: sundaymorning/greenswirls
@@ -52,44 +64,56 @@ layerinfo redist_uniq = "sundaymorning/greenswirls";
 layerinfo author_name = "Calla";
 
 set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
-set image_background_page_url = "sundaymorning/greenswirls.png";
+
+##===============================
+## Page Colors
+##===============================
 
 set color_page_background = "#fff";
-set color_page_text = "#666666";
 set color_page_link = "#599ea5";
 set color_page_link_hover = "#444";
 set color_page_link_visited = "#698e95";
-
+set color_page_text = "#666";
 set color_page_title = "#444";
 set color_page_title_background = "#b0e1e4";
-set color_header_text = "#444";
 set color_header_background = "#e0f1e1";
 set color_header_hover = "#444";
 set color_header_hover_background = "#dceff0";
+set color_header_text = "#444";
 
-set color_module_text = "#444";
-set color_module_link = "#599ea5";
-set color_module_link_hover = "#444";
-set color_module_background = "#f7fcfe";
-set color_module_border = "#999";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title = "#444";
-set color_module_title_background = "#e0f1e1";
-set color_module_title_border = "#999";
-
-set color_entry_text = "#444";
 set color_entry_background = "#fff";
 set color_entry_border = "#999";
-
+set color_entry_link = "#599ea5";
+set color_entry_link_hover = "#444";
+set color_entry_link_visited = "#698e95";
+set color_entry_text = "#444";
 set color_entry_title = "#444";
 set color_entry_title_background = "#e0f1e1";
 set color_entry_title_border = "#ddd";
 
-set color_entry_link = "#599ea5";
-set color_entry_link_hover = "#444";
-set color_entry_link_visited = "#698e95";
+##===============================
+## Module Colors
+##===============================
 
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+set color_module_link = "#599ea5";
+set color_module_link_hover = "#444";
+set color_module_text = "#444";
+set color_module_title = "#444";
+set color_module_title_background = "#e0f1e1";
+set color_module_title_border = "#999";
 set color_navigation_text = "#444000";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/greenswirls.png";
 
 
 #NEWLAYER: sundaymorning/lightondark
@@ -101,47 +125,62 @@ layerinfo author_name = "cesy";
 set layout_authors = [ { "name" => "cesy", "type" => "user" }];
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
 
+##===============================
+## Page Colors
+##===============================
+
+set color_page_background = "#000";
+set color_page_link = "#ddf";
+set color_page_link_active = "#fcc";
+set color_page_link_hover = "#cfc";
+set color_page_link_visited = "#ffc";
+set color_page_text = "#fff";
+set color_page_title = "#fff";
+set color_page_title_background = "#000";
+set color_header_background = "#666";
+set color_header_hover = "#cfc";
+set color_header_hover_background = "#060";
+set color_header_text = "#ccc";
+
+##===============================
+## Entry Colors
+##===============================
+
+set color_entry_background = "#000";
+set color_entry_border = "#fff";
+set color_entry_link = "#ddf";
+set color_entry_link_active = "#fcc";
+set color_entry_link_hover = "#cfc";
+set color_entry_link_visited = "#ffc";
+set color_entry_text = "#fff";
+set color_entry_title = "#fff";
+set color_entry_title_background = "#000";
+set color_entry_title_border = "#fff";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#000";
+set color_module_border = "#fff";
+set color_module_link = "#ddf";
+set color_module_link_active = "#fcc";
+set color_module_link_hover = "#cfc";
+set color_module_link_visited = "#ffc";
+set color_module_text = "#fff";
+set color_module_title = "#fff";
+set color_module_title_background = "#000";
+set color_module_title_border = "#fff";
+set color_navigation_background = "#000";
+set color_navigation_border = "#fff";
+set color_navigation_text = "#fff";
+
+##===============================
+## Images
+##===============================
+
 set image_background_page_url = "sundaymorning/whitesquiggle.png";
 
-set color_page_background = "#000000";
-set color_page_title_background = "#000000";
-set color_page_title = "#ffffff";
-set color_page_text = "#ffffff";
-set color_page_link = "#ddddff";
-set color_page_link_hover = "#ccffcc";
-set color_page_link_visited = "#ffffcc";
-set color_page_link_active = "#ffcccc";
-
-set color_header_background = "#666666";
-set color_header_text = "#cccccc";
-set color_header_hover_background = "#006600";
-set color_header_hover = "#ccffcc";
-
-set color_navigation_background = "#000000";
-set color_navigation_border = "#ffffff";
-set color_navigation_text = "#ffffff";
-
-set color_entry_background = "#000000";
-set color_entry_border = "#ffffff";
-set color_entry_title_background = "#000000";
-set color_entry_title_border = "#ffffff";
-set color_entry_title = "#ffffff";
-set color_entry_text = "#ffffff";
-set color_entry_link = "#ddddff";
-set color_entry_link_visited = "#ffffcc";
-set color_entry_link_hover = "#ccffcc";
-set color_entry_link_active = "#ffcccc";
-
-set color_module_background = "#000000";
-set color_module_border = "#ffffff";
-set color_module_title_background = "#000000";
-set color_module_title_border = "#ffffff";
-set color_module_title = "#ffffff";
-set color_module_text = "#ffffff";
-set color_module_link = "#ddddff";
-set color_module_link_visited = "#ffffcc";
-set color_module_link_hover = "#ccffcc";
-set color_module_link_active = "#ffcccc";
 
 #NEWLAYER: sundaymorning/nnwm2009
 layerinfo type = "theme";
@@ -151,23 +190,29 @@ layerinfo author_name = "zvi";
 
 set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
 
-set color_footer_background = "#ffefbd";
-set color_footer_link = "#ef8229";
+##===============================
+## Page Colors
+##===============================
 
-set color_header_background = "#ffefbd";
-
-set color_module_background = "#ffefbd";
-set color_module_text="#000000";
-set color_module_title = "#ef8229";
-
-set color_page_background = "#000000";
+set color_page_background = "#000";
 set color_page_border = "#842021";
 set color_page_link = "#429ace";
 set color_page_link_active = "#A5CF39";
 set color_page_link_hover = "#842021";
 set color_page_link_visited = "#ef4921";
-set color_page_text = "#ffffff";
+set color_page_text = "#fff";
 set color_page_title = "#ef8229";
+set color_header_background = "#ffefbd";
+set color_footer_background = "#ffefbd";
+set color_footer_link = "#ef8229";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#ffefbd";
+set color_module_text="#000";
+set color_module_title = "#ef8229";
 
 
 #NEWLAYER: sundaymorning/pinkswirls
@@ -177,44 +222,56 @@ layerinfo redist_uniq = "sundaymorning/pinkswirls";
 layerinfo author_name = "Calla";
 
 set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
-set image_background_page_url = "sundaymorning/pinkswirls.png";
+
+##===============================
+## Page Colors
+##===============================
 
 set color_page_background = "#e8eef1";
-set color_page_text = "#666666";
 set color_page_link = "#db127a";
 set color_page_link_hover = "#444";
 set color_page_link_visited = "#bb528a";
-
-set color_page_title = "#ffffff";
+set color_page_text = "#666";
+set color_page_title = "#fff";
 set color_page_title_background = "#f2a5cd";
-set color_header_text = "#444";
 set color_header_background = "#f7fcfe";
 set color_header_hover = "#444";
 set color_header_hover_background = "#f0eaed";
+set color_header_text = "#444";
 
-set color_module_text = "#444";
-set color_module_link = "#e0197e";
-set color_module_link_hover = "#444";
-set color_module_background = "#f7fcfe";
-set color_module_border = "#999";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title = "#444";
-set color_module_title_background = "#f0eaed";
-set color_module_title_border = "#999";
-
-set color_entry_text = "#444";
 set color_entry_background = "#f7fcfe";
 set color_entry_border = "#999";
-
+set color_entry_link = "#db127a";
+set color_entry_link_hover = "#444";
+set color_entry_link_visited = "#bb528a";
+set color_entry_text = "#444";
 set color_entry_title = "#444";
 set color_entry_title_background = "#f0eaed";
 set color_entry_title_border = "#ddd";
 
-set color_entry_link = "#db127a";
-set color_entry_link_hover = "#444";
-set color_entry_link_visited = "#bb528a";
+##===============================
+## Module Colors
+##===============================
 
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+set color_module_link = "#e0197e";
+set color_module_link_hover = "#444";
+set color_module_text = "#444";
+set color_module_title = "#444";
+set color_module_title_background = "#f0eaed";
+set color_module_title_border = "#999";
 set color_navigation_text = "#444000";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/pinkswirls.png";
 
 
 #NEWLAYER: sundaymorning/purpleswirls
@@ -224,44 +281,56 @@ layerinfo redist_uniq = "sundaymorning/purpleswirls";
 layerinfo author_name = "Calla";
 
 set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
-set image_background_page_url = "sundaymorning/purpleswirls.png";
+
+##===============================
+## Page Colors
+##===============================
 
 set color_page_background = "#fff";
-set color_page_text = "#666666";
 set color_page_link = "#9675a7";
 set color_page_link_hover = "#444";
 set color_page_link_visited = "#8685b7";
-
+set color_page_text = "#666";
 set color_page_title = "#eee";
 set color_page_title_background = "#673e7b";
-set color_header_text = "#444";
 set color_header_background = "#f7ebf4";
 set color_header_hover = "#444";
 set color_header_hover_background = "#e0d8e4";
+set color_header_text = "#444";
 
-set color_module_text = "#444";
-set color_module_link = "#9675a7";
-set color_module_link_hover = "#444";
-set color_module_background = "#f7fcfe";
-set color_module_border = "#999";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title = "#444";
-set color_module_title_background = "#f7ebf4";
-set color_module_title_border = "#999";
-
-set color_entry_text = "#666";
 set color_entry_background = "#f7fcfe";
 set color_entry_border = "#999";
-
+set color_entry_link = "#9675a7";
+set color_entry_link_hover = "#444";
+set color_entry_link_visited = "#8685b7";
+set color_entry_text = "#666";
 set color_entry_title = "#444";
 set color_entry_title_background = "#e0d8e4";
 set color_entry_title_border = "#ddd";
 
-set color_entry_link = "#9675a7";
-set color_entry_link_hover = "#444";
-set color_entry_link_visited = "#8685b7";
+##===============================
+## Module Colors
+##===============================
 
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+set color_module_link = "#9675a7";
+set color_module_link_hover = "#444";
+set color_module_text = "#444";
+set color_module_title = "#444";
+set color_module_title_background = "#f7ebf4";
+set color_module_title_border = "#999";
 set color_navigation_text = "#444000";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/purpleswirls.png";
 
 
 #NEWLAYER: sundaymorning/redcontrast
@@ -272,40 +341,48 @@ layerinfo author_name = "ambrya";
 
 set layout_authors = [ { "name" => "ambrya", "type" => "user" }];
 
+##===============================
+## Page Colors
+##===============================
+
 set color_page_background = "#5a0000";
-set color_page_text = "#82fa64";
 set color_page_link = "#fff499";
 set color_page_link_active = "#e2b586";
 set color_page_link_hover = "#e2b586";
 set color_page_link_visited = "#fff499";
-
+set color_page_text = "#82fa64";
 set color_page_title = "#82fa64";
-set color_header_text = "#82fa64";
 set color_header_hover = "#5a0000";
 set color_header_hover_background = "#82fa64";
+set color_header_text = "#82fa64";
 
-set color_module_text = "#c3ffb1";
-set color_module_link = "#e2b586";
-set color_module_link_active = "#fff499";
-set color_module_link_hover = "#fff499";
-set color_module_link_visited = "#e2b586";
-set color_module_background = "#3c0000";
-set color_module_border = "#82fa64";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title_background = "#5a0000";
-set color_module_title_border = "#1a4918";
-
-set color_entry_text = "#b7ff78";
 set color_entry_background = "#3c0000";
 set color_entry_border = "#82fa64";
-
-set color_entry_title_background = "#5a0000";
-set color_entry_title_border = "#82fa64";
-
 set color_entry_link = "#82fa64";
 set color_entry_link_active = "#c3ffb1";
 set color_entry_link_hover = "#c3ffb1";
 set color_entry_link_visited = "#82fa64";
+set color_entry_text = "#b7ff78";
+set color_entry_title_background = "#5a0000";
+set color_entry_title_border = "#82fa64";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#3c0000";
+set color_module_border = "#82fa64";
+set color_module_link = "#e2b586";
+set color_module_link_active = "#fff499";
+set color_module_link_hover = "#fff499";
+set color_module_link_visited = "#e2b586";
+set color_module_text = "#c3ffb1";
+set color_module_title_background = "#5a0000";
+set color_module_title_border = "#1a4918";
 
 
 #NEWLAYER: sundaymorning/redsquiggle
@@ -315,44 +392,56 @@ layerinfo redist_uniq = "sundaymorning/redsquiggle";
 layerinfo author_name = "Calla";
 
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
-set image_background_page_url = "sundaymorning/redsquiggle.png";
+
+##===============================
+## Page Colors
+##===============================
 
 set color_page_background = "#ffeeed";
-set color_page_text = "#666666";
 set color_page_link = "#8e2f2d";
 set color_page_link_hover = "#333";
 set color_page_link_visited = "#6e3f3d";
-
+set color_page_text = "#666";
 set color_page_title = "#eee";
 set color_page_title_background = "#8e2f2d";
-set color_header_text = "#333";
 set color_header_background = "#fff";
 set color_header_hover = "#333";
 set color_header_hover_background = "#e5d4d4";
+set color_header_text = "#333";
 
-set color_module_text = "#333";
-set color_module_link = "#8e2f2d";
-set color_module_link_hover = "#333";
-set color_module_background = "#f7fcfe";
-set color_module_border = "#999";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title = "#333";
-set color_module_title_background = "#e5d4d4";
-set color_module_title_border = "#999";
-
-set color_entry_text = "#333";
 set color_entry_background = "#fff";
 set color_entry_border = "#999";
-
+set color_entry_link = "#8e2f2d";
+set color_entry_link_hover = "#333";
+set color_entry_link_visited = "#6e3f3d";
+set color_entry_text = "#333";
 set color_entry_title = "#333";
 set color_entry_title_background = "#e5d4d4";
 set color_entry_title_border = "#ddd";
 
-set color_entry_link = "#8e2f2d";
-set color_entry_link_hover = "#333";
-set color_entry_link_visited = "#6e3f3d";
+##===============================
+## Module Colors
+##===============================
 
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+set color_module_link = "#8e2f2d";
+set color_module_link_hover = "#333";
+set color_module_text = "#333";
+set color_module_title = "#333";
+set color_module_title_background = "#e5d4d4";
+set color_module_title_border = "#999";
 set color_navigation_text = "#333000";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/redsquiggle.png";
 
 
 #NEWLAYER: sundaymorning/yellowsquiggle
@@ -362,42 +451,53 @@ layerinfo redist_uniq = "sundaymorning/yellowsquiggle";
 layerinfo author_name = "Calla";
 
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
-set image_background_page_url = "sundaymorning/yellowsquiggle.png";
+
+##===============================
+## Page Colors
+##===============================
 
 set color_page_background = "#f5f8e4";
-set color_page_text = "#666666";
 set color_page_link = "#998a8e";
 set color_page_link_hover = "#333";
 set color_page_link_visited = "#797a7e";
-
+set color_page_text = "#666";
 set color_page_title = "#333";
 set color_page_title_background = "#ccc6be";
-set color_header_text = "#333";
 set color_header_background = "#fff";
 set color_header_hover = "#333";
 set color_header_hover_background = "#e6dfd6";
+set color_header_text = "#333";
 
-set color_module_text = "#333";
-set color_module_link = "#998a8e";
-set color_module_link_hover = "#333";
-set color_module_background = "#f7fcfe";
-set color_module_border = "#999";
+##===============================
+## Entry Colors
+##===============================
 
-set color_module_title = "#333";
-set color_module_title_background = "#cbc5bd";
-set color_module_title_border = "#999";
-
-set color_entry_text = "#333";
 set color_entry_background = "#fff";
 set color_entry_border = "#999";
-
+set color_entry_link = "#998a8e";
+set color_entry_link_hover = "#333";
+set color_entry_link_visited = "#797a7e";
+set color_entry_text = "#333";
 set color_entry_title = "#333";
 set color_entry_title_background = "#cbc5bd";
 set color_entry_title_border = "#ddd";
 
-set color_entry_link = "#998a8e";
-set color_entry_link_hover = "#333";
-set color_entry_link_visited = "#797a7e";
+##===============================
+## Module Colors
+##===============================
 
+set color_module_background = "#f7fcfe";
+set color_module_border = "#999";
+set color_module_link = "#998a8e";
+set color_module_link_hover = "#333";
+set color_module_text = "#333";
+set color_module_title = "#333";
+set color_module_title_background = "#cbc5bd";
+set color_module_title_border = "#999";
 set color_navigation_text = "#333000";
 
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/yellowsquiggle.png";
