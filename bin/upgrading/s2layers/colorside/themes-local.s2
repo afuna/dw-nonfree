@@ -139,6 +139,8 @@ layerinfo name = "Mandala";
 layerinfo redist_uniq = "colorside/mandala";
 layerinfo author_name = "dancing_serpent";
 
+set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+
 set layout_resources = [ { "name" => "OpenClipart", "url" => "http://www.openclipart.org/" } ];
 
 ##===============================
