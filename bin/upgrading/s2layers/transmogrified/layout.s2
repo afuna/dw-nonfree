@@ -878,6 +878,10 @@ function Page::print_default_stylesheet () {
         padding-left: 1px;
     }
 
+    .navigation.empty {
+        display: none;
+        }
+
     .page-tags #content h2 {
         padding: 0.2em;
         margin: 0;
