@@ -559,7 +559,7 @@ function Page::print_default_stylesheet () {
     .module-userprofile .userpic {
         text-align: center;
     }
-    .module-userprofile ul {
+    .module-userprofile ul.icon-links {
         margin: 0;
         padding: 0;
         text-align: center;
@@ -569,7 +569,7 @@ function Page::print_default_stylesheet () {
         margin-top: 0;
         margin-bottom: 0;
     }
-    .module-userprofile li {
+    .module-userprofile .icon-links li {
         display: inline;
         padding: 5px;
         list-style: none;

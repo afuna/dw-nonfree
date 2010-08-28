@@ -511,17 +511,22 @@ q { font-style: italic;
 .module-userprofile .userpic {
     text-align: center;
 }
-.module-userprofile ul {
+.module-userprofile ul.icon-links {
     margin: 0;
     margin-top: 5px;
     padding: 0;
     text-align: center;
 }
+
+.module-userprofile ul.text-links {
+    text-align: left;
+}
+
 .module-userprofile p {
     margin-top: 0;
     margin-bottom: 0;
 }
-.module-userprofile li {
+.module-userprofile .icon-links li {
     display: inline;
     padding: 5px;
     list-style: none;
