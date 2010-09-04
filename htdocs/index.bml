@@ -188,6 +188,7 @@ _code?>
 <=body
 title=><?_code return $title; _code?>
 windowtitle=><?_code return $windowtitle; _code?>
+contentopts=>class="layout-wide-right-sidebar"
 head<=
 <?_code return $headextra; _code?>
 <=head
