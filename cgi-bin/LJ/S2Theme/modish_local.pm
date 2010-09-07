@@ -1,3 +1,5 @@
+use strict;
+
 package LJ::S2Theme::modish::lotus;
 use base qw( LJ::S2Theme::modish );
 sub cats { qw() }

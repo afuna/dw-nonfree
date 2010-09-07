@@ -1,3 +1,5 @@
+use strict;
+
 package LJ::S2Theme::colorside::atom;
 use base qw( LJ::S2Theme::colorside );
 sub cats { qw() }
