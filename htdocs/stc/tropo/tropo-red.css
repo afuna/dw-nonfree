@@ -423,6 +423,9 @@ h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-ite
     color: #333;
     background-color: #eee;
 }
+.field_block .zebra_row {
+    background-color: #fee;
+}
 .field_desc {
     color: #505050;
 }
