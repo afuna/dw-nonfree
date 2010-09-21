@@ -71,7 +71,7 @@ layerinfo name = "Black Eye";
 layerinfo redist_uniq = "transmogrified/blackeye";
 layerinfo author_name = "dancing_serpent";
 
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" }];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" }];
 
 set color_module_title_border = "#8a5598";
 set color_header_hover = "#8a5598";
@@ -140,7 +140,7 @@ layerinfo "name" = "Black or White";
 layerinfo redist_uniq = "transmogrified/blackorwhite";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_page_background = "#fff";
 set color_main_background = "#ffffff";
@@ -220,7 +220,7 @@ layerinfo name = "Brick Hearth";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/brickhearth";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "meow" palette by pinkpanda0466 (http://www.colourlovers.com/palette/164203/meow)
 
@@ -291,7 +291,7 @@ layerinfo name = "Coming Down Blue";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/comingdownblue";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "John Lee Hooker" palette by rich brenner (http://www.colourlovers.com/palette/339/John_Lee_Hooker)
 
@@ -362,7 +362,7 @@ layerinfo "name" = "Cotton Candy Dust";
 layerinfo redist_uniq = "transmogrified/cottoncandydust";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_archivemonth_background = "#fef6f6";
 set color_archivemonth_border = "#666666";
@@ -432,7 +432,7 @@ layerinfo name = "Dark Forest";
 layerinfo redist_uniq = "transmogrified/darkforest";
 layerinfo author_name = "dancing_serpent";
  
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
 
 set color_page_background = "#0f6832";
 set color_main_background = "#012409";
@@ -501,7 +501,7 @@ layerinfo name = "Dignified";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/dignified";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "Sweet Tweed" palette by Highwireart (http://www.colourlovers.com/palette/916455/Sweet_Tweed)
 
@@ -572,7 +572,7 @@ layerinfo name = "Dusty Raspberry";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/dustyraspberry";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "You're Not Here" palette by easteden (http://www.colourlovers.com/palette/913759/Youre_Not_Here)
 
@@ -643,7 +643,7 @@ layerinfo "name" = "Earth and Sky";
 layerinfo redist_uniq = "transmogrified/earthandsky";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_archivemonth_background = "#ffedd9";
 set color_archivemonth_border = "#6f3e09";
@@ -726,7 +726,7 @@ layerinfo name = "Forest Green";
 layerinfo redist_uniq = "transmogrified/forestgreen";
 layerinfo author_name = "dancing_serpent";
  
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
 
 set color_page_background = "#012409";
 set color_main_background = "#ebffed";
@@ -795,7 +795,7 @@ layerinfo "name" = "Frozen Sky";
 layerinfo redist_uniq = "transmogrified/frozensky";
 layerinfo author_name = "dancing_serpent";
 
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
 
 set color_module_title_border = "#4b696b";
 set color_header_hover = "#212f31";
@@ -864,7 +864,7 @@ layerinfo "name" = "Golden Ticket";
 layerinfo redist_uniq = "transmogrified/goldenticket";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_main_background = "#ffffff";
 set color_page_background = "#deb968";
@@ -945,7 +945,7 @@ layerinfo name = "Grey Days";
 layerinfo redist_uniq = "transmogrified/greydays";
 layerinfo author_name = "asenathwaite";
 
-set layout_authors = [ { "name" => "asenathwaite", "type" => "user" }];
+set theme_authors = [ { "name" => "asenathwaite", "type" => "user" }];
 
 set color_archivemonth_background = "#888888";
 set color_archivemonth_title = "#3a3a3c";
@@ -1027,7 +1027,7 @@ layerinfo name = "Midnight";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/midnight";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "Industry" palette by manie55 (http://www.colourlovers.com/palette/913723/industry)
 
@@ -1098,7 +1098,7 @@ layerinfo name = "New Ocean";
 layerinfo redist_uniq = "transmogrified/newocean";
 layerinfo author_name = "dancing_serpent";
 
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
 
 set color_page_background = "#6ab1b2";
 set color_main_background = "#cfe0e6";
@@ -1175,7 +1175,7 @@ layerinfo name = "Ocean";
 layerinfo redist_uniq = "transmogrified/ocean";
 layerinfo author_name = "dancing_serpent";
 
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
 
 set color_module_title_border = "#000000";
 set color_header_hover = "#000000";
@@ -1244,7 +1244,7 @@ layerinfo name = "Pale Jewels";
 layerinfo redist_uniq = "transmogrified/palejewels";
 layerinfo author_name = "dancing_serpent";
  
-set layout_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
+set theme_authors = [ { "name" => "dancing_serpent", "type" => "user" } ];
 
 set color_page_background = "#886c9d";
 set color_main_background = "#e9faee";
@@ -1321,7 +1321,7 @@ layerinfo name = "Rose Ice Cream";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/roseicecream";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "Mauvy, May I" palette by o2bqueen (http://www.colourlovers.com/palette/1015960/Mauvy,_May_I)
 
@@ -1393,7 +1393,7 @@ layerinfo name = "Shadow Boxing";
 layerinfo redist_uniq = "transmogrified/shadowboxing";
 layerinfo author_name = "baggyeyes";
 
-set layout_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
+set theme_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
 
 set color_page_background = "#ffffff";
 
@@ -1621,7 +1621,7 @@ layerinfo name = "Slow Green";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/slowgreen";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "a best friend" palette by wrecks (http://www.colourlovers.com/palette/916427/a_best_friend)
 
@@ -1692,7 +1692,7 @@ layerinfo name = "Spring Green";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/springgreen";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "Banana Roses" palette by mm184nomore (tp://www.colourlovers.com/palette/182339/banana_roses)
 
@@ -1763,7 +1763,7 @@ layerinfo "name" = "Subtle Almond";
 layerinfo redist_uniq = "transmogrified/subtlealmond";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_main_background = "#f0f0f0";
 set color_page_background = "#483018";
@@ -1843,7 +1843,7 @@ layerinfo name = "Summer Peach";
 layerinfo author_name = "branchandroot";
 layerinfo redist_uniq = "transmogrified/summerpeach";
 
-set layout_authors = [ { "name" => "branchandroot", "type" => "user" } ];
+set theme_authors = [ { "name" => "branchandroot", "type" => "user" } ];
 
 #uses the "Pure" palette by Sruoloc (http://www.colourlovers.com/palette/912313/Pure)
 
@@ -1915,7 +1915,7 @@ layerinfo name = "Tehotenion";
 layerinfo redist_uniq = "transmogrified/tehotenion";
 layerinfo author_name = "baggyeyes";
 
-set layout_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
+set theme_authors = [ { "name" => "baggyeyes", "type" => "user" } ];
 
 set color_page_background = "#000000";
 set color_page_text = "#ffffff";
@@ -2150,7 +2150,7 @@ layerinfo "name" = "White or Black";
 layerinfo redist_uniq = "transmogrified/whiteorblack";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 set color_page_background = "#000000";
 set color_page_text = "#ffffff";

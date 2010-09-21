@@ -122,7 +122,7 @@ layerinfo name = "Light On Dark";
 layerinfo redist_uniq = "sundaymorning/lightondark";
 layerinfo author_name = "cesy";
 
-set layout_authors = [ { "name" => "cesy", "type" => "user" }];
+set theme_authors = [ { "name" => "cesy", "type" => "user" }];
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
 
 ##===============================
@@ -188,7 +188,7 @@ layerinfo name = "NNWM 2009";
 layerinfo redist_uniq = "sundaymorning/nnwm2009";
 layerinfo author_name = "zvi";
 
-set layout_authors = [ { "name" => "zvi", "type" => "user" } ];
+set theme_authors = [ { "name" => "zvi", "type" => "user" } ];
 
 ##===============================
 ## Page Colors
@@ -339,7 +339,7 @@ layerinfo name = "Red Contrast";
 layerinfo redist_uniq = "sundaymorning/redcontrast";
 layerinfo author_name = "ambrya";
 
-set layout_authors = [ { "name" => "ambrya", "type" => "user" }];
+set theme_authors = [ { "name" => "ambrya", "type" => "user" }];
 
 ##===============================
 ## Page Colors
