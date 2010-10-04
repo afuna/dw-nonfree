@@ -44,6 +44,6 @@ sub cats { qw() }
 
 package LJ::S2Theme::sundaymorning::yellowsquiggle;
 use base qw( LJ::S2Theme::sundaymorning );
-sub cats { qw( featured ) }
+sub cats { qw() }
 
 1;
