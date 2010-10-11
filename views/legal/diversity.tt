@@ -1,21 +1,23 @@
-<?_c
-#
-# Diversity Statement
-#
-# Authors:
-#     Janine Smith <janine@netrophic.com>
-# Text by:
-#     The Dreamwidth Community
-#
-# Copyright (c) 2009-2010 by Dreamwidth Studios, LLC.
-#
-# This program is NOT free software or open-source; you can use it as an
-# example of how to implement your own site-specific extensions to the
-# Dreamwidth Studios open-source code, but you cannot use it on your site
-# or redistribute it, with or without modifications.
-#
-_c?><?page
-body<=
+[%# legal/diversity.tt
+  #
+  # Diversity Statement
+  #
+  # Authors:
+  #     Janine Smith <janine@netrophic.com>
+  # Text by:
+  #     The Dreamwidth Community
+  #
+  # Copyright (c) 2009-2010 by Dreamwidth Studios, LLC.
+  #
+  # This program is NOT free software or open-source; you can use it as an
+  # example of how to implement your own site-specific extensions to the
+  # Dreamwidth Studios open-source code, but you cannot use it on your site
+  # or redistribute it, with or without modifications.
+  #
+%]
+
+[%- sections.title='Diversity Statement' -%]
+
 <p>Platitudes are cheap. We've all heard services say they're committed to
 "diversity" and "tolerance" without ever getting specific, so here's our
 stance on it:</p>
@@ -82,10 +84,5 @@ pageviews. You're not demographic groups. You're people.</p>
 <p>Come dream with us.</p>
 <br />
 <p style="float:right; text-align:right;"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-         <img alt="Creative Commons BY-SA 3.0" style="border-width: 0;" src="http://i.creativecommons.org/l/by-sa/3.0/us/88x31.png" />
-         </a><br /><em>This document is usable under a Creative Commons 3.0 BY-SA license.</em></p>
-
-
-<=body
-title=>Diversity Statement
-page?>
+<img alt="Creative Commons BY-SA 3.0" style="border-width: 0;" src="http://i.creativecommons.org/l/by-sa/3.0/us/88x31.png" />
+</a><br /><em>This document is usable under a Creative Commons 3.0 BY-SA license.</em></p>

@@ -1,36 +1,30 @@
-<?page
-body<=
-<?_code
-{
-    # Guiding Principles
-    #
-    # Authors:
-    #     Janine Smith <janine@netrophic.com>
-    #
-    # Copyright (c) 2009 by Dreamwidth Studios, LLC.
-    #
-    # This program is NOT free software or open-source; you can use it as an
-    # example of how to implement your own site-specific extensions to the
-    # Dreamwidth Studios open-source code, but you cannot use it on your site
-    # or redistribute it, with or without modifications.
-    #
+[%# legal/principles.tt
+  #
+  # Guiding Principles
+  #
+  # Authors:
+  #     Janine Smith <janine@netrophic.com>
+  #
+  # Copyright (c) 2009 by Dreamwidth Studios, LLC.
+  #
+  # This program is NOT free software or open-source; you can use it as an
+  # example of how to implement your own site-specific extensions to the
+  # Dreamwidth Studios open-source code, but you cannot use it on your site
+  # or redistribute it, with or without modifications.
+  #
+%]
 
-    use strict;
-    use vars qw(%GET %POST $title $headextra @errors @warnings);
+[%- sections.head = BLOCK %]
+<style type='text/css'>
+#content ul li { margin-bottom: 1em; }
+</style>
+[% END -%]
 
-    $title = "Guiding Principles";
-    $headextra = "<style type='text/css'>
-    ul.spaced li {
-        margin-bottom: 1em;
-    }
-    </style>";
+[%- sections.title='Guiding Principles' -%]
 
-    my $ret;
-
-    $ret .= <<PAGE;
 <h2>We are committed to:</h2>
 
-<ul class='spaced'><li><strong>Open access</strong>. We will never make it hard for you to get 
+<ul><li><strong>Open access</strong>. We will never make it hard for you to get
 your data back from us or move to a different service if you want 
 to. We will provide you with tools to facilitate backing up your data, and we will
 never try to lock you into using our service in any way.</li>
@@ -64,7 +58,7 @@ contents to as many -- or as few -- people as you'd like.</li></ul>
 <h2>We operate our service under the principles of:</h2>
 
 
-<ul class='spaced'><li><strong>Transparency</strong>: We believe that you should know why we 
+<ul><li><strong>Transparency</strong>: We believe that you should know why we
 make the decisions we make. We will explain our reasoning as much as 
 possible. We will make it easy for you to know as much as you want to 
 about what we're doing. We will always err on the side of providing more information,
@@ -81,7 +75,7 @@ expression, we will tell you why, and work to find the best solutions possible.<
 <li><strong>Respect</strong>: We believe in the inherent dignity of all human 
 beings. We will never discriminate against any group of people. We will 
 work hard to maintain inclusive attitudes, use inclusive language, and 
-promote inclusiveness at all times. Our <a href="$LJ::SITEROOT/legal/diversity">Diversity
+promote inclusiveness at all times. Our <a href="[% roots.site %]/legal/diversity">Diversity
 Statement</a> isn't just there so we can pat ourselves on the back. It's there because 
 we believe that our diversity is our greatest strength.</li></ul>
 
@@ -100,17 +94,4 @@ their banners, graphics, or text advertisement to our users. We may make partner
 with other sites in order to add features that we don't have the resources for ourselves. 
 If we do this, we will clearly indicate any such features, and we will include 
 information in our
-<a href="$LJ::SITEROOT/legal/privacy">Privacy Policy</a>.</p>
-
-
-PAGE
-
-    return $ret;
-}
-_code?>
-<=body
-title=><?_code return $title; _code?>
-head<=
-<?_code return $headextra; _code?>
-<=head
-page?>
+<a href="[% roots.site %]/legal/privacy">Privacy Policy</a>.</p>
