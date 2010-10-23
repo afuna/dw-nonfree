@@ -1,7 +1,7 @@
 layerinfo type = "layout";
 layerinfo name = "Transmogrified";
 layerinfo redist_uniq = "transmogrified/layout";
-layerinfo author_name = "Yvonne (absolut)";
+layerinfo author_name = "Yvonne";
 layerinfo author_email = "absolut@livejournal.com";
 layerinfo des = "Transmogrified, a style you can change easily";
 

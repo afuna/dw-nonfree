@@ -2,7 +2,7 @@
 layerinfo type = "theme";
 layerinfo name = "Green Squiggle";
 layerinfo redist_uniq = "sundaymorning/greensquiggle";
-layerinfo author_name = "Calla";
+layerinfo author_name = "regna";
 
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
 
@@ -61,7 +61,7 @@ set image_background_page_url = "sundaymorning/greensquiggle.png";
 layerinfo type = "theme";
 layerinfo name = "Green Swirls";
 layerinfo redist_uniq = "sundaymorning/greenswirls";
-layerinfo author_name = "Calla";
+layerinfo author_name = "regna";
 
 set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
 
@@ -219,7 +219,7 @@ set color_module_title = "#ef8229";
 layerinfo type = "theme";
 layerinfo name = "Pink Swirls";
 layerinfo redist_uniq = "sundaymorning/pinkswirls";
-layerinfo author_name = "Calla";
+layerinfo author_name = "regna";
 
 set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
 
@@ -278,7 +278,7 @@ set image_background_page_url = "sundaymorning/pinkswirls.png";
 layerinfo type = "theme";
 layerinfo name = "Purple Swirls";
 layerinfo redist_uniq = "sundaymorning/purpleswirls";
-layerinfo author_name = "Calla";
+layerinfo author_name = "regna";
 
 set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
 
@@ -389,7 +389,7 @@ set color_module_title_border = "#1a4918";
 layerinfo type = "theme";
 layerinfo name = "Red Squiggle";
 layerinfo redist_uniq = "sundaymorning/redsquiggle";
-layerinfo author_name = "Calla";
+layerinfo author_name = "regna";
 
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
 
@@ -448,7 +448,7 @@ set image_background_page_url = "sundaymorning/redsquiggle.png";
 layerinfo type = "theme";
 layerinfo name = "Yellow Squiggle";
 layerinfo redist_uniq = "sundaymorning/yellowsquiggle";
-layerinfo author_name = "Calla";
+layerinfo author_name = "regna";
 
 set layout_resources = [ { "name" => "Tuts+", "url" => "http://vector.tutsplus.com/freebies/vectors/free-vector-decorative-ornament/" } ];
 
