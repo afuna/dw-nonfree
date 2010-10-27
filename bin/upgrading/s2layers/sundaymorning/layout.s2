@@ -1,7 +1,7 @@
 layerinfo "type" = "layout";
 layerinfo "name" = "Sunday Morning";
 layerinfo "redist_uniq" = "sundaymorning/layout";
-layerinfo "author_name" = "Calla";
+layerinfo "author_name" = "regna";
 layerinfo "lang" = "en";
 
 # Originally a Transmogrified theme
