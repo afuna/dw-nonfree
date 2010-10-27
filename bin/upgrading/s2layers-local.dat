@@ -5,6 +5,8 @@ colorside/themes-local  theme+          colorside/layout
 
 modish/themes-local     theme+          modish/layout
 
+modular/themes-local    theme+          modular/layout
+
 sundaymorning/layout    layout          core2
 sundaymorning/themes    theme+          sundaymorning/layout
 
