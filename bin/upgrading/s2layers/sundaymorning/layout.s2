@@ -367,21 +367,22 @@ q { font-style: italic;
 
 #wrap {
     $page_colors
-    padding-$sidebar_position_alt: $*sidebar_width;
+    padding-$sidebar_position_alt: 200px; /* Fixed: to display the bkg image */
     padding-top: 10px;
 }
 
 .one-column #wrap {
     margin-left: 2em;
+    margin-right: 2em;
 }
 
 .two-columns #wrap {
-    margin-$sidebar_position: 250px;
+    margin-$sidebar_position: $*sidebar_width;
+    padding-$sidebar_position: 60px;
 }
 
 #content {
     width: 100%;
-    margin-$sidebar_position: 10px;
     z-index: 20;
 }
 
@@ -399,17 +400,15 @@ q { font-style: italic;
 
 .module-section-two {
     width: $*sidebar_width;
-    max-width: 220px;
+    max-width: $*sidebar_width;
     height: 200px;
     $module_base_colors
-    padding-$sidebar_position_alt: 5px;
 }
 
 .two-columns .module-section-two {
     position: absolute;
     $sidebar_position: 2em;
     top: 8em;
-    margin-$sidebar_position_alt: -230px;
 }
 
 .module-section-one ul {
@@ -421,10 +420,14 @@ q { font-style: italic;
 
 .one-column .module-section-one ul {
     margin-left: 2em;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .two-columns .module-section-one ul {
-    margin-$sidebar_position: 250px;
+    margin-$sidebar_position: $*sidebar_width;
+    padding-$sidebar_position: 60px;
+    padding-$sidebar_position_alt: 0;
 }
 
 .two-columns-right .module-section-one ul {
