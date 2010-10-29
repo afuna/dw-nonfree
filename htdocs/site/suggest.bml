@@ -38,11 +38,17 @@ body<=
     my $emailselected = 1;
 
     # the community to post to:
-    my $destination = LJ::load_user( 'dw_suggestions' );
+    my $destination = LJ::load_user( $LJ::SUGGESTIONS_COMM );
 
     # the user (which should also be an admin of the community)
     # to post the maintainer-only address as:
-    my $suggestions_bot = LJ::load_user( 'suggestions_bot' );
+    my $suggestions_bot = LJ::load_user( $LJ::SUGGESTIONS_USER );
+
+    # verify proper configuration
+    return "<?errorbar This feature has not been configured for your site. errorbar?>"
+        unless $destination && $suggestions_bot &&
+               $destination->is_community &&
+               $suggestions_bot->can_manage_other( $destination );
 
     # handle the results of a POST request:
 
