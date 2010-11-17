@@ -14,6 +14,7 @@
 # Dreamwidth Studios open-source code, but you cannot use it on your site
 # or redistribute it, with or without modifications.
 #
+use strict;
 use DW::SiteScheme;
 
 DW::SiteScheme->register_siteschemes(
@@ -29,4 +30,3 @@ DW::SiteScheme->register_siteschemes(
 DW::SiteScheme->register_default_sitescheme( 'tropo-red' );
 
 1;
-
