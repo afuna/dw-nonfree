@@ -13,7 +13,7 @@ P=>{D}<p>%%data%%</p>
 
 STANDOUTO<=
 {D}<CENTER><FONT SIZE=1><BR></FONT><TABLE ALIGN=CENTER CELLPADDING=8 BORDER=1 BGCOLOR=#CCCCFF BORDERCOLORLIGHT=#DDDDFF
-BORDERCOLORDARK=#BBBBFF><TR><TD VALIGN=CENTER>
+BORDERCOLORDARK=#BBBBFF summary=""><TR><TD VALIGN=CENTER>
 %%DATA%%
 
 </TD></TR></TABLE></CENTER>
@@ -21,7 +21,7 @@ BORDERCOLORDARK=#BBBBFF><TR><TD VALIGN=CENTER>
 
 STANDOUT<=
 {DRps}<CENTER><FONT SIZE=1><BR></FONT>
-<table cellspacing=0 cellpadding=0 border=0 bgcolor="#ccccff">
+<table cellspacing=0 cellpadding=0 border=0 bgcolor="#ccccff" summary="">
  <tr>
   <td width=7 align=left valign=top>
    <img width=7 height=7 src="<?imgprefix?>/corn_nw.gif" alt=""></td>
@@ -148,7 +148,7 @@ _code?>
   <!-- mark is very sorry for this table. but it's the only way he found to fix the clear/float
        issues that were plaguing this temporary style. -->
 
-  <table><tr><td>
+  <table summary=""><tr><td>
 %%body%%
   </td></tr></table>
 
