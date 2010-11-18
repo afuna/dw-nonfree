@@ -849,3 +849,9 @@ div.adult_warning {
 .userslist-table tr.even {
     background-color: #f7f7f7;
 }
+
+/* For the community/settings page */
+
+.community-settings legend {
+    color: #3a155a;
+    }
