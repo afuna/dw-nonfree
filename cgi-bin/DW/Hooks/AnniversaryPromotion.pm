@@ -21,14 +21,15 @@ use LJ::Hooks;
 
 # returns if the promotion is valid right now
 sub promo_valid {
-    # valid from 2010-05-01 01:00:00 UTC to 2010-05-08 01:00:00 UTC
-    # this corresponds to 2010-04-30 21:00:00 EDT and a week later...
-    return 0 if time < 1272675600 || time > 1273280400;
+    # valid from Wed Dec  1 00:00:00 2010 UTC to Fri Dec 31 23:59:59 2010 UTC
+    return 0 if time < 1291161600 || time > 1293839999;
     return 1;
 }
 
 
 # returns how many points this cart is eligible for
+# clever; depends on the way that 10 points == $1
+# so if you buy $1 worth of stuff, you get 1 extra point (==1/10th of what you bought)
 sub cart_bonus_points {
     return int( $_[0]->total_cash );
 }
