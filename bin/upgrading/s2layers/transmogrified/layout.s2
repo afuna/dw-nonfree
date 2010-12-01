@@ -191,43 +191,6 @@ propgroup colors {
     property Color color_tagspage_title_background { des = "Tags page title background"; }
 }
 
-set color_main_background = "";
-set color_page_title_background = "";
-set color_header_background = "";
-set color_header_text = "";
-set color_header_hover_background = "";
-set color_header_hover = "";
-set color_module_title_background = "";
-set color_module_title_border = "";
-set color_entry_title_border = "";
-set color_entry_title_background = "";
-set color_entry_border_alt = "";
-set color_entry_background_alt = "";
-set color_entry_link_alt = "";
-set color_entry_link_hover_alt = "";
-set color_entry_link_active_alt = "";
-set color_entry_link_visited_alt = "";
-set color_entry_text_alt = "";
-set color_entry_subject_alt = "";
-set color_entry_subject_alt_border = "";
-set color_entry_subject_alt_background = "";
-set color_footer_background = "";
-set color_footer_text = "";
-set color_footer_link = "";
-set color_archivemonth_background = "";
-set color_archivemonth_border = "";
-set color_navigation_text = "";
-set color_navigation_background = "";
-set color_navigation_border = "";
-set color_archivemonth_title = "";
-set color_archivemonth_title_border = "";
-set color_archivemonth_title_background = "";
-set color_tagspage_title = "";
-set color_tagspage_title_border = "";
-set color_tagspage_background = "";
-set color_tagspage_border = "";
-set color_tagspage_title_background = "";
-set color_comments_form_border = "";
 
 # Images
 propgroup images {
