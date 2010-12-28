@@ -154,355 +154,323 @@ a:active,
     border-bottom: 0.5em solid #f4717a;
 }
 
-/**
- * Form field styles
- */
+/* generic classes */
 
-.dw-field-default {
-    color: #333;
+.disabled {
+    color: #999 !important;
+    background-color: #ddd !important;
+    border-color: #ccc !important;
 }
-.standout .standout-inner, .standout-colors {
+.read, .inactive {
+    color: #888;
+}
+.read:hover {
+    color: #000;
+}
+.read a, .inactive a {
+    color: #999 !important;
+}
+.read:hover a {
+    color: inherit !important;
+}
+
+.detail {
+    color: #555;
+}
+.status-hint {
+    color: #ccc;
+}
+
+.tablist .tab a {
+    color: #000;
+    background: #f4717a;
+    border-color: #c1272c;
+}
+.tablist .tab a:hover, .tablist .tab a.active {
+    background: #ffd8d8;
+}
+
+.tab-header {
+    background: #ffd8d8;
+    border-color: #ffd8d8;
+}
+.tab-container {
+  background-color:#fff;
+  border: 1px solid #c1272c;
+  border-top: none;
+}
+
+.action-bar {
+    text-align: center;
+    background-color: #ffd8d8;
+}
+.action-box {
     background-color: #ffafb6;
     color: #111;
     border: 1px solid #c1272d;
 }
-.standout-inner a:hover, .standout-inner a:active, .standout-inner a:hover {
+
+.select-list input, input.submit {
+    color: #fff;
+    background: #f4717a;
+    border: 2px solid #f6828b;
+    border-bottom: 2px solid #c1272d;
+    border-right: 2px solid #c1272d;
+}
+.select-list input:active, input.submit:active {
+    color: #eee;
+    background: #f9818a;
+    border: 2px solid #c1272d;
+    border-bottom: 2px solid #f6828b;
+    border-right: 2px solid #f6828b;
+}
+
+.highlight-box {
+    border: 1px solid;
+}
+.highlight, .highlight-box {
+    border-color: #c1272c;
+    background-color: #ffd8d8;
     color: #000;
+}
+.inset-box {
+    background-color: #fff;
+    border-right: 1px solid #f4717a;
+    border-bottom: 1px solid #f4717a;
+    color: #777;
+    padding: 3px 5px;
+}
+.warning-box {
+    border: 1px solid #c1272d;
+    background-color: #ffd8d8;
+    color: #000;
+}
+.error-box {
+    color: #000;
+    background-color: #fcf6db;
+    border: 1px solid #ffdfc0;
+}
+
+.odd, tr.odd th, tr.odd td {
+    background-color: #f7f7f7;
+}
+.even, tr.even th, tr.even td,
+thead th, tfoot td {
+    background-color: #efefef;
+}
+.column-table tbody th {
+    color: #777;
+    background-color: #fbfbfb;
+    border-right: 1px solid #cdcdcd;
+}
+table caption {
+    color:#C1272D;
+}
+
+table.grid, table.grid td {
+    border: 1px solid #999;    
+}
+
+.select-list li, .NotificationTable td {
+    border-color: #ccc;
+}
+.select-list li img {
+    border-color: #c1272c;
+}
+.selected, .select-list li.selected, tr.selected td {
+    background-color: #ffd8d8;
+    border-color: #c1272c;
+}
+
+form, fieldset, legend, legend span {
+    border-color: #c1272c;
+}
+
+.simple-form .error input {
+    border: 3px solid #ff0000;
+}
+.simple-form .error .error-msg {
+    color: #ff0000;
+    display: block;
+}
+.hint-input {
+    color: #777;
+    border: 1px solid #ccc;
+}
+.hint-input:focus {
+    color: #000;
+    border: 1px solid #999;
+}
+.multiple-select {
+    background-color: #eee;
+}
+
+.table-form table {
+  background-color:#F7F7F7;
+}
+
+.section-nav {
+    background-color: #ffd8d8;
+}
+.section-nav li a, .section-nav ul, .section-nav li, .section-nav-separator {
+    border-color: #c1272c;
+}
+.section-nav-content {
+    border-color: #c1272c;
+}
+.section-nav li.on {
+    background-color: #f7f7f7;
+}
+.section-nav li a:visited {
+    color: #c1272c;
+}
+.section-nav-inner-wrapper {
+    background: url("/img/tropo-red/tropred-borderpixel.gif") repeat-y scroll 134px 50%;
+}
+
+.collapsible .collapse-button {
+    width: 20px;
+}
+.collapsible.collapsed .collapse-button {
+    background-image: url("/img/tropo-red/tropred-arrow-right.gif");
+}
+.collapsible.expanded .collapse-button {
+    background-image: url("/img/tropo-red/tropred-arrow-down.gif");
+}
+
+.header {
+    background: #ddd;
+}
+
+.subheader {
+    background-color: #ffd8d8;
+    border-bottom: 1px solid #c1272c;
+}
+
+.preview-image {
+     border: 1px solid #fff;
+}
+
+/* contextualhover.css */
+div.ContextualPopup div.Inner {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #c1272c;
+}
+div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
+    color: #c1272c !important;
+}
+
+.ippu {
+    color: #000;
+}
+.ippu .track_title {
+    color: #f4717a;
 }
 
 /**
- * Start overriding some classes set in dw-free/htdocs/stc/
- * Other site scheme designers: use your own colors here
+ * Temporary page-specific styling
  * /
 
-/* editicons.css */
-#uploadBox {
-    background-color: #ffd8d8;
-    border: 1px solid #c1272c;
+/* Comments */
+.cmtbar.odd {
+    border-bottom: 1px solid #c1272c;
+    border-right: 1px solid #c1272c;
+}
+.cmtbar.even {
+    border-bottom: 1px solid #f4717a;
+    border-right: 1px solid #f4717a;
+}
+td.odd { background-color: #c0c0c0; }
+td.even { background-color: #e2e2e2; }
+
+/* inbox */
+.folders a {
+    color: #000;
+    border: 1px solid #fff;
+}
+.folders a.selected {
+    background: #ffd8d8;
+    border-color: #bbb;
+}
+.folders a:hover {
+    border-color: #bbb;
+    background: #eee;
 }
 
 /* profile.css */
-.section, .username, .actions li {
+.section, .actions li {
     background-color: #f7f7f7;
     border-bottom: 1px dotted #666;
     border-left: 1px dotted #666;
     color: #c1272d;
 }
-
-/* customize.css */
-h2.widget-header {
-    background: #ededed url(/img/tropo-red/corner.gif) no-repeat 0 0;
-    color: #222;
-}
-.theme-current {
-    background-color: #ffd8d8;
-    border: 1px solid #c1272c;
-}
-
-/* widgets/customizetheme.css, themechooser.css, themenav.css,
-currenttheme.css */
-.theme-current h2.widget-header, .layout-item.current {
-    background-color: #ffd8d8;
-    border: 1px solid #c1272c;
-}
-h2.widget-header, .theme-item.current, .theme-item img.theme-preview, .theme-item .theme-icons {
-    border: 1px solid #c1272c;
-}
-.theme-item .theme-button-disabled, .layout-item .layout-button-disabled {
-    background: #f4717a;
-}
-.customize-button, .theme-item .theme-button, .layout-item .layout-button {
-    background: #f4717a;
-    border: 2px solid #541e1a;
-    border-top: 2px solid #f4717a;
-    border-left: 2px solid #f4717a;
-}
-.theme-nav-content, .customize-content {
-    border: 1px solid #c1272c;
-    border-left: none;
-}
-.theme-selector-nav {
-    background-color: #ffd8d8;
-}
-.theme-nav li a, .theme-nav-small li {
-    border-right: 1px solid #c1272c;
-}
-.theme-nav li.on a {
-    border: 1px solid #c1272c;
-    border-right: none;
-}
-.theme-nav-separator {
-    border-right: 1px solid #c1272c;
-}
-.theme-nav-separator hr {
-    border-top: 1px solid #f4717a;
-}
-.customize-content .subheader {
-    background-color: #ffd8d8;
-    border-bottom: 1px solid #c1272c;
-}
-.customize-content .subheader.on {
-    background-color: #ffd8d8;
-}
-.customize-nav {
-    background-color: #ffd8d8;
-}
-.customize-nav li a, .customize-nav li li  {
-    border-right: 1px solid #c1272c;
-}
-.customize-nav li.on a, .customize-nav li.on ul {
-    border: 1px solid #c1272c;
-    border-right: none;
-    border-top: none;
-}
-.customize-nav li.on {
-    border-top: 1px solid #c1272c;
-}
-.moodtheme-preview, .appwidget-linkslist .tips-box {
-    background-color: #ffd8d8;
-    border: 1px solid #c1272c;
-}
-.theme-current-links {
-    border-bottom: 1px solid #c1272c;
-    border-right: 1px solid #c1272c;
-}
-.theme-nav li a:visited, .customize-nav li a:visited {
-    color: #c1272c;
-}
-
-/* more, detailed by page*/
-/*customizetheme.css*/
-.customize-button {
-    color: #fff;
-    background: #f4717a;
-    border: 2px solid #f6828b;
-    border-bottom: 2px solid #c1272d;
-    border-right: 2px solid #c1272d;
-}
-.customize-inner-wrapper {
-    background: url("/img/tropo-red/tropred-borderpixel.gif") repeat-y scroll 134px 50%;
-}
-.customize-content .subheader {
-    background-image: url("/img/tropo-red/tropred-arrow-right.gif");
-    border-bottom: 1px solid #ffd8d8;
-}
-.customize-content .subheader.on {
-    background-image: url("/img/tropo-red/tropred-arrow-down.gif");
-}
-.customize-content fieldset legend {
-    color: #777;
-}
-.customize-content h3 {
-    color: #777;
-}
-.customize-nav li.on a,
-.customize-nav li.on ul {
-    background: #fff;
-}
-.customize-nav li.on a {
-    /*background: #fff url("/img/tropo-red/tropred-arrow-right.gif") no-repeat right 50%;*/
-    border-right: 1px solid #fff;
-}
-.customize-nav li.on li a {
-    background: #fff;
-    border-right: 1px solid #fff;
-}
-.customize-nav li.on li {
-    border-right: 1px solid #fff;
-}
-.customize-nav li a:visited {
-    color: #c1272c;
-}
-
-/*themenav.css*/
-.theme-nav-inner-wrapper {
-    background: url("/img/tropo-red/tropred-borderpixel.gif") repeat-y scroll 134px 50%;
-}
-.theme-selector-nav {
-    background-color: #ffd8d8;
-}
-.theme-nav li.on a {
-    /*background: url("/img/tropo-red/tropred-arrow-right.gif") no-repeat right 50%;*/
-    background-color: #fff ;
-}
-.theme-nav li a:visited,
-.theme-nav-small a:visited {
-    color: #c1272c;
-}
-.theme-nav-separator {
-    border-right: 1px solid #ffd8d8;
-}
-.theme-nav-separator hr {
-    border-top: 1px solid #ffd8d8;
-}
-
-/*currentheme.css*/
-.theme-current h2.widget-header {
-    background-color: #ffd8d8;
-}
-.theme-current-content h3 {
+.section span.section_link {
     color: #000;
 }
-.theme-current-image {
-     border: 1px solid #fff;
+.section_body .inner_section_header {
+    color: #111;
 }
-.theme-current-links {
-    background-color: #fff;
-    border-right: 1px solid #f4717a;
-    border-bottom: 1px solid #f4717a;
-    color: #777;
+.section_body_title {
+    color: #111;
 }
-.theme-current ul li {
-    background: url("/img/customize/arrow.gif") no-repeat 0 5px;
-}
-
-/*themechooser*/
-.theme-selector-content h3 {
-    color: #777;
-}
-.theme-item.current {
-    border: 1px solid #f4717a;
-    background-color: #ffd8d8;
-}
-.theme-item img.theme-preview {
-    border: 1px solid #ffd8d8;
-}
-.theme-item.special h4,
-.theme-item.special .theme-desc {
-    background-color: #ffc;
-}
-.theme-item .theme-button {
-    color: #fff;
-    background: #f4717a;
-    border: 2px solid #f6828b;
-    border-bottom: 2px solid #c1272d;
-    border-right: 2px solid #c1272d;
-}
-.theme-item .theme-button-disabled {
-    background: #88CD73;
-}
-.theme-item .theme-icons {
-    border: 1px solid #ffd8d8;
-    background-color: #fff;
-}
-.theme-item.upgrade h4,
-.theme-item.upgrade .theme-desc {
-    color: #777;
-}
-.theme-time,
-.theme-upgrade-icon {
-    color: #333 !important;
-}
-.theme-upgrade-icon:hover .theme-upgrade-level,
-.theme-time:hover span.theme-availability {
-    background-color: #fff;
-}
-.theme-paging a:visited {
-    color: #c1272c;
-}
-
-/* inbox */
-.folders a.active {
-    background-color: #ffd8d8;
-    border: 1px solid #bbb;
+.profile th {
+    color: #111;
 }
 
 /* lj_settings.css */
-.section_head, table.alternating-rows th, div.username {
+.section_head, div.username {
     background-color: #d1ced2;
     color: #333;
     border-bottom: 1px solid #c1272c;
-}
-.cat_head {
-    background-color: #ddd;
-}
-.field_block td {
-    background-color: #f7f7f7;
 }
 .field_block .field_name {
     color: #333;
     background-color: #eee;
 }
-.field_block .zebra_row {
-    background-color: #fee;
-}
-.field_desc {
-    color: #505050;
-}
-.view_options {
-    color: #333;
+
+/* esn.css */
+.CategoryRow td {
+    border-bottom: 1px solid #ddd;
 }
 
-/* comm_promo.css */
-div.CommunityPromoBox {
-    border: 1px solid #f4717a;
-}
+/* community/settings */
+.community-settings legend {
+    color: #c1272d;
+    }
 
-/* settings.css */
-#settings_save {
-    background: #ffd8d8;
-}
-#settings_nav li a {
-    background: #f4717a;
+/* Shop pages */
+.shop-item-highlight {
     border: 1px solid #c1272c;
-    border-bottom: none;
-}
-#settings_nav li a:hover, #settings_nav li a.active {
-    background: #ffd8d8;
-}
-#settings_nav_title p {
-    background: #ffd8d8;
-    border-left: 1px solid #c1272c;
 }
 
-/* cprod.css */
-.cprod.h3 {
-    background: #f4717a;
-}
-.cprod content {
-    border: 1px solid #c1271c;
-}
+/* entry.css */
+a#lj_userpicselect {color: #c1272c;}
+#lj_userpicselect_img {border: 1px solid #fff;}
+#lj_userpicselect_img:hover {border: 1px solid #c1272c;}
+#lj_userpicselect_img_txt {color: #c1272c !important;}
+#userpic_preview_image.userpic_loggedout {border: 1px solid #c1272c;}
+.userpic_preview_border {border: 1px solid #ccc;}
+#infobox {border-left: 1px solid #000;}
+#compose-entry {border-bottom: 1px solid #bbb;}
+#compose-entry ul li a {background-color: #fff;border: 1px solid #f4717a;border-bottom: none;}
+#compose-entry ul li.on a {border-bottom: 1px solid #fff;}
+#draft-container {border: 1px solid #bbb;border-top: none;}
+#draftstatus {background-color: #fff;}
+#spellcheck-results {border: 1px solid #f4717a; background-color: #fff;}
+#htmltools {border-right: 1px solid #bbb;border-left: 1px solid #bbb;background: #fff;}
+#htmltools ul {border-bottom: 1px solid #8d8d8d;}
+#options, #public {border: 1px solid #bbb;background-color: #eee;}
+#public {color:#666;}
+#submitbar {background-color: #ddd;border: 1px solid #aaa;}
 
 /* create flow */
-.appwidget-createaccount .create-button {
-    color: #111;
-    background-color: #f4717a;
-}
-.appwidget-createaccountprogressmeter .step-block-active {
-    color: #fff;
-    background-color: #c1272d;
-}
-.appwidget-createaccountprogressmeter .step-block-inactive {
-    color: #fff;
-    background-color: #f4717a;
-}
-.appwidget-createaccountprogressmeter .step-selected {
-    color: #c1272d;
-}
-.appwidget-createaccountprogressmeter .step-previous {
-    color: #f4717a;
-}
-.appwidget-createaccountprogressmeter .step-next {
-    color: #666;
-}
-.appwidget-createaccountprofile .header {
-    color: #c1272d;
-}
-.appwidget-createaccountprofile .field-name {
-    background-color: #e0e0e0;
-}
-
-/* Comments */
-.cmtbar-odd {
-    border-bottom: 1px solid #c1272c;
-    border-right: 1px solid #c1272c;
-    background-color: #c0c0c0;
-}
-.cmtbar-even {
-    border-bottom: 1px solid #f4717a;
-    border-right: 1px solid #f4717a;
-    background-color: #e2e2e2;
-}
+.appwidget-createaccountprogressmeter .step-block-active { color: #fff; background-color: #c1272d; }
+.appwidget-createaccountprogressmeter .step-block-inactive { color: #fff; background-color: #f4717a; }
+.appwidget-createaccountprogressmeter .step-selected, .appwidget-createaccountprofile .header { color: #c1272d; }
+.appwidget-createaccountprogressmeter .step-previous { color: #f4717a; }
+.appwidget-createaccountprogressmeter .step-next { color: #666; }
+.appwidget-createaccountprofile .field-name { background-color: #e0e0e0; }
 
 /* Profile */
 .username {
@@ -515,13 +483,6 @@ hr.hr {
     color: #c1272d;
     background-color: #c1272d;
 }
-input.create-account {
-    color: #fff;
-    background: #f4717a;
-    border: 2px solid #f6828b;
-    border-bottom: 2px solid #c1272d;
-    border-right: 2px solid #c1272d;
-}
 input.text,
 textarea.text,
 select.select {
@@ -529,26 +490,6 @@ select.select {
     border: 1px solid #bbb;
     border-top: 1px solid #999;
     border-left: 1px solid #999;
-}
-.detail {
-    color: #111;
-}
-h2.widget-header {
-    border-bottom: 1px solid #ccc;
-}
-table.alternating-rows th {
-    border-top: 1px solid #c1272d;
-    border-bottom: 1px solid #c1272d;
-    background-color: #ffd8d8;
-}
-table.alternating-rows tr.altrow1 {
-    background-color: #fff;
-}
-table.alternating-rows tr.altrow2 {
-    background-color: #eee;
-}
-table.alternating-rows td {
-    border-bottom: 1px solid #ccc;
 }
 .appwidget .more-link {
     color: #c1272d !important;
@@ -564,292 +505,6 @@ table.alternating-rows td {
 .message blockquote {
     border: 1px solid #aaa;
 }
-.standout-border {
-    border: 1px solid #c1272d;
-}
-.standout-background {
-    background-color: #f4717a;
-}
-div.right-sidebar {
-    color: #000000;
-    background-color: #f4717a;
-    border: 1px solid #c1272d;
-}
-.textbutton {
-    color: #c1272c;
-}
-/*NOTE: tropo-red/corner.gif is #f7f7f7*/
-h2.solid-neutral {
-    background: #ededed url("/img/tropo-red/corner.gif") no-repeat 0 0;
-    color: #222;
-}
-h2.solid-blue { /*which is now solid pink*/
-    background: #f4717a url("/img/tropo-red/corner.gif") no-repeat 0 0;
-    color: #222;
-}
-.solid-neutral {
-    background: #ededed;
-}
-input.bright {
-    background-color: #f4717a;
-    border: 1px solid #c1272c;
-    color: #fff;
-}
 .helper {
     color: #666;
 }
-
-/* esn.css */
-.Subscribe tr.Inactive {
-    color: #aaa;
-}
-.Subscribe tr.Disabled {
-    background-color: #eee;
-}
-.Subscribe tr.altrow {
-    background-color: #f1f1f1;
-}
-.Subscribe tr.Inactive a {
-    color: #aaa;
-}
-.Subscribe td p {
-    color: #666;
-    background: #fff;
-}
-.CategoryRow td {
-    border-bottom: 1px solid #ddd;
-}
-#Subscriptions tr.lighter {
-    background-color: #ffd8d8;
-}
-#Subscriptions tr.darker {
-    background-color: #f4717a;
-}
-#SubscribeSaveButtons {
-    border: 1px solid #333;
-}
-.NotificationTable tr.Selected {
-    background-color: #f4717a;
-}
-.NotificationTable tr.Selected td {
-    border-top: 1px solid #ccc;
-}
-.NotificationTable td {
-    border-top: 1px solid #ddd;
-}
-.NotificationTable .inbox {
-    border-top: 1px solid #ddd;
-}
-.inbox .header {
-    background: #ddd;
-}
-.InboxItem_Read {
-    color: #888;
-}
-span.InboxItem_Read:hover {
-    color: #000;
-}
-span.InboxItem_Read a {
-    color: #999 !important;
-}
-span.InboxItem_Read:hover a {
-    color: inherit !important;
-}
-.inbox .InboxItem_Row {
-    background-color: #f7f7f7;
-}
-.inbox .alt {
-    background: #f6f6f6;
-}
-.inbox td.NoItems {
-    color: #ddd;
-}
-.inbox td.time {
-    color: #555;
-}
-.folders a {
-    color: #000;
-    border: 1px solid #fff;
-}
-.folders a:visited, .folders a:link {
-    color: #000;
-}
-.folders a:hover {
-    border: 1px solid #bbb;
-    background-color: #eee;
-}
-.ippu {
-    color: #000;
-}
-.ippu .track_title {
-    color: #f4717a;
-}
-
-/* entry.css */
-a#lj_userpicselect {
-    color: #c1272c;
-}
-#lj_userpicselect_img {
-    border: 1px solid #fff;
-}
-#lj_userpicselect_img:hover {
-    border: 1px solid #c1272c;
-}
-#lj_userpicselect_img_txt {
-    color: #c1272c !important;
-}
-#userpic_preview_image.userpic_loggedout {
-    border: 1px solid #c1272c;
-}
-.userpic_preview_border {
-    border: 1px solid #ccc;
-}
-#infobox {
-    border-left: 1px solid #000;
-}
-#compose-entry {
-    /*background: url("/img/tropo-red/tropred-borderpixel.gif") repeat-x 0 bottom;*/
-    border-bottom: 1px solid #bbb;
-}
-#compose-entry ul li a {
-    background-color: #fff;
-    border: 1px solid #f4717a;
-    border-bottom: none;
-}
-#compose-entry ul li.on a {
-    border-bottom: 1px solid #fff;
-}
-#draft-container {
-    border: 1px solid #bbb;
-    border-top: none;
-}
-#draftstatus {
-    background-color: #fff;
-}
-#spellcheck-results {
-    border: 1px solid #f4717a;
-    background-color: #fff; /*was ffffdd; seemed odd and clashy, changed to fff*/
-}
-#htmltools {
-    border-right: 1px solid #bbb;
-    border-left: 1px solid #bbb;
-    background: #fff;
-}
-#htmltools ul {
-    border-bottom: 1px solid #8d8d8d;
-}
-#options, #public {
-    border: 1px solid #bbb;
-    background-color: #eee;
-}
-#public {
-    color:#666;
-}
-#submitbar {
-    background-color: #ddd;
-    border: 1px solid #aaa;
-}
-
-/* contextualhover.css */
-div.ContextualPopup div.Inner {
-    background-color: #fff !important;
-    color: #000 !important;
-    border: 1px solid #c1272c;
-}
-div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
-    color: #c1272c !important;
-}
-
-/* profile.css */
-.tooltip {
-    border-bottom: 1px dotted #000;
-}
-li.profile_join_disabled, li.profile_addtrust_disabled,
-li.profile_addsub_comm_disabled, li.profile_addsub_feed_disabled,
-li.profile_addsub_person_disabled, li.profile_postentry_disabled,
-li.profile_trackuser_disabled, li.profile_sendmessage_disabled {
-    color: #999;
-}
-.details_stats p {
-    color: #666;
-}
-.details_stats .account_level {
-    color: #000;
-}
-.section span.section_link {
-    color: #000;
-}
-.section_body .inner_section_header {
-    color: #111;
-}
-.section_body_title {
-    color: #111;
-}
-.profile th {
-    color: #111;
-}
-
-/* tags.css */
-#selected_tags {
-    color: #777;
-}
-.tagsort {
-    /*border-top: 1px solid #cdcdcd;*/
-}
-.tagfield {
-    color: #777;
-    border: 1px solid #ccc;
-}
-.tagfield:focus {
-    color: #000;
-    border: 1px solid #999;
-}
-.tagfield_error {
-    border: 1px solid red;
-    background-color: #ecd7d7;
-}
-.proptbl .t {
-    color: #777;
-    background-color: #fbfbfb;
-    border-right: 1px solid #cdcdcd;
-}
-.proptbl .r {
-    color: #777;
-    background-color: #fbfbfb;
-    border-right: 1px solid #cdcdcd;
-}
-.proptbl .rv {
-    background-color: #eee;
-}
-.edittbl .l, .lsep {
-    border-right: 1px solid #777;
-}
-.edittbl .sep {
-    border-top: 1px solid #777;
-}
-.curtags {
-    color: #777;
-}
-.tagbox_nohist {
-    background-color: #eee;
-}
-
-/* Adult warning interstitals */
-div.adult_warning {
-    background-color: #ffd8d8;
-    border: 1px solid #c1272d;
-}
-
-/* For the manage/banusers page */
-.userslist-table tr.odd {
-    background-color: #efefef;
-}
-.userslist-table tr.even {
-    background-color: #fff;
-}
-
-/* For the community/settings page */
-
-.community-settings legend {
-    color: #c1272d;
-    }

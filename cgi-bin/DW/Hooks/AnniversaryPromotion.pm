@@ -45,7 +45,7 @@ LJ::Hooks::register_hook( 'shop_controller', sub {
 
     # put the note up top so people know
     $rv->{cart_display} .=
-        "<div class='shop-error'><strong>" .
+        "<div class='shop-item-highlight message-box'><strong>" .
         LJ::Lang::ml( 'shop.anniversarypromoblurb' ) .
         "</strong></div>\n";
 } );
@@ -65,7 +65,7 @@ LJ::Hooks::register_hook( 'shop_cart_render', sub {
     my $points = cart_bonus_points( $opts{cart} );
 
     # text depends on how many points they get
-    $$retref .= '<p class="shop-account-status">';
+    $$retref .= '<p class="shop-item-highlight shop-account-status">';
     if ( $points > 0 ) {
         $$retref .= LJ::Lang::ml( 'shop.annivpromo.points', { points => $points } );
     } else {

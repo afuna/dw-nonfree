@@ -81,6 +81,7 @@ body {
     text-align: right;
 }
 #account-links ul li {
+    list-style: none;
     float: left;
     margin: 0 .5em;
 }
@@ -132,6 +133,9 @@ body {
     width: 100%;
     line-height: 2.5em;
     clear: both;
+}
+#menu ul {
+    margin-left: 0;
 }
 #menu ul li {
     float: left;
@@ -348,175 +352,41 @@ body {
     z-index: 5;
 }
 
-/**
- * Form field styles
- */
-
-.dw-field-default {
-    font-style: italic;
+.highlight-box, .message-box,  .error-box {
+    margin: 1em auto;
+    padding: 0.5em;
 }
-.standout {
+.message-box .title {
+    font-weight: bold;
+}
+.message-box h1.title {
     text-align: center;
 }
-.standout .standout-inner {
-    margin-top: .5em;
-    margin-left: auto;
-    margin-right: auto;
-}
-.standout .standout-inner td {
+
+.action-box {
+    display: table;
+    text-align: center;
+    margin: 0.5em auto 0 auto;
     padding: 0.5em;
+}
+
+table.grid {
+    border-collapse: collapse;
+}
+
+form.simple-form fieldset ul {
+    padding-top: 3em;
+}
+
+.subheader {
+    margin: 1em 0 0;
+    padding: 0.2em;
+    font-size: 110%;
 }
 
 /* update.bml */
 #draft {
     font-size: medium;
-}
-
-/**
- * Start overriding some classes set in dw-free/htdocs/stc/
- * Other site scheme designers: use your own colors here
- * /
-
-/* editicons.css */
-#uploadBox {
-    margin: 0 20px 0 0;
-}
-
-/* profile.css */
-.section img, .username img {
-    padding-left: 3px;
-}
-
-/* widgets/customizetheme.css, themechooser.css, themenav.css,
-currenttheme.css */
-.theme-item {
-    overflow-x: visible;
-    overflow-y: visible;
-}
-.theme-nav li a:visited, .customize-nav li a:visited {
-    font-weight: bold;
-}
-
-/* more, detailed by page*/
-/*customizetheme.css*/
-.customize-content .subheader {
-    background-position: left center;
-    background-repeat: no-repeat;
-}
-.customize-content .subheader.on {
-    background-position: left center;
-    background-repeat: no-repeat;
-}
-
-/*currentheme.css*/
-.theme-current h2.widget-header {
-    background-image: none;
-}
-.theme-current-links {
-    padding: 3px 5px;
-}
-
-/* inbox */
-.folders a.active {
-    font-weight: bold;
-}
-
-/* lj_settings.css */
-.section_head, table.alternating-rows th, div.username {
-    border: none;
-}
-
-/* allpics styling */
-table.allpics {
-    margin-left: 50px;
-}
-.allpics td {
-    vertical-align: bottom;
-}
-.allpics .pic img {
-    margin-right: 1em;
-    margin-top: 15px;
-}
-.allpics blank {
-    width: 50px;
-}
-.allpics td.desc {
-padding-right: 10px;
-}
-
-/* editfilters styling */
-table.editfilters td {
-    padding: 5px;
-}
-
-
-/* FAQ */
-.faqlist {
-    list-style: disc outside;
-    margin-bottom: 2em;
-}
-
-/* Inbox - Compose */
-.inbox-compose {
-    width: 100%;
-}
-.inbox-compose td {
-    vertical-align: top;
-}
-
-/* Support Highscores */
-table#support-highscores {
-    line-height: 2.2;
-}
-
-/* manage/invitecodes.bml */
-.invitecodes td {
-    padding: 5px;
-}
-
-/* create flow */
-.create-form td {
-    padding: 5px;
-}
-
-/* Comments */
-.cmtbar-odd {
-    min-width: 50em;
-}
-.cmtbar-even {
-    min-width: 50em;
-}
-
-/* lj_base-app.css */
-.rounded-box {
-    background: no-repeat;
-    zoom: 1;
-}
-.rounded-box .rounded-box-tr {
-    background: 100% 0 no-repeat;
-}
-.rounded-box .rounded-box-bl {
-    background: 0 100% no-repeat;
-}
-.rounded-box .rounded-box-br {
-    background: 100% 100% no-repeat;
-    padding: 2px; /* border width */
-}
-
-/* Adult warning interstitals */
-div.adult_warning {
-    padding: 0 10px;
-}
-/* CSS-style some things that users like to use */
-q {
-    margin-left: 1em;
-    font-style: italic;
-}
-small {
-    font-size: smaller;
-}
-big {
-    font-size: larger;
 }
 
 /* for pages which we know may have wide content, and we want this content visible */
