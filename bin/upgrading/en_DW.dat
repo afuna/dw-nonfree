@@ -22,6 +22,10 @@ invitecodes.userclass.premium_paid=Premium paid users
 
 langname.en_DW=English
 
+shop.admin.checkmoneyorder.body=[[user]] just sent a check/money order. Receipt is at: [[receipturl]]
+
+shop.admin.checkmoneyorder.subject=New Check/Money Order Pending
+
 shop.anniversarypromoblurb=Dreamwidth is currently offering an Anniversary Promotion -- we're giving you 10% more points on all of your orders!
 
 shop.annivpromo.points=This order will earn you <strong>[[points]] Dreamwidth [[?points|Point|Points]]</strong> to spend on your next order as part of our Anniversary Promotion.
