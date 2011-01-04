@@ -26,7 +26,7 @@
 
 <p>We believe that the DMCA takedown process is a powerful tool that can help copyright holders protect their intellectual property from being exploited. We also believe that the DMCA takedown process is a powerful tool that is frequently misused to force a chilling effect on legitimate and legal speech. Our enforcement policy is an attempt to prevent the worst abuses of this process that we've seen over the years, while still upholding our legal obligations and protecting copyright holders from the misuse of their intellectual property.</p>
 
-<p>This is a complicated process, and the law surrounding it is unclear in many situations. We've tried to make this as readable as possible. If you have any questions that aren't covered here, please <a href='[% roots.site %]/support/submit'>contact us</a> with your questions.</p>
+<p>This is a complicated process, and the law surrounding it is unclear in many situations. We've tried to make this as readable as possible. If you have any questions that aren't covered here, please <a href='[% site.root %]/support/submit'>contact us</a> with your questions.</p>
 
 <p>None of this material should be construed as legal advice. We cannot advise you on how to protect your rights online, either your rights as a copyright holder or your rights as someone accused of copyright infringement. If you are in need of legal advice, contact a lawyer who is licensed to practice in your jurisdiction.</p>
 
@@ -34,13 +34,13 @@
 
 <p>If you believe that someone on [% site.name %] has violated your copyright, you may send us a Notification of Copyright Infringement. For us to process such a notification, it must substantially comply with the requirements set forth in United States law. To speed our handling of your notification, please make sure it complies with the following criteria:</p>
 
-<ol><li>Notifications may be submitted to [% site.nameshort %]'s Registered Agent in one of three ways. You may send it via email (no attachments, please) to <b>[% email.coppa %]</b>; you may send it via fax to <b>319-856-3598</b>; or you may send it via physical mail to <b>38 S Paca St #217, Baltimore, MD, 21201</b>. We prefer to receive notification via email or fax.</li>
+<ol><li>Notifications may be submitted to [% site.nameshort %]'s Registered Agent in one of three ways. You may send it via email (no attachments, please) to <b>[% site.email.coppa %]</b>; you may send it via fax to <b>319-856-3598</b>; or you may send it via physical mail to <b>38 S Paca St #217, Baltimore, MD, 21201</b>. We prefer to receive notification via email or fax.</li>
 
 <li>Notifications must be signed by the copyright holder or the copyright holder's designated agent. Signatures may be a physical signature or a digital signature in a recognized industry-standard format such as PGP. Unsigned notifications will not be processed.</li>
 
 <li>Notifications must specifically identify the copyrighted work being infringed upon. For instance, if the work is a published book, provide the title, author, and ISBN; if the work is a magazine article, provide the title, author, magazine name, and magazine issue; if the work is available on the Internet, provide the URL of the work.</li>
 
-<li>Notifications must specifically include the URL where the work is being infringed upon [% site.nameshort %]'s servers. For us to be able to reasonably identify the material, you must provide us with the complete URL, not a link to the entire journal. For instance, instead of http://username.[% domain.site %] (a link to the entire journal), provide http://username.[% domain.site %]/123.html (a link to the specific entry).</li>
+<li>Notifications must specifically include the URL where the work is being infringed upon [% site.nameshort %]'s servers. For us to be able to reasonably identify the material, you must provide us with the complete URL, not a link to the entire journal. For instance, instead of http://username.[% site.domain %] (a link to the entire journal), provide http://username.[% site.domain %]/123.html (a link to the specific entry).</li>
 
 <li>Notifications must include sufficient information for us to contact you, including your address, your telephone number, and your email address.</li>
 

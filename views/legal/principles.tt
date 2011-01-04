@@ -75,7 +75,7 @@ expression, we will tell you why, and work to find the best solutions possible.<
 <li><strong>Respect</strong>: We believe in the inherent dignity of all human 
 beings. We will never discriminate against any group of people. We will 
 work hard to maintain inclusive attitudes, use inclusive language, and 
-promote inclusiveness at all times. Our <a href="[% roots.site %]/legal/diversity">Diversity
+promote inclusiveness at all times. Our <a href="[% site.root %]/legal/diversity">Diversity
 Statement</a> isn't just there so we can pat ourselves on the back. It's there because 
 we believe that our diversity is our greatest strength.</li></ul>
 
@@ -94,4 +94,4 @@ their banners, graphics, or text advertisement to our users. We may make partner
 with other sites in order to add features that we don't have the resources for ourselves. 
 If we do this, we will clearly indicate any such features, and we will include 
 information in our
-<a href="[% roots.site %]/legal/privacy">Privacy Policy</a>.</p>
+<a href="[% site.root %]/legal/privacy">Privacy Policy</a>.</p>
