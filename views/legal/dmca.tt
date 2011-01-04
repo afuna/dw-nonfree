@@ -34,7 +34,7 @@
 
 <p>If you believe that someone on [% site.name %] has violated your copyright, you may send us a Notification of Copyright Infringement. For us to process such a notification, it must substantially comply with the requirements set forth in United States law. To speed our handling of your notification, please make sure it complies with the following criteria:</p>
 
-<ol><li>Notifications may be submitted to [% site.nameshort %]'s Registered Agent in one of three ways. You may send it via email (no attachments, please) to <b>[% site.email.abuse %]</b>, or you may send it via physical mail to <b>[% site.addressline %]</b>. We prefer to receive notification via email.</li>
+<ol><li>Notifications may be submitted to [% site.nameshort %]'s Registered Agent in one of two ways. You may send it via email (no attachments, please) to <b>[% site.email.abuse %]</b>, or you may send it via physical mail to <b>[% site.addressline %]</b>. We prefer to receive notification via email.</li>
 
 <li>Notifications must be signed by the copyright holder or the copyright holder's designated agent. Signatures may be a physical signature or a digital signature in a recognized industry-standard format such as PGP. Unsigned notifications will not be processed.</li>
 
