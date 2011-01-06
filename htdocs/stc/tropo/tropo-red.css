@@ -204,9 +204,9 @@ a:active,
     text-align: center;
     background-color: #ffd8d8;
 }
-.action-box {
-    background-color: #ffafb6;
+.action-box ul {
     color: #111;
+    background-color: #ffafb6;
     border: 1px solid #c1272d;
 }
 

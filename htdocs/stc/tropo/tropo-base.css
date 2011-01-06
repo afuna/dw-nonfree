@@ -364,13 +364,6 @@ body {
     text-align: center;
 }
 
-.action-box {
-    display: table;
-    text-align: center;
-    margin: 0.5em auto 0 auto;
-    padding: 0.5em;
-}
-
 table.grid {
     border-collapse: collapse;
 }
