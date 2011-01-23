@@ -237,7 +237,7 @@ body<=
     $ret .= LJ::html_textarea( { 
                                 name => 'summary',
                                 rows => 3,
-                                cols => 60,
+                                cols => 100,
                                 wrap => 'soft',
                                 value => $POST{summary}
                               } );
@@ -246,8 +246,8 @@ body<=
     $ret .= "<h2>Full Description</h2><p>The full description of your idea. Be as specific and detailed as you can. Tell us what issue or area your suggestion is intended to improve, why you think your specific suggestion is the best solution, what problems or drawbacks your suggestion might have if it's implemented, and if there are any other ways you can think to accomplish what you'd like to improve that could also be considered. The more detail you provide, the better chances your suggestion has of being implemented.</p>";
     $ret .= LJ::html_textarea( { 
                                 name => 'description',
-                                rows => 7,
-                                cols => 60,
+                                rows => 20,
+                                cols => 100,
                                 wrap => 'soft',
                                 value => $POST{description}
                               } );
