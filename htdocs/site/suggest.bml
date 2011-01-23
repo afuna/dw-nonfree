@@ -155,8 +155,15 @@ body<=
             my $err = LJ::Protocol::error_message( $response || $response2 );
             return LJ::bad_input( $err );
         } else {
-            my $commname = $destination->ljuser_display; 
-            return "<h2>Success!</h2>\n<p>Your suggestion has been submitted to the moderation queue of $commname. Once approved, it will appear in the community for discussion and evaluation.";
+            my $commname = $destination->ljuser_display;
+            my $commlink = $destination->journal_base;
+            my $ret = "<h2>Success!</h2>\n"
+                    . "<p>Your suggestion has been submitted to the moderation queue of $commname."
+                    . " Once approved, it will appear in the community for discussion and evaluation.</p>\n"
+                    . "<p>From here you can:</p><ul>\n"
+                    . "<li><a href='$LJ::SITEROOT/site/suggest'>Make another suggestion</a></li>\n"
+                    . "<li><a href='$commlink'>View the suggestions community</a></li></ul>\n";
+            return $ret;
         }
 
     } elsif ( LJ::did_post() && $POST{preview} ) {
