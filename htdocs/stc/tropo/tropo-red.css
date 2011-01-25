@@ -233,6 +233,12 @@ a:active,
     background-color: #ffd8d8;
     color: #000;
 }
+.searchhighlight {
+    background: #ffd8d8;
+    color: #000;
+    padding: 0.2em;
+    font-weight: bold;
+}
 .inset-box {
     background-color: #fff;
     border-right: 1px solid #f4717a;
