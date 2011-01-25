@@ -855,6 +855,10 @@ function Page::print_default_stylesheet () {
         display: none;
         }
 
+    .page-read .navigation.empty {
+        display: block;
+        }
+
     .page-tags #content h2 {
         padding: 0.2em;
         margin: 0;
