@@ -106,22 +106,35 @@ HTML
         <div id="intro-create-content">
 HTML
         $ret .= "<h1>" . BML::ml( ".create.join_dreamwidth", { sitename => $LJ::SITENAMESHORT } ) . "</h1>\n";
-        $ret .= "<p>" . BML::ml( LJ::is_enabled( 'payments' ) ?
-                                     ".create.join_dreamwidth.content" :
-                                     ".create.join_dreamwidth.content.nopayments",
-                                 { aopts => "href=\"$LJ::SITEROOT/support/faqbrowse?faqid=105\"" }
-                               ) . "</p>\n";
+
+        my $string = ".create.join_dreamwidth.content";
+        if ( ! $LJ::USE_ACCT_CODES )          { $string .= ".noinvites";  }
+        if ( ! LJ::is_enabled( 'payments' ) ) { $string .= ".nopayments"; }
+        # possible strings are:
+        # .create.join_dreamwidth.content                      - normal
+        # .create.join_dreamwidth.content.noinvites            - will be in use occasionally
+        # .create.join_dreamwidth.content.nopayments           - was in use before payments were set up
+        # .create.join_dreamwidth.content.noinvites.nopayments - highly unlikely to ever be in use on DW.org, but possible on Dreamhacks
+        $ret .= "<p>" . BML::ml( $string, { aopts => ( $LJ::USE_ACCT_CODES ?
+                                                       "href=\"$LJ::SITEROOT/support/faqbrowse?faqid=105\"" :
+                                                       "href=\"$LJ::SITEROOT/support/faqbrowse?faqid=4\"" ) } ) . "</p>\n";
+
+        my $createlink = ( $LJ::USE_ACCT_CODES ?
+                           "<a href=\"$LJ::SITEROOT/create\" onClick=\"return nocreatejs || displayCreateDiv(&quot;invite&quot;);\">$ML{'.create.invitelink'}</a>" :
+                           "<a href=\"$LJ::SITEROOT/create\">$ML{'.create.createaccount'}</a>" );
         $ret .= <<HTML;
             <ul id="create-links">
-                <li><a href="$LJ::SITEROOT/create" onClick="return nocreatejs || displayCreateDiv(&quot;invite&quot;);">$ML{'.create.invitelink'}</a></li>
 HTML
         $ret .= <<HTML if LJ::is_enabled( 'payments' );
-                <li class="lastli"><a href="$LJ::SITEROOT/shop/account?for=new">$ML{'.create.paymentlink'}</a></li>
+                <li><a href="$LJ::SITEROOT/shop/account?for=new">$ML{'.create.paymentlink2'}</a></li>
 HTML
         $ret .= <<HTML;
+                <li class="lastli">$createlink</li>
             </ul>
 HTML
-        $ret .= "<p style=\"margin-top: 1em;\">" . BML::ml( ".create.join_dreamwidth.codeshare" ) . "</p>\n";
+        if ( $LJ::USE_ACCT_CODES ) {
+          $ret .= "<p style=\"margin-top: 1em;\">" . BML::ml( ".create.join_dreamwidth.codeshare" ) . "</p>\n";
+        }
         $ret .= <<HTML;
         </div>
     </div>
@@ -147,7 +160,6 @@ HTML
                     [ '/latest', 'latest_things', 'footnote' ],
                     [ '/random', 'random_journal', 'footnote' ],
                     [ '/community/random', 'random_community', 'footnote' ],
-                    [ 'http://dw-codesharing.dreamwidth.org/', 'codeshare' ],
                 ],
                 footnote => 'no_screening',
             },
@@ -159,6 +171,9 @@ HTML
                 ],
             },
         );
+
+        push @{$columns[1]->{items}}, [ 'http://dw-codesharing.dreamwidth.org/', 'codeshare' ]
+            if $LJ::USE_ACCT_CODES;
 
         foreach my $column ( @columns ) {
             my $name = $column->{name};

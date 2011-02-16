@@ -1,5 +1,7 @@
 .create.cancel=Cancel
 
+.create.createaccount=Create Free Account
+
 .create.enter_code=Enter your invite code:
 
 .create.invitelink=Enter Invite Code
@@ -10,9 +12,13 @@
 
 .create.join_dreamwidth.content=Creating an account requires either a small payment or an invite code. (<a [[aopts]]>Why?</a>)
 
+.create.join_dreamwidth.content.noinvites=This week only, you can create a Dreamwidth account without an invite code. If you want, you can still support Dreamwidth by making a small payment in return for <a [[aopts]]>extra features</a>.
+
+.create.join_dreamwidth.content.noinvites.nopayments=You can create an account using the link below.
+
 .create.join_dreamwidth.content.nopayments=Creating an account requires an invite code. (<a [[aopts]]>Why?</a>)
 
-.create.paymentlink=Make Payment
+.create.paymentlink2=Create Paid Account
 
 .create.use_code=Use Code
 
