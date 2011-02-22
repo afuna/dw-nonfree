@@ -284,6 +284,11 @@ function Page::print()
     $this->print_module_section("three");
     """
         </div>
+        <div id="body-footer">
+    """;
+            print safe """<div class="page-top"><a href="#">$*text_page_top</a></div>""";
+    """
+        </div>
     """;
     $this->print_wrapper_end();
     """
@@ -368,7 +373,7 @@ function Page::print_default_stylesheet () {
                 $page_colors
     }
 
-    #container, #footer {
+    #container, #footer, #body-footer {
         margin: 0 $*margins_size$*margins_unit;
     }
 
@@ -943,6 +948,25 @@ function Page::print_default_stylesheet () {
 
     #commenttext {
         width: 95%;
+    }
+
+    #body-footer {
+        background-color: $*color_header_background;
+        color: $*color_header_text;
+        padding: .5em 0;
+        text-align: right;
+    }
+
+    #body-footer a {
+        background-color: $*color_header_background;
+        color: $*color_header_text;
+        padding: .5em 20px;
+        text-decoration: none;
+    }
+
+    #body-footer a:hover {
+        background-color: $*color_header_hover_background;
+        color: $*color_header_hover;
     }
 
     .one-column #content { float: none; }
