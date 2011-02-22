@@ -514,3 +514,9 @@ select.select {
 .helper {
     color: #666;
 }
+
+/* Quick Reply table */
+
+#qrformdiv table {
+    border: 1px solid #999;
+}
