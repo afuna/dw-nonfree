@@ -790,7 +790,7 @@ $userpic_css
     padding: 0;
 }
 
-.manage-tags-link {
+.manage-link {
     text-align: center;
     font-size: .7em;
 }
