@@ -242,6 +242,11 @@ function Page::print()
             $this->print_module_section("two");
     """
         </div><div style="clear:both;"></div>
+        <div id="footer">
+        """;
+            print safe """<div class="page-top"><a href="#">$*text_page_top</a></div>""";
+        """
+        </div>
     </div>
     """;
     $this->print_wrapper_end();
@@ -860,6 +865,12 @@ $userpic_css
 
 #commenttext {
     width: 95%;
+}
+
+#footer {
+    font-size: .9em;
+    margin: 1em 0;
+    text-align: center;
 }
 
 """;
