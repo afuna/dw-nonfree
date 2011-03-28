@@ -38,6 +38,87 @@ set custom_colors_template = "%%new%% .userpic a { background-color: %%backgroun
 
 set module_layout_sections = "none|(none)|two|Sidebar";
 
+propgroup colors {
+    property use color_page_background;
+    
+    property Color color_page_title_background { des = "Title background"; }
+    property use color_page_title;
+    property Color color_header_background { des = "Header background"; }
+    property Color color_header_text { des = "Header text"; }
+    property Color color_header_hover_background {des = "Header link background when hovered over"; }
+    property Color color_header_hover { des = "Header link text when hovered over"; }
+
+    property use color_page_text;
+
+    property use color_page_link;
+    property use color_page_link_hover;
+    property use color_page_link_active;
+    property use color_page_link_visited;
+
+    property use color_module_link;
+    property use color_module_link_hover;
+    property use color_module_link_active;
+    property use color_module_link_visited;
+    property use color_module_border;
+    property use color_module_text;
+    property use color_module_background;
+    property use color_module_title;
+    property Color color_module_title_background { des = "Sidebar box title background"; }
+    property Color color_module_title_border { des = "Sidebar box title border"; }
+
+    property use color_entry_border;
+    property use color_entry_background;
+    property use color_entry_link;
+    property use color_entry_link_hover;
+    property use color_entry_link_active;
+    property use color_entry_link_visited;
+    property use color_entry_text;
+    property use color_entry_title;
+    property Color color_entry_title_border { des = "Entry\Comment subject border"; }
+    property Color color_entry_title_background { des = "Entry\Comment subject background"; }
+
+    property Color color_navigation_background { des = "Page back/forwards background"; }
+    property Color color_navigation_text { des = "Page back/forwards text"; }
+    property Color color_navigation_border { des = "Page back/forwards border"; }
+}
+
+propgroup images {
+    property use image_background_page_group;
+}
+
+set image_background_page_repeat = "no-repeat";
+
+propgroup fonts {
+    property use font_base;
+    property use font_fallback;
+    property use font_base_size;
+    property use font_base_units;
+    property use font_journal_title;
+    property use font_journal_title_size;
+    property use font_journal_title_units;
+    property use font_entry_title;
+    property use font_entry_title_size;
+    property use font_entry_title_units;
+    property use font_comment_title;
+    property use font_comment_title_size;
+    property use font_comment_title_units;
+    property use font_module_heading;
+    property use font_module_heading_size;
+    property use font_module_heading_units;
+    property use font_module_text;
+    property use font_module_text_size;
+    property use font_module_text_units;
+}
+
+set font_base = "Arial";
+set font_fallback = "sans-serif";
+set font_base_size = "1";
+set font_base_units = "em";
+set font_journal_title_size = "2";
+set font_journal_title_units = "em";
+set font_module_heading_size = "1.353";
+set font_module_heading_units = "em";
+
 propgroup modules {
     property use module_userprofile_group;
     property use module_navlinks_group;
@@ -117,89 +198,6 @@ propgroup text {
     property use text_module_customtext_content;
     property use text_module_customtext_url;
 }
-
-propgroup colors {
-    property use color_page_background;
-    
-    property Color color_page_title_background { des = "Title background"; }
-    property use color_page_title;
-    property Color color_header_background { des = "Header background"; }
-    property Color color_header_text { des = "Header text"; }
-    property Color color_header_hover_background {des = "Header link background when hovered over"; }
-    property Color color_header_hover { des = "Header link text when hovered over"; }
-
-    property use color_page_text;
-
-    property use color_page_link;
-    property use color_page_link_hover;
-    property use color_page_link_active;
-    property use color_page_link_visited;
-
-    property use color_module_link;
-    property use color_module_link_hover;
-    property use color_module_link_active;
-    property use color_module_link_visited;
-    property use color_module_border;
-    property use color_module_text;
-    property use color_module_background;
-    property use color_module_title;
-    property Color color_module_title_background { des = "Sidebar box title background"; }
-    property Color color_module_title_border { des = "Sidebar box title border"; }
-
-    property use color_entry_border;
-    property use color_entry_background;
-    property use color_entry_link;
-    property use color_entry_link_hover;
-    property use color_entry_link_active;
-    property use color_entry_link_visited;
-    property use color_entry_text;
-    property use color_entry_title;
-    property Color color_entry_title_border { des = "Entry\Comment subject border"; }
-    property Color color_entry_title_background { des = "Entry\Comment subject background"; }
-
-    property Color color_navigation_background { des = "Page back/forwards background"; }
-    property Color color_navigation_text { des = "Page back/forwards text"; }
-    property Color color_navigation_border { des = "Page back/forwards border"; }
-}
-
-# Images
-propgroup images {
-    property use image_background_page_group;
-}
-
-set image_background_page_repeat = "no-repeat";
-
-# Fonts
-propgroup fonts {
-    property use font_base;
-    property use font_fallback;
-    property use font_base_size;
-    property use font_base_units;
-    property use font_journal_title;
-    property use font_journal_title_size;
-    property use font_journal_title_units;
-    property use font_entry_title;
-    property use font_entry_title_size;
-    property use font_entry_title_units;
-    property use font_comment_title;
-    property use font_comment_title_size;
-    property use font_comment_title_units;
-    property use font_module_heading;
-    property use font_module_heading_size;
-    property use font_module_heading_units;
-    property use font_module_text;
-    property use font_module_text_size;
-    property use font_module_text_units;
-}
-
-set font_base = "Arial";
-set font_fallback = "sans-serif";
-set font_base_size = "1";
-set font_base_units = "em";
-set font_journal_title_size = "2";
-set font_journal_title_units = "em";
-set font_module_heading_size = "1.353";
-set font_module_heading_units = "em";
 
 propgroup customcss {
     property use external_stylesheet;

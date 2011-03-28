@@ -7,10 +7,6 @@ layerinfo des = "Transmogrified, a style you can change easily";
 
 set layout_authors = [ { "name" => "Yvonne" } ];
 
-set entry_management_links = "text";
-set comment_management_links = "text";
-set all_commentsubjects = true;
-
 propgroup presentation {
     property use num_items_recent;
     property use num_items_reading;
@@ -46,79 +42,10 @@ set margins_size = "2";
 set margins_unit = "%";
 set tags_page_type = "";
 set userpics_position = "right";
+set entry_management_links = "text";
+set comment_management_links = "text";
+set all_commentsubjects = true;
 set custom_colors_template = "%%new%% .userpic a {background-color: %%background%%; border: solid 1px %%foreground%%;}";
-
-propgroup modules {
-    property use module_userprofile_group;
-    property use module_navlinks_group;
-    property use module_calendar_group;
-    property use module_pagesummary_group;
-    property use module_tags_group;
-    property use module_active_group;
-    property use module_links_group;
-    property use module_syndicate_group;
-    property use module_time_group;
-    property use module_poweredby_group;
-    property use module_customtext_group;
-    property use module_credit_group;
-    property use module_search_group;
-}
-
-set module_layout_sections = "none|(none)|one|Header|two|Sidebar|three|Footer";
-set module_navlinks_section = "one";
-set module_userprofile_section = "two";
-set module_pagesummary_section = "two";
-set module_tags_section = "two";
-set module_links_section = "two";
-set module_syndicate_section = "two";
-set module_calendar_section = "two";
-set module_poweredby_section = "three";
-set module_time_section = "none";
-set module_customtext_section = "two";
-set module_active_section = "two";
-set module_credit_section = "two";
-set module_search_section = "two";
-
-propgroup text {
-    property use text_view_recent;
-    property use text_view_friends;
-    property use text_view_network;
-    property use text_view_friends_comm;
-    property use text_view_friends_filter;
-    property use text_view_archive;
-    property use text_view_userinfo;
-    property use text_view_memories;
-    property use text_view_tags;
-
-    property use text_post_comment;
-    property use text_max_comments;
-    property use text_read_comments;
-    property use text_post_comment_friends;
-    property use text_read_comments_friends;
-
-    property use text_skiplinks_back;
-    property use text_skiplinks_forward;
-    property use text_meta_music;
-    property use text_meta_mood;
-    property use text_meta_location;
-    property use text_meta_xpost;
-    property use text_tags;
-
-    property use text_entry_prev;
-    property use text_entry_next;
-    property use text_edit_entry;
-    property use text_edit_tags;
-    property use text_tell_friend;
-    property use text_mem_add;
-    property use text_watch_comments;
-    property use text_unwatch_comments;
-    property use text_permalink;
-    property use text_stickyentry_subject;
-    
-    property use text_module_customtext;
-    property use text_module_customtext_content;
-    property use text_module_customtext_url;
-}
 
 propgroup colors {
     property use color_page_background;
@@ -194,8 +121,6 @@ propgroup colors {
     property Color color_tagspage_title_background { des = "Tags page title background"; }
 }
 
-
-# Images
 propgroup images {
     property use image_background_page_group;
     property use image_background_header_group;
@@ -204,7 +129,6 @@ propgroup images {
     property use image_background_module_group;
 }
 
-# Fonts
 propgroup fonts {
     property use font_base;
     property use font_fallback;
@@ -234,13 +158,84 @@ set font_base_units = "em";
 set font_module_heading_size = "1.1";
 set font_module_heading_units = "em";
 
+propgroup modules {
+    property use module_userprofile_group;
+    property use module_navlinks_group;
+    property use module_calendar_group;
+    property use module_pagesummary_group;
+    property use module_tags_group;
+    property use module_active_group;
+    property use module_links_group;
+    property use module_syndicate_group;
+    property use module_time_group;
+    property use module_poweredby_group;
+    property use module_customtext_group;
+    property use module_credit_group;
+    property use module_search_group;
+}
+
+set module_layout_sections = "none|(none)|one|Header|two|Sidebar|three|Footer";
+set module_navlinks_section = "one";
+set module_userprofile_section = "two";
+set module_pagesummary_section = "two";
+set module_tags_section = "two";
+set module_links_section = "two";
+set module_syndicate_section = "two";
+set module_calendar_section = "two";
+set module_poweredby_section = "three";
+set module_time_section = "none";
+set module_customtext_section = "two";
+set module_active_section = "two";
+set module_credit_section = "two";
+set module_search_section = "two";
+
+propgroup text {
+    property use text_view_recent;
+    property use text_view_friends;
+    property use text_view_network;
+    property use text_view_friends_comm;
+    property use text_view_friends_filter;
+    property use text_view_archive;
+    property use text_view_userinfo;
+    property use text_view_memories;
+    property use text_view_tags;
+
+    property use text_post_comment;
+    property use text_max_comments;
+    property use text_read_comments;
+    property use text_post_comment_friends;
+    property use text_read_comments_friends;
+
+    property use text_skiplinks_back;
+    property use text_skiplinks_forward;
+    property use text_meta_music;
+    property use text_meta_mood;
+    property use text_meta_location;
+    property use text_meta_xpost;
+    property use text_tags;
+
+    property use text_entry_prev;
+    property use text_entry_next;
+    property use text_edit_entry;
+    property use text_edit_tags;
+    property use text_tell_friend;
+    property use text_mem_add;
+    property use text_watch_comments;
+    property use text_unwatch_comments;
+    property use text_permalink;
+    property use text_stickyentry_subject;
+    
+    property use text_module_customtext;
+    property use text_module_customtext_content;
+    property use text_module_customtext_url;
+}
+
 propgroup customcss {
     property use external_stylesheet;
     property use include_default_stylesheet;
     property use linked_stylesheet;
     property use custom_css;
 }
-
 
 function Page::print()
 {
