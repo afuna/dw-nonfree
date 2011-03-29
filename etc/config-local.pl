@@ -107,6 +107,12 @@
         points => [],
     );
 
+    %LJ::BETA_FEATURES = (
+        "journaljquery" => {
+            start_time  => 0,
+            end_time    => "Inf",
+        },
+    );
 }
 
 1;
