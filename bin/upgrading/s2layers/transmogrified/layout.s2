@@ -13,17 +13,8 @@ propgroup presentation {
     property use use_journalstyle_entry_page;
     property use layout_type;
     property use sidebar_width;
-
-    property string margins_size {
-        des = "Size of left and right margins";
-        size = 5;
-    }
-
-    property string margins_unit {
-        des = "Unit for margins size";
-        values = "em|em|%|%|px|px";
-    }
-
+    property use margins_size;
+    property use margins_unit;
     property use tags_page_type;
     property use userpics_position;
     property use entry_metadata_position;
