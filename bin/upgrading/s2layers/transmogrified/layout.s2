@@ -16,6 +16,7 @@ propgroup presentation {
     property use margins_size;
     property use margins_unit;
     property use tags_page_type;
+    property use userpics_style_group;
     property use userpics_position;
     property use entry_metadata_position;
     property use use_custom_friend_colors;
@@ -315,18 +316,39 @@ function Page::print_default_stylesheet () {
     var string module_font = generate_font_css($*font_module_text, $*font_base, $*font_fallback, $*font_module_text_size, $*font_module_text_units);
     var string module_title_font = generate_font_css($*font_module_heading, $*font_base, $*font_fallback, $*font_module_heading_size, $*font_module_heading_units);
 
+    var string entry_userpic_shift = "";
+    if ( $*entry_userpic_style == "" ) { $entry_userpic_shift = "-66px"; }
+    elseif ( $*entry_userpic_style == "small" ) { $entry_userpic_shift = "-50px"; }
+    elseif ( $*entry_userpic_style == "smaller" ) { $entry_userpic_shift = "-33px"; }
+
+    var string comment_userpic_shift = "";
+    if ( $*comment_userpic_style == "" ) { $comment_userpic_shift = "-66px"; }
+    elseif ( $*comment_userpic_style == "small" ) { $comment_userpic_shift = "-50px"; }
+    elseif ( $*comment_userpic_style == "smaller" ) { $comment_userpic_shift = "-33px"; }
+
+    var string entry_header_margin = "";
+    if ( $*entry_userpic_style == "" ) { $entry_header_margin = "120px"; }
+    elseif ( $*entry_userpic_style == "small" ) { $entry_header_margin = "95px"; }
+    elseif ( $*entry_userpic_style == "smaller" ) { $entry_header_margin = "70px"; }
+
+    var string comment_header_margin = "";
+    if ( $*comment_userpic_style == "" ) { $comment_header_margin = "120px"; }
+    elseif ( $*comment_userpic_style == "small" ) { $comment_header_margin = "95px"; }
+    elseif ( $*comment_userpic_style == "smaller" ) { $comment_header_margin = "70px"; }
 
     var string userpic_css = "";
     if($*userpics_position == "left") {
         $userpic_css = """
         .entry-title, .comment-title { margin: 0; }
-        .has-userpic .header { margin: 0 0 0 120px; }
+        .has-userpic .entry .header { margin: 0 0 0 $entry_header_margin; }
+        .has-userpic .comment .header { margin: 0 0 0 $comment_header_margin; }
         .entry .userpic a, .comment .userpic a { left: 10px; right: auto; }""";
     }
     elseif($*userpics_position == "right") {
         $userpic_css = """
         .entry-title, .comment-title { margin: 0; }
-        .has-userpic .entry-title, .has-userpic .comment-title { margin-right: 120px; }
+        .has-userpic .entry .header { margin: 0 $entry_header_margin 0 0; }
+        .has-userpic .comment .header { margin: 0 $comment_header_margin 0 0; }
         .entry .userpic a, .comment .userpic a { right: 10px; left: auto; }""";
     }
 
@@ -577,12 +599,21 @@ function Page::print_default_stylesheet () {
         margin-bottom: 10px;
     }
     $userpic_css
+
     .entry .userpic a, .comment .userpic a {
         display: block;
         position: absolute;
-        top: -66px;
         padding: 5px;
     }
+
+    .entry .userpic a {
+        top: $entry_userpic_shift;
+    }
+
+    .comment .userpic a {
+        top: $comment_userpic_shift;
+    }
+
     .entry .userpic img, .comment .userpic img {
         border: none;
     }
