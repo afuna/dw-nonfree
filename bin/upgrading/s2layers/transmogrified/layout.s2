@@ -180,6 +180,7 @@ set module_customtext_section = "two";
 set module_active_section = "two";
 set module_credit_section = "two";
 set module_search_section = "two";
+set module_cuttagcontrols_section = "two";
 
 propgroup text {
     property use text_view_recent;
