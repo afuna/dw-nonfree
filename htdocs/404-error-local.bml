@@ -43,7 +43,7 @@ body<=
     $ret .= <<PAGE;
 <p>We can't find that page. If you entered the URL directly or pasted it into your browser's address bar, make sure you didn't typo, paste too little, or paste too much. If you followed a link, you may want to report this to the maintainer of the page that linked you here.</p>
 
-<p>If you believe this URL is correct, please check our <a href="http://twitter.com/dreamwidth">offsite status page</a> to see if we're aware of the problem. If we haven't updated it, please drop us an <a href="mailto:dwisbroken\@dwscoalition.org">email</a> and let us know something's broken. Be sure to tell us what you were doing and which page you were trying to view or use.</p>
+<p>If you believe this URL is correct, please check our <a href="http://twitter.com/dreamwidth">offsite status page</a> to see if we're aware of the problem. If we haven't updated it, check to see if it's <a href="http://www.downforeveryoneorjustme.com/dreamwidth.org">just a problem for you</a>. If it isn't, don't worry -- we'll fix it as soon as we can!</p>
 
 <!--
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
