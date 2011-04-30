@@ -32,9 +32,9 @@ the same terms as Perl itself.  For a copy of the license, please reference
 [%- BLOCK block.page -%]
 [%- IF logo_path -%]
 [%- ELSIF tropo_color != 'red' -%]
-    [%- logo_path = '/tropo-red/dw_logo_beta_' _ tropo_color _ '.png' -%]
+    [%- logo_path = '/tropo-red/dw_logo_' _ tropo_color _ '.png' -%]
 [%- ELSE -%]
-    [%- logo_path = '/tropo-red/dw_logo_beta.png' -%]
+    [%- logo_path = '/tropo-red/dw_logo.png' -%]
 [%- END -%]
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
