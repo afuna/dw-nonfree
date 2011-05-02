@@ -6,7 +6,7 @@
 # specific to Dreamwidth Studios, LLC
 #
 # Authors:
-#      Pau Amma <pauamma@cpan.org>
+#      Pau Amma <pauamma@dreamwidth.org>
 #
 # Copyright (c) 2009 by Dreamwidth Studios, LLC.
 #
@@ -231,7 +231,7 @@ Bound to have some.
 
 =head1 AUTHORS
 
-Pau Amma <pauamma@cpan.org>
+Pau Amma <pauamma@dreamwidth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
