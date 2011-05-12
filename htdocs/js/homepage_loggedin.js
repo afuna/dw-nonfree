@@ -16,7 +16,7 @@
 */
 
 
-DW.whenPageLoaded( function() {
+jQuery( function($) {
     /**
      *  Add appwidget-first class to first widgets in each column
      */
