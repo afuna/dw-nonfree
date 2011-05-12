@@ -721,6 +721,9 @@ $userpic_css
 .entry .metadata.top-metadata {
     padding-top: 10px;
 }
+.entry .metadata.bottom-metadata {
+    clear: both;
+}
 .entry .metadata ul {
     margin: 0;
     padding: 0;
@@ -728,6 +731,7 @@ $userpic_css
 .entry .metadata li {
     list-style: none;
 }
+.entry .footer, .comment .footer { clear: both; }
 .entry .footer .inner, .comment .footer .inner {
     text-align: right;
 }
