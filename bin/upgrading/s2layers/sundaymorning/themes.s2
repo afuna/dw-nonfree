@@ -444,6 +444,63 @@ set color_navigation_text = "#333000";
 set image_background_page_url = "sundaymorning/redsquiggle.png";
 
 
+#NEWLAYER: sundaymorning/tealdeer
+layerinfo type = "theme";
+layerinfo name = "Teal Deer";
+layerinfo redist_uniq = "sundaymorning/tealdeer";
+layerinfo author_name = "nornoriel";
+
+set theme_authors = [ { "name" => "nornoriel", "type" => "user" } ];
+set layout_resources = [ { "name" => "Beeex.net", "url" => "http://beeex.net/freebies/vectors/vector-swooshes-and-swirls" } ];
+
+##===============================
+## Page Colors
+##===============================
+
+set color_page_background = "#1693a5";
+set color_page_link = "#53ebff";
+set color_page_link_hover = "#003f4c";
+set color_page_link_visited = "#53ebff";
+set color_page_text = "#003f4c";
+set color_page_title = "#68b3ac";
+set color_page_title_background = "#003f4c";
+set color_header_background = "#003f4c";
+set color_header_hover_background = "#53ebff";
+set color_header_text = "#68b3ac";
+
+##===============================
+## Entry Colors
+##===============================
+
+set color_entry_background = "#376970";
+set color_entry_border = "#003f4c";
+set color_entry_link = "#53ebff";
+set color_entry_link_hover = "#003f4c";
+set color_entry_link_visited = "#53ebff";
+set color_entry_text = "#68b3ac";
+set color_entry_title = "#5a9b93";
+set color_entry_title_background = "#003f4c";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#376970";
+set color_module_border = "#003f4c";
+set color_module_link = "#53ebff";
+set color_module_link_hover = "#003f4c";
+set color_module_link_visited = "#53ebff";
+set color_module_text = "#68b3ac";
+set color_module_title = "#68b3ac";
+set color_module_title_background = "#003f4c";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/tealdeer.png";
+
+
 #NEWLAYER: sundaymorning/yellowsquiggle
 layerinfo type = "theme";
 layerinfo name = "Yellow Squiggle";
