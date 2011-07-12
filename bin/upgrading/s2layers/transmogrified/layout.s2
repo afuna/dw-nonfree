@@ -472,15 +472,17 @@ function Page::print_default_stylesheet () {
         padding: 0;
     }
 
-    .module-section-one .module-navlinks li {
-        display: inline;
-        list-style: none;
-    }
     .module-section-one .module-navlinks ul {
         background-color: $*color_header_background;
         color: $*color_header_text;
         margin: 0;
-        padding: 0.5em 20px;
+        padding: 0 20px;
+    }
+
+    .module-section-one .module-navlinks li {
+        display: inline;
+        line-height: 2.3em;
+        list-style: none;
     }
 
     .module-section-one .module-navlinks li a {
