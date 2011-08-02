@@ -239,7 +239,7 @@ function Page::print()
     <head>""";
         $this->print_head();
         $this->print_stylesheets();
-        $this->print_head_title();    
+        $this->print_head_title();
     println "</head>";
     $this->print_wrapper_start();
     $this->print_control_strip();
@@ -258,13 +258,20 @@ function Page::print()
     $this->print_module_section("one");
     """
             <div id="wrap">
+    """;
+            if ($*layout_type == "one-column-split") {
+                $this->print_module_section("two");
+            }
+    """
             <div id="content">
     """;
     $this->print_body();
     """
             </div>
     """;
-    $this->print_module_section("two");
+            if ($*layout_type != "one-column-split") {
+                $this->print_module_section("two");
+            }
     """
             </div><div style="clear:both;"></div>
         </div>
@@ -454,15 +461,24 @@ function Page::print_default_stylesheet () {
         $sidebar_positioning
     }
 
+    .one-column .module-section-two {
+        margin: 0;
+        position: relative;
+        width: auto;
+    }
+
     .module-section-two .module {
         border: solid 1px $*color_module_border;
         color: $*color_module_text;
         background-color: $*color_module_background;
         margin: 20px;
         margin-$sidebar_position_alt: 10px;
-        padding: 10px;        
+        padding: 10px;
     }
 
+    .one-column .module-section-two .module {
+        margin: 20px 0;
+    }
 
     .module-section-one .module {
         padding: .5em 20px;
@@ -561,6 +577,11 @@ function Page::print_default_stylesheet () {
         padding: 5px;
         list-style: none;
     }
+
+    .one-column .module-userprofile .module-content {
+        text-align: center;
+    }
+
     .module-calendar .module-content {
         text-align: center;
     }
@@ -571,9 +592,19 @@ function Page::print_default_stylesheet () {
     .module-search .search-form {
         text-align: right;
     }
+
+    .one-column .module-search .search-form {
+        text-align: left;
+    }
+
     .module-search .search-box {
         width: 100%;
     }
+
+    .one-column .module-search .search-box {
+        width: auto;
+    }
+
     /* wrap long content, particularly openid usernames */
     .module-pagesummary .ljuser {
         white-space: normal !important;
@@ -997,7 +1028,7 @@ function Page::print_default_stylesheet () {
     }
 
     .one-column #content { float: none; }
-    .one-column .module-section-two { float: none; padding-bottom: 10px; margin-bottom: 20px; }
+    .one-column .module-section-two { float: none; padding-bottom: 10px; }
     .one-column #wrap { padding-left: 20px; padding-right: 20px; }
     .two-columns-right #content { float: left; }
     .two-columns-right .module-section-two { float: left; }

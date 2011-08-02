@@ -37,8 +37,6 @@ set all_commentsubjects = true;
 
 set custom_colors_template = "%%new%% .userpic a { background-color: %%background%%; border: solid 1px %%foreground%%; }";
 
-set module_layout_sections = "none|(none)|two|Sidebar";
-
 propgroup colors {
     property use color_page_background;
     
@@ -137,11 +135,12 @@ propgroup modules {
     property use module_cuttagcontrols_group;
 
     property string module_navlinks_section_override {
-        values = "none|(none)|one|Header|two|Sidebar";
+        values = "none|(none)|one|Header|two|Sidebar|three|Footer";
         grouped = 1;
         }
 }
 
+set module_layout_sections = "none|(none)|two|Sidebar|three|Footer";
 set grouped_property_override = { "module_navlinks_section" => "module_navlinks_section_override" };
 
 set module_navlinks_section = "one";
@@ -234,15 +233,28 @@ function Page::print()
         $this->print_module_section("one");
     """
         <div id="wrap">
+
+    """;
+        if ($*layout_type == "one-column-split") {
+            $this->print_module_section("two");
+        }
+    """
             <div id="content">
     """;
                 $this->print_body();
     """
             </div>
     """;
+        if ($*layout_type != "one-column-split") {
             $this->print_module_section("two");
+        }
     """
         </div><div style="clear:both;"></div>
+        <div id="bottom">
+            """;
+            $this->print_module_section("three");
+            """
+        </div>
         <div id="footer">
         """;
             print safe """<div class="page-top"><a href="#">$*text_page_top</a></div>""";
@@ -409,16 +421,26 @@ q { font-style: italic;
 
 #wrap {
     $page_colors
+}
+
+#wrap,
+.two-columns #bottom {
     padding-$sidebar_position_alt: 200px; /* Fixed: to display the bkg image */
     padding-top: 10px;
 }
 
-.one-column #wrap {
+.one-column #wrap,
+.one-column #bottom {
     margin-left: 2em;
     margin-right: 2em;
 }
 
-.two-columns #wrap {
+.one-column #bottom {
+    margin-top: 1em;
+}
+
+.two-columns #wrap,
+.two-columns #bottom {
     margin-$sidebar_position: $*sidebar_width;
     padding-$sidebar_position: 60px;
 }
@@ -443,7 +465,6 @@ q { font-style: italic;
 .module-section-two {
     width: $*sidebar_width;
     max-width: $*sidebar_width;
-    height: 200px;
     $module_base_colors
 }
 
@@ -451,6 +472,19 @@ q { font-style: italic;
     position: absolute;
     $sidebar_position: 2em;
     top: 8em;
+}
+
+.one-column .module-section-two {
+    width: auto;
+    max-width: none;
+}
+
+.one-column-split .module-section-two {
+    margin-bottom: 1em;
+}
+
+.module-section-three {
+    $module_base_colors
 }
 
 .module-section-one ul {
@@ -492,23 +526,28 @@ q { font-style: italic;
     $header_hover_colors
 }
 
-.module-section-two a, .module-section-two .module-header a {
+.module-section-two a, .module-section-two .module-header a,
+.module-section-three a, .module-section-three .module-header a {
     $module_link_colors
 }
 
-.module-section-two a:visited, .module-section-two .module-header a:visited {
+.module-section-two a:visited, .module-section-two .module-header a:visited,
+.module-section-three a:visited, .module-section-three .module-header a:visited {
     $module_link_visited_colors
 }
 
-.module-section-two a:hover, .module-section-two .module-header a:hover {
+.module-section-two a:hover, .module-section-two .module-header a:hover,
+.module-section-three a:hover, .module-section-three .module-header a:hover {
     $module_link_hover_colors
 }
 
-.module-section-two a:active, .module-section-two .module-header a:active {
+.module-section-two a:active, .module-section-two .module-header a:active,
+.module-section-three a:active, .module-section-three .module-header a:active {
     $module_link_active_colors
 }
 
-.module-section-two h2 {
+.module-section-two h2,
+.module-section-three h2 {
     margin: 0;
     margin-bottom: 7px;
     padding: .2em;
@@ -519,11 +558,13 @@ q { font-style: italic;
     border-top: none;
 }
 
-.module-section-two ul {
+.module-section-two ul,
+.module-section-three ul {
     list-style-type: none;
     margin-left: .5em;
     padding: 0;
 }
+.module-section-two ul ul,
 .module-section-two ul ul {
     list-style-type: none;
     margin-left: .5em;
@@ -531,12 +572,14 @@ q { font-style: italic;
     margin-bottom: 0;
 }
 
-.module-section-two .module {
+.module-section-two .module,
+.module-section-three .module {
     $module_colors
     border-top: none;
 }
 
-.module-section-two .module:first-child {
+.module-section-two .module:first-child,
+.module-section-three .module:first-child {
     border-top: 1px solid $*color_module_border;
 }
 
@@ -585,7 +628,18 @@ q { font-style: italic;
 }
 
 .module-search .search-box { margin: .5em 0; width: 100%; }
+
+.one-column .module-search .search-box,
+.module-section-three .module-search .search-box {
+    width: auto;
+    }
+
 .module-search .search-form { margin: .5em; text-align: right; }
+
+.one-column .module-search .search-form,
+.module-section-three .module-search .search-form {
+    text-align: left;
+    }
 
 /* wrap long content, particularly openid usernames */
 .module-pagesummary .ljuser {
