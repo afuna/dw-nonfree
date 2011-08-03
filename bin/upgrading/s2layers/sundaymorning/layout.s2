@@ -135,12 +135,12 @@ propgroup modules {
     property use module_cuttagcontrols_group;
 
     property string module_navlinks_section_override {
-        values = "none|(none)|one|Header|two|Sidebar|three|Footer";
+        values = "none|(none)|one|Header|two|Main Module Section|three|Footer";
         grouped = 1;
         }
 }
 
-set module_layout_sections = "none|(none)|two|Sidebar|three|Footer";
+set module_layout_sections = "none|(none)|two|Main Module Section|three|Footer";
 set grouped_property_override = { "module_navlinks_section" => "module_navlinks_section_override" };
 
 set module_navlinks_section = "one";
