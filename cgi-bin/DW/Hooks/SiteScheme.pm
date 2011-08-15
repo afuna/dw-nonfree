@@ -34,9 +34,17 @@ LJ::Hooks::register_hook('modify_scheme_list', sub {
     @{$schemes} = (
         { scheme => "tropo-red" },
         { scheme => "tropo-purple" },
-        { scheme => "celerity-local" },
-        { scheme => "gradation-horizontal-local" },
-        { scheme => "gradation-vertical-local" },
+        { scheme => "celerity-local",
+            alt => 'siteskins.celerity.alt',
+            desc => 'siteskins.celerity.desc', },
+        { scheme => "gradation-horizontal-local",
+            alt => 'siteskins.gradation-horizontal.alt',
+            desc => 'siteskins.gradation-horizontal.desc',
+        },
+        { scheme => "gradation-vertical-local",
+            alt => 'siteskins.gradation-vertical.alt',
+            desc => 'siteskins.gradation-vertical.desc',
+        },
         { scheme => "lynx" },
     );
 });
