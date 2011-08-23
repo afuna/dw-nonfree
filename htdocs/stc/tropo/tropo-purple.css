@@ -45,9 +45,11 @@ body {
  */
 
 a:link,
-a:visited,
 .link {
     color: #3a155a;
+}
+a:visited {
+    color: #000000;
 }
 a:hover,
 a:active,
