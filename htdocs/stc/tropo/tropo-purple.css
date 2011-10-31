@@ -363,6 +363,26 @@ form, fieldset, legend, legend span {
      border: 1px solid #fff;
 }
 
+/* post page */
+.token:hover, .token.hover, .token:focus, .token.focus {
+    color: #7e27c1;
+    border-color: #5e3da6;
+}
+
+.token .token_remove:hover, .token .token_remove:focus {
+    color: #7e27c1;
+    background-color: #d3afec;
+}
+
+#iconselector_icons_list li:hover, .kwmenu .selected, #iconselector_icons_list .iconselector_selected {
+    border-color: #5e3da6;
+}
+
+.slidecontrols a:hover {
+    color: #7e27c1;
+}
+
+
 /* contextualhover.css */
 div.ContextualPopup div.Inner {
     background-color: #fff !important;
@@ -496,7 +516,8 @@ hr.hr {
 }
 input.text,
 textarea.text,
-select.select {
+select.select,
+.autocomplete_container {
     background: #fff url("/img/input-bg.gif") repeat-x 0 -1px;
     border: 1px solid #bbb;
     border-top: 1px solid #999;

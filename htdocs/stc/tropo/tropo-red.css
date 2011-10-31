@@ -294,10 +294,10 @@ form, fieldset, legend, legend span {
     border-color: #c1272c;
 }
 
-.simple-form .error input {
+.simple-form .error input, form .error input {
     border: 3px solid #ff0000;
 }
-.simple-form .error .error-msg {
+.simple-form .error .error-msg, form .error .error-msg {
     color: #ff0000;
     display: block;
 }
@@ -357,6 +357,27 @@ form, fieldset, legend, legend span {
 
 .preview-image {
      border: 1px solid #fff;
+}
+
+/* post page */
+.token:hover, .token.hover, .token:focus, .token.focus {
+    color: #c1272c;
+    border-color: #b66;
+}
+
+.token .token_remove:hover, .token .token_remove:focus {
+     color: #c1272c;
+     background-color: #ffd8d8;
+}
+#iconselector_icons_list li:hover, .kwmenu .selected, #iconselector_icons_list .iconselector_selected {
+    border-color: #c1272d;
+}
+.slidecontrols a:hover {
+    color: #b63333;
+}
+
+.ui-widget-header, a.component-header-hover, .selected {
+    color: #C1272D;
 }
 
 /* contextualhover.css */
@@ -493,7 +514,8 @@ hr.hr {
 }
 input.text,
 textarea.text,
-select.select {
+select.select,
+.autocomplete_container {
     background: #fff url("/img/input-bg.gif") repeat-x 0 -1px;
     border: 1px solid #bbb;
     border-top: 1px solid #999;

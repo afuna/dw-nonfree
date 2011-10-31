@@ -50,6 +50,10 @@ body {
     border-style: solid;
     border-width: 2em 0;
 }
+.ui-widget {
+    font-size: 0.75em;
+}
+
 #page {
     max-width: 80em;
     margin: 0 auto;
@@ -189,6 +193,18 @@ body {
 }
 #menu .appwidget-search input#search {
     width: 15.5em;
+}
+#menu .appwidget-search {
+    margin-left: 25em;
+}
+#menu .appwidget-search {
+    white-space: nowrap;
+}
+#menu .appwidget-search input {
+    max-width: 30%;
+}
+#menu .appwidget-search select {
+    max-width: 20%;
 }
 
 /**
@@ -391,4 +407,8 @@ form.simple-form fieldset ul {
 #page_talkread #entry, #page_talkread  #Comments .talk-comment,
 #page_inbox .InboxItem_Content {
     max-width: 80em;
+}
+
+.slidepanel {
+    margin-top: -2em;
 }
