@@ -376,7 +376,7 @@ form, fieldset, legend, legend span {
     color: #b63333;
 }
 
-.ui-widget-header, a.component-header-hover, .selected {
+.ui-widget-header, a.component-header-hover {
     color: #C1272D;
 }
 
