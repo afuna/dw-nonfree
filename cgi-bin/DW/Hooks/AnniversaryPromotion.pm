@@ -17,6 +17,7 @@ package DW::Hooks::AnniversaryPromotion;
 
 use strict;
 use LJ::Hooks;
+use LJ::Time;
 
 # use mysql date format:            year-month-date hour::min:seconds
 my $start_time = LJ::mysqldate_to_time( "2011-12-01 00:00:00", 1 );
