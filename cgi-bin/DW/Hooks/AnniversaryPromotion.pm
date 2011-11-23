@@ -18,11 +18,15 @@ package DW::Hooks::AnniversaryPromotion;
 use strict;
 use LJ::Hooks;
 
+# use mysql date format:            year-month-date hour::min:seconds
+my $start_time = LJ::mysqldate_to_time( "2011-12-01 00:00:00", 1 );
+my $end_time   = LJ::mysqldate_to_time( "2011-12-31 23:59:59", 1 );
+# warn sprintf( "Running shop promo from %s to %s\n", scalar gmtime( $START_TIME ), scalar gmtime( $END_TIME ) );
+
 
 # returns if the promotion is valid right now
 sub promo_valid {
-    # valid from Wed Dec  1 00:00:00 2010 UTC to Fri Dec 31 23:59:59 2010 UTC
-    return 0 if time < 1291161600 || time > 1293839999;
+    return 0 if time < $start_time|| time > $end_time;
     return 1;
 }
 
