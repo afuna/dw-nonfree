@@ -213,7 +213,7 @@ a:active,
     border: 1px solid #3a155a;
 }
 
-.select-list input, input.submit {
+.select-list input {
     color: #fff;
     background: #8356e6;
     border: 2px solid #f3d2fc;
