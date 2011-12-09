@@ -219,7 +219,7 @@ a:active,
     border-bottom: 2px solid #c1272d;
     border-right: 2px solid #c1272d;
 }
-.select-list input:active, input.submit:active {
+.select-list input:active {
     color: #eee;
     background: #f9818a;
     border: 2px solid #c1272d;
