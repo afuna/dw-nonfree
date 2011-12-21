@@ -404,6 +404,11 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
  * Temporary page-specific styling
  * /
 /* Comments */
+
+.talkform .disabled {
+    background: transparent !important;
+}
+
 .cmtbar.odd {
     border-bottom: 1px solid #7e27c1;
     border-right: 1px solid #7e27c1;
