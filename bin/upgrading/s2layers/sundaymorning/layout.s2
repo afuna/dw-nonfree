@@ -83,6 +83,8 @@ propgroup colors {
 
 propgroup images {
     property use image_background_page_group;
+    property use image_background_header_group;
+    property use image_background_header_height;
 }
 
 set image_background_page_repeat = "no-repeat";
@@ -271,9 +273,6 @@ function Page::print()
 function Page::print_default_stylesheet() {
     var string sidebar_position = "";
     var string sidebar_position_alt = "";
-    var string image_background_page_position = "100% 70px";
-    if ($*layout_type == "two-columns-right") { $sidebar_position = "right"; $sidebar_position_alt = "left"; $image_background_page_position = "0% 70px"; }
-    elseif ($*layout_type == "two-columns-left") { $sidebar_position = "left"; $sidebar_position_alt = "right"; }
 
     var string page_background_colors = generate_color_css( new Color, $*color_page_background, new Color );
     var string page_colors = generate_color_css( $*color_page_text, new Color, new Color );
@@ -284,11 +283,27 @@ function Page::print_default_stylesheet() {
 
     var string page_content_title_colors = generate_color_css( $*color_entry_title, $*color_entry_background, $*color_entry_border );
 
-    var string container_background = generate_background_css( $*image_background_page_url, $*image_background_page_repeat, $image_background_page_position, new Color );
-
     var string page_title_colors = generate_color_css( $*color_page_title, $*color_page_title_background, new Color );
     var string page_title_anchor_colors = generate_color_css( $*color_page_title, new Color, new Color );
     var string header_colors = generate_color_css( $*color_header_text, $*color_header_background, $*color_module_border );
+    var string header_background = generate_background_css($*image_background_header_url, $*image_background_header_repeat, $*image_background_header_position, $*color_header_background);
+
+    var string module_two_position = "8em";
+    var string image_background_page_position_top = "70px";
+    if ($*image_background_header_height > 0) {
+        $header_background = """
+            $header_background
+            height: """ + $*image_background_header_height + "px;";
+        $module_two_position = $*image_background_header_height + 20 + "px;";
+        $image_background_page_position_top = $*image_background_header_height + 20 + "px;";
+    }
+
+    var string image_background_page_position = "100% $image_background_page_position_top";
+    if ($*layout_type == "two-columns-right") { $sidebar_position = "right"; $sidebar_position_alt = "left"; $image_background_page_position = "0% $image_background_page_position_top"; }
+    elseif ($*layout_type == "two-columns-left") { $sidebar_position = "left"; $sidebar_position_alt = "right"; }
+
+    var string container_background = generate_background_css( $*image_background_page_url, $*image_background_page_repeat, $image_background_page_position, new Color );
+
     var string header_hover_colors = generate_color_css( $*color_header_hover, $*color_header_hover_background, new Color );
 
     var string module_base_colors = generate_color_css( $*color_module_text, new Color, new Color );
@@ -401,6 +416,7 @@ q { font-style: italic;
  
 #header {
     $page_title_colors
+    $header_background
     margin: 0;
     padding: 0;
 }
@@ -471,7 +487,7 @@ q { font-style: italic;
 .two-columns .module-section-two {
     position: absolute;
     $sidebar_position: 2em;
-    top: 8em;
+    top: $module_two_position;
 }
 
 .one-column .module-section-two {
