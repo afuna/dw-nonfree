@@ -33,6 +33,10 @@ body<=
     # for pages that require authentication
     my $remote = LJ::get_remote();
     return "<?needlogin?>" unless $remote;
+    return "Sorry, you must have confirmed your email to make a suggestion"
+        unless $remote->is_validated;
+    return "Sorry, suspended accounts can't make suggestions"
+        if $remote->is_suspended;
 
     my ( $ret, $suggestion, $response, $response2 );
     my $emailselected = 1;
