@@ -36,12 +36,12 @@ want to use.</p>
             <p>[% IF loop.first %]<b>[% who.name %]</b> [% END %][% paragraph %]</p>
         [%- END -%]
         [%- IF who.official -%]
-            <p>[%- FOREACH key IN o_keys -%]
-                [%- FOREACH journal IN who.official.$key -%]
+            [%- FOREACH key IN o_keys -%]
+                <p>[%- FOREACH journal IN who.official.$key -%]
                     [%- IF loop.first %][% IF loop.size == 1 %][% o_strings.$key.0 %][% ELSE %][% o_strings.$key.1 %][% END %]:[% END -%]
                     [%- IF loop.last and !loop.first %] and[% END %] [% journal %][% IF !(loop.last) and loop.size > 2 %],[% END -%]
-                [%- END -%]
-            [%- END -%]</p>
+                [%- END -%]</p>
+            [%- END -%]
         [%- END -%]
     </div>[%- END -%]
 [%- END -%]
