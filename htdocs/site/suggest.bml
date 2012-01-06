@@ -127,7 +127,7 @@ body<=
             $bugzilla_post .= "To post this entry to Bugzilla, use this link and change any of the fields as appropriate:<br /><br />&nbsp;&nbsp;&nbsp;<a href='";
     
             # oh my god bugzilla makes ugly URLs:
-            $bugzilla_post .= "http://bugs.dwscoalition.org/enter_bug.cgi?assigned_to=&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=enhancement&bug_status=NEW&comment=" . $bugzilla_desc . "&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&dependson=&description=&flag_type-1=X&flag_type-10=X&flag_type-11=X&flag_type-2=X&flag_type-3=X&flag_type-5=X&flag_type-7=X&form_name=enter_bug&keywords=&op_sys=All&priority=P-&product=Dreamwidth%20Development&qa_contact=&rep_platform=All&short_desc=" . $bugzilla_subject . "&target_milestone=-undecided-&version=1.0";
+            $bugzilla_post .= "http://bugs.dwscoalition.org/enter_bug.cgi?assigned_to=&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=enhancement&bug_status=NEW&comment=" . $bugzilla_desc . "&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&dependson=&description=&flag_type-1=X&flag_type-10=X&flag_type-11=X&flag_type-2=X&flag_type-3=X&flag_type-5=X&flag_type-7=X&form_name=enter_bug&keywords=from-suggestions&op_sys=All&priority=P-&product=Dreamwidth%20Development&qa_contact=&rep_platform=All&short_desc=" . $bugzilla_subject . "&target_milestone=-undecided-&version=1.0";
     
             $bugzilla_post .= "'>Post '$POST{title}' to Bugzilla</a>.<br /><br />Once you do, retag both this entry and the public entry it belongs with.";
     
