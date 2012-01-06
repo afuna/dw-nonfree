@@ -259,6 +259,10 @@ body {
     margin-bottom: 1em;
 }
 
+ul, ol {
+    margin-left: 1.5em;
+}
+
 /**
  * Content Layouts
  *
