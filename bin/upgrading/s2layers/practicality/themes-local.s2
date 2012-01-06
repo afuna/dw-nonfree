@@ -70,7 +70,7 @@ function Page::print_theme_stylesheet() {
         margin-right: 135px;
         }
 
-    span.metadata-item {
+    .metadata-item {
         color: $*color_entry_border;
         }
 
@@ -78,29 +78,29 @@ function Page::print_theme_stylesheet() {
         background-color: #D0C0B0;
         }
 
-    div.module-calendar th,
-    .page-archive div.month td.day-has-entries {
+    .module-calendar th,
+    .page-archive .month td.day-has-entries {
         background-color: $*color_module_title_background;
         }
 
-    div.module-calendar td.entry-day,
-    .page-archive div.month th {
+    .module-calendar td.entry-day,
+    .page-archive .month th {
         background-color: $*color_entry_title_background;
         }
 
-    div.module-calendar a {
+    .module-calendar a {
         color: #000060;
         }
 
-    div.module-calendar a:visited {
+    .module-calendar a:visited {
         color: #200040;
         }
 
-    div.module-calendar a:hover {
+    .module-calendar a:hover {
         color: $*color_module_link_hover;
         }
 
-    div.module-calendar a:hover {
+    .module-calendar a:active {
         color: $*color_module_link_active;
         }
     """;
