@@ -1502,29 +1502,33 @@ function Page::print_theme_stylesheet() {
 
     .navigation a,
     .month a,
-    .day  .entry a,
-    .page-tags .tags-container a {
+    .day .entry a,
+    .page-tags .tags-container a,
+    .page-icons .icons-container a {
         color: $*color_entry_link;
         }
 
     .navigation a:visited,
     .month a:visited,
     .day .entry a:visited,
-    .page-tags .tags-container a:visited {
+    .page-tags .tags-container a:visited,
+    .page-icons .icons-container a:visited {
         color: $*color_entry_link_visited;
         }
 
     .navigation a:hover,
     .month a:hover,
     .day .entry a:hover,
-    .page-tags .tags-container a:hover {
+    .page-tags .tags-container a:hover,
+    .page-icons .icons-container a:hover {
         color: $*color_entry_link_hover;
         }
 
     .navigation a:active,
     .month a:active,
     .day .entry a:active,
-    .page-tags .tags-container a:active {
+    .page-tags .tags-container a:active,
+    .page-icons .icons-container a:active {
         color: $*color_entry_link_active;
         }
     """;
@@ -2479,15 +2483,10 @@ function Page::print_theme_stylesheet() {
 
     .entry .userpic img, .comment .userpic img {
         box-shadow: 4px 5px 5px #94978B;
-        -o-box-shadow: 4px 5px 5px #94978B;
-        -moz-box-shadow: 4px 5px 5px #94978B;
-        -webkit-box-shadow: 4px 5px 5px #94978B;
         }
 
     .entry, .comment {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .entry-wrapper-odd .entry, .comment-wrapper-odd .comment, .text_noentries_day,
@@ -2507,14 +2506,10 @@ function Page::print_theme_stylesheet() {
 
     .month-wrapper {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .month .inner dl {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         padding: 10px;
         }
 
@@ -2540,23 +2535,25 @@ function Page::print_theme_stylesheet() {
         font-weight: bold;
         }
 
-    .page-tags #content h2 {
+    .tags-container,
+    .icons-container {
+        border-radius: 8px;
+        }
+
+    .tags-container h2,
+    .icons-container h2 {
         border-left: solid 1px $*color_tagspage_title_border;
         border-top: solid 1px $*color_tagspage_title_border;
         border-right: solid 3px $*color_tagspage_title_border;
         border-bottom: solid 3px $*color_tagspage_title_border;
         }
 
-    .tags-container {
+    .page-icons .comment {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .module-header {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .module-section-two h2 {
@@ -3234,15 +3231,10 @@ function Page::print_theme_stylesheet() {
 
     .entry .userpic img, .comment .userpic img {
         box-shadow: 4px 5px 5px #94978B;
-        -o-box-shadow: 4px 5px 5px #94978B;
-        -moz-box-shadow: 4px 5px 5px #94978B;
-        -webkit-box-shadow: 4px 5px 5px #94978B;
         }
 
     .entry, .comment {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .month {
@@ -3251,15 +3243,11 @@ function Page::print_theme_stylesheet() {
 
     .month .inner dl {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         padding: 10px;
         }
 
     .month-wrapper {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .month .day-has-entries {
@@ -3278,17 +3266,14 @@ function Page::print_theme_stylesheet() {
         font-weight: bold;
         }
 
-    .tags-container {
+    .tags-container,
+    .icons-container {
         border-radius: 8px;
         color: $*color_entry_text;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .module-header {
         border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
         }
 
     .module-calendar .entry-day,

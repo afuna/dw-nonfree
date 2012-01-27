@@ -107,11 +107,13 @@ propgroup colors {
     property Color color_navigation_text { des = "Page back/forwards text"; }
     property Color color_navigation_border { des = "Page back/forwards border"; }
 
-    property Color color_tagspage_background { des = "Tags page background"; }
-    property Color color_tagspage_border { des = "Tags page border"; }
-    property Color color_tagspage_title { des = "Tags page title text"; }
-    property Color color_tagspage_title_border { des = "Tags page title border"; }
-    property Color color_tagspage_title_background { des = "Tags page title background"; }
+    ### Also used for the custom Icons page; implemented later hence the inaccurate name.
+    property Color color_tagspage_background { des = "Tags and Icons page background"; }
+    property Color color_tagspage_border { des = "Tags and Iconspage border"; }
+    property Color color_tagspage_title { des = "Tags and Icons page title text"; }
+    property Color color_tagspage_title_border { des = "Tags and Icons page title border"; }
+    property Color color_tagspage_title_background { des = "Tags and Icons page title background"; }
+
 }
 
 propgroup images {
@@ -432,16 +434,6 @@ function Page::print_default_stylesheet () {
         z-index: 20;
      }
 
-    .tags-container {
-        background-color: $*color_tagspage_background;
-       border: 1px solid $*color_tagspage_border;
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    .page-tags #wrap {
-        margin-$sidebar_position_alt: 20px;
-    }
     .module {
         $module_background
     }
@@ -924,20 +916,6 @@ function Page::print_default_stylesheet () {
         display: block;
         }
 
-    .page-tags #content h2 {
-        padding: 0.2em;
-        margin: 0;
-        border: solid 1px $*color_tagspage_title_border;
-        color: $*color_tagspage_title;
-        background-color: $*color_tagspage_title_background;
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
-
-    .page-tags #content h2 {
-        margin-right: 10px;
-    }
-
     .month-wrapper, #archive-month dl {
         padding: 10px;
         position: relative;
@@ -1004,6 +982,100 @@ function Page::print_default_stylesheet () {
         display: inline-block;
         padding-left: 5px;
     }
+
+    /*--- Tags Page ---*/
+
+    .page-tags #wrap {
+        margin-$sidebar_position_alt: 20px;
+        }
+
+    .tags-container {
+        background-color: $*color_tagspage_background;
+        border: 1px solid $*color_tagspage_border;
+        margin-top: 10px;
+        padding: 10px;
+        }
+
+    .tags-container h2 {
+        background-color: $*color_tagspage_title_background;
+        border: solid 1px $*color_tagspage_title_border;
+        color: $*color_tagspage_title;
+        font-size: 1.2em;
+        margin: 0 0 20px;
+        padding: .2em;
+        }
+
+    /*--- Icons Page ---*/
+
+    .page-icons #wrap {
+        margin-$sidebar_position_alt: 20px;
+        }
+
+    .icons-container {
+        background-color: $*color_tagspage_background;
+        border: 1px solid $*color_tagspage_border;
+        margin-top: 10px;
+        padding: 10px;
+        }
+
+    .icons-container h2 {
+        background-color: $*color_tagspage_title_background;
+        border: solid 1px $*color_tagspage_title_border;
+        color: $*color_tagspage_title;
+        font-size: 1.2em;
+        margin: 0 0 20px;
+        padding: .2em;
+        }
+
+    .sorting-options ul {
+        padding-left: 0;
+        text-align: center;
+        }
+
+    .sorting-options ul li {
+        display: inline;
+        list-style: none;
+        }
+
+    .page-icons .comment {
+        margin: 0;
+        padding: 0;
+        }
+
+    .page-icons .icon {
+        margin: 1em 0;
+        }
+
+    .icon-image {
+        float: left;
+        clear: left;
+        margin-bottom: .25em;
+        min-width: 100px;
+        padding-right: 1em;
+        }
+
+    .icon-info {
+        min-height: 100px;
+        }
+
+    .icon-info span {
+        font-weight: bold;
+        }
+
+    .icon-info .default {
+        text-decoration: underline;
+        }
+
+    .icon-info .keywords ul {
+        display: inline;
+        padding-left: 0;
+        }
+
+    .icon-info .keywords ul li {
+        display: inline;
+        list-style: none;
+        padding: 0;
+        }
 
     #commenttext {
         width: 95%;
