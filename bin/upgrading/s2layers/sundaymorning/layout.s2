@@ -1041,7 +1041,7 @@ $userpic_css
 .icon-info .keywords ul li {
     display: inline;
     list-style: none;
-    padding: 0;
+    padding: 0 .25em 0 0;
     }
 
 #commenttext {
