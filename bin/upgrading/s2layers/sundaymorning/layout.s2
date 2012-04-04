@@ -28,6 +28,8 @@ propgroup presentation {
     property use reg_firstdayofweek;
     property use entry_datetime_format_group;
     property use comment_datetime_format_group;
+    property use all_entrysubjects;
+    property use all_commentsubjects;
 }
 
 set layout_type = "two-columns-left";
@@ -706,22 +708,19 @@ $userpic_css
     border: none;
 }
 
-.comment-title {
-    $comment_title_font
-    }
-
-.comment-title h4 {
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    padding: 0;
-}
 .entry-title, .comment-title {
     padding: .2em;
 }
+
 .entry-title {
     $entry_title_font
 }
+
+.comment-title {
+    $comment_title_font
+    margin: 0;
+    }
+
 .entry-wrapper .entry, .comment, .text_noentries_day {
     $entry_colors
     margin-top: 100px;
@@ -733,6 +732,14 @@ $userpic_css
     border: none;
     $entry_title_colors
 }
+
+.no-subject .entry .entry-title,
+.no-subject .comment .comment-title {
+    background: none;
+    border: none;
+    padding: 0;
+    }
+
 .entry-wrapper .entry-title a, .comment-wrapper .comment-title a {
     $entry_title_link_colors
 }

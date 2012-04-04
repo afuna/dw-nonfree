@@ -29,6 +29,8 @@ propgroup presentation {
     property use reg_firstdayofweek;
     property use entry_datetime_format_group;
     property use comment_datetime_format_group;
+    property use all_entrysubjects;
+    property use all_commentsubjects;
 }
 
 set layout_type = "two-columns-right";
@@ -354,15 +356,19 @@ function Page::print_default_stylesheet () {
     if($*userpics_position == "left") {
         $userpic_css = """
         .entry-title, .comment-title { margin: 0; }
-        .has-userpic .entry .header { margin: 0 0 0 $entry_header_margin; }
-        .has-userpic .comment .header { margin: 0 0 0 $comment_header_margin; }
+        .has-userpic .entry .header,
+        .has-userpic .entry .poster { margin: 0 0 0 $entry_header_margin; }
+        .has-userpic .comment .header,
+        .has-userpic .comment .poster { margin: 0 0 0 $comment_header_margin; }
         .entry .userpic a, .comment .userpic a { left: 10px; right: auto; }""";
     }
     elseif($*userpics_position == "right") {
         $userpic_css = """
         .entry-title, .comment-title { margin: 0; }
-        .has-userpic .entry .header { margin: 0 $entry_header_margin 0 0; }
-        .has-userpic .comment .header { margin: 0 $comment_header_margin 0 0; }
+        .has-userpic .entry .header,
+        .has-userpic .entry .poster { margin: 0 $entry_header_margin 0 0; }
+        .has-userpic .comment .header,
+        .has-userpic .comment .poster { margin: 0 0 0 $comment_header_margin; }
         .entry .userpic a, .comment .userpic a { right: 10px; left: auto; }""";
     }
 
@@ -648,22 +654,18 @@ function Page::print_default_stylesheet () {
         border: none;
     }
 
-.comment-title {
-    $comment_title_font
-    }
-
-    .comment-title h4 {
-        font-size: inherit;
-        font-weight: inherit;
-        margin: 0;
-        padding: 0;
-    }
     .entry-title, .comment-title {
-        padding: 0.2em;
+        padding: .2em;
     }
     .entry .entry-title {
         $entry_title_font
     }
+
+    .comment-title {
+        $comment_title_font
+        margin: 0;
+    }
+
     .entry-title a, .comment-title a {
         text-decoration: none;
     }
@@ -712,6 +714,14 @@ function Page::print_default_stylesheet () {
         color: $*color_entry_subject_alt;
         background-color: $*color_entry_subject_alt_background;
     }
+
+    .no-subject .entry .entry-title,
+    .no-subject .comment .comment-title {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
     .entry-wrapper-even .entry-title a, .comment-wrapper-even .comment-title a {
         color: $*color_entry_subject_alt;
     }
@@ -736,6 +746,11 @@ function Page::print_default_stylesheet () {
         padding: 10px 0;
     }
 
+    .page-recent .journal-type-P.has-userpic.no-subject .entry-content,
+    .page-day .journal-type-P.has-userpic.no-subject .entry-content {
+        padding-top: 25px;
+    }
+
     .no-userpic .comment {
         margin-top: 20px;
     }
@@ -747,10 +762,6 @@ function Page::print_default_stylesheet () {
         display: inline;
         margin-right: .3em;
         line-height: 1.4em;
-        }
-
-    .partial .comment-title h4 {
-        display: inline;
         }
 
     .partial .comment-poster:before {
