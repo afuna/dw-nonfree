@@ -2548,10 +2548,6 @@ function Page::print_theme_stylesheet() {
         border-bottom: solid 3px $*color_tagspage_title_border;
         }
 
-    .page-icons .comment {
-        border-radius: 8px;
-        }
-
     .module-header {
         border-radius: 8px;
         }

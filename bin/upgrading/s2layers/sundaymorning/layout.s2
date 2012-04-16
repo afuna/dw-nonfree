@@ -1011,14 +1011,7 @@ $userpic_css
     list-style: none;
     }
 
-.page-icons .comment {
-    background: transparent;
-    border: none;
-    margin: 0;
-    padding: 0;
-    }
-
-.page-icons .icon {
+.icons-container .icon {
     margin: 1em 0;
     }
 
@@ -1034,20 +1027,20 @@ $userpic_css
     min-height: 100px;
     }
 
-.icon-info span {
-    font-weight: bold;
-    }
-
 .icon-info .default {
     text-decoration: underline;
     }
 
-.icon-info .keywords ul {
+.icon-info span {
+    font-weight: bold;
+    }
+
+.icon-keywords ul {
     display: inline;
     padding-left: 0;
     }
 
-.icon-info .keywords ul li {
+.icon-keywords ul li {
     display: inline;
     list-style: none;
     padding: 0 .25em 0 0;
