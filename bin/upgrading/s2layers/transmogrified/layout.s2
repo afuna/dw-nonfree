@@ -368,7 +368,7 @@ function Page::print_default_stylesheet () {
         .has-userpic .entry .header,
         .has-userpic .entry .poster { margin: 0 $entry_header_margin 0 0; }
         .has-userpic .comment .header,
-        .has-userpic .comment .poster { margin: 0 0 0 $comment_header_margin; }
+        .has-userpic .comment .poster { margin: 0 $comment_header_margin 0 0; }
         .entry .userpic a, .comment .userpic a { right: 10px; left: auto; }""";
     }
 
