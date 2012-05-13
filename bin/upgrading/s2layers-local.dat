@@ -1,6 +1,8 @@
 ################################################################
 # base filename            layer type      parent
 
+siteviews/themes-local     theme+          siteviews/layout
+
 colorside/themes-local     theme+          colorside/layout
 
 modish/themes-local        theme+          modish/layout
