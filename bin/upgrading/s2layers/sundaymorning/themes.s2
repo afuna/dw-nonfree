@@ -406,6 +406,75 @@ set color_navigation_text = "#444000";
 set image_background_page_url = "sundaymorning/pinkswirls.png";
 
 
+#NEWLAYER: sundaymorning/purplesquiggle
+layerinfo type = "theme";
+layerinfo name = "Purple Squiggle";
+layerinfo redist_uniq = "sundaymorning/purplesquiggle";
+layerinfo author_name = "alyndra";
+
+set theme_authors = [ { "name" => "alyndra", "type" => "user" } ];
+
+##===============================
+## Page Colors
+##===============================
+
+set color_page_background = "#49406c";
+set color_page_link = "#fed0fb";
+set color_page_link_hover = "#b6fcee";
+set color_page_link_visited = "#a5e4d6";
+set color_page_text = "#f1efdd";
+set color_page_title = "#f1efdd";
+set color_page_title_background = "#49406c";
+set color_header_background = "#49406c";
+set color_header_hover = "#b6fcee";
+set color_header_hover_background = "#49406c";
+set color_header_text = "#f1efdd";
+
+##===============================
+## Entry Colors
+##===============================
+
+set color_entry_background = "#49406c";
+set color_entry_border = "#49406c";
+set color_entry_link = "#4cedd2";
+set color_entry_link_hover = "#b6fcee";
+set color_entry_link_visited = "#a5e4d6";
+set color_entry_text = "#f1efdd";
+set color_entry_title = "#fed0fb";
+set color_entry_title_background = "#49406c";
+set color_entry_title_border = "#49406c";
+
+##===============================
+## Module Colors
+##===============================
+
+set color_module_background = "#49406c";
+set color_module_border = "#49406c";
+set color_module_link = "#fed0fb";
+set color_module_link_hover = "#b6fcee";
+set color_module_link_visited = "#a5e4d6";
+set color_module_text = "#f1efdd";
+set color_module_title = "#f1efdd";
+set color_module_title_background = "#49406c";
+set color_module_title_border = "#f1efdd";
+set color_navigation_background = "#49406c";
+set color_navigation_border = "#49406c";
+set color_navigation_text = "#f1efdd";
+
+##===============================
+## Fonts
+##===============================
+
+set font_module_heading_size = ".9";
+set font_module_heading_units = "em";
+
+##===============================
+## Images
+##===============================
+
+set image_background_page_url = "sundaymorning/greensquiggle.png";
+
+
 #NEWLAYER: sundaymorning/purpleswirls
 layerinfo type = "theme";
 layerinfo name = "Purple Swirls";
