@@ -3,6 +3,8 @@
 
 siteviews/themes-local     theme+          siteviews/layout
 
+bannering/themes-local     theme+          bannering/layout
+
 colorside/themes-local     theme+          colorside/layout
 
 modish/themes-local        theme+          modish/layout
