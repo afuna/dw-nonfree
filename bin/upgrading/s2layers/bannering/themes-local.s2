@@ -34,7 +34,7 @@ set color_entry_border = "#999";
 
 set color_module_title = "#000";
 set color_module_border = "#999";
-set color_navlinks_current = "#fff";
+set color_navlinks_link_current = "#fff";
 set color_navlinks_link = "#b12a3b";
 set color_navlinks_link_visited = "#5a6ffc";
 
@@ -96,7 +96,7 @@ set color_entry_border = "#ccc";
 
 set color_module_title = "#fff";
 set color_module_border = "#ccc";
-set color_navlinks_current = "#000";
+set color_navlinks_link_current = "#000";
 set color_navlinks_link = "#900";
 set color_navlinks_link_visited = "#600";
 
