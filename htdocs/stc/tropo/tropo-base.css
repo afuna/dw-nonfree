@@ -129,7 +129,7 @@ body {
  * The menu follows the content in the markup source, so we absolutely position it underneath the masthead
  */
 
-#menu {
+nav {
     position: absolute;
     top: 8.833333em;
     left: 0;
@@ -138,20 +138,20 @@ body {
     line-height: 2.5em;
     clear: both;
 }
-#menu ul {
+nav ul {
     margin-left: 0;
 }
-#menu ul li {
+nav ul li {
     float: left;
     position: relative;
     display: block;
     height: 100%;
     width: 0;
 }
-#menu ul > li {
+nav ul > li {
     width: auto;
 }
-#menu ul li a {
+nav ul li a {
     display: block;
     text-decoration: none;
     text-indent: 2em;
@@ -159,51 +159,51 @@ body {
 }
 
 /* .hover is a class added by js for the currently hovered/focused menu */
-#menu ul li.hover a {
+nav ul li.hover a {
     height: 100%;
     width: auto;
 }
-#menu ul li.hover a:hover {
+nav ul li.hover a:hover {
     cursor: pointer;
 }
-#menu ul li ul {
+nav ul li ul {
     display: none;
 }
-#menu ul li.hover ul {
+nav ul li.hover ul {
     display: block;
     position: absolute;
     top: 2.5em;
     left: 0;
     width: 18em;
 }
-#menu ul li ul li {
+nav ul li ul li {
     float: none;
     width: 100%;
 }
-#menu ul li ul li a {
+nav ul li ul li a {
     text-align: left;
     display: block;
     width: 100%;
 }
-#menu .appwidget-search {
+nav .appwidget-search {
     text-align: right;
     line-height: 2.1em;
     padding-right: .833333em;
     position: static;
 }
-#menu .appwidget-search input#search {
+nav .appwidget-search input#search {
     width: 15.5em;
 }
-#menu .appwidget-search {
+nav .appwidget-search {
     margin-left: 25em;
 }
-#menu .appwidget-search {
+nav .appwidget-search {
     white-space: nowrap;
 }
-#menu .appwidget-search input {
+nav .appwidget-search input {
     max-width: 30%;
 }
-#menu .appwidget-search select {
+nav .appwidget-search select {
     max-width: 20%;
 }
 
@@ -211,16 +211,16 @@ body {
  * Footer
  */
 
-#footer {
+footer {
     width: 100%;
     height: 4.166667em;
     clear: both;
     padding: .45em 0 0 .63em;
 }
-#footer ul {
+footer ul {
     overflow: hidden;
 }
-#footer ul li {
+footer ul li {
     list-style: none;
     float: left;
     margin-right: .8em;
