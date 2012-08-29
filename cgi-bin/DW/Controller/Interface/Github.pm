@@ -6,7 +6,7 @@
 #
 # Authors:
 #      Afuna <coder.dw@afunamatata.com>
-#      Pau Amma <pauamma@dreamwidth.org>#
+#      Pau Amma <pauamma@dreamwidth.org>
 #
 # Copyright (c) 2012 by Dreamwidth Studios, LLC.
 #
@@ -18,13 +18,20 @@
 use strict;
 use warnings;
 
+use DW::Routing;
 use JSON ();
 
-# Magic to make it run when appropriate URL is posted and retrieve post data
+DW::Routing->register_string( "/interface/github", \&hooks_handler, app => 1 );
 
-my $event = JSON::decode( mumble );
-my $hook_type = $event->{ ... }); # Whatever github uses for the hook type
-my %table = ( ... ); # hooktype => [ sub { do stuff }, sub { do more stuff } ]
-foreach my $action ( @{$table->{$hooktype}} ) {
-    $action->( $event );
+sub hooks_handler {
+    my $r = DW::Request->get;
+    # my $event = JSON::decode( mumble );
+    # my $hook_type = $event->{ ... }); # Whatever github uses for the hook type
+    # my %table = ( ... ); # hooktype => [ sub { do stuff }, sub { do more stuff } ]
+    # foreach my $action ( @{$table->{$hooktype}} ) {
+    #     $action->( $event );
+    # }
+    return $r->OK;
 }
+
+1;
