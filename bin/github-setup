@@ -24,7 +24,7 @@ fi
 
 if [ -z "$username" -o -z "$password" -o -z "$domain" ]
 then
-    echo "Incomplete information. Make sure you've entered the Github username & password, and your siteroot"
+    echo "Incomplete information. Make sure you've entered the Github username & password, and your siteroot" >&2
     exit 1
 fi
 
