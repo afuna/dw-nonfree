@@ -28,15 +28,33 @@ sub hooks_handler {
     my $r = DW::Request->get;
 
     # parse out the payload
-    my $payload = $r->post_args->{payload};
-    my $event = JSON::jsonToObj( $payload );
-    warn Data::Dumper::Dumper( $event );
+    my $payload = JSON::jsonToObj( $r->post_args->{payload} );
 
-    # my $hook_type = $event->{ ... }); # Whatever github uses for the hook type
-    # my %table = ( ... ); # hooktype => [ sub { do stuff }, sub { do more stuff } ]
-    # foreach my $action ( @{$table->{$hooktype}} ) {
-    #     $action->( $event );
-    # }
+    my $hook_type = exists $payload->{pull_request} ? "pull_request" :
+                    exists $payload->{commits}    ? "push"      :
+                    "";
+
+    my %table = (
+            pull_request => [ sub {
+                # comment on zilla
+                warn "pull request hook: comment on zilla";
+            } ],
+            push => [ sub {
+                # post to changelog
+                warn "commits hook: post to changelog";
+            }, sub {
+                # comment on zilla
+                warn "commits hook: post to zilla";
+            }, sub {
+                # mark zilla as resolved
+                warn "commits hook: mark as resolved";
+            } ],
+    );
+
+    foreach my $action ( @{$table{$hook_type}} ) {
+        $action->( $payload );
+    }
+
     return $r->OK;
 }
 
