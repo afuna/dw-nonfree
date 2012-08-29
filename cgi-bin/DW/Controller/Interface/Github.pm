@@ -26,7 +26,12 @@ DW::Routing->register_string( "/interface/github", \&hooks_handler,
 
 sub hooks_handler {
     my $r = DW::Request->get;
-    # my $event = JSON::decode( mumble );
+
+    # parse out the payload
+    my $payload = $r->post_args->{payload};
+    my $event = JSON::jsonToObj( $payload );
+    warn Data::Dumper::Dumper( $event );
+
     # my $hook_type = $event->{ ... }); # Whatever github uses for the hook type
     # my %table = ( ... ); # hooktype => [ sub { do stuff }, sub { do more stuff } ]
     # foreach my $action ( @{$table->{$hooktype}} ) {
