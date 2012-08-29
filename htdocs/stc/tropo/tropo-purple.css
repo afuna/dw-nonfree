@@ -65,23 +65,23 @@ a:active,
  * Menu navigation
  */
 
-#menu {
+nav {
     background: #f3d2fc;
 }
-#menu ul li a {
+nav ul li.topnav a {
     background: transparent url(/img/tropo-red/icon_menu_swirl_dropdown.png) 0.833333em 0.916667em no-repeat;
     color: #111;
 }
 /* .hover is a class added by js for the currently hovered/focused menu */
-#menu ul li.hover a {
+nav ul li.hover a {
     background-color: #5e3da6;
     color: #fff;
 }
-#menu ul li.hover a:hover {
+nav ul li.hover a:hover {
     background-color: #3a155a;
     color: #fff;
 }
-#menu ul li.hover ul {
+nav ul li.hover ul {
     background-color: #5e3da6;
 }
 
@@ -89,7 +89,7 @@ a:active,
  * Footer
  */
 
-#footer {
+footer {
     background: #f3d2fc;
 }
 
