@@ -20,6 +20,7 @@ use warnings;
 
 use DW::Routing;
 use JSON ();
+use XMLRPC::Lite;
 
 DW::Routing->register_string( "/interface/github", \&hooks_handler,
                                 app => 1, methods => { POST => 1 } );
@@ -37,7 +38,23 @@ sub hooks_handler {
     my %table = (
             pull_request => [ sub {
                 my $payload = $_[0];
+
+                my $bugzilla = $LJ::GITHUB{bugzilla};
+                my $username = $bugzilla->{username};
+                my $password = $bugzilla->{password};
+                my $server = $bugzilla->{server};
+                return unless defined $username && defined $password && defined $server;
+
                 my $pull_request = $payload->{pull_request};
+
+                # we're looking for anything that looks like a bug id
+                # in the form of: "close / fix / address bug 123, 456, and 789"
+                my $pull_text = "$pull_request->{title} $pull_request->{body}";
+                my ( $closes, $bugs ) =
+                    ( $pull_text =~ /(?:(close|fix|address)e?(?:s|d)? )?bugs?:? *([\d ,\+&#and]+)/i );
+                my @bug_ids = grep { $_ + 0 } split( /(\d+)/, $bugs );
+                return unless @bug_ids;
+
                 my $msg = sprintf( "Pull Request %d: %s (%s)\n",
                                     $payload->{number},
                                     $payload->{action},
@@ -49,7 +66,20 @@ sub hooks_handler {
                                     $pull_request->{title},
                                     $pull_request->{body}
                                 );
-                warn "$msg";
+
+                my $xmlrpc = XMLRPC::Lite->new;
+                $xmlrpc->proxy(
+                        "http://$server/xmlrpc.cgi",
+                        agent => "$LJ::SITENAME Changelog Hook ($LJ::ADMIN_EMAIL)"
+                );
+
+                foreach my $id ( @bug_ids ) {
+                    my $res = $xmlrpc->call( "Bug.add_comment", {
+                        id => $id, comment => $msg,
+                        Bugzilla_login =>  $username,
+                        Bugzilla_password => $password
+                    } );
+                }
             } ],
             push => [ sub {
                 # post to changelog
