@@ -31,13 +31,25 @@ sub hooks_handler {
     my $payload = JSON::jsonToObj( $r->post_args->{payload} );
 
     my $hook_type = exists $payload->{pull_request} ? "pull_request" :
-                    exists $payload->{commits}    ? "push"      :
+                    exists $payload->{commits}      ? "push"         :
                     "";
 
     my %table = (
             pull_request => [ sub {
-                # comment on zilla
-                warn "pull request hook: comment on zilla";
+                my $payload = $_[0];
+                my $pull_request = $payload->{pull_request};
+                my $msg = sprintf( "Pull Request %d: %s (%s)\n",
+                                    $payload->{number},
+                                    $payload->{action},
+                                    $pull_request->{user}->{login}
+                                );
+
+                $msg   .= sprintf( "%s\n\n%s\n%s",
+                                    $pull_request->{html_url},
+                                    $pull_request->{title},
+                                    $pull_request->{body}
+                                );
+                warn "$msg";
             } ],
             push => [ sub {
                 # post to changelog
