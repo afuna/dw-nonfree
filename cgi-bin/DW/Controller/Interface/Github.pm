@@ -21,7 +21,8 @@ use warnings;
 use DW::Routing;
 use JSON ();
 
-DW::Routing->register_string( "/interface/github", \&hooks_handler, app => 1 );
+DW::Routing->register_string( "/interface/github", \&hooks_handler,
+                                app => 1, methods => { POST => 1 } );
 
 sub hooks_handler {
     my $r = DW::Request->get;
