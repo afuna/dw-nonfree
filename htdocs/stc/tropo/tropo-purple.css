@@ -281,7 +281,7 @@ table caption {
 }
 
 table.grid, table.grid td {
-    border: 1px solid #999;    
+    border: 1px solid #999;
 }
 
 .select-list li, .NotificationTable td {
@@ -409,17 +409,18 @@ div.ContextualPopup div.Inner a, div.ContextualPopup div.Inner a:visited {
     background: transparent !important;
 }
 
-.cmtbar.odd {
+.comment-wrapper-odd .header {
     border-bottom: 1px solid #7e27c1;
     border-right: 1px solid #7e27c1;
+    background-color: #c0c0c0;
 }
-.cmtbar.even {
+.comment-wrapper-even .header {
     border-bottom: 1px solid #d3afec;
     border-right: 1px solid #d3afec;
+    background-color: #e2e2e2;
 }
-td.odd { background-color: #c0c0c0; }
-td.even { background-color: #e2e2e2; }
-td.screened {background-color: #B79BC2 !important;}
+
+.screened .header {background-color: #B79BC2 !important;}
 
 /* inbox */
 .folders a {
