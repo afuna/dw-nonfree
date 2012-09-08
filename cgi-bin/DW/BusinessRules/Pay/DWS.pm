@@ -20,6 +20,8 @@ package DW::BusinessRules::Pay;
 
 use strict;
 
+use base 'DW::BusinessRules::Pay';
+
 use Carp qw/ confess /;
 
 use constant SECS_IN_DAY => 86400;
