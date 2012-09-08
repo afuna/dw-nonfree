@@ -21,7 +21,6 @@ package DW::BusinessRules::Pay;
 use strict;
 
 use Carp qw/ confess /;
-use DateTime;
 
 use constant SECS_IN_DAY => 86400;
 use constant CONVERSION_RATE => 0.7;
@@ -48,10 +47,10 @@ sub convert {
     my ( $from_type, $dest_type, $months, $days, $seconds ) = @_;
 
     confess "invalid paid time type $from_type"
-        unless $from_type =~ /^premium|paid$/;
+        unless $from_type =~ /^(?:premium|paid)$/;
 
     confess "invalid destination account type $dest_type"
-        unless $dest_type =~ /^premium|paid$/;
+        unless $dest_type =~ /^(?:premium|paid)$/;
 
     confess "redundant conversion from $from_type to $dest_type"
         if $from_type eq $dest_type;
