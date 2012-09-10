@@ -16,7 +16,7 @@
 # or redistribute it, with or without modifications.
 #
 
-package DW::BusinessRules::Pay;
+package DW::BusinessRules::Pay::DWS;
 
 use strict;
 
