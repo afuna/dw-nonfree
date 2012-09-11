@@ -61,17 +61,17 @@ sub convert {
         unless $months || $days || $seconds;
 
     if ( $from_type eq 'paid' and $dest_type eq 'premium' ) { # paid to premium
-        
+
         # first, convert any seconds value supplied
         $seconds = int( $seconds * CONVERSION_RATE ) if $seconds;
 
         # convert individual days to seconds and add on
-        $seconds += int( $days * CONVERSION_RATE * SECS_IN_DAY ) if $days; 
+        $seconds += int( $days * CONVERSION_RATE * SECS_IN_DAY ) if $days;
 
         # convert months to seconds and add on
         #   A 30-day month is assumed as per existing business logic
         $seconds += int( $months * 30 * CONVERSION_RATE * SECS_IN_DAY ) if $months;
-  
+
     } else { # premium to paid
 
         # again, first with the seconds.
@@ -84,7 +84,7 @@ sub convert {
 
         # then the months
         $seconds += int ( $months * 30 / CONVERSION_RATE * SECS_IN_DAY ) if $months;
-    
+
     }
 
     return $seconds;
