@@ -78,6 +78,23 @@
             official:
                 - misskat
                 - dw_support
+        -   name: Alierak
+            img: http://www.dreamwidth.org/userpic/314317/7805
+            bio:
+                - |
+                    is Dreamwidth's backup sysadmin on call, helping Mark wrangle servers
+                    and keeping an eye out for problems. He has approximately two decades of
+                    experience with Unix systems and open source, resulting in ninja-like reflexes
+                    for troubleshooting and bug hunting. He became <s>disillusioned</s> familiar
+                    with the LiveJournal codebase in 2006 when Brad announced a cross-site
+                    scripting contest offering permanent accounts for reporting security bugs
+                    (Alierak won three and maintains a healthy mistrust of our HTML cleaner).
+                - |
+                    He is also a sysadmin at a major university, husband and father of two, and
+                    enjoys building or fixing things, cooking, and playing with math. He can
+                    often be found singing or playing various instruments in church.
+            official:
+                - alierak
 -   name: Community Project Leaders
     note: "People who are currently working on major projects for Dreamwidth!"
     people:
