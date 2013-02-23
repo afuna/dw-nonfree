@@ -221,6 +221,17 @@
                     IRC with The Awesomest Girlfriend. He's a permanent resident of There. His
                     alignment shifts randomly between Useful Evil, Chaotic Punny,
                     and Ergative Absolutive.
+        -   name: Deborah
+            img: http://www.dreamwidth.org/userpic/5456520/37793
+            bio:
+                - |
+                    co-leads the accessibility team. She spends her time writing accessibility
+                    improvements for the Dreamwidth code, as well as educating the other developers
+                    and designers about accessibility. In her other life she works in library
+                    technology, where she's gained a reputation as That Person Who Will Glare
+                    at You If Your Library Software Isn't Accessible.
+            official:
+                - | dw_accessibility
         -   name: Ricky Buchanan
             img: http://www.dreamwidth.org/userpic/529540/6
             bio:
