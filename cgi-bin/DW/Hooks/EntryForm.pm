@@ -53,6 +53,11 @@ LJ::Hooks::register_hook( 'faqlink', sub {
     my ( $faq, $text ) = @_;
     my $ret;
 
+    my $faqobj = LJ::Faq->load ( $faq );
+    if ( ! $faqobj ) {
+        return 0;
+    }
+
     $ret .= "<a target='blank' href='$LJ::SITEROOT/support/faqbrowse?faqid=" . $faq . "'>" .  $text . "</a>";
 
     return $ret;
