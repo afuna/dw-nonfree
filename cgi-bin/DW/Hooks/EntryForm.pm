@@ -55,14 +55,14 @@ LJ::Hooks::register_hook( 'faqlink', sub {
 
     # Keep a hash of faqnames => ids because that'll be
     # nonfree-specific
-    my $faqs = {
+    my %faqs = (
         "alttext" => 207, # "What's the description of an image for?"
-    };
-    my $faq = $faqs->{$faqname};
+    );
+    my $faq = $faqs{$faqname};
 
     my $faqobj = LJ::Faq->load ( $faq );
     if ( ! $faqobj ) {
-        return 0;
+        return;
     }
 
     $ret .= "<a target='blank' href='$LJ::SITEROOT/support/faqbrowse?faqid=" . $faq . "'>" .  $text . "</a>";
