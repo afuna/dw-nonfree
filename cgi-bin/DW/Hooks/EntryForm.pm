@@ -58,7 +58,7 @@ LJ::Hooks::register_hook( 'faqlink', sub {
     my %faqs = (
         "alttext" => 207, # "What's the description of an image for?"
     );
-    return unless exists $faqs{$faqname}
+    return unless exists $faqs{$faqname};
 
     my $faq = $faqs{$faqname};
     my $faqobj = LJ::Faq->load( $faq )
