@@ -174,20 +174,20 @@
             img: http://www.dreamwidth.org/userpic/261/6
             bio:
                 - |
-                    (the Information Architect) joined Dreamwidth
-                    because she's passionate about online community and user experiences, as
-                    evidenced by her work running the LJ community no_lj_ads. As Mistress of
-                    Project Organization, she has insatiable needs to collate and organize
-                    information of all kinds, mostly manifesting in the site wiki and stalking
+                    (the Information Architect) has insatiable needs to collate and organize
+                    information of all kinds, mostly manifesting in the site wiki and rallying
                     everyone to make sure things are properly documented and categorized. If
                     you ask her where someone put something, she can tell you in three seconds
-                    or less ... unless you mean her keys.
+                    or less ... unless you mean her keys.  This leaves her in an excellent
+                    position to assist new contributors. She also does development work, back to
+                    front and in between.
                 - |
                     Audra lives in Seattle, WA, where she works as a bioinformatics software
                     engineer, which involves sifting through massive amounts of data using code
                     and math for biology research.
             official:
                 - dw_wiki
+                - dw_styles
         -   name: Andrea Nall
             img: http://www.dreamwidth.org/userpic/262/6
             bio:
