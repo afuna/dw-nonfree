@@ -10,7 +10,7 @@ Common code for Tropospherical site schemes, refactored for inheritance.
     Jesse Proulx <jproulx@jproulx.net>
     Elizabeth Lubowitz <grrliz@gmail.com>
 
-Copyright (c) 2010-2011 by Dreamwidth Studios, LLC.
+Copyright (c) 2010-2013 by Dreamwidth Studios, LLC.
 
 This program is free software; you may redistribute it and/or modify it under
 the same terms as Perl itself.  For a copy of the license, please reference
@@ -23,11 +23,24 @@ the same terms as Perl itself.  For a copy of the license, please reference
             'stc/reset.css',
             'stc/jquery/jquery.ui.theme.smoothness.css',
             'stc/lj_base-app.css',
-            'stc/base-colors-light.css',
+            'stc/base-colors-light.css' );
+        dw_scheme.need_res({ group => 'default' },
             'stc/tropo/tropo-base.css',
-            'stc/tropo/tropo-' _ tropo_color _ '.css' );
-        dw_scheme.need_res({ group => 'jquery' }, 'js/nav-jquery.js' );
-        dw_scheme.need_res({ group => 'default' }, 'js/nav.js' ); -%]
+            'stc/tropo/tropo-' _ tropo_color _ '.css',
+            'js/nav.js' );
+        dw_scheme.need_res({ group => 'jquery' },
+            'stc/tropo/tropo-base.css',
+            'stc/tropo/tropo-' _ tropo_color _ '.css',
+            'js/nav-jquery.js' );
+        dw_scheme.need_res({ group => 'foundation' },
+                'stc/css/foundation.css',
+                'stc/css/schemes/tropo/tropo-base.css',
+                'stc/css/schemes/tropo/tropo-' _ tropo_color _ '.css',
+                'js/jquery/jquery-1.8.3.js',
+                'js/foundation/vendor/custom.modernizr.js',
+                'js/foundation/foundation/foundation.js',
+                'js/foundation/foundation/foundation.topbar.js' );
+    -%]
 [%- END -%]
 
 [%- BLOCK block.page -%]
@@ -47,15 +60,49 @@ the same terms as Perl itself.  For a copy of the license, please reference
                 because of incompatibilities with JAWS and
                 Firefox %]
                 <div id="masthead" role="banner">
+[% IF resource_group == "foundation" %]
+                    <div class="row">
+                    <div class="columns large-4 small-12">
+[% END %]
                     <span id="logo">
                         [% PROCESS block.logo %]
                     </span>
+[% IF resource_group == "foundation" %]
+                    </div>
+                   
+                    <div class="columns large-8 small-12"> 
+                    <div id="account-links" role="navigation">
+                        [% PROCESS block.accountlinks %]
+                    </div>
+                    </div>
+                    </div>
+[% END %]
                 </div>
+[% IF resource_group == "foundation" %]
+                <div class="row">
+                        <nav role="navigation" class="top-bar">
+                            <ul class="title-area">
 
+                            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+                            </ul>
+                            <section class="top-bar-section">
+                            [% PROCESS block.menunav %]
+                            <ul class="right" role="search">
+                            <li class="has-form">
+                            [% dw_scheme.search_render %]
+                            </li>
+                            </ul>
+                            </section>
+                        </nav>
+                </div>
+[% END %]
+                
                 <div id="content" role="main" [% sections.contentopts %]>
                 <h1>[% sections.title %]</h1>
                 [% content %]
                 </div>
+
+[% IF resource_group != "foundation" %]
                 <div id="account-links" role="navigation">
                     [% PROCESS block.accountlinks %]
                 </div>
@@ -66,13 +113,23 @@ the same terms as Perl itself.  For a copy of the license, please reference
                     </div>
                 </nav>
                 <footer role="contentinfo">
+[% END %]
+[% IF resource_group == "foundation" %]
+                <footer role="contentinfo" class="row">
+[% END %]
                     [% PROCESS block.footer %]
                 </footer>
             </div>
         </div>
         [% dw_scheme.final_body_html %]
+[% IF resource_group == "foundation" %]
+  <script>
+    $(document).foundation();
+  </script>        
+[% ELSE %]
+  <div id="shim-alpha"> </div>
+[% END %]
 
-        <div id="shim-alpha"> </div>
     </body>
 </html>
 [%- END -%]

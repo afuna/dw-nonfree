@@ -1,0 +1,58 @@
+/** Tropospherical Red CSS
+ *
+ * Authors:
+ *     Janine Smith <janine@netrophic.com>
+ *     Jesse Proulx <jproulx@jproulx.net>
+ *     Elizabeth Lubowitz <grrliz@gmail.com>
+ *     Denise Paolucci <denise@dreamwidth.org>
+ *
+ * Copyright (c) 2009 by Dreamwidth Studios, LLC.
+ *
+ * This program is NOT free software or open-source; you can use it as an
+ * example of how to implement your own site-specific extensions to the
+ * Dreamwidth Studios open-source code, but you cannot use it on your site
+ * or redistribute it, with or without modifications.
+ *
+ */
+
+/**
+ * Dreamwidth Site Scheme
+ *
+ * Standard layout for Dreamwidth
+ *
+ * Mockups designed by grrliz, hence grrliz.css
+ *
+ * @project         Dreamwidth Site Design
+ * @author          Jesse Proulx
+ * @date            2009-01-07
+ * @version         Alpha
+ * @revision        $Revision$
+ * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
+ *
+ * @colordef        #f7f7f7 Almost White (body background)
+ * @colordef        #111111 Almost Black (copy)
+ */
+ 
+$primary-color: #c1272d;
+$neutral-primary-color: #c29b9b;
+$muted-neutral-primary-color: #d1ced2;
+$dark-primary-color: #8b0000;
+$muted-dark-primary-color: #bb6666;
+$muted2-dark-primary-color: #b63333;
+
+$faint-accent: #e9e9e9;
+
+$muted-primary-color: #f4717a;
+$light-primary-color: #ffd8d8;
+$muted-light-primary-color: #ffafb6;
+
+$opposite-color: #c7e0f6;
+$light-opposite-color: #ecf6ff;
+
+$error-color: #ff0000;
+$light-alternate: #fcf6db;
+$muted-light-alternate: #ffdfc0;
+
+$text-color: #111111;
+
+@import "tropo-colors";

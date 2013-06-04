@@ -43,14 +43,16 @@ HEAD
         LJ::set_active_resource_group( 'jquery' );
         LJ::need_res( { group => 'jquery' }, 'js/homepage_loggedin.js' );
 
+        $ret .= '<div class="row">';
         my $panels = DW::Panel->init( u => $remote );
-        $ret .= '<div id="primary">';
+        $ret .= '<div id="primary" class="large-8 small-12 columns">';
         $ret .= $panels->render_primary;
         $ret .= '</div>';
 
-        $ret .= '<div id="secondary">';
+        $ret .= '<div id="secondary" class="large-4 small-12 columns">';
         $ret .= $panels->render_secondary;
-        $ret .= '</div><div class="clear-floats"></div>';
+        $ret .= '</div>';
+        $ret .= '</div>';
     }
     else {
         # logged-out homepage
@@ -58,7 +60,9 @@ HEAD
         use DW::InviteCodes;
 
         LJ::need_res( "js/tropo/homepage.js" );
-        LJ::need_res( "stc/tropo/homepage.css" );
+        LJ::need_res( { group => "default" }, "stc/tropo/homepage.css" );
+        LJ::need_res( { group => "jquery" }, "stc/tropo/homepage.css" );
+        LJ::need_res( { group => "foundation" }, "stc/css/schemes/tropo/homepage.css" );
 
         $headextra .= <<HEAD;
 <script type="text/javascript">
@@ -77,8 +81,8 @@ HEAD
         $headextra .= "</script>\n";
 
         $ret .= <<HTML;
-<div id="intro-box">
-    <div id="intro-box-main">
+<div id="intro-box" class="row collapse">
+    <div id="intro-box-main" class="columns large-7 small-12">
         <div id="intro-border-main-top"></div>
         <div id="intro-border-main-bottom"></div>
         <div id="intro-border-main-left">
@@ -96,14 +100,8 @@ HTML
         $ret .= <<HTML;
         </div>
     </div>
-    <div id="intro-box-create">
-        <div id="intro-border-create-top"></div>
-        <div id="intro-border-create-bottom"></div>
-        <div id="intro-border-create-right">
-            <div id="intro-border-create-bottomright"></div>
-            <div id="intro-border-create-topright"></div>
-        </div>
-        <div id="intro-create-content">
+    <div id="intro-box-create" class="columns large-5 small-12">
+        <div id="intro-create-content" >
 HTML
         $ret .= "<h1>" . BML::ml( ".create.join_dreamwidth", { sitename => $LJ::SITENAMESHORT } ) . "</h1>\n";
 
@@ -175,9 +173,10 @@ HTML
         push @{$columns[1]->{items}}, [ 'http://dw-codesharing.dreamwidth.org/', 'codeshare' ]
             if $LJ::USE_ACCT_CODES;
 
+        $ret .= '<div class="row">';
         foreach my $column ( @columns ) {
             my $name = $column->{name};
-            $ret .= "    <div id=\"links-$name\" class=\"links-column\">\n";
+            $ret .= "    <div id=\"links-$name\" class=\"column large-4 small-12\">\n";
             $ret .= "        <h2>" . BML::ml( ".links.$name", { sitename => $LJ::SITENAMESHORT } ) . "</h2>\n";
             $ret .= "        <dl>\n";
             foreach my $item ( @{$column->{items}} ) {
@@ -194,7 +193,7 @@ HTML
             $ret .= "        <p><small>" . BML::ml( ".links.$name." . $column->{footnote}, { sitename => $LJ::SITENAMESHORT } ) . "</small></p>\n" if defined $column->{footnote};
             $ret .= "    </div>\n";
         }
-        $ret .= "</div>\n";
+        $ret .= "</div></div>\n";
     }
 
     return $ret;
