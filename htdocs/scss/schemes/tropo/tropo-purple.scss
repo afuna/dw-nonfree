@@ -29,18 +29,14 @@
  * @revision        $Revision$
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  *
- * @colordef        #f7f7f7 Almost White (body background)
- * @colordef        #111111 Almost Black (copy)
  */
- 
+
 $primary-color: #3a155a;
 $neutral-primary-color: #c29b9b;
 $muted-neutral-primary-color: #d1ced2;
 $dark-primary-color: #8b0000;
 $muted-dark-primary-color: #bb6666;
 $muted2-dark-primary-color: #b63333;
-
-$faint-accent: #f3d2fc;
 
 $muted-primary-color: #5e3da6;
 $light-primary-color: #ffd8d8;
@@ -54,5 +50,9 @@ $light-alternate: #fcf6db;
 $muted-light-alternate: #ffdfc0;
 
 $text-color: #111111;
+$page-background: #f7f7f7;
+$link-color: $primary-color;
+$link-visited-color: $dark-primary-color;
+$link-hover-color: $muted-primary-color;
 
-@import "tropo-colors";
+@import "schemes/skin-colors";

@@ -24,26 +24,18 @@
  *
  * @project         Dreamwidth Site Design
  * @author          Jesse Proulx
- * @date    w        2009-01-07
+ * @date            2009-01-07
  * @version         Alpha
  * @revision        $Revision$
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  */
 
-$topbar-bg: #DDDDDD;
-
+$topbar-bg: #dddddd;
 @import "foundation";
 
 body {
     font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
 }
-
-/**
- * Default browser font size is 16px, we want 12px. All width/height measurements
- * are now calculated using the element's font-size in pixels.
- *
- * For example, a 30px wide box with a font-size of 12px = 30/12 = 2.5em
- */
 
 #canvas {
     font-size: 1em;
@@ -51,9 +43,6 @@ body {
     margin: 0;
     border-style: solid;
     border-width: 2em 0;
-}
-.ui-widget {
-    font-size: 0.75em;
 }
 
 #page {
@@ -70,9 +59,6 @@ body {
     border-bottom: 0.5em solid #F4717A;
     border-top: 0.5em solid #E3E3E3;
 }
-#masthead .inner {
-    @include grid-row(false);
-}
 
 #masthead #logo {
     display: block;
@@ -80,7 +66,7 @@ body {
 }
 
 #nav-login-form {
-   margin-top: 1em; 
+   margin-top: 1em;
 }
 
 #account-links {
@@ -122,31 +108,11 @@ body {
 
 /**
  * Menu navigation
- *
- * The menu follows the content in the markup source, so we absolutely position it underneath the masthead
  */
 
-/* nav .appwidget-search {
-    text-align: right;
-    line-height: 2.1em;
-    padding-right: .833333em;
-    position: static;
+nav {
+    background-color: $topbar-bg;
 }
-nav .appwidget-search input#search {
-    width: 15.5em;
-}
-nav .appwidget-search {
-    margin-left: 25em;
-}
-nav .appwidget-search {
-    white-space: nowrap;
-}
-nav .appwidget-search input {
-    max-width: 30%;
-}
-nav .appwidget-search select {
-    max-width: 20%;
-} */
 
 /**
  * Footer
@@ -157,6 +123,7 @@ footer {
     clear: both;
     padding: .45em 0 0 .63em;
     overflow: auto;
+    background-color: $topbar-bg;
 
     ul {
         overflow: hidden;
@@ -170,7 +137,7 @@ footer {
         }
 
     }
-    
+
     p { font-size: .8em; }
 }
 
@@ -209,129 +176,4 @@ footer {
 
 ul, ol {
     margin-left: 1.5em;
-}
-
-/**
- * Content Layouts
- *
- * Content layouts are determined based on the class assigned to #content. Potential layouts include:
- * -- wide sidebars
- * -- thin sidebars
- * -- equal width/height columns
- * -- full page (default)
- *
- * Columns/rows inside of #content are named primary, secondary, tertiary, etc and
- * content is placed inside based on order of importance.
- */
-
-
-/**
- * Panels are generic boxes for divs inside of #content
- */
-
-#content #primary .panel,
-#content #secondary .panel {
-    width: 100%;
-    border-width: 1px 0 1px 0;
-    border-style: solid;
-    margin: 0 0 .166667em 0;
-    overflow: hidden;
-}
-#content #primary .panel h2 {
-    line-height: 2em;
-    border-style: none;
-    font: bold 1.5em/2 Arial, sans-serif;
-}
-#content #primary .panel p {
-    clear: both;
-}
-#content #secondary .panel h2 {
-    line-height: 30px;
-    border-style: none;
-    font: bold 1.166667em/2.142857 Arial, sans-serif;
-}
-#content .panel .sidebar ul {
-     list-style: none;
-     margin-left: 0;
-}
-#content .panel ul {
-    list-style: circle;
-    margin-left: 2em;
-}
-
-/**
- * Panels have different styles for different content layouts
- */
-
-.layout-wide-right-sidebar #primary .panel .sidebar {
-    float: left;
-    width: 22%;
-}
-.layout-wide-right-sidebar #primary .panel .contents {
-    float: left;
-    padding-top: 6px;
-    padding-left: 14px;
-    width: 75%;
-    line-height: 1.8;
-}
-.layout-wide-right-sidebar #secondary .panel .contents {
-    margin: 0.5em 0;
-    line-height: 1.8;
-}
-
-/* panel-first class is added through js */
-#content .panel-first {
-    border-top: 0 !important;
-}
-
-/**
- * Scheme-specific blocks
- */
-
-#updateinsobject {
-    z-index: 5;
-}
-
-.highlight-box, .message-box,  .error-box {
-    margin: 1em auto;
-    padding: 0.5em;
-}
-.message-box .title {
-    font-weight: bold;
-}
-.message-box h1.title {
-    text-align: center;
-}
-
-table.grid {
-    border-collapse: collapse;
-}
-
-form.simple-form fieldset ul {
-    padding-top: 3em;
-}
-
-.subheader {
-    margin: 1em 0 0;
-    padding: 0.2em;
-    font-size: 110%;
-}
-
-/* update.bml */
-#draft {
-    font-size: medium;
-}
-
-/* for pages which we know may have wide content, and we want this content visible */
-.self_wrap  #content {
-    overflow: visible;
-}
-
-#page_talkread #entry, #page_talkread  #Comments .talk-comment,
-#page_inbox .InboxItem_Content {
-    max-width: 80em;
-}
-
-.slidepanel {
-    margin-top: -2em;
 }
