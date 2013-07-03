@@ -29,8 +29,6 @@
  * @revision        $Revision$
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  *
- * @colordef        #f7f7f7 Almost White (body background)
- * @colordef        #111111 Almost Black (copy)
  */
 
 $primary-color: #c1272d;
@@ -57,4 +55,8 @@ $link-color: $primary-color;
 $link-visited-color: $dark-primary-color;
 $link-hover-color: $muted-primary-color;
 
+$topbar-bg: #dddddd;
+
+@import "foundation";
+@import "schemes/tropo/tropo-base";
 @import "schemes/skin-colors";

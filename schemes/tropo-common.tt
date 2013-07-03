@@ -34,7 +34,6 @@ the same terms as Perl itself.  For a copy of the license, please reference
             'js/nav-jquery.js' );
         dw_scheme.need_res({ group => 'foundation' },
                 'stc/css/foundation.css',
-                'stc/css/schemes/tropo/tropo-base.css',
                 'stc/css/schemes/tropo/tropo-' _ tropo_color _ '.css',
                 'js/jquery/jquery-1.8.3.js',
                 'js/foundation/vendor/custom.modernizr.js',
