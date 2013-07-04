@@ -30,13 +30,8 @@
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  */
 
-body {
-    font: 100%/1 Verdana, Helvetica, Arial, sans-serif;
-}
-
 #canvas {
-    font-size: 1em;
-    line-height: 1.5;
+    border-color: $strong-accent-color;
     margin: 0;
     border-style: solid;
     border-width: 2em 0;
@@ -147,30 +142,4 @@ footer {
     margin-top: 4.6em;
     margin-bottom: 2.75em;
     @include grid-row(false);
-}
-#content h1 {
-    font: bold 2em/1.5 Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-#content h2 {
-    font: 1.5em/1.5 Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-#content p {
-    margin-bottom: 1em;
-}
-#content p.note {
-    font-style: italic;
-    font-size: .8em;
-}
-#content ul.bullet-list {
-    list-style: disc outside;
-    margin-left: 2em;
-    margin-bottom: 1em;
-}
-
-ul, ol {
-    margin-left: 1.5em;
 }
