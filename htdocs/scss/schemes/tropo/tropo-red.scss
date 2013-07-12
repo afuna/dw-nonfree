@@ -63,8 +63,21 @@ $anchor-font-color:                    #c1272d;
 $anchor-font-color-visited:            shade( $anchor-font-color, 30% );
 $anchor-font-color-hover:              lighten( $anchor-font-color, 30% );
 
-$topbar-bg: #dddddd;
-$nav-bg: #dddddd;
+// navigation
+$topbar-bg:                            #e3e3e3;
+$topbar-link-weight:                   normal;
+$topbar-link-color:                    #111;
+$topbar-link-bg-hover:                 $strong-accent-color;
+$topbar-link-bg-active:                $strong-accent-color;
+
+$topbar-dropdown-link-color:           #fff;
+$topbar-dropdown-link-bg:              #f4717a;
+
+$topbar-menu-link-color:               $topbar-link-color;
+$topbar-menu-icon-color:               $topbar-link-color;
+
+$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl.png";
+$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
 
 $include-html-classes: true;
 @import "foundation";
