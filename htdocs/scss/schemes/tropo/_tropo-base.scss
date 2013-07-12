@@ -121,6 +121,10 @@
         background: transparent;
         text-indent: 0;
     }
+
+    select {
+        @extend %top-bar-form-element;
+    }
 }
 
 /**

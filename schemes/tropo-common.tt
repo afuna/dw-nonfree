@@ -81,9 +81,7 @@ the same terms as Perl itself.  For a copy of the license, please reference
                         </ul>
                         <section class="top-bar-section">
                         [% PROCESS block.menunav %]
-                        <ul class="right" role="search">
-                        <li class="has-form">
-                        [% dw_scheme.search_render %]
+                        [% PROCESS block.search %]
                         </li>
                         </ul>
                         </section>
