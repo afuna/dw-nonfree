@@ -63,7 +63,11 @@
 
 #account-links {
     text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
+
 #account-links ul li {
     list-style: none;
     float: left;
@@ -101,6 +105,26 @@
 /**
  * Menu navigation
  */
+
+@mixin navigation-position($masthead-height, $topbar-height) {
+    .top-bar {
+        position: absolute;
+        top: $masthead-height;
+        left: 0;
+        right: 0;
+        max-width: 80em;
+    }
+
+    #masthead {
+        height: $masthead-height;
+    }
+
+    div#content {
+        margin-top: $topbar-height;
+    }
+}
+
+@include navigation-position( 7em, $topbar-height );
 
 .top-bar .top-bar-section  {
     .topnav a {
