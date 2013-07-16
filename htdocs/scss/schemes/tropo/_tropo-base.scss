@@ -40,6 +40,8 @@
 #page {
     position: relative;
     z-index: 1;
+    max-width: $row-width;
+    margin: 0 auto;
 }
 
 /**
@@ -63,44 +65,58 @@
 
 #account-links {
     text-align: right;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
-#account-links ul li {
-    list-style: none;
-    float: left;
-    margin: 0 .5em;
-}
-#account-links #nav-login-form {
-    margin-bottom: 0em;
+    ul {
+        float: right;
+        clear: both;
+        margin: 0;
+    }
 
-    label[for="login_remember_me"] {
-        display: inline;
-        margin-right: 1em;
+    li {
+        list-style: none;
+        float: left;
+        margin: 0 .5em;
+
+        &:after {
+            content: "•";
+            margin-left: .5em;
+        }
+        &:last-child:after {
+            content: "";
+            margin-left: 0;
+        }
+    }
+
+
+    .ljuser {
+        font-size: 1.5em;
+        line-height: 1;
+    }
+
+    .ljuser img {
+        vertical-align: middle !important;
+    }
+
+    form {
+        margin-bottom: 0;
     }
 }
 
-
-#account-links-text {
-    float: right;
-    padding-right: 1em;
-}
-#account-links-text .ljuser {
-    font-size: 1.5em;
-}
-#account-links-text .ljuser img {
-    vertical-align: middle !important;
-}
 #account-links-userpic {
-    float: right;
+    max-height: 7em;
+    margin-left: 1em;
 }
-#account-links-userpic img {
-    margin-top: 0.75em;
-    max-height: 90px;
-    max-width: 90px;
-}
+
+
+// #account-links #nav-login-form {
+//     margin-bottom: 0em;
+
+//     label[for="login_remember_me"] {
+//         display: inline;
+//         margin-right: 1em;
+//     }
+// }
+
 
 /**
  * Menu navigation
@@ -109,10 +125,9 @@
 @mixin navigation-position($masthead-height, $topbar-height) {
     .top-bar {
         position: absolute;
-        top: $masthead-height;
+        top: 0;
         left: 0;
         right: 0;
-        max-width: 80em;
     }
 
     #masthead {
@@ -120,7 +135,15 @@
     }
 
     div#content {
-        margin-top: $topbar-height;
+        padding-top: $topbar-height;
+    }
+
+    #account-links {
+        position: absolute;
+        top: -$masthead-height;
+        right: 0;
+        font-size: emCalc(14px);
+        min-width: 80em;
     }
 }
 
