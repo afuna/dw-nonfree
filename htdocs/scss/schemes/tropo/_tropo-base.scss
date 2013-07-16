@@ -54,11 +54,6 @@
     border-top: 0.5em solid $topbar-bg;
 }
 
-#masthead #logo {
-    display: block;
-    margin-top: 2.5em;
-}
-
 #nav-login-form {
    margin-top: 1em;
 }
@@ -144,6 +139,10 @@
         right: 0;
         font-size: emCalc(14px);
         min-width: 80em;
+    }
+
+    #logo {
+        line-height: $masthead-height - 1em;
     }
 }
 
