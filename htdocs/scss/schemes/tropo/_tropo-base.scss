@@ -54,13 +54,7 @@
     border-top: 0.5em solid $topbar-bg;
 }
 
-#nav-login-form {
-   margin-top: 1em;
-}
-
 #account-links {
-    text-align: right;
-
     ul {
         float: right;
         clear: both;
@@ -95,6 +89,10 @@
     form {
         margin-bottom: 0;
     }
+
+     label.inline {
+        text-align: right;
+    }
 }
 
 #account-links-userpic {
@@ -102,15 +100,21 @@
     margin-left: 1em;
 }
 
+#account-links-text {
+    text-align: right;
+}
 
-// #account-links #nav-login-form {
-//     margin-bottom: 0em;
+#nav-login-form {
+    line-height: 1;
 
-//     label[for="login_remember_me"] {
-//         display: inline;
-//         margin-right: 1em;
-//     }
-// }
+    label, input {
+        margin-bottom: 0.5em;
+    }
+
+    a {
+        line-height: 2em;
+    }
+}
 
 
 /**
@@ -137,8 +141,12 @@
         position: absolute;
         top: -$masthead-height;
         right: 0;
-        font-size: emCalc(14px);
-        min-width: 80em;
+        margin-top: 1em;
+        width: $row-width;
+    }
+
+    #nav-login-form, #account-links-text {
+        font-size: emCalc(12px);
     }
 
     #logo {
