@@ -81,7 +81,7 @@ the same terms as Perl itself.  For a copy of the license, please reference
                     [% PROCESS block.accountlinks %]
                 </div>
 
-                <nav role="navigation" class="top-bar row">
+                <nav role="navigation" class="top-bar contain-to-grid">
                     <ul class="title-area">
                     <li class="name"></li>
 
@@ -95,7 +95,7 @@ the same terms as Perl itself.  For a copy of the license, please reference
                     </section>
                 </nav>
 
-                <footer role="contentinfo" class="row">
+                <footer role="contentinfo" class="contain-to-grid">
                     [% PROCESS block.footer %]
                 </footer>
             </div>
