@@ -62,9 +62,9 @@
 
 @mixin navigation-position($masthead-height, $topbar-height) {
 
-    @include account-links( right, $masthead-height, -$masthead-height + 1em );
+    @include header-nav( right, $masthead-height, -$masthead-height + 1em );
 
-    .top-bar {
+    .skin-nav {
         position: absolute;
         top: 0;
         left: 0;
