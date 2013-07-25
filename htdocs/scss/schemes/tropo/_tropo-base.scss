@@ -30,6 +30,8 @@
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  */
 
+@import "schemes/skin-colors", "schemes/nav";
+
 #canvas {
     border-color: $strong-accent-color;
     margin: 0;
@@ -54,74 +56,14 @@
     border-top: 0.5em solid $topbar-bg;
 }
 
-#account-links {
-    ul {
-        float: right;
-        clear: both;
-        margin: 0;
-    }
-
-    li {
-        list-style: none;
-        float: left;
-        margin: 0 .5em;
-
-        &:after {
-            content: "•";
-            margin-left: .5em;
-        }
-        &:last-child:after {
-            content: "";
-            margin-left: 0;
-        }
-    }
-
-
-    .ljuser {
-        font-size: 1.5em;
-        line-height: 1;
-    }
-
-    .ljuser img {
-        vertical-align: middle !important;
-    }
-
-    form {
-        margin-bottom: 0;
-    }
-
-     label.inline {
-        text-align: right;
-    }
-}
-
-#account-links-userpic {
-    max-height: 7em;
-    margin-left: 1em;
-}
-
-#account-links-text {
-    text-align: right;
-}
-
-#nav-login-form {
-    line-height: 1;
-
-    label, input {
-        margin-bottom: 0.5em;
-    }
-
-    a {
-        line-height: 2em;
-    }
-}
-
-
 /**
  * Menu navigation
  */
 
 @mixin navigation-position($masthead-height, $topbar-height) {
+
+    @include account-links( right, $masthead-height, -$masthead-height + 1em );
+
     .top-bar {
         position: absolute;
         top: 0;
@@ -135,22 +77,6 @@
 
     div#content {
         padding-top: $topbar-height;
-    }
-
-    #account-links {
-        position: absolute;
-        top: -$masthead-height;
-        right: 0;
-        margin-top: 1em;
-        width: $row-width;
-    }
-
-    #nav-login-form, #account-links-text {
-        font-size: emCalc(12px);
-    }
-
-    #logo {
-        line-height: $masthead-height - 1em;
     }
 }
 
