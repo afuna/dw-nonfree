@@ -56,6 +56,10 @@
     border-top: 0.5em solid $topbar-bg;
 }
 
+#account-links {
+    right: 0;
+}
+
 /**
  * Menu navigation
  */
@@ -64,23 +68,19 @@
 
     @include header-nav( right, $masthead-height, -$masthead-height + 1em );
 
-    .skin-nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    #masthead {
-        height: $masthead-height;
-    }
-
     div#content {
         padding-top: $topbar-height;
     }
 }
 
 @include navigation-position( 7em, $topbar-height );
+
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
 .top-bar .top-bar-section  {
     .topnav a {
