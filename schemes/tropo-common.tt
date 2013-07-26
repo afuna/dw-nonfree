@@ -93,7 +93,7 @@ the same terms as Perl itself.  For a copy of the license, please reference
                     </section>
                 </nav>
 
-                <footer role="contentinfo" class="contain-to-grid">
+                <footer role="contentinfo">
                     [% PROCESS block.footer %]
                 </footer>
             </div>
