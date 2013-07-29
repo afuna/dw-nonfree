@@ -1,0 +1,147 @@
+/** Tropospherical CSS
+ *
+ * Authors:
+ *     Janine Smith <janine@netrophic.com>
+ *     Jesse Proulx <jproulx@jproulx.net>
+ *     Elizabeth Lubowitz <grrliz@gmail.com>
+ *     Denise Paolucci <denise@dreamwidth.org>
+ *
+ * Copyright (c) 2009 by Dreamwidth Studios, LLC.
+ *
+ * This program is NOT free software or open-source; you can use it as an
+ * example of how to implement your own site-specific extensions to the
+ * Dreamwidth Studios open-source code, but you cannot use it on your site
+ * or redistribute it, with or without modifications.
+ *
+ */
+
+/**
+ * Dreamwidth Site Scheme
+ *
+ * Standard layout for Dreamwidth
+ *
+ * Mockups designed by grrliz, hence grrliz.css
+ *
+ * @project         Dreamwidth Site Design
+ * @author          Jesse Proulx
+ * @date            2009-01-07
+ * @version         Alpha
+ * @revision        $Revision$
+ * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
+ */
+
+@import "schemes/skin-colors", "schemes/nav";
+
+#canvas {
+    border-color: $strong-accent-color;
+    margin: 0;
+    border-style: solid;
+    border-width: 2em 0;
+}
+
+#page {
+    position: relative;
+    z-index: 1;
+    max-width: $row-width;
+    margin: 0 auto;
+}
+
+/**
+ * Masthead is the space for our logo and account links
+ */
+
+#masthead {
+    background: none repeat scroll 0 0 #ffffff;
+    border-bottom: 0.5em solid $topbar-dropdown-link-bg;
+    border-top: 0.5em solid $topbar-bg;
+}
+
+#account-links {
+    right: 0;
+}
+
+/**
+ * Menu navigation
+ */
+
+@mixin navigation-position($masthead-height, $topbar-height) {
+
+    @include header-nav( right, $masthead-height, -$masthead-height + 1em );
+
+    div#content {
+        padding-top: $topbar-height;
+    }
+}
+
+@include navigation-position( 7em, $topbar-height );
+
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.top-bar .top-bar-section  {
+    .topnav a {
+        background: $topbar-bg url($topbar-bgimage) 0.833333em 50% no-repeat;
+        text-indent: 15px;
+        text-decoration: none;
+    }
+
+    .hover a, .moved a {
+        background: $topbar-dropdown-link-bg url($topbar-bgimage-hover) 0.833333em 50% no-repeat;
+        color: $topbar-link-color-hover;
+    }
+
+    .hover a:hover {
+        background-color: $topbar-link-bg-hover;
+    }
+
+    .title a {
+        background: transparent;
+        text-indent: 0;
+    }
+
+    select {
+        @extend %top-bar-form-element;
+    }
+}
+
+/**
+ * Footer
+ */
+
+footer {
+    @include grid-row(false);
+    clear: both;
+    padding: .45em 0 0 .63em;
+    overflow: auto;
+    background-color: $topbar-bg;
+
+    ul {
+        overflow: hidden;
+        font-size: .8em;
+        margin-left: 0em;
+
+        li {
+            list-style: none;
+            float: left;
+            margin-right: .8em;
+        }
+
+    }
+
+    p { font-size: .8em; }
+}
+
+/**
+ * #content houses the page-specific innards, and creates margins for the absolutely
+ * positioned masthead and footer
+ */
+
+#content {
+    margin-top: 4.6em;
+    margin-bottom: 2.75em;
+    @include grid-row(false);
+}

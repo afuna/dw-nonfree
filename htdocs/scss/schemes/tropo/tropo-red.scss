@@ -1,0 +1,86 @@
+/** Tropospherical Red CSS
+ *
+ * Authors:
+ *     Janine Smith <janine@netrophic.com>
+ *     Jesse Proulx <jproulx@jproulx.net>
+ *     Elizabeth Lubowitz <grrliz@gmail.com>
+ *     Denise Paolucci <denise@dreamwidth.org>
+ *
+ * Copyright (c) 2009 by Dreamwidth Studios, LLC.
+ *
+ * This program is NOT free software or open-source; you can use it as an
+ * example of how to implement your own site-specific extensions to the
+ * Dreamwidth Studios open-source code, but you cannot use it on your site
+ * or redistribute it, with or without modifications.
+ *
+ */
+
+/**
+ * Dreamwidth Site Scheme
+ *
+ * Standard layout for Dreamwidth
+ *
+ * Mockups designed by grrliz, hence grrliz.css
+ *
+ * @project         Dreamwidth Site Design
+ * @author          Jesse Proulx
+ * @date            2009-01-07
+ * @version         Alpha
+ * @revision        $Revision$
+ * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
+ *
+ */
+
+// very strong color, for emphasis. use sparingly
+$strong-accent-color: #c1272d;
+
+
+// foundation global variables
+$body-bg: #f7f7f7;
+$body-font-color: #111111;
+$body-font-family: Verdana, Helvetica, Arial, sans-serif;
+$base-line-height: 1.5;
+
+// background colors for various components
+$primary-color: #fde8e7;
+$secondary-color: #e9e9e9;
+$alert-color: #d75759;
+$success-color: #7bb74b;
+
+
+// foundation type variables
+// We use these to control header font styles
+$header-font-family:                   Arial, sans-serif;
+$header-font-color:                    $strong-accent-color;
+
+// override colors based on $header-font-color
+$small-font-color:                     $body-font-color;
+$code-color:                           lighten( $body-font-color, 30% );
+
+// We use these to style anchors
+$anchor-text-decoration:               "underline";
+$anchor-font-color:                    #c1272d;
+$anchor-font-color-visited:            shade( $anchor-font-color, 30% );
+$anchor-font-color-hover:              lighten( $anchor-font-color, 30% );
+
+// navigation
+$topbar-bg:                            #e3e3e3;
+$topbar-link-weight:                   normal;
+$topbar-link-color:                    #111;
+$topbar-link-bg-hover:                 $strong-accent-color;
+$topbar-link-bg-active:                $strong-accent-color;
+
+$topbar-dropdown-bg:                   $topbar-bg;
+$topbar-dropdown-link-color:           #fff;
+$topbar-dropdown-link-bg:              #f4717a;
+
+$topbar-menu-link-color:               $topbar-link-color;
+$topbar-menu-icon-color:               $topbar-link-color;
+
+$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl.png";
+$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
+
+$include-html-classes: true;
+@import "foundation";
+
+@import "schemes/tropo/tropo-base", "schemes/skin-colors";
