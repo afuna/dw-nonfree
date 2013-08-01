@@ -31,6 +31,7 @@
  */
 
 @import "schemes/skin-colors", "schemes/nav";
+$header-height: 7em;
 
 #canvas {
     border-color: $strong-accent-color;
@@ -64,25 +65,19 @@
  * Menu navigation
  */
 
-@mixin navigation-position($masthead-height, $topbar-height) {
+@include header-nav( horizontal, right, $header-height, -$header-height, 0 );
 
-    @include header-nav( right, $masthead-height, -$masthead-height + 1em );
-
-    div#content {
-        padding-top: $topbar-height;
-    }
+// reset the way we position #content
+// #masthead is otuside #page, unlike most other site skins
+#content {
+    margin-top: 0 !important;
+    padding-top: $header-height;
 }
-
-@include navigation-position( 7em, $topbar-height );
-
 .main-nav {
-    position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
 }
 
-.top-bar .top-bar-section  {
+.main-nav .top-bar-section  {
     .topnav a {
         background: $topbar-bg url($topbar-bgimage) 0.833333em 50% no-repeat;
         text-indent: 15px;
@@ -101,10 +96,6 @@
     .title a {
         background: transparent;
         text-indent: 0;
-    }
-
-    select {
-        @extend %top-bar-form-element;
     }
 }
 
@@ -141,7 +132,6 @@ footer {
  */
 
 #content {
-    margin-top: 4.6em;
-    margin-bottom: 2.75em;
     @include grid-row(false);
+    margin-bottom: 2.75em;
 }
