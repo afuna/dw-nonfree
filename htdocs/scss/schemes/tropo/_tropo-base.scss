@@ -65,7 +65,7 @@ $header-height: 7em;
  * Menu navigation
  */
 
-@include header-nav( horizontal, right, $header-height, -$header-height, 0 );
+@include main-nav( horizontal, right, $header-height, -$header-height, 0 );
 
 // reset the way we position #content
 // #masthead is otuside #page, unlike most other site skins
