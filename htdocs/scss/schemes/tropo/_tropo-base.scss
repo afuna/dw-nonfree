@@ -99,6 +99,15 @@ $header-height: 7em;
     }
 }
 
+
+.nav-search {
+    line-height: $topbar-height;
+    input, select {
+        line-height: $base-line-height;
+        top: 0;
+    }
+}
+
 /**
  * Footer
  */
