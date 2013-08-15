@@ -37,7 +37,7 @@ $header-height: 7em;
     border-color: $strong-accent-color;
     margin: 0;
     border-style: solid;
-    border-width: 2em 0;
+    border-width: 1em 0;
 }
 
 #page {
@@ -54,7 +54,16 @@ $header-height: 7em;
 #masthead {
     background: none repeat scroll 0 0 #ffffff;
     border-bottom: 0.5em solid $topbar-dropdown-link-bg;
-    border-top: 0.5em solid $topbar-bg;
+}
+
+@media #{$small} {
+    #masthead {
+        border-top: 0.5em solid $topbar-bg;
+    }
+
+    #canvas {
+        border-width: 2em 0;
+    }
 }
 
 #account-links {
@@ -71,8 +80,9 @@ $header-height: 7em;
 // #masthead is otuside #page, unlike most other site skins
 #content {
     margin-top: 0 !important;
-    padding-top: $header-height;
+    padding-top: $nav-small-screen-header-height;
 }
+
 .main-nav {
     top: 0;
 }
