@@ -6,7 +6,7 @@
  *     Elizabeth Lubowitz <grrliz@gmail.com>
  *     Denise Paolucci <denise@dreamwidth.org>
  *
- * Copyright (c) 2009 by Dreamwidth Studios, LLC.
+ * Copyright (c) 2009-2013 by Dreamwidth Studios, LLC.
  *
  * This program is NOT free software or open-source; you can use it as an
  * example of how to implement your own site-specific extensions to the
@@ -52,6 +52,7 @@ $success-color: #7bb74b;
 // We use these to control header font styles
 $header-font-family:                   Arial, sans-serif;
 $header-font-color:                    $strong-accent-color;
+$list-side-margin:                     1em;
 
 // override colors based on $header-font-color
 $small-font-color:                     $body-font-color;
