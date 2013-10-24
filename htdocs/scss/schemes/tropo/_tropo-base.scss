@@ -132,7 +132,7 @@ footer {
     ul {
         overflow: hidden;
         font-size: .8em;
-        margin-left: 0em;
+        margin: 0;
 
         li {
             list-style: none;
@@ -142,7 +142,10 @@ footer {
 
     }
 
-    p { font-size: .8em; }
+    p {
+        font-size: .8em;
+        margin: 0 0 0.5em 0;
+    }
 }
 
 /**
