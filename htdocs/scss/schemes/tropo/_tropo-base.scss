@@ -30,11 +30,14 @@
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  */
 
+$include-html-classes: true;
+@import "foundation";
+
 @import "schemes/skin-colors", "schemes/nav", "schemes/skiplink";
 $header-height: 7em;
 
 #canvas {
-    border-color: $strong-accent-color;
+    border-color: $body-border-color;
     margin: 0;
     border-style: solid;
     border-width: 1em 0;
@@ -89,7 +92,7 @@ $header-height: 7em;
 
 .main-nav .top-bar-section  {
     .topnav a {
-        background: $topbar-bg url($topbar-bgimage) 0.833333em 50% no-repeat;
+        background: transparent url($topbar-bgimage) 0.833333em 50% no-repeat;
         text-indent: 15px;
         text-decoration: none;
     }
@@ -132,7 +135,7 @@ footer {
     ul {
         overflow: hidden;
         font-size: .8em;
-        margin-left: 0em;
+        margin: 0;
 
         li {
             list-style: none;
@@ -142,7 +145,10 @@ footer {
 
     }
 
-    p { font-size: .8em; }
+    p {
+        font-size: .8em;
+        margin: 0 0 0.5em 0;
+    }
 }
 
 /**
