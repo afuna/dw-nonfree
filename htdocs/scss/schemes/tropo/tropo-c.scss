@@ -1,0 +1,147 @@
+/** Tropospherical Red CSS
+ *
+ * Authors:
+ *     Janine Smith <janine@netrophic.com>
+ *     Jesse Proulx <jproulx@jproulx.net>
+ *     Elizabeth Lubowitz <grrliz@gmail.com>
+ *     Denise Paolucci <denise@dreamwidth.org>
+ *
+ * Copyright (c) 2009-2013 by Dreamwidth Studios, LLC.
+ *
+ * This program is NOT free software or open-source; you can use it as an
+ * example of how to implement your own site-specific extensions to the
+ * Dreamwidth Studios open-source code, but you cannot use it on your site
+ * or redistribute it, with or without modifications.
+ *
+ */
+
+/**
+ * Dreamwidth Site Scheme
+ *
+ * Standard layout for Dreamwidth
+ *
+ * Mockups designed by grrliz, hence grrliz.css
+ *
+ * @project         Dreamwidth Site Design
+ * @author          Jesse Proulx
+ * @date            2009-01-07
+ * @version         Alpha
+ * @revision        $Revision$
+ * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
+ *
+ */
+
+/**
+ * Here are the base colors from the theme. All other colors (other than grays) should be derived from these.
+ */
+$_base-color:           #fde8e7;    // pink
+$_error-color:          #d75759;    // red
+$_success-color:        #7bb74b;    // green
+$_link-color:           #C1272D;    // dark red
+
+$strong-accent-color: $_link-color;
+$weak-accent-color: $_base-color;
+
+// foundation global variables
+$body-bg:           #f7f7f7;
+$body-font-color:   #111111;
+$body-font-family:  Verdana, Helvetica, Arial, sans-serif;
+$base-line-height:  1.5;
+
+// background colors for various components
+$primary-color:     $_base-color;
+$secondary-color:   #e9e9e9;
+$alert-color:       $_error-color;
+
+// foundation type variables
+// We use these to control header font styles
+$header-font-family:                    Arial, sans-serif;
+$header-font-color:                     lighten( $body-font-color, 20% );
+$page-title-color:                      $strong-accent-color;
+$list-side-margin:                      1em;
+
+// we want to base these on $body-font-color rather than the random variables they're based on
+$code-color:                            tint( $body-font-color, 20% );
+$blockquote-font-color:                 tint( $body-font-color, 20% );
+
+// We use these to style anchors1
+$anchor-text-decoration:               underline;
+$anchor-font-color:                    $_link-color;
+$anchor-font-color-visited:            tint( $anchor-font-color, 30% );
+$anchor-font-color-hover:              adjust-color( $anchor-font-color, $red: 40, $green: -80, $blue: -80 );
+
+// buttons
+// $button-font-color:                       #fff;
+// $button-font-color-alt:                   #333;
+
+// forms
+$form-label-font-color:                 lighten($body-font-color, 40%);
+$input-font-color:                      $body-font-color;
+$input-bg-color:                        #fff;
+$input-focus-bg-color:                  darken($input-bg-color, 2%);
+$input-border-color:                    darken($input-bg-color, 20%);
+$input-focus-border-color:              darken($input-bg-color, 40%);
+$input-disabled-bg:                     #ddd;
+$fieldset-border-color:                 #ddd;
+$legend-bg:                             $body-bg;
+$input-prefix-bg:                       darken($input-bg-color, 5%);
+$input-prefix-border-color:             $input-border-color;
+// $input-prefix-font-color:               #333;
+// $input-prefix-font-color-alt:           #fff;
+// $input-error-message-font-color:        #fff;
+// $input-error-message-font-color-alt:    #333;
+
+// alerts
+// $alert-font-color: #fff;
+// $alert-font-color-alt: darken($secondary-color, 60%);
+$alert-border-width: 5px;
+// $alert-border-color: darken($primary-color, $alert-function-factor);
+
+$alert-close-color: #fff;
+
+// pagination
+// $pagination-link-font-color: #999;
+// $pagination-link-active-bg: darken(#fff, 10%);
+// $pagination-link-unavailable-font-color: #999;
+// $pagination-link-current-font-color: #fff;
+
+// panel
+$panel-bg:                              darken( $body-bg, 5% );
+
+// sub nav
+// $sub-nav-font-color: #999;
+// $sub-nav-active-color: #fff;
+
+// tables
+$table-bg: #fff;
+$table-even-row-bg: #f7f7f7;
+//$table-border-color: #ddd;
+$table-head-bg: $weak-accent-color;
+$table-head-font-color: #222;
+// $table-row-font-color: #222;
+
+// navigation
+$topbar-bg:                            #e3e3e3;
+$topbar-link-weight:                   normal;
+$topbar-link-color:                    #111;
+$topbar-link-bg-hover:                 $strong-accent-color;
+$topbar-link-bg-active:                $strong-accent-color;
+
+$topbar-dropdown-bg:                   $topbar-bg;
+$topbar-dropdown-link-color:           #fff;
+$topbar-dropdown-link-bg:              #f4717a;
+
+$topbar-menu-link-color:               $topbar-link-color;
+$topbar-menu-icon-color:               $topbar-link-color;
+
+$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl.png";
+$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
+
+$topbar-height: 32px;
+$topbar-input-height: 1em;
+
+$include-html-classes: true;
+@import "foundation";
+
+@import "schemes/tropo/tropo-base";
+

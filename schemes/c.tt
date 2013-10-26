@@ -1,0 +1,2 @@
+[% tropo_color  = "c" %]
+[%- logo_path = '/tropo-red/dw_logo.png' -%]

@@ -29,6 +29,12 @@ LJ::Hooks::register_hook('modify_scheme_list', sub {
         'tropo-common' => { parent => 'common', internal => 1 },
         'tropo-purple' => { parent => 'tropo-common', title => "Tropospherical Purple" },
         'tropo-red' => { parent => 'tropo-common', title => "Tropospherical Red" },
+        'a' => { parent => 'tropo-common', title => "a" },
+        'b' => { parent => 'tropo-common', title => "b" },
+        'c' => { parent => 'tropo-common', title => "c" },
+        'd' => { parent => 'tropo-common', title => "d" },
+        'e' => { parent => 'tropo-common', title => "e" },
+        'f' => { parent => 'tropo-common', title => "f" },
     );
 
     @{$schemes} = (
@@ -46,6 +52,8 @@ LJ::Hooks::register_hook('modify_scheme_list', sub {
             desc => 'siteskins.gradation-vertical.desc',
         },
         { scheme => "lynx" },
+        { scheme => 'a' },
+        { scheme => 'b' },
     );
 });
 
