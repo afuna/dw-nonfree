@@ -33,7 +33,7 @@
 $include-html-classes: true;
 @import "foundation";
 
-@import "schemes/skin-colors", "schemes/nav", "schemes/skiplink";
+@import "skins/skin-colors", "skins/nav", "skins/skiplink";
 $header-height: 7em;
 
 #canvas {

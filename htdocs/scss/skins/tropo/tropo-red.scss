@@ -59,7 +59,7 @@ $form-font-color:     $_off-black;
 $form-bg-color:       $_white;
 $form-border-color:   $_low-contrast-gray;
 
-@import "schemes/alert-colors";
+@import "skins/alert-colors";
 
 
 // foundation global variables
@@ -135,7 +135,7 @@ $topbar-height: 32px;
 $topbar-input-height: 1em;
 $topbar-dropdown-toggle-color: $soft-accent-color;
 
-@import "schemes/tropo/tropo-base";
+@import "skins/tropo/tropo-base";
 
 .main-nav {
     background: #ddd url(/img/tropo-red/bg_menu_gradient.png) repeat-x;
