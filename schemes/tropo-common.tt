@@ -31,7 +31,7 @@ the same terms as Perl itself.  For a copy of the license, please reference
         dw_scheme.need_res({ group => 'jquery' },  old_css_files.merge( [ 'js/nav-jquery.js' ] ));
 
         dw_scheme.need_res({ group => 'foundation' },
-            'stc/css/schemes/tropo/tropo-' _ tropo_color _ '.css'
+            'stc/css/skins/tropo/tropo-' _ tropo_color _ '.css'
         );
     -%]
 [%- END -%]
@@ -46,7 +46,7 @@ the same terms as Perl itself.  For a copy of the license, please reference
 
 [%- IF resource_group == "foundation" -%]
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
     [% PROCESS block.head %]
     <body [% sections.bodyopts %]>
         <div id="canvas">
@@ -75,7 +75,12 @@ the same terms as Perl itself.  For a copy of the license, please reference
                     </div>
                 </div>
 
-                [% content %]
+                [%- PROCESS block.errors -%]
+
+                <div class="row"><div class="large-12 columns">
+                    [%- content -%]
+                </div></div>
+
                 </div>
 
                 <div id="account-links" role="navigation" class="hide-for-small">
