@@ -31,7 +31,7 @@
  */
 
 $include-html-classes: true;
-@import "foundation";
+@import "foundation/foundation";
 
 @import "skins/skin-colors", "skins/nav", "skins/skiplink";
 $header-height: 7em;
@@ -160,3 +160,5 @@ footer {
     @include grid-row( nested-collapse );
     margin-bottom: 2.75em;
 }
+
+@import "skins/page-layout-hacks";
