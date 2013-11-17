@@ -31,7 +31,7 @@
  */
 
 $include-html-classes: true;
-@import "foundation";
+@import "foundation/foundation";
 
 @import "skins/skin-colors", "skins/nav", "skins/skiplink";
 $header-height: 7em;
