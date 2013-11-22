@@ -131,16 +131,15 @@ $topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl.png";
 $topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
 
 $topbar-height: 32px;
-$topbar-input-height: 1em;
 $topbar-dropdown-toggle-color: $soft-accent-color;
 
 @import "skins/tropo/tropo-base";
 
-.main-nav {
+.main-nav:not(.expanded) {
     background: #ddd url(/img/tropo-red/bg_menu_gradient.png) repeat-x;
 
     ul, .has-form {
-        background: transparent !important;
+        background: transparent;
     }
 }
 
