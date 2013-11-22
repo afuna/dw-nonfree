@@ -104,7 +104,6 @@ $alert-function-factor: 20%;
 
 // panel
 $panel-bg:                              darken( $body-bg, 5% );
-$panel-callout-bg:                      change-color( $soft-accent-color, $lightness:lightness($panel-bg) );
 
 // sub nav
 // $sub-nav-font-color: #999;
