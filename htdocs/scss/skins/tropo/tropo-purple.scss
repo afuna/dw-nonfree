@@ -104,7 +104,6 @@ $alert-function-factor: 20%;
 
 // panel
 $panel-bg:                              darken( $body-bg, 5% );
-$panel-callout-bg:                      change-color( $soft-accent-color, $lightness:lightness($panel-bg) );
 
 // sub nav
 // $sub-nav-font-color: #999;
@@ -136,7 +135,6 @@ $topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl_dropdown.
 $topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
 
 $topbar-height: 32px;
-$topbar-input-height: 1em;
 $topbar-dropdown-toggle-alpha: 0.8;
 
 @import "skins/tropo/tropo-base";
