@@ -41,14 +41,26 @@ $header-height: 7em;
     margin: 0;
     border-style: solid;
     border-width: 1em 0;
+    min-height: 100vh;
+}
+
+#canvas, #page {
+  display: flex;
+  flex-direction: column;
 }
 
 #page {
     position: relative;
     z-index: 1;
     max-width: $row-width;
+    width: 100%;
     margin: 0 auto;
 }
+
+#content, #page {
+  flex: 1;
+}
+
 
 /**
  * Masthead is the space for our logo and account links
