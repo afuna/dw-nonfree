@@ -30,10 +30,7 @@
  * @copyright       Copyright (c) 2009 by Dreamwidth Studios, LLC
  */
 
-$include-html-classes: true;
-@import "foundation/foundation";
-
-@import "skins/skin-colors", "skins/nav", "skins/skiplink";
+@import "skins/global-styles", "skins/nav", "skins/skiplink";
 $header-height: 7em;
 
 #canvas {
