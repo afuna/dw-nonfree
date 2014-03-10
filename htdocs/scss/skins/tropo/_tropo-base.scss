@@ -78,8 +78,12 @@ $header-height: 7em;
     }
 }
 
+#account-links-wrapper {
+    position: absolute;
+    top: 0;
+}
 #account-links {
-    right: 0;
+    right: 0.5em;
 }
 
 /**
