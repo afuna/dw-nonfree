@@ -78,8 +78,12 @@ $header-height: 7em;
     }
 }
 
+#account-links-wrapper {
+    position: absolute;
+    top: 0;
+}
 #account-links {
-    right: 0;
+    right: 0.5em;
 }
 
 /**
@@ -99,7 +103,7 @@ $header-height: 7em;
     top: 0;
 }
 
-.top-bar-section  {
+.main-nav .top-bar-section  {
     li.has-dropdown {
         // all links in the dropdown menus
         & a {
