@@ -86,7 +86,7 @@ $blockquote-font-color:                 tint( $body-font-color, 20% );
 // We use these to style anchors1
 $anchor-text-decoration:               underline;
 $anchor-font-color:                    $link-color;
-$anchor-font-color-visited:            tint( $anchor-font-color, 30% );
+$anchor-font-color-visited:            shade( desaturate( $anchor-font-color, 20% ), 20% );
 $anchor-font-color-hover:              adjust-color( $anchor-font-color, $red: 40, $green: -80, $blue: -80 );
 
 // forms
@@ -108,6 +108,11 @@ $alert-function-factor: 20%;
 // panel
 $panel-bg:                              darken( $body-bg, 5% );
 
+// reveal modal
+$reveal-modal-bg:                       $panel-bg;
+$reveal-border-color:                   $form-border-color;
+$reveal-close-color:                    $link-color;
+
 // sub-nav
 $sub-nav-font-color:	$inactive-color;
 
@@ -117,7 +122,7 @@ $pagination-link-unavailable-font-color:	$inactive-color;
 
 // tables
 $table-bg:              $form-bg-color;
-$table-even-row-bg:     $background-color;
+$table-even-row-bg:     $panel-bg;
 $table-border-color:    $border-color;
 $table-head-bg:         $primary-color;
 $table-head-font-color: $primary-text-color;
@@ -154,5 +159,5 @@ $topbar-dropdown-toggle-color: $soft-accent-color;
 }
 
 footer {
-    background: #ddd url(/img/tropo-red/bg_footer_gradient.png) repeat-x;
+    background: #eee url(/img/tropo-red/bg_footer_gradient.png) repeat-x;
 }
