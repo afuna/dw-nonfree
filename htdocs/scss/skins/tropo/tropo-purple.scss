@@ -34,6 +34,7 @@
 
 // color names. Only use these variables in the color assignment section
 $_purple:           #5e3da6;
+$_bright-purple:    saturate( $_purple, 30% );
 $_dark-purple:      #3a155a;
 $_pink:             #f3d2fc;
 
@@ -47,7 +48,7 @@ $_white:            #fff;
 // color assignment
 $background-color:    $_light-gray;
 $text-color:          $_off-black;
-$link-color:          $_purple;
+$link-color:          $_bright-purple;
 
 $primary-color:       $_purple;
 $primary-text-color:  $_white;      // color of text on a $primary-color background
@@ -86,7 +87,7 @@ $blockquote-font-color:                 tint( $body-font-color, 20% );
 // We use these to style anchors1
 $anchor-text-decoration:               underline;
 $anchor-font-color:                    $link-color;
-$anchor-font-color-visited:            tint( $anchor-font-color, 30% );
+$anchor-font-color-visited:            shade( desaturate( $anchor-font-color, 20% ), 20% );
 $anchor-font-color-hover:              adjust-color( $anchor-font-color, $red: 40, $green: -80, $blue: -80 );
 
 // forms

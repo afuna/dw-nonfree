@@ -86,7 +86,7 @@ $blockquote-font-color:                 tint( $body-font-color, 20% );
 // We use these to style anchors1
 $anchor-text-decoration:               underline;
 $anchor-font-color:                    $link-color;
-$anchor-font-color-visited:            tint( $anchor-font-color, 30% );
+$anchor-font-color-visited:            shade( desaturate( $anchor-font-color, 20% ), 20% );
 $anchor-font-color-hover:              adjust-color( $anchor-font-color, $red: 40, $green: -80, $blue: -80 );
 
 // forms
