@@ -594,8 +594,7 @@ select.select,
     color: #8b0000;
 }
 #archive-month .navigation a:hover,
-#archive-month .navigation a:active,
-.link:hover {
+#archive-month .navigation a:active {
     color: #f4717a;
 }
 
