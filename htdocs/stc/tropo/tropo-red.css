@@ -582,9 +582,9 @@ select.select,
 
 /* MonthPage */
 
-#archive-month .navigation li, #archive-month .navigation a, #archive-month .navigation li.active {display: inline; }
+#archive-month .navigation li, #archive-month .navigation {display: inline; }
 
-#archive-month .navigation a, #archive-month .navigation li.active {
+#archive-month .navigation {
     font-weight: bold;
     background-color: transparent;
     color: #C1272D;
