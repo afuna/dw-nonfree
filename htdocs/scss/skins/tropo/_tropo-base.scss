@@ -109,16 +109,16 @@ $header-height: 7em;
         & a {
             text-indent: 15px;
             text-decoration: none;
-            background: transparent url($topbar-bgimage) 0.833333em 50% no-repeat;
+            background: transparent url($topbar-bgimage) 11px 50% no-repeat;
         }
 
         // dropdown
         .dropdown a {
-            background: $topbar-dropdown-link-bg url($topbar-bgimage-hover) 0.833333em 50% no-repeat;
+            background: $topbar-dropdown-link-bg url($topbar-bgimage-hover) 11px 50% no-repeat;
         }
 
         &:hover > a, & a:hover {
-            background: $topbar-link-bg-hover url($topbar-bgimage-hover) 0.833333em 50% no-repeat;
+            background: $topbar-link-bg-hover url($topbar-bgimage-hover) 11px 50% no-repeat;
         }
     }
 }
