@@ -21,6 +21,7 @@ use strict;
 use DW::Routing;
 use LJ::JSON;
 use Digest::HMAC_SHA1 ();
+use HTTP::Request;
 
 DW::Routing->register_string( "/interface/github", \&hooks_handler,
                                 app => 1,
@@ -30,7 +31,7 @@ DW::Routing->register_string( "/interface/github", \&hooks_handler,
 
 my %table = (
     ping            => [ \&respond_to_ping ],
-    issue_comment   => [ \&label_from_comment ],
+    issue_comment   => [ \&label_from_comment, \&claim_issue ],
     issues          => [ \&label_from_new_issue ],
     pull_request    => [ \&label_from_new_pull_request ],
 );
@@ -38,6 +39,27 @@ my %table = (
 sub respond_to_ping {
     my $r = DW::Request->get;
     $r->print( "pinged" );
+}
+
+# matches "claim", "claimed", "claiming"
+sub matches_claim {
+    my $text = $_[0];
+    return $text =~ /\bclaim(?:ed|ing)?\b/i;
+}
+
+sub claim_issue {
+    my $payload = $_[0];
+    my $comment = $payload->{comment};
+
+    if ( matches_claim( $comment->{body} ) ) {
+        my $edit_url = $payload->{issue}->{url};
+        my $assignee = $comment->{user}->{login};
+
+        return _call_github_api( $edit_url,
+                to_json( { assignee => $assignee } ),
+                method => "PATCH"
+        );
+    }
 }
 
 sub label_from_comment {
@@ -112,13 +134,22 @@ sub _replace_labels {
     # automatically add labels (but only if we're modifying labels in the first place)
     push @labels, ( $is_pull_request ? "type: pull request" : "type: issue" );
 
+    # replace all labels in the issue
+    return _call_github_api( "$issue_url/labels", to_json( \@labels ) );
+}
+
+sub _call_github_api {
+    my ( $api_url, $content, %opts ) = @_;
+    my $http_method = $opts{method} || "PUT";
+
     my $ua = LJ::get_useragent( role => 'github' );
     $ua->agent( $LJ::SITENAME );
 
-    # replace all labels in the issue
-    my $res = $ua->put( "$issue_url/labels",
-                        Content => to_json( \@labels ),
-                        Authorization => "token $LJ::GITHUB{api}->{token}" );
+    my $request = HTTP::Request->new( $http_method => $api_url,
+                                      [ Authorization => "token $LJ::GITHUB{api}->{token}" ],
+                                      $content
+                                    );
+    my $res = $ua->request( $request );
     return $res && $res->is_success ? 1 : 0;
 }
 
