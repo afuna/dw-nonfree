@@ -7,11 +7,13 @@ javascripts_dir = "htdocs/js"
 
 add_import_path "../../htdocs/scss"
 
-# You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
+env_from_cli = environment
+if (environment.nil?)
+  environment = :development
+else
+  environment = env_from_cli
+end
 
-# To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
+output_style  = (environment == :production) ? :compressed : :expanded
+line_comments = (environment == :production) ? false : true
 
-# To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
