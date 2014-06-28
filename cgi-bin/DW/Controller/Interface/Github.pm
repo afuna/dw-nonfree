@@ -17,11 +17,17 @@
 package DW::Controller::Interface::Github;
 
 use strict;
-
+use DW::Controller;
 use DW::Routing;
+use DW::Template;
+use DW::FormErrors;
+
 use LJ::JSON;
+use DW::External::GithubJoinApp;
+
 use Digest::HMAC_SHA1 ();
 use HTTP::Request;
+
 
 DW::Routing->register_string( "/interface/github", \&hooks_handler,
                                 app => 1,
@@ -29,6 +35,14 @@ DW::Routing->register_string( "/interface/github", \&hooks_handler,
                                 methods => { POST => 1 },
                             );
 
+DW::Routing->register_string( "/interface/github/join", \&join_handler,
+                                app => 1,
+                                methods => { GET => 1 }
+                            );
+DW::Routing->register_string( "/interface/github/authorize", \&github_authorize_handler,
+                                app => 1,
+                                method => { POST => 1 }
+                                );
 my %table = (
     ping            => [ \&respond_to_ping ],
     issue_comment   => [ \&label_from_comment, \&claim_issue ],
@@ -138,6 +152,7 @@ sub _replace_labels {
     return _call_github_api( "$issue_url/labels", to_json( \@labels ) );
 }
 
+# calls the github api as an account owned by Dreamwidth
 sub _call_github_api {
     my ( $api_url, $content, %opts ) = @_;
     my $http_method = $opts{method} || "PUT";
@@ -182,6 +197,44 @@ sub hooks_handler {
     }
 
     return $r->OK;
+}
+
+sub github_authorize_handler {
+    my $auth = DW::External::GithubJoinApp->new;
+    return $auth->redirect_to_authorize( DW::Request->get );
+}
+
+sub join_handler {
+    my $r = DW::Request->get;
+    my $get = $r->get_args;
+
+    my $code = $get->{code};
+    my $state = $get->{state};
+
+    my $errors = DW::FormErrors->new;
+    if ( $code && $state ) {
+        $errors->add( undef, ".error.invalid_challenge" ) unless LJ::challenge_check( $state );
+
+        unless ( $errors->exist ) {
+            my $auth = DW::External::GithubJoinApp->new;
+            my $github_login = $auth->get_github_login( $code );
+            if ( $github_login ) {
+                my $ok = _call_github_api( "https://api.github.com/teams/763025/members/$github_login", to_json( [] ) );
+                if ( $ok ) {
+                    return success_ml( "/interface/github/join.tt" );
+                } else {
+                    $errors->add( undef, ".error.join_failed" );
+                }
+            } else {
+                $errors->add( undef, ".error.no_github_login" );
+            }
+        }
+    }
+
+    return DW::Template->render_template( 'interface/github/join.tt', {
+        authorize_url => LJ::create_url( "/interface/github/authorize" ),
+        errors => $errors,
+    } );
 }
 
 1;

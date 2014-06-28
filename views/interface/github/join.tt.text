@@ -1,0 +1,15 @@
+.title=Join Dreamwidth on Github
+
+.message=Add yourself to the Dreamwidth team as a contributor on Github. We just need you to confirm which Github profile you're using. Also, don't worry about accidentally doing anything: this lets you assign issues to yourself, but doesn't grant you write access to the Dreamwidth repositories. (Help me fix this text <3)
+
+.submit=Join
+
+.error.invalid_challenge=Unable to authorize you at this time. Please try again (make sure you haven't reloaded the page).
+
+.error.join_failed=Attempting to join failed. Please try again and if it doesn't work, contact us so we can add you manually.
+
+.error.no_github_login=We were unable to determine your Github username, so we couldn't add you automatically. Please try again and if it doesn't work, contact us so we can add you manually.
+
+.success.title=Successfully Joined the Contributors Team
+
+.success.message=Congrats on taking this first step, and welcome! Please talk to us (link to wiki) :)
