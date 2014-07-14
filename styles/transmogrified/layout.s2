@@ -260,9 +260,6 @@ propgroup customcss {
     property use custom_css;
 }
 
-function Page::print_meta_viewport_tag() {
-}
-
 function Page::print()
 {
     """
@@ -485,29 +482,30 @@ function Page::print_default_stylesheet () {
 
     .module-section-two {
         position: relative;
-        width: $*sidebar_width;
-        /* this must stay at the bottom of this code as in some circumstances
-        it closes one declaration and opens another one */
-        $sidebar_positioning
     }
 
-    .one-column .module-section-two {
-        margin: 0;
-        position: relative;
-        width: auto;
+    @media $*desktop_media_query {
+        .multiple-columns .module-section-two {
+            width: $*sidebar_width;
+            /* this must stay at the bottom of this code as in some circumstances
+            it closes one declaration and opens another one */
+            $sidebar_positioning
+        }
     }
 
     .module-section-two .module {
         border: solid 1px $*color_module_border;
         color: $*color_module_text;
         background-color: $*color_module_background;
-        margin: 20px;
-        margin-$sidebar_position_alt: 10px;
+        margin: 20px 0;
         padding: 10px;
     }
 
-    .one-column .module-section-two .module {
-        margin: 20px 0;
+    @media $*desktop_media_query {
+        .multiple-columns .module-section-two .module {
+            margin: 20px;
+            margin-$sidebar_position_alt: 10px;
+        }
     }
 
     .module-section-one .module {
@@ -605,7 +603,7 @@ function Page::print_default_stylesheet () {
         padding: 5px;
     }
 
-    .one-column .module-userprofile .module-content {
+    .module-userprofile .module-content {
         text-align: center;
     }
 
@@ -616,20 +614,18 @@ function Page::print_default_stylesheet () {
         margin-left: auto;
         margin-right: auto;
     }
-    .module-search .search-form {
-        text-align: right;
-    }
 
-    .one-column .module-search .search-form {
+    .module-search .search-form {
         text-align: left;
     }
+    @media $*desktop_media_query {
+        .multiple-columns .module-search .search-form {
+            text-align: right;
+        }
 
-    .module-search .search-box {
-        width: 100%;
-    }
-
-    .one-column .module-search .search-box {
-        width: auto;
+        .multiple-columns .module-search .search-box {
+            width: 100%;
+        }
     }
 
     /* wrap long content, particularly openid usernames */
@@ -1122,15 +1118,16 @@ function Page::print_default_stylesheet () {
         color: $*color_header_hover;
     }
 
-    .one-column #content { float: none; }
-    .one-column .module-section-two { float: none; padding-bottom: 10px; }
-    .one-column #wrap { padding-left: 20px; padding-right: 20px; }
-    .two-columns-right #content { float: left; }
-    .two-columns-right .module-section-two { float: left; }
-    .two-columns-right #wrap { padding-$sidebar_position: $*sidebar_width; }
-    .two-columns-left #content { float: right; }
-    .two-columns-left .module-section-two { float: right; }
-    .two-columns-left #wrap { padding-$sidebar_position: $*sidebar_width; }
-
+    #content { float: none; }
+    .module-section-two { float: none; padding-bottom: 10px; }
+    #wrap { padding-left: 20px; padding-right: 20px; }
+    @media $*desktop_media_query {
+        .two-columns-right #content { float: left; }
+        .two-columns-right .module-section-two { float: left; }
+        .two-columns-right #wrap { padding-$sidebar_position: $*sidebar_width; }
+        .two-columns-left #content { float: right; }
+        .two-columns-left .module-section-two { float: right; }
+        .two-columns-left #wrap { padding-$sidebar_position: $*sidebar_width; }
+    }
     """;
 }
