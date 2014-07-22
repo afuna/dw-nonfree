@@ -55,10 +55,16 @@ sub claim_issue {
         my $edit_url = $payload->{issue}->{url};
         my $assignee = $comment->{user}->{login};
 
-        return _call_github_api( $edit_url,
+        _call_github_api( $edit_url,
                 to_json( { assignee => $assignee } ),
                 method => "PATCH"
         );
+
+        _call_github_api( $payload->{issue}->{url} . "/labels",
+                to_json( [ "status: claimed" ] ),
+                method => "POST"
+        );
+        return;
     }
 }
 
