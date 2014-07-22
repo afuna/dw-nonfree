@@ -22,6 +22,7 @@ use DW::Routing;
 use LJ::JSON;
 use Digest::HMAC_SHA1 ();
 use HTTP::Request;
+use List::MoreUtils qw/ none /;
 
 DW::Routing->register_string( "/interface/github", \&hooks_handler,
                                 app => 1,
@@ -73,6 +74,21 @@ sub label_from_comment {
 
     my @labels = _extract_labels( $payload->{comment}->{body} );
     my $is_pull_request = exists $payload->{issue}->{pull_request};
+    my $current_status = $payload->{issue}->{assignee} ? "status: claimed" : "status: unclaimed";
+
+    # if we're commenting on an issue (not a pull request), we may want to update the claimed/unclaimed status
+    unless ( $is_pull_request ) {
+        my @current_labels = map { $_->{name} } @{$payload->{issue}->{labels}};
+
+        # so we don't make unnecessary API calls, only update if the claimed status has changed and no longer matches existing labels
+        if ( none { $_ eq $current_status } @current_labels ) {
+            # and since we replace all labels, get a list of the current labels -- sans automatically generated tags
+            @labels = grep { $_ ne "status: claimed" && $_ ne "status: unclaimed" && $_ !~ /type: / } @current_labels;
+        }
+    }
+
+    # add the current status to the list of labels, if we have any other labels that needed replacing
+    push @labels, $current_status if @labels;
 
     _replace_labels( $payload->{issue}->{url}, $is_pull_request, @labels );
 }
@@ -85,6 +101,7 @@ sub label_from_new_issue {
 
     my @labels = _extract_labels( $issue->{body} );
     push @labels, "status: untriaged" unless @labels;
+    push @labels, $payload->{issue}->{assignee} ? "status: claimed" : "status: unclaimed";
 
     _replace_labels( $issue->{url}, 0, @labels );
 }
