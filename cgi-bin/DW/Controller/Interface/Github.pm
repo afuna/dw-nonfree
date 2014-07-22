@@ -148,6 +148,9 @@ sub _call_github_api {
     my ( $api_url, $content, %opts ) = @_;
     my $http_method = $opts{method} || "PUT";
 
+    my $r = DW::Request->get;
+    $r->print( "$http_method: $api_url\n" . $content . "\n");
+
     my $ua = LJ::get_useragent( role => 'github' );
     $ua->agent( $LJ::SITENAME );
 
@@ -156,6 +159,9 @@ sub _call_github_api {
                                       $content
                                     );
     my $res = $ua->request( $request );
+    $r->print("API response: " . $res->message);
+    $r->print("\n\n");
+
     return $res && $res->is_success ? 1 : 0;
 }
 
