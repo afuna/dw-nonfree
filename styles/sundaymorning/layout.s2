@@ -298,6 +298,9 @@ function Page::print()
 }
 
 function Page::print_default_stylesheet() {
+    var string medium_media_query = generate_medium_media_query();
+    var string large_media_query = generate_large_media_query();
+
     var string sidebar_position = "";
     var string sidebar_position_alt = "";
     var string image_background_page_position = "100% 70px";
@@ -464,7 +467,7 @@ q { font-style: italic;
     margin: 1em 2em 0 2em;
 }
 
-@media $*desktop_media_query {
+@media $medium_media_query {
     .two-columns #wrap, .two-columns #bottom {
         margin: 0;
         margin-$sidebar_position: $*sidebar_width;
@@ -502,7 +505,7 @@ q { font-style: italic;
     margin-bottom: 1em;
 }
 
-@media $*desktop_media_query {
+@media $medium_media_query {
     .two-columns .module-section-two {
         width: $*sidebar_width;
         max-width: $*sidebar_width;
@@ -522,7 +525,7 @@ q { font-style: italic;
     padding: .5em 0;
 }
 
-@media $*desktop_media_query {
+@media $medium_media_query {
     .two-columns .module-section-one ul {
         margin-left: 0;
         margin-$sidebar_position: $*sidebar_width;
@@ -651,7 +654,7 @@ q { font-style: italic;
 .module-search .search-box { margin: .5em 0; }
 .module-search .search-form { margin: .5em; }
 
-@media $*desktop_media_query {
+@media $medium_media_query {
     .two-columns .module-section-two .module-search .search-box { width: 100%; }
     .two-columns .module-section-two .module-search .search-form { text-align: right; }
 }
@@ -761,6 +764,15 @@ $userpic_css
 }
 .entry-content, .comment-content {
     padding: 10px 0;
+}
+/* To constrain the width and prevent layout breaking */
+.entry-content img, .comment-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media $large_media_query {
+    .entry-content img, .comment-content img { max-width: none; }
 }
 .tag {
     font-weight: bold;
