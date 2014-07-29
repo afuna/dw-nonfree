@@ -108,9 +108,10 @@ sub matches_claim {
 sub claim_issue {
     my $payload = $_[0];
     my $comment = $payload->{comment};
+    my $issue = $payload->{issue};
 
-    if ( matches_claim( $comment->{body} ) ) {
-        my $issue_url = $payload->{issue}->{url};
+    if ( ! $issue->{assignee} && matches_claim( $comment->{body} ) ) {
+        my $issue_url = $issue->{url};
         _set_assignee( $issue_url, $comment->{user}->{login} );
         _set_claim_status( $issue_url, $payload->{issue}->{labels} );
     }
