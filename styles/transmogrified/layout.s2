@@ -266,7 +266,7 @@ function Page::print()
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
     <head>""";
-        $this->print_meta_viewport_tag();
+        $this->print_meta_tags();
         $this->print_head();
         $this->print_stylesheets();
         $this->print_head_title();
@@ -324,6 +324,9 @@ function Page::print()
 }
 
 function Page::print_default_stylesheet () {
+    var string medium_media_query = generate_medium_media_query();
+    var string large_media_query = generate_large_media_query();
+
     var string sidebar_positioning = "";
     var string sidebar_position = "";
     var string sidebar_position_alt = "";
@@ -484,7 +487,7 @@ function Page::print_default_stylesheet () {
         position: relative;
     }
 
-    @media $*desktop_media_query {
+    @media $medium_media_query {
         .multiple-columns .module-section-two {
             width: $*sidebar_width;
             /* this must stay at the bottom of this code as in some circumstances
@@ -501,7 +504,7 @@ function Page::print_default_stylesheet () {
         padding: 10px;
     }
 
-    @media $*desktop_media_query {
+    @media $medium_media_query {
         .multiple-columns .module-section-two .module {
             margin: 20px;
             margin-$sidebar_position_alt: 10px;
@@ -618,7 +621,7 @@ function Page::print_default_stylesheet () {
     .module-search .search-form {
         text-align: left;
     }
-    @media $*desktop_media_query {
+    @media $medium_media_query {
         .multiple-columns .module-search .search-form {
             text-align: right;
         }
@@ -763,6 +766,16 @@ function Page::print_default_stylesheet () {
     }
     .entry-content, .comment-content {
         padding: 10px 0;
+    }
+
+    /* To constrain the width and prevent layout breaking */
+    .entry-content img, .comment-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media $large_media_query {
+        .entry-content img, .comment-content img { max-width: none; }
     }
 
     .page-recent .journal-type-P.has-userpic.no-subject .entry-content,
@@ -1121,7 +1134,7 @@ function Page::print_default_stylesheet () {
     #content { float: none; }
     .module-section-two { float: none; padding-bottom: 10px; }
     #wrap { padding-left: 20px; padding-right: 20px; }
-    @media $*desktop_media_query {
+    @media $medium_media_query {
         .two-columns-right #content { float: left; }
         .two-columns-right .module-section-two { float: left; }
         .two-columns-right #wrap { padding-$sidebar_position: $*sidebar_width; }
