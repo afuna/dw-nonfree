@@ -15,6 +15,8 @@ propgroup presentation {
     property use use_journalstyle_entry_page;
     property use layout_type;
     property use sidebar_width;
+    property use medium_breakpoint_width;
+    property use large_breakpoint_width;
     property use reverse_sortorder_group;
     property use reg_firstdayofweek;
     property use tags_page_type;
