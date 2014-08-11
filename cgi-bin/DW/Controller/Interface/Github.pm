@@ -129,7 +129,7 @@ sub label_from_comment {
         unless $is_pull_request || @labels;
 
     # add the current status to the list of labels, if we have any other labels that needed replacing
-    push @labels, $current_status if @labels;
+    push @labels, $current_status if $current_status && @labels;
 
     _replace_labels( $payload->{issue}->{url}, $is_pull_request, @labels );
 }
