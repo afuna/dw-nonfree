@@ -129,23 +129,26 @@ $table-head-font-color: $primary-text-color;
 $table-row-font-color:  $text-color;
 
 // navigation
-$topbar-bg:                            $soft-accent-color;
+$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl_dropdown.png";
+$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
+$topbar-bgimage-position:              11px 50% no-repeat;
+
+$topbar-bg:                            $soft-accent-color url($topbar-bgimage) $topbar-bgimage-position;
 $topbar-link-weight:                   normal;
 $topbar-link-color:                    $text-color;
-$topbar-link-bg-hover:                 $strong-accent-color;
+$topbar-link-bg-hover:                 $strong-accent-color url($topbar-bgimage-hover) $topbar-bgimage-position;
 $topbar-link-bg-active:                $strong-accent-color;
 
 $topbar-dropdown-bg:                   $topbar-bg;
 $topbar-dropdown-link-color:           $primary-text-color;
-$topbar-dropdown-link-bg:              $primary-color;
+$topbar-dropdown-link-bg:              $primary-color url($topbar-bgimage-hover) $topbar-bgimage-position;
 
 $topbar-menu-link-color:               $topbar-link-color;
 $topbar-menu-icon-color:               $topbar-link-color;
 
-$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl_dropdown.png";
-$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
-
 $topbar-height: 32px;
 $topbar-dropdown-toggle-alpha: 0.8;
+
+$masthead-bottom-accent-color:         $primary-color;
 
 @import "skins/tropo/tropo-base";
