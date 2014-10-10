@@ -80,7 +80,6 @@ $header-font-color:                     lighten( $body-font-color, 20% );
 $list-side-margin:                      1em;
 
 // we want to base these on $body-font-color rather than the random variables they're based on
-$code-color:                            tint( $body-font-color, 20% );
 $blockquote-font-color:                 tint( $body-font-color, 20% );
 
 // We use these to style anchors1
@@ -129,24 +128,27 @@ $table-head-font-color: $primary-text-color;
 $table-row-font-color:  $text-color;
 
 // navigation
-$topbar-bg:                            #ddd;
+$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl.png";
+$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
+$topbar-bgimage-position:              11px 50% no-repeat;
+
+$topbar-bg:                            transparent url($topbar-bgimage) $topbar-bgimage-position;
 $topbar-link-weight:                   normal;
 $topbar-link-color:                    $text-color;
-$topbar-link-bg-hover:                 $primary-color;
+$topbar-link-bg-hover:                 $primary-color url($topbar-bgimage-hover) $topbar-bgimage-position;
 $topbar-link-bg-active:                $primary-color;
 
 $topbar-dropdown-bg:                   $topbar-bg;
 $topbar-dropdown-link-color:           $primary-text-color;
-$topbar-dropdown-link-bg:              $soft-accent-color;
+$topbar-dropdown-link-bg:              $soft-accent-color url($topbar-bgimage-hover) $topbar-bgimage-position;
 
 $topbar-menu-link-color:               $topbar-link-color;
 $topbar-menu-icon-color:               $topbar-link-color;
 
-$topbar-bgimage:                       "/img/tropo-red/icon_menu_swirl.png";
-$topbar-bgimage-hover:                 "/img/tropo-red/icon_menu_swirl_dropdown.png";
-
 $topbar-height: 32px;
 $topbar-dropdown-toggle-color: $soft-accent-color;
+
+$masthead-bottom-accent-color:         $soft-accent-color;
 
 @import "skins/tropo/tropo-base";
 
