@@ -140,7 +140,7 @@ sub label_from_new_issue {
 
     my $issue = $payload->{issue};
 
-    my @labels = _extract_labels( $issue->{body} );
+    my @labels = _extract_labels( $issue->{body}, $issue->{labels} );
     push @labels, "status: untriaged" unless @labels;
     push @labels, "status: claimed" if $payload->{issue}->{assignee};
 
@@ -153,7 +153,7 @@ sub label_from_new_pull_request {
 
     my $pr = $payload->{pull_request};
 
-    my @labels = _extract_labels( $pr->{body} );
+    my @labels = _extract_labels( $pr->{body}, $pr->{labels} );
     push @labels, "status: untriaged" unless @labels;
 
     _replace_labels( $pr->{issue_url}, 1, @labels );
@@ -161,7 +161,7 @@ sub label_from_new_pull_request {
 
 # labels are in the form of: "##label" "##prefix:label"
 sub _extract_labels {
-    my ( $text ) = @_;
+    my ( $text, $existing_labels ) = @_;
 
     my @labels_from_comment = ( $text =~ m/\#\#((?:
                                             \w      # word character
@@ -172,6 +172,7 @@ sub _extract_labels {
     my @valid_labels = (
             "from: suggestions", "from: support",
             "is: bug", "is: feature", "is: upkeep",
+            "curated: beginner", "curated: mostwanted",
         );
 
     my %mapped_labels = (
@@ -188,7 +189,8 @@ sub _extract_labels {
 
     my @normalized_labels = grep { $_ }
                                 map { $mapped_labels{$_} } @labels_from_comment;
-    return @normalized_labels;
+    my @existing_labels = map { $_->{name} } @$existing_labels;
+    return @normalized_labels, @existing_labels;
 }
 
 sub _replace_labels {
