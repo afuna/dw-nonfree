@@ -380,7 +380,7 @@ ul, ol {
     z-index: 5;
 }
 
-.highlight-box, .message-box,  .error-box {
+.highlight-box, .message-box,  .error-box, .alert-box {
     margin: 1em auto;
     padding: 0.5em;
 }

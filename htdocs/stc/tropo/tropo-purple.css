@@ -256,7 +256,7 @@ footer {
     background-color: #f3d2fc;
     color: #000;
 }
-.error-box {
+.error-box, .alert-box {
     color: #000;
     background-color: #fcf6db;
     border: 1px solid #ffdfc0;
