@@ -253,12 +253,10 @@ function Page::print()
     """
     <div id="container">
         <div id="header">
-            <a name="top">
     """;
                 $this->print_global_title();
                 $this->print_global_subtitle();
     """
-            </a>
         </div>
     """;
         $this->print_module_section("one");
