@@ -15,7 +15,7 @@
  *
  */
 
-/** 
+/**
  * Dreamwidth Site Scheme
  *
  * Standard layout for Dreamwidth
@@ -152,3 +152,7 @@ $topbar-dropdown-toggle-alpha: 0.8;
 $masthead-bottom-accent-color:         $primary-color;
 
 @import "skins/tropo/tropo-base";
+
+footer {
+    background-color: $soft-accent-color;
+}
