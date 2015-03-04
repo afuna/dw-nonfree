@@ -160,6 +160,10 @@ $masthead-bottom-accent-color:         $soft-accent-color;
     }
 }
 
+.main-nav.expanded li {
+    background-color: #ddd;
+}
+
 footer {
     background: #eee url(/img/tropo-red/bg_footer_gradient.png) repeat-x;
 }
